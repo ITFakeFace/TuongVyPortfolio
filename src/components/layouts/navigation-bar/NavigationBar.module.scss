@@ -1,0 +1,61 @@
+@use "sass:color";
+// Định nghĩa biến
+$active-bg: #0957c9;
+$text-dim: rgba(255, 255, 255, 0.6);
+$transition-speed: 0.2s;
+
+.customPillButton {
+  display: inline-flex;
+  background: transparent;
+  border: none;
+  gap: 2px;
+
+  // Sử dụng :global(selector) cho từng trường hợp cụ thể
+  // Cách này an toàn và không gây lỗi "Ambiguous"
+
+  :global(.p-button) {
+    background: transparent !important;
+    border: none !important;
+    color: $text-dim !important;
+    border-radius: 999px !important;
+    padding: 4px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    box-shadow: none !important;
+    transition: all $transition-speed ease;
+    min-width: 60px;
+
+    &:not(:global(.p-highlight)):hover {
+      color: white !important;
+      background: rgba(1, 27, 64, 1) !important;
+    }
+
+    &.p-highlight, // Một số bản PrimeReact class này là local nếu dùng module
+    &:global(.p-highlight) {
+      background: $active-bg !important;
+      color: white !important;
+
+      &:hover {
+        background: color.adjust($active-bg, $lightness: -5%) !important;
+      }
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+}
+
+.navLink {
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity $transition-speed;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+/* Theme (Bạn có thể chọn theme khác như lara-light-blue, v.v.) */
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+/* Core CSS của các Component */
+@import "primereact/resources/primereact.min.css";
+
+/* Icons (Cực kỳ quan trọng để hiện mũi tên pi-chevron-left) */
+@import "primeicons/primeicons.css";
+
+/* PrimeFlex (Nếu bạn dùng các class tiện ích của Prime thay vì Tailwind) */
+/* @import "primeflex/primeflex.css"; */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Chỉ định nghĩa keyframes, timing và loop. 
+     Bỏ qua duration hoặc để mặc định rất nhỏ để dễ nhận biết khi bị ghi đè */
+  --animate-scroll-left: marquee linear infinite;
+  --animate-scroll-right: marquee linear infinite reverse;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

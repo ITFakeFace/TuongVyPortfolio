@@ -1,0 +1,9 @@
+$bg-image-url: url("../../../assets/images/backgrounds/LatestEventsSection-bg-1.png");
+
+.container {
+  background-image: $bg-image-url;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}

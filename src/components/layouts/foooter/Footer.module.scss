@@ -1,0 +1,8 @@
+$bg-image-url: url("../../../assets/images/backgrounds/Footer-bg-1.png");
+
+.container {
+  background-image: $bg-image-url;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

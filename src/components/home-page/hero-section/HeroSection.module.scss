@@ -1,0 +1,23 @@
+$bg-image-url: url("../../../assets/images/backgrounds/HeroSection-bg-2.webp");
+$bg-image-url-mobile: url("../../../assets/images/backgrounds/HeroSection-bg-mobile-2.webp");
+
+.container {
+  width: 100%;
+  background-image: $bg-image-url;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+
+  background-size: cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+
+  @media (max-width: 768px) {
+    background-image: $bg-image-url-mobile;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+
+    background-size: cover; // 🔥 QUAN TRỌNG
+    background-blend-mode: overlay;
+  }
+}

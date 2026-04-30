@@ -1,0 +1,90 @@
+$primary: #011b40;
+$secondary: rgb(255, 255, 255, 0.5);
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+
+  // 1. Quan trọng: Cô lập phần nội dung (Ảnh) để nút căn theo vùng này
+
+  // --- STYLE NÚT BẤM (PREV/NEXT) ---
+  :global(.p-carousel-prev),
+  :global(.p-carousel-next) {
+    background-color: $secondary !important;
+    border-radius: 50% !important;
+    width: 75px !important;
+    height: 75px !important;
+    color: $primary !important;
+    z-index: 20; // Đảm bảo nổi lên trên ảnh
+    position: absolute !important;
+    top: 50% !important; // Bây giờ nó sẽ căn theo p-carousel-content (chỉ phần ảnh)
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+
+    &:hover {
+      //   transform: scale(1.1) !important;
+      background-color: $primary !important;
+      color: $secondary !important;
+    }
+
+    // Khắc phục lỗi nút bị đẩy ra ngoài trên một số trình duyệt
+    margin: 0 !important;
+  }
+  :global(.p-carousel-prev) {
+    transform: translateX(-50%) !important;
+  }
+  :global(.p-carousel-next) {
+    transform: translateX(50%) !important;
+  }
+
+  // --- PHÂN CHIA RESPONSIVE ---
+
+  // Desktop: Nút nằm ở 2 mép, có padding để không đè quá sâu vào ảnh
+  @media (min-width: 768px) {
+    // padding: 0 50px;
+
+    :global(.p-carousel-prev) {
+      left: 0 !important;
+    }
+    :global(.p-carousel-next) {
+      right: 0 !important;
+    }
+  }
+
+  // Mobile: Nút nhỏ hơn và đè sát mép ảnh
+  @media (max-width: 767px) {
+    // padding: 0; // Mobile thường để ảnh tràn viền
+
+    :global(.p-carousel-prev),
+    :global(.p-carousel-next) {
+      width: 35px !important;
+      height: 35px !important;
+    }
+    :global(.p-carousel-prev) {
+      transform: translateX(0) !important;
+      left: 10px !important;
+    }
+    :global(.p-carousel-next) {
+      transform: translateX(0) !important;
+      right: 10px !important;
+    }
+  }
+
+  // --- STYLE INDICATORS (DẤU CHẤM) ---
+  :global(.p-carousel-indicators) {
+    padding: 1.5rem 0;
+
+    :global(.p-carousel-indicator.p-highlight) button {
+      background-color: $primary !important;
+    }
+
+    button {
+      background-color: $secondary;
+      border: solid 2px $secondary !important;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+  }
+}
