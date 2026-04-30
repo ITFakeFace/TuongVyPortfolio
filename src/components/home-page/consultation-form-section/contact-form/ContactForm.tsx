@@ -186,11 +186,11 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className=" bg-linear-to-br from-[#FFFFFF]/30 to-[#0957C9]/30 border-white border-3 text-[#011B40] w-full p-5 md:p-12! rounded-[3rem] shadow-2xl flex flex-col gap-2">
           <h2
-            className={`${lang == "Viet" ? "text-3xl" : "text-[1.3rem]"} md:text-4xl font-bold text-center mb-3 uppercase tracking-wider bg-clip-text bg-linear-to-r from-[#011B40] to-[#0346A6]`}
+            className={`${lang == "Viet" ? "text-3xl" : "text-[1.3rem]"} md:text-3xl font-bold text-center mb-3 uppercase tracking-wider bg-clip-text bg-linear-to-r from-[#011B40] to-[#0346A6]`}
           >
             {lang === "Viet"
               ? "Đặt lịch trao đổi trực tiếp"
-              : "SCHEDULE FOR DIRECT CONSULTATION"}
+              : "SCHEDULE A DIRECT CONSULTATION"}
           </h2>
 
           {fields.map((field) => (
@@ -251,7 +251,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
             <Button
               type="submit"
               unstyled
-              label={lang === "Viet" ? "Gửi đi >>" : "Book now >>"}
+              label={lang === "Viet" ? "Gửi đi >>" : "SUBMIT"}
               className={`${lang == "Viet" ? "px-8!" : "px-3!"} md:px-16! py-3! text-lg md:text-4xl border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
             />
           </div>
@@ -261,7 +261,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
           <Button
             type="submit"
             unstyled
-            label={lang === "Viet" ? "Gửi đi >>" : "Book now >>"}
+            label={lang === "Viet" ? "Gửi đi >>" : "SUBMIT"}
             className={`px-16! py-3! md:text-4xl! ${lang == "Viet" ? "text-2xl!" : "text-lg!"} border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
           />
         </div>

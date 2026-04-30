@@ -5,22 +5,24 @@ import { motion } from "framer-motion"; // Import motion
 import { cl } from "@/utils/cn";
 import CountUp from "react-countup";
 import styles from "./HeroSection.module.scss";
-import TuongVyImage from "@/assets/images/assets/HeroSection-TuongVyImage-2.png";
+import TuongVyImage from "@/assets/images/assets/HeroSection-TuongVyImage-3.png";
 import TuongVyMobileImage from "@/assets/images/assets/HeroSection-TuongVyMobileImage-2.png";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { useContactForm } from "@/context/ContactContext";
 
 const HeroSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
   const stat1Time: number = 6;
   const stat2Time: number = 3;
   const renderHeroDesktop = () => {
     return (
       <div className={``}>
-        <div className={`flex lg:flex-col mt-10 lg:gap-10`}>
-          <div className={`flex lg:flex-row gap-10 lg:ml-20`}>
+        <div className={`flex lg:flex-col mt-10 gap-5`}>
+          <div className={`flex lg:flex-row gap-5 lg:ml-20`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,11 +68,11 @@ const HeroSection = () => {
                 >
                   {lang == "Viet"
                     ? "Quản lý cấp cao ngành"
-                    : "Quản lý cấp cao ngành"}
+                    : "Senior Executive in Consumer"}
                   <br />
                   {lang == "Viet"
-                    ? "Ngân hàng và Công nghệ tài chính"
-                    : "Ngân hàng và Công nghệ tài chính"}
+                    ? "Tài chính tiêu dùng và Ngân hàng số"
+                    : "Finance and Digital Banking"}
                 </div>
               </div>
             </motion.div>
@@ -81,7 +83,7 @@ const HeroSection = () => {
               className={`w-1/4`}
             >
               <div
-                className={`w-full h-full scale-80! text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
+                className={`w-full h-full text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
               >
                 <div
                   className={cl(
@@ -119,11 +121,11 @@ const HeroSection = () => {
                 >
                   {lang == "Viet"
                     ? "Chuyên gia trong mảng"
-                    : "Chuyên gia trong mảng"}
+                    : "Expert in Digital Banking"}
                   <br />
                   {lang == "Viet"
                     ? "Digital Bank và ứng dụng AI"
-                    : "Digital Bank và ứng dụng AI"}
+                    : "and AI Applications"}
                 </div>
               </div>
             </motion.div>
@@ -152,12 +154,13 @@ const HeroSection = () => {
             <Button
               unstyled
               className={`bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] border-2 border-white rounded-2xl py-4 px-15 text-white text-[clamp(30px,0.625rem+1.3vw,35px)] font-bold hover:cursor-pointer`}
-              label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "TƯ VẤN TRỰC TIẾP"}
+              label={lang == "Viet" ? "KHÁM PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
+              onClick={openContactForm}
             />
             <Button
               unstyled
               className={`border-2 border-white rounded-2xl py-4 px-15 text-white text-[clamp(30px,0.625rem+1.3vw,35px)] font-bold hover:cursor-pointer`}
-              label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "LATEST EVENTS"}
+              label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
             />
           </div>
         </div>
@@ -165,7 +168,8 @@ const HeroSection = () => {
           <Image
             src={TuongVyImage}
             alt="Tuong Vy Image"
-            className={`h-[90%] w-auto absolute bottom-0 right-[5%] pointer-events-none`}
+            className={`h-[90%] w-auto absolute bottom-0 right-[2%] pointer-events-none`}
+            priority
           />
         </div>
       </div>
@@ -216,12 +220,14 @@ const HeroSection = () => {
 
               {/* CHỮ MÔ TẢ: Nhỏ và mảnh hơn */}
               <div className="text-[clamp(5px,0.4rem+0.5vw,7px)] text-black text-balance font-normal opacity-80 tracking-wider uppercase mt-[-5px]">
-                {lang == "Viet" ? "Quản lý cấp cao ngành" : "Senior Management"}
+                {lang == "Viet"
+                  ? "Quản lý cấp cao ngành"
+                  : "Senior Executive in Consumer"}
                 <br />
                 <span className="font-normal opacity-100">
                   {lang == "Viet"
-                    ? "Ngân hàng và Công nghệ tài chính"
-                    : "Banking & Fintech"}
+                    ? "Tài chính tiêu dùng và Ngân hàng số"
+                    : "Finance and Digital Banking"}
                 </span>
               </div>
             </div>
@@ -264,12 +270,14 @@ const HeroSection = () => {
               </div>
 
               <div className="text-[clamp(5px,0.4rem+0.5vw,7px)] text-balance opacity-80 font-normal tracking-wider uppercase mt-[-5px] text-black">
-                {lang == "Viet" ? "Chuyên gia trong mảng" : "Expert in"}
+                {lang == "Viet"
+                  ? "Chuyên gia trong mảng"
+                  : "Expert in Digital Bankings"}
                 <br />
                 <span className="font-normal opacity-100">
                   {lang == "Viet"
                     ? "Digital Bank và ứng dụng AI"
-                    : "Digital Bank & AI"}
+                    : "and AI Applications"}
                 </span>
               </div>
             </div>
@@ -303,12 +311,13 @@ const HeroSection = () => {
           <Button
             unstyled
             className="bg-linear-to-r from-[#07367B] to-[#1F2833] border border-white rounded-xl py-3 px-10 text-white text-md font-bold uppercase tracking-wider w-fit mx-auto"
-            label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "DIRECT CONSULTANCY"}
+            label={lang == "Viet" ? "KHÁM PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
+            onClick={openContactForm}
           />
           <Button
             unstyled
             className="border border-white rounded-xl py-3 px-8 text-white text-sm font-bold uppercase tracking-wider w-fit mx-auto"
-            label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "LATEST EVENTS"}
+            label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
           />
         </div>
       </div>

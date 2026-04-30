@@ -18,7 +18,7 @@ const ConsultationFormSection = () => {
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
                 `}
           >
-            {lang == "Viet" ? "ĐỐI TÁC HỢP TÁC" : "ĐỐI TÁC HỢP TÁC"}
+            {lang == "Viet" ? "ĐỐI TÁC HỢP TÁC" : "STRATEGIC PARTNERSHIPS"}
           </div>
         </div>
         <div className="relative w-full h-[9px]">
@@ -66,15 +66,15 @@ const ConsultationFormSection = () => {
         className="w-9/10 lg:w-4/5 h-auto object-contain mx-auto mb-10 lg:mb-0"
       />
       <div className={`flex flex-col lg:flex-row relative`}>
-        <div className={`w-full lg:w-1/3`}>
+        <div className={`w-full lg:w-1/2`}>
           <Image
             src={TuongVyImage}
             alt="Tuong Vy"
-            className="absolute lg:static w-4/7 lg:w-4/5 h-auto object-cover ml-auto bottom-0 right-0"
+            className="absolute lg:static w-4/7 lg:w-3/5 lg:mr-30 h-auto object-cover ml-auto bottom-0 right-0"
           />
         </div>
-        <div className={`w-full lg:w-2/3 lg:pt-10`}>
-          <div className={`w-9/10 mx-auto`}>
+        <div className={`w-full lg:w-1/2 lg:pt-10`}>
+          <div className={`w-8/10 mr-auto`}>
             <ContactForm lang={lang} />
           </div>
         </div>

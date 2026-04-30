@@ -5,6 +5,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { PrimeReactProvider } from "primereact/api";
 import NavigationBar from "@/components/layouts/navigation-bar/NavigationBar";
 import Footer from "@/components/layouts/foooter/Footer";
+import ContactSidebar from "@/components/layouts/side-button-bar/ContactSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
             <NavigationBar />
             {children}
             <Footer />
+            <ContactSidebar />
           </LanguageProvider>
         </PrimeReactProvider>
       </body>

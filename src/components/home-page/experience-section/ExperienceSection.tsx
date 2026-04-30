@@ -49,6 +49,7 @@ import TrustingSocialLogo from "@/assets/images/assets/ExperienceSection-Trustin
 import FilmStrip from "@/components/generals/FilmStrip";
 import TuongVyImage from "@/assets/images/assets/ExperienceSection-TuongVyImage-1.png";
 import { Button } from "primereact/button";
+import { useContactForm } from "@/context/ContactContext";
 
 interface ExperienceItemProps {
   image: StaticImageData;
@@ -60,6 +61,8 @@ interface ExperienceItemProps {
 
 const ExperienceSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
+
   const expStyles: Record<string, string> = {
     title: "text-2xl font-bold text-gray-800",
   };
@@ -156,16 +159,16 @@ const ExperienceSection = () => {
   };
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} -mt-1`}>
       <div
         className={`text-transparent bg-clip-text font-bold text-6xl bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] text-center py-10`}
       >
-        {lang == "Viet" ? "KINH NGHIỆM THỰC CHIẾN" : "KINH NGHIỆM THỰC CHIẾN"}
+        {lang == "Viet" ? "KINH NGHIỆM THỰC CHIẾN" : "PRACTICAL EXPERIENCE"}
       </div>
       <div className={`flex flex-col px-5 lg:px-20 gap-10 lg:gap-10`}>
         <ExperienceItem
           image={ExpImage1}
-          title={lang == "Viet" ? "2025 - Hiện tại" : "2025 - Present"}
+          title={lang == "Viet" ? "2025 - Hiện tại" : "2025 - now"}
           direction="left"
         >
           <div className={`grid grid-cols-1 lg:grid-cols-2 gap-2`}>
@@ -181,7 +184,7 @@ const ExperienceSection = () => {
               <div className={`mt-3 text-center text-[15px] lg:text-[20px]`}>
                 {lang == "Viet"
                   ? "Đối tác chiến lược với OCB Bank - Đơn vị sở hữu nền tảng Liobank by OCB"
-                  : "Đối tác chiến lược với OCB Bank - Đơn vị sở hữu nền tảng Liobank by OCB"}
+                  : "Strategic Partner with OCB Bank – Owner of the Liobank by OCB platform"}
               </div>
               <Image
                 src={FintechLogo}
@@ -211,7 +214,7 @@ const ExperienceSection = () => {
         </ExperienceItem>
         <ExperienceItem
           image={ExpImage2}
-          title={lang == "Viet" ? "2/2025 - Hiện tại" : "2/2025 - Present"}
+          title={lang == "Viet" ? "2/2025 - Hiện tại" : "2/2025 - now"}
           direction="right"
         >
           <div className={``}>
@@ -236,6 +239,60 @@ const ExperienceSection = () => {
         </ExperienceItem>
         <ExperienceItem
           image={ExpImage3}
+          title={"11/2023 - 1/2025"}
+          direction="left"
+        >
+          <div className={``}>
+            <div
+              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+            >
+              {lang == "Viet" ? "Phó Tổng Giám Đốc" : "Deputy CEO"}
+            </div>
+            <div className={`text-center text-[15px] lg:text-[20px]`}>
+              CAKE by VPBank
+            </div>
+            <div
+              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+            >
+              <Image
+                src={CakeLogo}
+                alt="SHB Finance Logo"
+                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+              />
+            </div>
+          </div>
+        </ExperienceItem>
+        <ExperienceItem
+          image={ExpImage4}
+          title={"2022 - 2023"}
+          direction="right"
+        >
+          <div className={``}>
+            <div
+              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center text-balance leading-normal`}
+            >
+              {lang == "Viet"
+                ? "Thành viên Ban Điều hành Câu lạc bộ Tài chính Tiêu dùng "
+                : "Executive Committee Member, Consumer Finance Club"}
+            </div>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
+              {lang == "Viet"
+                ? "Hiệp hội Ngân hàng Việt Nam"
+                : "Vietnam Banks Association"}
+            </div>
+            <div
+              className={`bg-white rounded-2xl w-1/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+            >
+              <Image
+                src={VNBALogo}
+                alt="VNBALogo"
+                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+              />
+            </div>
+          </div>
+        </ExperienceItem>
+        <ExperienceItem
+          image={ExpImage3}
           title={"7/2018 - 10/2023"}
           direction="left"
         >
@@ -243,7 +300,7 @@ const ExperienceSection = () => {
             <div
               className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
-              {lang == "Viet" ? "Phó Tổng Giám Đốc" : "Deputy General Director"}
+              {lang == "Viet" ? "Phó Tổng Giám Đốc" : "Deputy CEO"}
             </div>
             <div className={`text-center text-[15px] lg:text-[20px]`}>
               SHB Finance (SHBFC)
@@ -318,9 +375,7 @@ const ExperienceSection = () => {
             <div
               className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
-              {lang == "Viet"
-                ? "Trưởng phòng Kinh doanh"
-                : "Trưởng nhóm Kinh doanh"}
+              {lang == "Viet" ? "Trưởng phòng Kinh doanh" : "Head of Sales"}
             </div>
             <div className={`text-center text-[15px] lg:text-[20px]`}>
               PRUDENTIAL VIETNAM FINANCIAL
@@ -328,7 +383,7 @@ const ExperienceSection = () => {
             <div className={`mt-3 text-center text-[15px] lg:text-[20px]`}>
               {lang == "Viet"
                 ? "Kênh Bán hàng Chi nhánh, Quận 1"
-                : "Kênh Bán hàng Chi nhánh, Quận 1"}
+                : "Branch Sales Channel, District 1"}
             </div>
             <div
               className={`bg-white rounded-2xl w-1/2 mx-auto mt-3 px-5 py-1 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
@@ -350,9 +405,7 @@ const ExperienceSection = () => {
             <div
               className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
-              {lang == "Viet"
-                ? "Trưởng nhóm Kinh doanh"
-                : "Trưởng nhóm Kinh doanh"}
+              {lang == "Viet" ? "Trưởng nhóm Kinh doanh" : "Sales Team Leader"}
             </div>
             <div className={`text-center text-[15px] lg:text-[20px]`}>
               ANZ Bank
@@ -374,20 +427,20 @@ const ExperienceSection = () => {
       >
         {lang == "Viet"
           ? "PHÁT TRIỂN TRÊN HÀNH TRÌNH MỞ RỘNG HỢP TÁC"
-          : "PHÁT TRIỂN TRÊN HÀNH TRÌNH MỞ RỘNG HỢP TÁC"}
+          : "GROWTH THROUGH EXPANDING PARTNERSHIPS"}
       </div>
       <div className={`flex flex-col gap-10`}>
         <FilmStrip
           items={FilmList1}
           gap={"gap-[30px] lg:gap-[100px]"}
           className={`bg-white py-5`}
-          imageClassName="h-10 lg:h-24 w-auto"
+          imageClassName="h-10 lg:h-20 w-auto"
         />
         <FilmStrip
           items={FilmList2}
           gap={"gap-[30px] lg:gap-[100px]"}
           className={`bg-white py-5`}
-          imageClassName="h-6 lg:h-12 w-auto"
+          imageClassName="h-6 lg:h-10 w-auto"
           duration={10}
           direction="right"
         />
@@ -398,12 +451,15 @@ const ExperienceSection = () => {
         <Button
           unstyled
           className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-4xl border-2 border-white text-[24px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
-          label={lang == "Viet" ? "TRAO ĐỔI TRỰC TIẾP" : "TRAO ĐỔI TRỰC TIẾP"}
+          label={
+            lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
+          }
+          onClick={openContactForm}
         />
         <Image
           src={TuongVyImage}
           alt="Tuong Vy"
-          className={`object-cover w-8/10 lg:w-4/10 h-auto lg:mt-10 rounded-2xl lg:rounded-4xl z-20 relative`}
+          className={`object-cover w-8/10 lg:w-7/20 h-auto lg:mt-10 rounded-2xl lg:rounded-4xl z-20 relative`}
         />
         <div className={`flex flex-col justify-center lg:gap-10`}>
           <blockquote
@@ -415,16 +471,23 @@ const ExperienceSection = () => {
             before:transform before:-translate-x-2 before:-translate-y-4
           `}
           >
-            <p className="font-bold text- lg:text-[clamp(45px,-15px+3.9vw,60px)] leading-tight relative z-10">
-              Chọn ra khỏi vùng an toàn
+            <p className="font-bold text-xl lg:text-[clamp(45px,-15px+3.9vw,60px)] leading-tight relative z-10 lg:w-auto text-center">
+              {lang == "Viet"
+                ? "Chọn ra khỏi vùng an toàn"
+                : "Step Out of Your Comfort"}
               <br />
-              để tạo sự tăng trưởng
+              {lang == "Viet"
+                ? "để tạo sự tăng trưởng"
+                : "Zone to Drive Growth"}
             </p>
           </blockquote>
           <Button
             unstyled
             className={`hidden lg:block mt-5 px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-4xl border-2 border-white text-[24px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
-            label={lang == "Viet" ? "TRAO ĐỔI TRỰC TIẾP" : "TRAO ĐỔI TRỰC TIẾP"}
+            label={
+              lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
+            }
+            onClick={openContactForm}
           />
         </div>
       </div>

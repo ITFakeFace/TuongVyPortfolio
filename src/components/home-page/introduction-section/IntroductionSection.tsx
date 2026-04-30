@@ -34,40 +34,46 @@ const IntroductionSection = () => {
           {lang == "Viet" ? "Xin chào!" : "Hello!"}
         </div>
         <div
-          className={`font-bold text-xl lg:text-[clamp(3.125rem,0.625rem+2.083vw,3.75rem)] bg-clip-text text-transparent bg-[linear-gradient(78deg,#5A5B5B_0%,#FFFFFF_50%,#FFFFFF_100%)]`}
+          className={`font-bold text-[clamp(16px,5.96px+2.554vw,55px)] bg-clip-text text-transparent bg-[linear-gradient(78deg,#5A5B5B_0%,#FFFFFF_50%,#FFFFFF_100%)]`}
         >
           {lang == "Viet"
             ? "TÔI LÀ TRẦN THANH NỮ TƯỜNG VY"
-            : "TÔI LÀ TRẦN THANH NỮ TƯỜNG VY"}
+            : "I AM TRAN THANH NU TUONG VY"}
         </div>
         <div
-          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(1.125rem,-0.375rem+1.5625vw,1.5rem)] text-white font-normal mt-5`}
+          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(17px,-7px+1.5625vw,23px)] text-white font-normal mt-5`}
         >
           <div>
             <span className={`font-bold`}>
               {lang == "Viet"
                 ? "Khởi nghiệp từ năm 21 tuổi,"
-                : "Khởi nghiệp từ năm 21 tuổi,"}
+                : "Starting my entrepreneurial journey at the age of 21,"}
             </span>
             {lang == "Viet"
               ? " tôi bén duyên với nhịp độ của nền kinh tế thị trường. Từ những va chạm thực tế đầu tiên, tôi chọn ngành Tài chính như một hành trình thử thách bản thân và mở rộng giới hạn. Với gần 18 năm trong lĩnh vực ngân hàng và Fintech, với tôi, đó không chỉ là câu chuyện con số, mà là hành trình kiến tạo tăng trưởng, đổi mới và giá trị bền vững qua từng dấu mốc sự nghiệp"
-              : " tôi bén duyên với nhịp độ của nền kinh tế thị trường. Từ những va chạm thực tế đầu tiên, tôi chọn ngành Tài chính như một hành trình thử thách bản thân và mở rộng giới hạn. Với gần 18 năm trong lĩnh vực ngân hàng và Fintech, với tôi, đó không chỉ là câu chuyện con số, mà là hành trình kiến tạo tăng trưởng, đổi mới và giá trị bền vững qua từng dấu mốc sự nghiệp"}
+              : " I quickly immersed myself in the fast pace of a market-driven economy. From those early real-world experiences, I chose finance as a path to challenge myself and push beyond my limits. With"}
             <span className={`font-bold`}>
-              {lang == "Viet" ? " gần 18 năm" : " gần 18 năm"}
+              {lang == "Viet" ? " gần 18 năm" : " nearly 18 years"}
             </span>
             {lang == "Viet"
               ? " trong lĩnh vực ngân hàng và Fintech, với tôi, đó không chỉ là câu chuyện con số, mà là hành trình kiến tạo tăng trưởng, đổi mới và giá trị bền vững qua từng dấu mốc sự nghiệp"
-              : " trong lĩnh vực ngân hàng và Fintech, với tôi, đó không chỉ là câu chuyện con số, mà là hành trình kiến tạo tăng trưởng, đổi mới và giá trị bền vững qua từng dấu mốc sự nghiệp"}
+              : " in banking and fintech, to me, this has never been just about numbers—it’s a journey of driving growth, innovation, and sustainable value at every career milestone."}
           </div>
           <div>
             {lang == "Viet"
               ? "Trong suốt quá trình phát triển, tôi đã xây dựng và mở rộng các mô hình kinh doanh cho vay, dẫn dắt hệ sinh thái phối hợp digital banking quy mô lớn và thiết lập các quan hệ hợp tác chiến lược. Với trải nghiệm ở vai trò Phó Tổng Giám đốc và Nhà sáng lập, tôi hiểu sâu sắc bài toán cân bằng giữa tăng trưởng và tối ưu chi phí – nền tảng cốt lõi đã định hình tư duy và bản lĩnh nghề nghiệp."
-              : "Không ngừng phát triển và đóng góp trong ngành tài chính, tôi đã xây dựng và mở rộng các mô hình kinh doanh cho vay, dẫn dắt những hệ sinh thái bán hàng quy mô lớn, đồng thời thiết lập các mối quan hệ hợp tác chiến lược trong ngành. Với vai trò từng là Phó Tổng Giám đốc và nhà sáng lập/ chủ doanh nghiệp, tôi hiểu rõ bài toán cân bằng giữa tăng trưởng doanh thu và tối ưu chi phí - điều đã định hình tư duy phát triển và bản lĩnh nghề nghiệp trong tôi."}
+              : "Throughout my career, I have built and scaled lending business models, led large-scale digital banking ecosystems, and established strategic partnerships. With experience as a Deputy CEO and a Founder, I have developed a deep understanding of balancing growth with cost optimization—a core foundation that has shaped my strategic thinking and professional resilience."}
           </div>
           <div>
+            {lang == "Viet" ? "Thế mạnh của tôi là" : "My strengths lie in"}
+            <b>
+              {lang == "Viet"
+                ? " quản trị P&L, chuyển đổi số và thúc đẩy tăng trưởng"
+                : " P&L management, digital transformation, and driving growth through partnerships."}
+            </b>
             {lang == "Viet"
-              ? "Thế mạnh của tôi là quản trị P&L, chuyển đổi số và thúc đẩy tăng trưởng thông qua hợp tác. Và hơn hết, tôi tự hào khi góp phần xây dựng nên những tổ chức, đội ngũ phát triển vững mạnh và những kết quả tăng trưởng bền vững – không chỉ trong ngắn hạn mà còn tạo nền tảng cho tương lai."
-              : "Thế mạnh của tôi là quản trị P&L, chuyển đổi số và thúc đẩy tăng trưởng thông qua hợp tác. Và hơn hết, tôi tự hào khi góp phần xây dựng nên những tổ chức, đội ngũ phát triển vững mạnh và những kết quả tăng trưởng bền vững – không chỉ trong ngắn hạn mà còn tạo nền tảng cho tương lai."}
+              ? " thông qua hợp tác. Và hơn hết, tôi tự hào khi góp phần xây dựng nên những tổ chức, đội ngũ phát triển vững mạnh và những kết quả tăng trưởng bền vững – không chỉ trong ngắn hạn mà còn tạo nền tảng cho tương lai."
+              : " More importantly, I take pride in building strong organizations, developing high-performing teams, and creating sustainable value for the future."}
           </div>
         </div>
       </div>

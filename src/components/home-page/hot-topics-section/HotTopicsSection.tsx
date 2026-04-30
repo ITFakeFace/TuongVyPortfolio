@@ -4,18 +4,29 @@ import styles from "./HotTopicsSection.module.scss";
 import { cl } from "@/utils/cn";
 import HotTopicImage from "@/assets/images/assets/HotTopicsSection-HotTopicImage-1.png";
 import TuongVyImage from "@/assets/images/assets/HotTopicsSection-TuongVyImage-1.png";
+import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-3.png";
+import TuongVyImage2 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-2.png";
 import PartnerImage1 from "@/assets/images/assets/HotTopicsSection-PartnerImage-1.png";
-import YoungPartnerImage1 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-1.png";
 import PartnerImage2 from "@/assets/images/assets/HotTopicsSection-PartnerImage-2.png";
+import PartnerImage3 from "@/assets/images/assets/HotTopicsSection-PartnerImage-3.png";
+import PartnerImage4 from "@/assets/images/assets/HotTopicsSection-PartnerImage-4.png";
+import PartnerImage5 from "@/assets/images/assets/HotTopicsSection-PartnerImage-5.png";
+import PartnerImage6 from "@/assets/images/assets/HotTopicsSection-PartnerImage-6.png";
+import YoungPartnerImage1 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-1.png";
+import YoungPartnerImage2 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-2.png";
+import YoungPartnerImage3 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-3.png";
+import YoungPartnerImage4 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-4.png";
+import YoungPartnerImage5 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-5.png";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "primereact/button";
 import { Carousel } from "primereact/carousel";
+import { useContactForm } from "@/context/ContactContext";
 
 interface TrainingPartnerItemProps {
   image: string | StaticImageData;
   text: {
-    Eng: { partner: string; role: string; description: string };
-    Viet: { partner: string; role: string; description: string };
+    Eng: { title: string; partner: string; role: string; description: string };
+    Viet: { title: string; partner: string; role: string; description: string };
   };
 }
 
@@ -29,6 +40,8 @@ interface YoungPartnerItemProps {
 
 const HotTopicsSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
+
   const renderTopicItem = (
     index: string,
     title: string,
@@ -65,34 +78,114 @@ const HotTopicsSection = () => {
     {
       image: PartnerImage1,
       text: {
-        Eng: {
+        Viet: {
+          title: "DESIGN SOLUTION AND BACK TO BASIC IN A MODERN WORKPLACE",
           partner: "Công ty Chuyển Phát Nhanh 247",
           role: "Huấn luyện đào tạo",
           description:
             "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
         },
-        Viet: {
-          partner: "Công ty Chuyển Phát Nhanh 247",
-          role: "Huấn luyện đào tạo",
+        Eng: {
+          title: "DESIGN SOLUTION AND BACK TO BASIC IN A MODERN WORKPLACE",
+          partner: "247 Express Delivery Company",
+          role: "Training & Coaching",
           description:
-            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
+            "Solution design, business strategy and operations; hands-on training for the Business Strategy Planning Department and Regional Sales Management.",
         },
       },
     },
     {
       image: PartnerImage2,
       text: {
-        Eng: {
+        Viet: {
+          title: "X2 YOUR LIFE WITH LINKED IN & AI",
           partner: "SHE Global Community",
           role: "Diễn giả",
           description:
             "Góc nhìn về thời đại số trong cơn bùng nổ “ứng dụng AI”. AI và chuyển đổi số giúp tối ưu hiệu suất; giá trị tạo ra mới quyết định năng lực lãnh đạo.",
         },
+        Eng: {
+          title: "X2 YOUR LIFE WITH LINKED IN & AI",
+          partner: "SHE Global Community",
+          role: "Speaker",
+          description:
+            "Perspectives on the digital era amid the surge of AI adoption. AI and digital transformation enhance performance, but value creation defines leadership capability.",
+        },
+      },
+    },
+    {
+      image: PartnerImage3,
+      text: {
         Viet: {
+          title: "THE ART OF NETWORKINGS",
           partner: "SHE Global Community",
           role: "Diễn giả",
           description:
-            "Góc nhìn về thời đại số trong cơn bùng nổ “ứng dụng AI”. AI và chuyển đổi số giúp tối ưu hiệu suất; giá trị tạo ra mới quyết định năng lực lãnh đạo.",
+            "Xây dựng tư duy và kỹ năng networking trong thời đại số, phát triển thương hiệu và sự nghiệp cá nhân bền vững.",
+        },
+        Eng: {
+          title: "THE ART OF NETWORKINGS",
+          partner: "SHE Global Community",
+          role: "Speaker",
+          description:
+            "Building networking mindset and skills in the digital age; developing personal branding and sustainable career growth.",
+        },
+      },
+    },
+    {
+      image: PartnerImage4,
+      text: {
+        Viet: {
+          title: "AI UNLIMITED FUTURE: HỘI NGHỊ ĐỔI MỚI SÁNG TẠO VIỆT NAM",
+          partner: "BOSSKOL",
+          role: "Huấn luyện đào tạo",
+          description:
+            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
+        },
+        Eng: {
+          title: "AI UNLIMITED FUTURE: HỘI NGHỊ ĐỔI MỚI SÁNG TẠO VIỆT NAM",
+          partner: "BOSSKOL",
+          role: "Training & Coaching",
+          description:
+            "Solution design, business strategy and operations; hands-on training for the Business Strategy Planning Department and Regional Sales Management.",
+        },
+      },
+    },
+    {
+      image: PartnerImage5,
+      text: {
+        Viet: {
+          title: "WORKSHOP: SHE SLAYS - RAISE AND SHINE",
+          partner: "SHE Global Community",
+          role: "Diễn giả",
+          description:
+            "Đồng hành cùng phái nữ định vị bản thân, xây dựng thương hiệu cá nhân chuyên nghiệp và rèn luyện kỹ năng giao tiếp tự tin để chủ động nắm bắt cơ hội, bứt phá lộ trình thăng tiến.",
+        },
+        Eng: {
+          title: "WORKSHOP: SHE SLAYS - RAISE AND SHINE",
+          partner: "SHE Global Community",
+          role: "Speaker",
+          description:
+            "Empowering women to define their identity, build a professional personal brand, and develop confident communication skills to seize opportunities and accelerate career growth.",
+        },
+      },
+    },
+    {
+      image: PartnerImage6,
+      text: {
+        Eng: {
+          title: "WORKSHOP: NEW JOURNEY - NEW VALUE",
+          partner: "SHE Global Community",
+          role: "Speaker",
+          description:
+            "Supporting women in discovering new value, expanding networks, and building breakthrough career paths for future opportunities.",
+        },
+        Viet: {
+          title: "WORKSHOP: NEW JOURNEY - NEW VALUE",
+          partner: "SHE Global Community",
+          role: "Diễn giả",
+          description:
+            "Cùng phái nữ khám phá giá trị mới, kết nối mạng lưới tài năng và xây dựng lộ trình bứt phá bản thân để sẵn sàng cho những hành trình sự nghiệp đầy tiềm năng.",
         },
       },
     },
@@ -110,6 +203,9 @@ const HotTopicsSection = () => {
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
         <div className="w-full flex-1 flex flex-col justify-between gap-6">
+          <div className="w-full text-xl md:text-4xl font-bold leading-snug text-center line-clamp-2 min-h-[2.4em] md:min-h-[2.8em] flex items-center justify-center">
+            {item.text[lang].title}
+          </div>
           {/* Khối chữ */}
           <div className="flex flex-col gap-4 text-justify">
             <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
@@ -128,9 +224,7 @@ const HotTopicsSection = () => {
 
             <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
               <span className="font-semibold">
-                {lang == "Viet"
-                  ? "Nội dung chương trình: "
-                  : "Program overview: "}
+                {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
               </span>
               {item.text[lang].description}
             </div>
@@ -140,7 +234,7 @@ const HotTopicsSection = () => {
           <div className="lg:pt-6 w-full flex justify-center mt-auto">
             <Button
               unstyled
-              label="XEM THÊM >>"
+              label={lang == "Viet" ? "LIÊN HỆ ĐÀO TẠO" : "TRAINING INQUIRIES"}
               className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300"
             />
           </div>
@@ -155,19 +249,100 @@ const HotTopicsSection = () => {
       text: {
         Eng: {
           title:
-            "TALKSHOW: NHÀ LÃNH ĐẠO HẠNH PHÚC CHỦ ĐỀ “ỨNG PHÓ VỚI KHÓ KHĂN VÀ THẤT BẠI” ",
-          partner: "Công ty Chuyển Phát Nhanh 247",
-          role: "Huấn luyện đào tạo",
+            "TALKSHOW: THE HAPPY LEADER – “NAVIGATING CHALLENGES AND FAILURE”",
+          partner: "Ho Chi Minh City University of Economics and Finance (UEF)",
+          role: "Speaker",
           description:
-            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
+            "Multi-dimensional perspectives on the journey of modern leadership through both highs and lows—equipping young individuals with the knowledge and confidence to overcome challenges and pursue their desired career paths.",
         },
         Viet: {
           title:
             "TALKSHOW: NHÀ LÃNH ĐẠO HẠNH PHÚC CHỦ ĐỀ “ỨNG PHÓ VỚI KHÓ KHĂN VÀ THẤT BẠI” ",
-          partner: "Công ty Chuyển Phát Nhanh 247",
-          role: "Huấn luyện đào tạo",
+          partner: "Đại Học Kinh Tế Tài Chính TP.HCM UEF",
+          role: "Diễn giả",
           description:
-            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
+            "Những góc nhìn đa chiều về hành trình của một người lãnh đạo trong thời đại mới, với những giai đoạn sáng - tối khác nhau. Từ đó có thêm kiến thức và niềm tin để bạn trẻ sẵn sàng đương đầu với khó khăn, từ đó chinh phục những vị trí mà mình mong muốn. ",
+        },
+      },
+    },
+    {
+      image: YoungPartnerImage2,
+      text: {
+        Eng: {
+          title: "COFFEE TALK: WORK SMART BY MASTERING AI AGENTS",
+          partner: "FSB Institute of Management & Technology",
+          role: "Speaker",
+          description:
+            "Transforming AI into a multi-functional virtual workforce. Emphasizing the use of tools like ChatGPT, Canva AI, and FPT AI Agents to automate workflows and enhance data-driven decision-making.",
+        },
+        Viet: {
+          title:
+            "COFFEE TALK: LÀM VIỆC THÔNG MINH PHẢI TINH THÔNG VỚI AI AGENTS",
+          partner: "Viện Quản trị & Công nghệ FSB",
+          role: "Diễn giả",
+          description:
+            "Tập trung biến AI thành nhân sự ảo đầy đa nhiệm. Nhấn mạnh việc ứng dụng các công cụ như ChatGPT, Canva AI, và FPT AI Agents để tự động hóa công việc, tăng cường khả năng ra quyết định dựa trên dữ liệu.",
+        },
+      },
+    },
+    {
+      image: YoungPartnerImage3,
+      text: {
+        Eng: {
+          title:
+            "COMPETITION: ECONOMIC COMMENTARY SERIES 2025 (THEME: GIG ECONOMY)",
+          partner: "UEH – ISB Talent School",
+          role: "Judge",
+          description:
+            "Analyzing workforce transformation, the role of digital platforms (Gig Economy), and the impact of AI on the economy.",
+        },
+        Viet: {
+          title:
+            "CUỘC THI: CHUỖI BÌNH LUẬN SỰ KIỆN KINH TẾ 2025  (CHỦ ĐỀ: GIG ECONOMY)",
+          partner: "Trường Tài Năng UEH - ISB",
+          role: "Ban giám khảo",
+          description:
+            "Phân tích sự chuyển dịch của lực lượng lao động, vai trò của nền tảng số (Gig Economy) và tác động của AI đến nền kinh tế.",
+        },
+      },
+    },
+    {
+      image: YoungPartnerImage4,
+      text: {
+        Eng: {
+          title:
+            "YEAR-END CLOSING: BUSINESS PLANNING & PRACTICAL MANAGEMENT WITH AI",
+          partner: "FSB Institute of Management & Technology",
+          role: "Speaker",
+          description:
+            "Guiding the use of AI as a strategic assistant for rapid 2025 planning, optimizing operations, and transitioning toward data-driven management to streamline structures and boost revenue.",
+        },
+        Viet: {
+          title:
+            "CHỐT SỔ CUỐI NĂM: KẾ HOẠCH KINH DOANH VÀ QUẢN TRỊ THỰC CHIẾN VỚI AI",
+          partner: "Viện Quản trị & Công nghệ FSB",
+          role: "Diễn giả",
+          description:
+            "Hướng dẫn sử dụng AI làm trợ lý chiến lược để lập kế hoạch 2025 nhanh chóng, tối ưu hóa vận hành, từ đó chuyển đổi sang quản trị dữ liệu (data-driven) nhằm tinh gọn bộ máy và thúc đẩy doanh số.",
+        },
+      },
+    },
+    {
+      image: YoungPartnerImage5,
+      text: {
+        Eng: {
+          title: "COMPETITION: CONQUER THE RECRUITER",
+          partner: "Saigon University",
+          role: "Judge",
+          description:
+            "An academic platform helping students refine skills and build confidence before entering the real job market.",
+        },
+        Viet: {
+          title: "CUỘC THI: CHINH PHỤC NHÀ TUYỂN DỤNG",
+          partner: "Trường Đại học Sài Gòn",
+          role: "Ban giám khảo",
+          description:
+            "Sân chơi học thuật giúp sinh viênhoàn thiện kỹ năng và bản lĩnh trước khi bước vào thị trường lao động thực tế.",
         },
       },
     },
@@ -189,8 +364,8 @@ const HotTopicsSection = () => {
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
-        <div className="w-full flex-1 flex flex-col justify-between gap-6">
-          <div className="w-full text-xl md:text-4xl font-bold leading-snug">
+        <div className="w-full flex flex-col justify-between gap-6">
+          <div className="w-full text-xl md:text-4xl font-bold leading-snug text-center">
             {item.text[lang].title}
           </div>
           {/* Khối chữ */}
@@ -211,9 +386,7 @@ const HotTopicsSection = () => {
 
             <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
               <span className="font-semibold">
-                {lang == "Viet"
-                  ? "Nội dung chương trình: "
-                  : "Program overview: "}
+                {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
               </span>
               {item.text[lang].description}
             </div>
@@ -227,15 +400,21 @@ const HotTopicsSection = () => {
     <div
       className={`${styles.container} relative overflow-hidden pb-110 lg:pb-120`}
     >
-      <div className={`flex flex-col lg:flex-row relative pb-10`}>
+      <div className={`flex flex-col lg:flex-row relative`}>
         <Image
           src={HotTopicImage}
           alt="Hot Topic"
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
-        <div className={`w-full lg:w-1/2`}></div>
-        <div className={`w-full lg:w-1/2 pt-10 lg:pt-10`}>
-          <div className={`mb-10 lg:mb-15`}>
+        <div className="w-full h-full lg:w-1/2 relative flex justify-end items-end">
+          <Image
+            src={TuongVyImage2}
+            alt="Tuong Vy"
+            className="w-11/14 h-auto block align-bottom z-30 translate-x-[-10%] lg:translate-x-[0%]"
+          />
+        </div>
+        <div className={`w-full lg:w-1/2 lg:pt-10`}>
+          <div className={`mb-10 lg:mb-15 lg:w-4/5`}>
             <div className="relative w-full h-[9px]">
               <svg
                 className="absolute block inset-0 size-full"
@@ -276,11 +455,11 @@ const HotTopicsSection = () => {
             </div>
             <div>
               <div
-                className={`flex flex-row justify-center text-[35px] lg:text-[45px] gap-2 lg:gap-4 font-bold 
+                className={`flex flex-row justify-center text-[35px] lg:text-[65px] gap-2 lg:gap-4 font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
                 `}
               >
-                {lang == "Viet" ? "CHỦ ĐỀ NỔI BẬT" : "CHỦ ĐỀ NỔI BẬT"}
+                {lang == "Viet" ? "CHỦ ĐỀ NỔI BẬT" : "FEATURED TOPICS"}
               </div>
             </div>
             <div className="relative w-full h-[9px]">
@@ -323,33 +502,62 @@ const HotTopicsSection = () => {
             </div>
           </div>
           <div className={`flex flex-col gap-5 lg:gap-10`}>
-            {renderTopicItem(
-              "01",
-              "TRÍ TUỆ NHÂN TẠO (AI)",
-              "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
-              "ml-4 lg:w-3/4",
-            )}
-            {renderTopicItem(
-              "02",
-              "KỸ NĂNG LÃNH ĐẠO",
-              "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
-              "ml-4 lg:ml-16 lg:w-3/4",
-            )}
-            {renderTopicItem(
-              "03",
-              "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
-              "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
-              "ml-4 lg:ml-16 lg:w-4/5",
-            )}
-            {renderTopicItem(
-              "04",
-              "KINH TẾ THỊ TRƯỜNG",
-              "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
-              "ml-4 lg:w-3/4",
-            )}
+            {lang == "Viet"
+              ? renderTopicItem(
+                  "01",
+                  "TRÍ TUỆ NHÂN TẠO (AI)",
+                  "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
+                  "ml-4 lg:w-3/4",
+                )
+              : renderTopicItem(
+                  "01",
+                  "ARTIFICIAL INTELLIGENCE (AI)",
+                  "AI won’t replace you—but those who use AI will.",
+                  "ml-4 lg:w-3/4",
+                )}
+            {lang == "Viet"
+              ? renderTopicItem(
+                  "02",
+                  "KỸ NĂNG LÃNH ĐẠO",
+                  "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
+                  "ml-4 lg:ml-16 lg:w-3/4",
+                )
+              : renderTopicItem(
+                  "02",
+                  "LEADERSHIP SKILLS",
+                  "Leadership is about building effective systems, not just managing people.",
+                  "ml-4 lg:ml-16 lg:w-3/4",
+                )}
+            {lang == "Viet"
+              ? renderTopicItem(
+                  "03",
+                  "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
+                  "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
+                  "ml-4 lg:ml-16 lg:w-4/5",
+                )
+              : renderTopicItem(
+                  "03",
+                  "FIANANCE & DIGITAL TRANSFORMATION",
+                  "A pivotal phase for businesses in the digital banking era.",
+                  "ml-4 lg:ml-16 lg:w-4/5",
+                )}
+            {lang == "Viet"
+              ? renderTopicItem(
+                  "04",
+                  "KINH TẾ THỊ TRƯỜNG",
+                  "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
+                  "ml-4 lg:w-3/4",
+                )
+              : renderTopicItem(
+                  "04",
+                  "MARKET ECONOMY",
+                  "Understanding the market means understanding cash flow and customer behavior.",
+                  "ml-4 lg:w-3/4",
+                )}
           </div>
           <div className={`w-full lg:w-4/5 flex justify-center mt-5 lg:mt-5`}>
-            <button
+            <Button
+              unstyled
               className={`
                       bg-linear-to-r from-[#042B63] from-50% to-[#2F3945] 
                       border-2 lg:border-3 border-white rounded-2xl lg:rounded-4xl
@@ -359,9 +567,10 @@ const HotTopicsSection = () => {
                       transition-all duration-300 hover:brightness-110
                       relative z-20 
                     `}
+              onClick={openContactForm}
             >
-              {lang == "Viet" ? "TRAO ĐỔI TRỰC TIẾP" : "TRAO ĐỔI TRỰC TIẾP"}
-            </button>
+              {lang == "Viet" ? "TRAO ĐỔI TRỰC TIẾP" : "LET’S DISCUSSION"}
+            </Button>
           </div>
         </div>
       </div>
@@ -374,7 +583,7 @@ const HotTopicsSection = () => {
         >
           {lang == "Viet"
             ? "ĐỐI TÁC HỢP TÁC ĐÀO TẠO"
-            : "ĐỐI TÁC HỢP TÁC ĐÀO TẠO"}
+            : "TRAINING & DEVELOPMENT PARTNERS"}
         </div>
         <div className={`${styles.carouselWrapper} w-full`}>
           <div className="">
@@ -406,7 +615,7 @@ const HotTopicsSection = () => {
         </div>
       </div>
       <div
-        className={`bg-linear-to-br from-[#1F2833] from-33% to-[#C8871F] to-85%
+        className={`bg-linear-to-br from-[#1F2833] from-33% to-[#0957C9] to-85%
             border-3 border-white
             flex flex-col lg:flex-row w-9/10 mx-auto mt-20
             items-center lg:items-end /* Thay đổi ở đây để đẩy mọi thứ xuống đáy trên desktop */
@@ -426,11 +635,11 @@ const HotTopicsSection = () => {
           <div
             className={`text-[clamp(30px,17.13px+3.274vw,80px)] leading-tight font-bold`}
           >
-            {lang == "Viet" ? "PHƯƠNG PHÁP" : "UNIQUE"}
+            {lang == "Viet" ? "PHƯƠNG PHÁP" : "TAILORED"}
             <br />
-            {lang == "Viet" ? "RIÊNG BIỆT" : "METHOD"}
+            {lang == "Viet" ? "RIÊNG BIỆT" : "METHODOLOGIES"}
             <br />
-            {lang == "Viet" ? "CHO DOANH NGHIỆP" : "FOR BUSINESS"}
+            {lang == "Viet" ? "CHO DOANH NGHIỆP" : "FOR ENTERPRISES"}
           </div>
 
           {/* List description */}
@@ -441,28 +650,29 @@ const HotTopicsSection = () => {
               <li>
                 {lang == "Viet"
                   ? "Thiết kế chương trình đạo tạo và truyền tải cụ thể trên case study thực tế của doanh nghiệp."
-                  : "Thiết kế chương trình đạo tạo và truyền tải cụ thể trên case study thực tế của doanh nghiệp."}
+                  : "Design customized training programs delivered through real business case studies."}
               </li>
 
               <li>
                 {lang == "Viet"
                   ? "Đưa ra tư duy giải quyết vấn đề về bài toán nhân sự, mô hình vận hành,...."
-                  : "Đưa ra tư duy giải quyết vấn đề về bài toán nhân sự, mô hình vận hành,...."}
+                  : "Provide problem-solving frameworks for HR challenges, operating models, and more."}
               </li>
             </ul>
           </div>
 
           <Button
             unstyled
-            label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "CONSULTANCY"}
-            className="mt-10 mb-10 lg:mb-0 bg-linear-to-r from-[#C0821F] to-[#1F2833] text-white text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 py-2 cursor-pointer hover:scale-110 transition-all duration-300"
+            label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "DIRECT CONSULTATION"}
+            className="mt-10 mb-10 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-3xl border-2 border-white w-fit px-10 py-2 cursor-pointer hover:scale-110 transition-all duration-300"
+            onClick={openContactForm}
           />
         </div>
 
         {/* Khối chứa ảnh */}
-        <div className={`lg:w-2/7 flex items-end justify-end lg:h-full`}>
+        <div className={`lg:w-3/7 flex items-end justify-end lg:h-full`}>
           <Image
-            src={TuongVyImage}
+            src={TuongVyImage3}
             alt="Tuong Vy"
             className="w-4/5 lg:w-full h-auto object-contain block align-bottom"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
@@ -478,16 +688,17 @@ const HotTopicsSection = () => {
             font-extrabold lg:font-bold text-[clamp(30px,17.13px+3.274vw,80px)]
             `}
           >
-            {lang == "Viet" ? "ĐỒNG HÀNH" : "ĐỒNG HÀNH"}
+            {lang == "Viet" ? "ĐỒNG HÀNH" : "SUPPORTING"}
             <br />
-            {lang == "Viet" ? "CÙNG SỰ" : "CÙNG SỰ"} <br />
-            {lang == "Viet" ? "PHÁT TRIỂN TRẺ" : "PHÁT TRIỂN TRẺ"}
+            {lang == "Viet" ? "CÙNG SỰ" : "YOUNG TALENT"} <br />
+            {lang == "Viet" ? "PHÁT TRIỂN TRẺ" : "DEVELOPMENT"}
           </div>
           <Button
             unstyled
-            label={lang == "Viet" ? "LIÊN HỆ NGAY" : "LIÊN HỆ NGAY"}
+            label={lang == "Viet" ? "LIÊN HỆ NGAY" : "CONTACT NOW"}
             className={`mt-5 lg:mt-5 lg:mb-0 bg-linear-to-r from-[#12F4FE] from-69% to-[#FFFFFF] text-black text-[clamp(18px,12.336px+1.441vw,40px)] font-bold 
             rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300`}
+            onClick={openContactForm}
           />
         </div>
         <div className={`w-full lg:w-1/2 mt-10 lg:mt-0`}>

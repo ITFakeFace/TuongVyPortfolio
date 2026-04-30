@@ -47,8 +47,8 @@ const NavigationBar = () => {
       key: "method",
       id: "method",
       value: {
-        Eng: "Digital Bank Solution",
-        Viet: "Giải pháp Digital Bank",
+        Eng: "Training & Consultation",
+        Viet: "Đào tạo và tư vấn",
       },
     },
     {
@@ -100,30 +100,32 @@ const NavigationBar = () => {
         </button>
 
         {/* LOGO */}
-        <div className="text-white text-2xl md:text-3xl font-bold tracking-tighter shrink-0">
+        <div className="text-white text-2xl md:text-2xl font-bold tracking-tighter shrink-0 ml-20">
           {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
         </div>
 
-        {/* MENU: Ẩn khi bị Overflow */}
         <nav
           ref={navRef}
-          className={`${isOverflowing ? "invisible absolute" : "hidden md:flex"} items-center gap-8 mx-4 flex-nowrap`}
+          className={`${isOverflowing ? "invisible absolute" : "hidden md:flex"} flex-grow items-center justify-center gap-8 mx-4 flex-nowrap`}
         >
           {menuItems.map((item) => (
             <a
               key={item.key}
               href={`#${item.id}`}
-              className="text-white font-bold uppercase whitespace-nowrap hover:opacity-70"
+              className="text-white font-semibold uppercase whitespace-nowrap hover:opacity-70"
             >
               {item.value[lang]}
             </a>
           ))}
         </nav>
 
+        {/* THÊM MỘT DIV TRỐNG NẾU MENU BỊ ẨN ĐỂ ĐẨY NÚT LANGUAGE SANG PHẢI */}
+        {isOverflowing && <div className="flex-grow"></div>}
+
         {/* SELECT BUTTON BÊN PHẢI */}
         <div className="shrink-0">
           <div
-            className={`bg-black rounded-full p-[2px] flex items-center overflow-hidden border border-gray-800`}
+            className={`bg-black rounded-full ml-2 lg:ml-0 p-[2px] flex items-center overflow-hidden border border-gray-800`}
           >
             <SelectButton
               value={lang}
@@ -153,8 +155,8 @@ const NavigationBar = () => {
             </button>
           }
           header={
-            <div className="font-bold text-2xl text-[#b5bc4f] tracking-widest pl-4">
-              HELENA LE.
+            <div className="font-bold text-2xl text-[#7c9abe] tracking-widest pl-4">
+              {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
             </div>
           }
         >
@@ -165,7 +167,7 @@ const NavigationBar = () => {
                 key={item.key}
                 href={`#${item.id}`}
                 onClick={() => setVisible(false)}
-                className="group relative overflow-hidden bg-[#4c5409]/80 hover:bg-[#b5bc4f] text-white font-bold uppercase text-xl py-2 px-4 transition-all duration-300 shadow-md"
+                className="group relative overflow-hidden bg-[#152a4b]/80 hover:bg-[#7c9abe] text-white font-semibold uppercase text-xl py-2 px-4 transition-all duration-300 shadow-md"
                 style={{}}
               >
                 <div className="relative z-10 flex justify-between items-center">

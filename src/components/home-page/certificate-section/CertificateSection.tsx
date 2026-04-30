@@ -8,6 +8,9 @@ import CertificateImage2 from "@/assets/images/assets/CertificateSection-Certifi
 import CertificateImage3 from "@/assets/images/assets/CertificateSection-CertificateImage-3.png";
 import CertificateImage4 from "@/assets/images/assets/CertificateSection-CertificateImage-4.png";
 import CertificateImage5 from "@/assets/images/assets/CertificateSection-CertificateImage-5.png";
+import CertificateImage6 from "@/assets/images/assets/CertificateSection-CertificateImage-6.png";
+import CertificateImage7 from "@/assets/images/assets/CertificateSection-CertificateImage-7.png";
+import CertificateImage8 from "@/assets/images/assets/CertificateSection-CertificateImage-8.png";
 import PartnerCertificateImage1 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-1.png";
 import PartnerCertificateImage2 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-2.png";
 import PartnerCertificateImage3 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-3.png";
@@ -38,7 +41,7 @@ const CertificateSection = () => {
     CertificateImage2,
     CertificateImage3,
     CertificateImage4,
-    CertificateImage5,
+    CertificateImage6,
   ];
   const certificateCarouselItems: CertificateCarouselProps[] = [
     {
@@ -54,7 +57,41 @@ const CertificateSection = () => {
           title: "PROFESSIONAL COACHING FOUNDATION",
           author: "Mind Coach Global",
           description:
-            "Nhà khai vấn chuyên nghiệp trải qua 03 tháng đào tạo với các phiên Coach 1 - 1 giúp khai phóng và phát triển nhiều lãnh đạo tiềm năng.",
+            "Certified Professional Coach after a 3-month program, delivering 1-on-1 coaching sessions to unlock and develop high-potential leaders.",
+        },
+      },
+    },
+    {
+      image: CertificateImage7,
+      text: {
+        Viet: {
+          title: "MIDDLE MANAGER MINDSET",
+          author: "Top Pion",
+          description:
+            "Thay đổi tư duy quản lý bằng mô hình NLP, phá bỏ giới hạn bản thân, chuyển đổi từ thực thi sang lãnh đạo chiến lược và quản trị sự thay đổi.",
+        },
+        Eng: {
+          title: "MIDDLE MANAGER MINDSET",
+          author: "Top Pion",
+          description:
+            "Transforming management mindset through NLP models—breaking personal limitations and transitioning from execution to strategic leadership and change management.",
+        },
+      },
+    },
+    {
+      image: CertificateImage8,
+      text: {
+        Viet: {
+          title: "LEADERSHIP EXCELLENCE",
+          author: "New Mind Academy",
+          description:
+            "trang bị tư duy lãnh đạo đột phá, kỹ năng truyền cảm hứng, xây dựng đội ngũ và quản trị thay đổi, giúp nhà quản lý tối ưu hiệu suất và khẳng định vị thế dẫn dắt.",
+        },
+        Eng: {
+          title: "LEADERSHIP EXCELLENCE",
+          author: "New Mind Academy",
+          description:
+            "Equipping breakthrough leadership thinking, inspirational communication, team building, and change management—enabling leaders to optimize performance and strengthen their leadership presence.",
         },
       },
     },
@@ -79,14 +116,14 @@ const CertificateSection = () => {
           <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[clamp(15px,11.136px+0.982vw,30px)]">
             <div className=" leading-relaxed">
               <span className="font-semibold text-left">
-                {lang == "Viet" ? "Đơn vị cấp bằng: " : "Đơn vị cấp bằng: "}
+                {lang == "Viet" ? "Đơn vị cấp bằng: " : "Issued by: "}
               </span>
               {item.text[lang].author}
             </div>
 
             <div className="leading-relaxed text-left">
               <span className="font-semibold ">
-                {lang == "Viet" ? "Nội dung: " : "Nội dung: "}
+                {lang == "Viet" ? "Nội dung: " : "Content: "}
               </span>
               {item.text[lang].description}
             </div>
@@ -130,14 +167,14 @@ const CertificateSection = () => {
         className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
         text-transparent text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold text-center ${styles.title} text-white `}
       >
-        {lang === "Viet" ? "THÀNH TỰU SỰ NGHIỆP" : "THÀNH TỰU SỰ NGHIỆP"}
+        {lang === "Viet" ? "THÀNH TỰU SỰ NGHIỆP" : " CAREER ACHIEVEMENTS"}
       </div>
       <div
         className={`text-white text-center px-4 w-8/10 lg:w-11/20 mx-auto text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
       >
         {lang === "Viet"
           ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành"
-          : "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành"}
+          : "Every journey carries meaningful value, recognized by partner organizations and businesses."}
       </div>
       <div className={`mt-10`}>
         <FilmStrip
@@ -149,19 +186,19 @@ const CertificateSection = () => {
       </div>
       <div
         className={`mt-10 lg:mt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
-        text-transparent lg:mx-40 flex flex-col items-center justify-center lg:items-start`}
+          text-transparent lg:mx-40 flex flex-col items-center justify-center lg:items-start`}
       >
         <div
           className={`text-center lg:text-left text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
         >
-          {lang === "Viet" ? "GIẤY CHỨNG NHẬN" : "CERTIFICATES"}
+          {lang === "Viet" ? "GIẤY CHỨNG NHẬN" : "CERTIFICATION"}
         </div>
         <div
           className={`w-8/10 lg:w-full text-white text-center lg:text-left px-4 text-[clamp(10px,6.136px+0.982vw,25px)] font-medium mx-0 lg:mx-auto`}
         >
           {lang === "Viet"
             ? "Minh chứng cụ thể từ các đơn vị đào tạo cho những kỹ năng “làm nghề” quan trọng"
-            : "Minh chứng cụ thể từ các đơn vị đào tạo cho những kỹ năng “làm nghề” quan trọng"}
+            : "Tangible validation from training institutions for essential professional competencies."}
         </div>
       </div>
       <div
@@ -184,13 +221,20 @@ const CertificateSection = () => {
       </div>
       <div
         className={`mt-10 lg:mt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
-        text-transparent lg:mx-40 flex flex-col items-center justify-center`}
+          text-transparent lg:mx-40 flex flex-col items-center justify-center`}
       >
         <div
           //   className={`text-center text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
           className={`text-center text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
         >
-          {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CHỨNG NHẬN ĐỒNG HÀNH"}
+          {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CERTIFIED PARTNERSHIPS"}
+        </div>
+        <div
+          className={`text-white text-center px-4 w-8/10 lg:w-20/20 mx-auto text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
+        >
+          {lang === "Viet"
+            ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành."
+            : "Every journey is marked by meaningful value, recognized and validated by partner organizations and businesses"}
         </div>
       </div>
       <div

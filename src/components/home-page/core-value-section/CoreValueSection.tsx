@@ -3,6 +3,7 @@ import React from "react";
 import TuongVyUpward from "@/assets/images/assets/CoreValueSection-UpwardTuongVy-1.png";
 import TuongVyDownward from "@/assets/images/assets/CoreValueSection-DownwardTuongVy-1.png";
 import FinancialProfessor from "@/assets/images/assets/CoreValueSection-FinancialProfessor-1.png";
+import FinancialProfessorEng from "@/assets/images/assets/CoreValueSection-FinancialProfessorEng-1.png";
 import BottomBg from "@/assets/images/assets/CoreValueSection-BottomBg-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
@@ -93,29 +94,29 @@ const CoreValueSection = () => {
             className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-transparent
                 text-[clamp(20px,4.565px+3.929vw,80px)] font-bold lg:mt-20`}
           >
-            {lang == "Viet" ? "07 NĂNG LỰC" : "07 NĂNG LỰC "} <br />
-            {lang == "Viet" ? "CỐT LÕI" : "CỐT LÕI"}
+            {lang == "Viet" ? "07 NĂNG LỰC" : "07 CORE "} <br />
+            {lang == "Viet" ? "CỐT LÕI" : "COMPETENCIES"}
           </div>
           <div className={`flex flex-col mt-10 lg:mt-30 mb-50 gap-10`}>
             {renderLeftItem(
               "01",
               lang == "Viet"
                 ? "Lãnh đạo trong xây dựng đội ngũ và phát triển năng lực"
-                : "Lãnh đạo trong xây dựng đội ngũ và phát triển năng lực",
+                : "Leadership in Team Building and Capability Development",
               "lg:w-8/10",
             )}
             {renderLeftItem(
               "02",
               lang == "Viet"
                 ? "Quản trị nhân sự dựa trên KPI"
-                : "Quản trị nhân sự dựa trên KPI",
+                : "KPI-Driven Human Resource Management",
               "lg:w-4/5",
             )}
             {renderLeftItem(
               "03",
               lang == "Viet"
                 ? "Xây dựng nền tảng và vận hành doanh nghiệp"
-                : "Xây dựng nền tảng và vận hành doanh nghiệp",
+                : "Business Foundation Development and Operations",
               "lg:w-3/5",
             )}
           </div>
@@ -128,28 +129,28 @@ const CoreValueSection = () => {
               "04",
               lang == "Viet"
                 ? "Chuyển đổi số và hợp tác fintech"
-                : "Chuyển đổi số và hợp tác fintech",
+                : "Digital Transformation and Fintech Collaboration",
               "lg:w-9/10",
             )}
             {renderRightItem(
               "05",
               lang == "Viet"
                 ? "Phân tích chiến lược và để ra giải pháp"
-                : "Phân tích chiến lược và để ra giải pháp",
+                : "Strategic Analysis and Solution Design",
               "lg:w-6/10",
             )}
             {renderRightItem(
               "06",
               lang == "Viet"
                 ? "Tối ưu chi phí và giám sát tài chính"
-                : "Tối ưu chi phí và giám sát tài chính",
+                : "Cost Optimization & Financial Oversight",
               "lg:w-1/2",
             )}
             {renderRightItem(
               "07",
               lang == "Viet"
                 ? "Quản trị quan hệ đối tác và Đàm phán"
-                : "Quản trị quan hệ đối tác và Đàm phán",
+                : "Partnership Management and Negotiation",
               "lg:w-1/2",
             )}
           </div>
@@ -167,7 +168,7 @@ const CoreValueSection = () => {
           className={`absolute w-8/19 h-auto object-cover top-[-2%] lg:top-[-7%] left-[50%] -translate-x-1/2 z-30`}
         />
         <Image
-          src={FinancialProfessor}
+          src={lang == "Viet" ? FinancialProfessor : FinancialProfessorEng}
           alt="Financial Professor"
           className={`w-8/10 h-auto object-cover my-10 lg:my-40 z-50`}
         />

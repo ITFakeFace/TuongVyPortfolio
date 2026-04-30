@@ -23,7 +23,7 @@ $transition-speed: 0.2s;
     font-weight: 600;
     box-shadow: none !important;
     transition: all $transition-speed ease;
-    min-width: 60px;
+    min-width: 40px;
 
     &:not(:global(.p-highlight)):hover {
       color: white !important;

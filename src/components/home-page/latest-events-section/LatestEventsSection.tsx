@@ -63,13 +63,13 @@ const LatestEventsSection = () => {
         <div
           className={`
           /* Mobile: size nhỏ hơn, padding ít hơn */
-          text-[clamp(18px,4vw,24px)] lg:text-[clamp(30px,10px+1.2vw,35px)] 
+          text-[clamp(18px,4vw,24px)] lg:text-[clamp(25px,-15px+2.604vw,35px)]
           min-h-[80px] lg:min-h-[clamp(105px,73px+2.083vw,113px)]
           px-6 lg:px-12 
           
           leading-tight lg:leading-normal 
-          text-balance
-          text-center
+          #text-balance
+          text-left
           line-clamp-2
           font-bold py-2 w-full border-b-[1px] lg:border-b-2 border-white
           justify-center items-center flex
@@ -87,7 +87,7 @@ const LatestEventsSection = () => {
           w-full 
           
           /* Mobile: text nhỏ hơn, Desktop: 25px */
-          text-[10px] lg:text-[25px] 
+          text-[12px] lg:text-[clamp(24px,-8px+2.083vw,32px)]
           gap-2 lg:gap-0
           ${styles.infoBox}
         `}
@@ -95,7 +95,7 @@ const LatestEventsSection = () => {
           <span className="font-medium lg:font-normal text-center">
             {guest}
           </span>
-          <span className="opacity-80 lg:opacity-100">{time}</span>
+          <span className="font-medium lg:font-normal text-center">{time}</span>
           <span className="font-medium lg:font-normal text-center">
             {destination}
           </span>
@@ -133,7 +133,7 @@ const LatestEventsSection = () => {
             unstyled
             className="px-10 lg:px-15 py-3 bg-linear-to-r from-[#12F4FE] to-white text-black font-bold text-[24px] lg:text-[32px] border-white border-2 rounded-4xl hover:cursor-pointer transition-transform hover:scale-105"
           >
-            {lang === "Viet" ? "TÌM HIỂU THÊM" : "LEARN MORE"}
+            {lang === "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
           </Button>
         </div>
       </div>
@@ -189,7 +189,7 @@ const LatestEventsSection = () => {
         <div>
           <div className="flex flex-row justify-center text-[35px] lg:text-[65px] gap-2 lg:gap-4 font-bold">
             <span className={`text-white`}>
-              {lang == "Viet" ? "SỰ KIỆN" : "LATESTS"}
+              {lang == "Viet" ? "SỰ KIỆN" : "LATEST"}
             </span>
             <span className={`text-[#12F4FE]`}>
               {lang == "Viet" ? "MỚI NHẤT" : "EVENTS"}
