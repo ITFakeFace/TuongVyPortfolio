@@ -42,16 +42,16 @@ const ContactDialog = ({
   const onSubmit = async (data: FormData) => {
     // Thay ID_CUA_FORM bằng ID thực tế từ URL Google Form của bạn
     const GOOGLE_FORM_ACTION_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfmo5ltgc36spU8z7HRoMHrPZ-etpMX0slsPDCnqWk9mukYdQ/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLScWswC69IVdnmv_-_aMz2pJyHyKyhjQt6b4rIB-dGT20baQ1w/formResponse";
 
     const formData = new URLSearchParams();
 
     // Ánh xạ entry ID bạn đã cung cấp vào các trường tương ứng
-    formData.append("entry.1821532733", data.fullName);
-    formData.append("entry.1776177637", data.email);
-    formData.append("entry.2027532706", data.phone);
-    formData.append("entry.314417235", data.organization);
-    formData.append("entry.692501202", data.content);
+    formData.append("entry.1794306111", data.fullName);
+    formData.append("entry.646979108", data.email);
+    formData.append("entry.26443356", data.phone);
+    formData.append("entry.1282483705", data.organization);
+    formData.append("entry.1624064614", data.content);
 
     try {
       await fetch(GOOGLE_FORM_ACTION_URL, {
@@ -165,7 +165,7 @@ const ContactDialog = ({
         pt={{
           root: {
             className:
-              "!w-[95vw] md:!w-[600px] !rounded-[3rem] !overflow-hidden !border-none !shadow-2xl",
+              "!w-[95vw] md:!w-[600px] !rounded-2xl !overflow-hidden !border-none !shadow-2xl",
           },
           header: {
             className:
