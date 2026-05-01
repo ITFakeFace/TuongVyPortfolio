@@ -95,7 +95,7 @@ const CareerPathSection = () => {
           className={`bg-linear-to-r  from-[#0957C9] via-[#0745A0] via-40% to-[#042B63] bg-clip-text text-transparent leading-tight text-[clamp(30px,19.7px+2.62vw,70px)] font-extrabold mx-auto`}
         >
           {lang == "Viet"
-            ? "KIẾN TẠO BỨC PHÁ SỰ NGHIỆP"
+            ? "KIẾN TẠO BỨT PHÁ SỰ NGHIỆP"
             : "CREATE YOUR CAREER BREAKTHROUGH"}
         </div>
         <div className={`text-sm lg:text-2xl mt-4`}>
@@ -140,7 +140,7 @@ const CareerPathSection = () => {
             </div>
           </div>
           <div
-            className={`bg-[#056CFF] -ml-5 flex justify-center items-center text-center w-5/15 lg:w-2/6 aspect-square rounded-full`}
+            className={`bg-[#056CFF] -ml-2 flex justify-center items-center text-center w-5/15 lg:w-2/6 aspect-square rounded-full`}
           >
             <div className={`w-3/4`}>
               {lang == "Viet"

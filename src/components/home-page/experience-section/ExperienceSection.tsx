@@ -455,7 +455,7 @@ const ExperienceSection = () => {
         <a href="#covid-period">
           <Button
             unstyled
-            className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-2xl lg:rounded-4xl border-2 border-white text-[16px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
+            className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-2xl lg:rounded-4xl border-1 border-white text-[16px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
             label={
               lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
             }

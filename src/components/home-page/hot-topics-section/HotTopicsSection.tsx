@@ -295,7 +295,7 @@ const HotTopicsSection = () => {
           partner: "UEH – ISB Talent School",
           role: "Judge",
           description:
-            "Analyzing workforce transformation, the role of digital platforms (Gig Economy), and the impact of AI on the economy.",
+            "Analyzing workforce transformation, the role of digital platforms (GIG Economy), and the impact of AI on the economy.",
         },
         Viet: {
           title:
@@ -303,7 +303,7 @@ const HotTopicsSection = () => {
           partner: "Trường Tài Năng UEH - ISB",
           role: "Ban giám khảo",
           description:
-            "Phân tích sự chuyển dịch của lực lượng lao động, vai trò của nền tảng số (Gig Economy) và tác động của AI đến nền kinh tế.",
+            "Phân tích sự chuyển dịch của lực lượng lao động, vai trò của nền tảng số (GIG Economy) và tác động của AI đến nền kinh tế.",
         },
       },
     },
@@ -343,7 +343,7 @@ const HotTopicsSection = () => {
           partner: "Trường Đại học Sài Gòn",
           role: "Ban giám khảo",
           description:
-            "Sân chơi học thuật giúp sinh viênhoàn thiện kỹ năng và bản lĩnh trước khi bước vào thị trường lao động thực tế.",
+            "Sân chơi học thuật giúp sinh viên hoàn thiện kỹ năng và bản lĩnh trước khi bước vào thị trường lao động thực tế.",
         },
       },
     },
@@ -361,7 +361,7 @@ const HotTopicsSection = () => {
         <Image
           src={item.image}
           alt="Partner Image"
-          className="w-full h-auto object-cover object-center md:scale-100"
+          className="w-full h-auto object-cover object-center scale-110 md:scale-100"
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
@@ -646,7 +646,7 @@ const HotTopicsSection = () => {
 
             {/* List description */}
             <div
-              className={`flex items-center justify-center text-left text-[12px] lg:text-[clamp(16px,14.456px+0.393vw,22px)] lg:w-5/7 mt-5 lg:mt-10`}
+              className={`flex items-center justify-center text-left text-[14px] lg:text-[clamp(16px,14.456px+0.393vw,22px)] leading-relaxed lg:leading-normal lg:w-5/7 mt-5 lg:mt-10`}
             >
               <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
                 <li>
@@ -677,7 +677,7 @@ const HotTopicsSection = () => {
           <Image
             src={TuongVyImage3}
             alt="Tuong Vy"
-            className="w-8/10 lg:w-full h-auto object-contain block align-bottom lg:translate-x-[-10%] translate-x-[0%] mx-auto lg:mx-0"
+            className="w-7/10 lg:w-full h-auto object-contain block align-bottom lg:translate-x-[-10%] translate-x-[0%] mx-auto lg:mx-0"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
           />
         </div>

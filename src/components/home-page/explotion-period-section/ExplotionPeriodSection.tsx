@@ -393,7 +393,7 @@ const ExplotionPeriodSection = () => {
             className={`text-center lg:text-left lg:pl-[10%] w-fit shrink-0 mx-auto lg:mx-0`}
           >
             <div
-              className={`text-white italic font-medium text-[16px] lg:text-[clamp(25px,22.427px+0.655vw,35px)] leading-loose`}
+              className={`text-white italic font-medium text-[16px] lg:text-[clamp(25px,22.427px+0.655vw,35px)] leading-loose mb-2 lg:mb-0`}
             >
               {lang == "Viet" ? "TƯ VẤN CHIẾN LƯỢC" : "STRATEGIC CONSULTING"}
             </div>
@@ -413,8 +413,8 @@ const ExplotionPeriodSection = () => {
               unstyled
               className={`
               relative overflow-hidden
-              px-10 lg:px-35 py-4 mt-5 lg:mt-15
-              rounded-3xl lg:rounded-4xl border-2 border-[#C8971F]
+              px-10 lg:px-35 py-2 lg:py-4 mt-5 lg:mt-15
+              rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
               bg-[linear-gradient(90deg,#1F2833,#042B63)]
               text-[20px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
               animate-heartbeat
@@ -439,7 +439,7 @@ const ExplotionPeriodSection = () => {
             <Image
               src={MethodEnd}
               alt="Method End"
-              className={`w-full h-full object-cover rounded-4xl lg:rounded-none`}
+              className={`w-full h-full object-cover rounded-2xl lg:rounded-none`}
             />
           </div>
         </div>

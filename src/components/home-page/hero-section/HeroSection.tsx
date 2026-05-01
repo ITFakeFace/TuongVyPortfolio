@@ -307,10 +307,10 @@ const HeroSection = () => {
           href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
           target="_blank"
           rel="noopener noreferrer"
-          className={`absolute top-0 right-5`}
+          className={`absolute top-5 right-5`}
         >
           <div
-            className={`bg-[radial-gradient(circle,#5268D2_35%,#7DB3E2_100%)] rounded-xl aspect-square p-3 lg:p-5 flex items-center`}
+            className={`bg-[radial-gradient(circle,#5268D2_35%,#7DB3E2_100%)] rounded-lg aspect-square p-3 lg:p-5 flex items-center`}
           >
             <FontAwesomeIcon
               icon={faLinkedinIn}
@@ -322,11 +322,11 @@ const HeroSection = () => {
         <Image
           src={TuongVyMobileImage}
           alt="Tuong Vy Image"
-          className={`w-9/10 h-auto mx-auto mt-17`}
+          className={`w-10/10 h-auto mx-auto mt-17`}
         />
 
         {/* Khối Tên */}
-        <div className="text-center w-full space-y-2 -mt-2 mb-5">
+        <div className="text-center w-full space-y-2 -mt-5 mb-5">
           <div className="bg-linear-to-br from-[#ffffff] to-[#a8abab] bg-clip-text text-transparent font-bold leading-[1.1]">
             <div className="text-[clamp(2.5rem,10vw,3.5rem)]">
               {lang == "Viet" ? "TRẦN THANH NỮ" : "TRAN THANH NU"}

@@ -225,12 +225,12 @@ const CertificateSection = () => {
       >
         <div
           //   className={`text-center text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
-          className={`text-center text-[22px] lg:text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
+          className={`text-center text-[24px] lg:text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
         >
           {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CERTIFIED PARTNERSHIPS"}
         </div>
         <div
-          className={`text-white text-center px-4 w-8/10 lg:w-20/20 mx-auto text-[8px] lg:text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
+          className={`text-white text-center px-4 w-9/10 lg:w-20/20 mx-auto text-[10px] lg:text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
         >
           {lang === "Viet"
             ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành."
@@ -238,7 +238,7 @@ const CertificateSection = () => {
         </div>
       </div>
       <div
-        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-5 lg:mt-10 pb-20 lg:pb-30`}
+        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-10 lg:mt-10 pb-20 lg:pb-30`}
       >
         <div className="">
           <Carousel
