@@ -109,11 +109,11 @@ const CertificateSection = () => {
         </div>
 
         <div className="w-full md:w-3/7 md:flex-1 flex flex-col items-start gap-3 md:gap-10 my-auto">
-          <div className="w-full font-bold leading-snug text-[clamp(25px,18.565px+1.637vw,50px)] text-center lg:text-left">
+          <div className="w-full font-bold leading-snug text-[16px] lg:text-[clamp(25px,18.565px+1.637vw,50px)] text-center lg:text-left">
             {item.text[lang].title}
           </div>
 
-          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[clamp(15px,11.136px+0.982vw,30px)]">
+          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[14px] lg:text-[clamp(15px,11.136px+0.982vw,30px)]">
             <div className=" leading-relaxed">
               <span className="font-semibold text-left">
                 {lang == "Viet" ? "Đơn vị cấp bằng: " : "Issued by: "}
@@ -165,7 +165,7 @@ const CertificateSection = () => {
     >
       <div
         className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
-        text-transparent text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold text-center ${styles.title} text-white `}
+        text-transparent text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold text-center ${styles.title}`}
       >
         {lang === "Viet" ? "THÀNH TỰU SỰ NGHIỆP" : " CAREER ACHIEVEMENTS"}
       </div>
@@ -176,12 +176,12 @@ const CertificateSection = () => {
           ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành"
           : "Every journey carries meaningful value, recognized by partner organizations and businesses."}
       </div>
-      <div className={`mt-10`}>
+      <div className={`mt-10 lg:mt-20 lg:mb-30`}>
         <FilmStrip
           items={certificates}
           gap={`gap-5 lg:gap-10`}
-          className={``}
-          itemClassName={`w-[400px] lg:w-[700px] h-auto rounded-2xl lg:rounded-4xl object-cover my-auto`}
+          className={`overflow-visible overflow-x-clip!`}
+          itemClassName={`w-[400px] lg:w-[700px] h-auto rounded-2xl lg:rounded-4xl object-cover my-auto hover:scale-130 hover:z-30 transition-transform duration-300`}
         />
       </div>
       <div
@@ -202,7 +202,7 @@ const CertificateSection = () => {
         </div>
       </div>
       <div
-        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-5 lg:mt-10`}
+        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-5 lg:mt-15`}
       >
         <div className="">
           <Carousel
@@ -220,17 +220,17 @@ const CertificateSection = () => {
         </div>
       </div>
       <div
-        className={`mt-10 lg:mt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
+        className={`mt-10 lg:mt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
           text-transparent lg:mx-40 flex flex-col items-center justify-center`}
       >
         <div
           //   className={`text-center text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
-          className={`text-center text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
+          className={`text-center text-[22px] lg:text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
         >
           {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CERTIFIED PARTNERSHIPS"}
         </div>
         <div
-          className={`text-white text-center px-4 w-8/10 lg:w-20/20 mx-auto text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
+          className={`text-white text-center px-4 w-8/10 lg:w-20/20 mx-auto text-[8px] lg:text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
         >
           {lang === "Viet"
             ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành."

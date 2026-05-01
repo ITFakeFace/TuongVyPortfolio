@@ -6,7 +6,7 @@ import { cl } from "@/utils/cn";
 import CountUp from "react-countup";
 import styles from "./HeroSection.module.scss";
 import TuongVyImage from "@/assets/images/assets/HeroSection-TuongVyImage-3.png";
-import TuongVyMobileImage from "@/assets/images/assets/HeroSection-TuongVyMobileImage-2.png";
+import TuongVyMobileImage from "@/assets/images/assets/HeroSection-TuongVyMobileImage-3.png";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,13 +16,13 @@ import { useContactForm } from "@/context/ContactContext";
 const HeroSection = () => {
   const { lang } = useLanguage();
   const { openContactForm } = useContactForm();
-  const stat1Time: number = 6;
+  const stat1Time: number = 3;
   const stat2Time: number = 3;
   const renderHeroDesktop = () => {
     return (
       <div className={``}>
-        <div className={`flex lg:flex-col mt-10 gap-5`}>
-          <div className={`flex lg:flex-row gap-5 lg:ml-20`}>
+        <div className={`flex lg:flex-col mt-[-20px] gap-5`}>
+          <div className={`flex lg:flex-row gap-0 lg:ml-20 translate-y-5`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const HeroSection = () => {
               className={`w-1/4`}
             >
               <div
-                className={`w-full h-full lg:pb-5 text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
+                className={`scale-70 w-full h-full lg:pb-5 text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
               >
                 <div
                   className={cl(
@@ -52,13 +52,13 @@ const HeroSection = () => {
                   >
                     {({ countUpRef }) => (
                       <span
-                        className={`leading-[0.5] inline-block tracking-tighter`}
+                        className={`leading-tight inline-block tracking-tighter`}
                         ref={countUpRef}
                       />
                     )}
                   </CountUp>
                   <div className={`leading-none`}>
-                    <span className="text-[clamp(1rem,0.5rem+3vw,5rem)] ml-2 font-bold opacity-90">
+                    <span className="text-[clamp(1rem,0.485rem+2.095vw,3rem)] ml-5 font-bold opacity-90">
                       {lang === "Viet" ? " năm" : " years"}
                     </span>
                   </div>
@@ -71,8 +71,10 @@ const HeroSection = () => {
                     : "Senior Executive in Consumer"}
                   <br />
                   {lang == "Viet"
-                    ? "Tài chính tiêu dùng và Ngân hàng số"
+                    ? "Tài chính tiêu dùng"
                     : "Finance and Digital Banking"}
+                  <br />
+                  {lang == "Viet" ? "và Ngân hàng số" : ""}
                 </div>
               </div>
             </motion.div>
@@ -83,7 +85,7 @@ const HeroSection = () => {
               className={`w-1/4`}
             >
               <div
-                className={`w-full h-full text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
+                className={`-translate-x-[18%] scale-70 w-full h-full text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-43% to-[#0957C9]/0 to-89%`}
               >
                 <div
                   className={cl(
@@ -105,13 +107,13 @@ const HeroSection = () => {
                   >
                     {({ countUpRef }) => (
                       <span
-                        className={`leading-[0.5] inline-block tracking-tighter`}
+                        className={`leading-tight inline-block tracking-tighter`}
                         ref={countUpRef}
                       />
                     )}
                   </CountUp>
                   <div className={`leading-none`}>
-                    <span className="text-[clamp(1rem,0.5rem+3vw,5rem)] ml-2 font-bold opacity-90">
+                    <span className="text-[clamp(1rem,0.485rem+2.095vw,3rem)] ml-5 font-bold opacity-90">
                       {lang === "Viet" ? " năm" : " years"}
                     </span>
                   </div>
@@ -138,10 +140,10 @@ const HeroSection = () => {
           <div
             className={`bg-linear-to-bl from-[#ffffff] to-[#acafaf] bg-clip-text text-transparent font-bold ml-20 leading-tight`}
           >
-            <div className={`text-[clamp(5.5rem,0rem+6vw,7rem)]`}>
+            <div className={`text-[clamp(5rem,-1rem+6.25vw,6.5rem)]`}>
               {lang == "Viet" ? "TRẦN THANH NỮ" : "TRAN THANH NU"}
             </div>
-            <div className={`text-[clamp(5.5rem,0rem+6vw,7rem)]`}>
+            <div className={`text-[clamp(5rem,-1rem+6.25vw,6.5rem)]`}>
               {lang == "Viet" ? "TƯỜNG VY" : "TUONG VY"}
             </div>
           </div>
@@ -150,18 +152,24 @@ const HeroSection = () => {
           >
             VICTORY TRẦN
           </div> */}
-          <div className={`lg:ml-20 flex lg:flex-row lg:gap-[3vw] z-20`}>
+          <div className={`lg:ml-20 flex lg:flex-row lg:gap-[3vw] z-20 mt-5`}>
             <Button
               unstyled
-              className={`bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] border-2 border-white rounded-2xl py-4 px-15 text-white text-[clamp(30px,0.625rem+1.3vw,35px)] font-bold hover:cursor-pointer`}
+              className={`bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] border-2 border-white rounded-4xl py-4 px-15 
+                text-white text-[25px] font-bold hover:cursor-pointer
+                animate-heartbeat`}
               label={lang == "Viet" ? "KHÁM PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
               onClick={openContactForm}
             />
-            <Button
-              unstyled
-              className={`border-2 border-white rounded-2xl py-4 px-15 text-white text-[clamp(30px,0.625rem+1.3vw,35px)] font-bold hover:cursor-pointer`}
-              label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
-            />
+            <a href="#latest-events">
+              <Button
+                unstyled
+                className={`border-2 border-white rounded-4xl py-4 px-15 text-white text-[25px] font-bold hover:cursor-pointer`}
+                label={
+                  lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"
+                }
+              />
+            </a>
           </div>
         </div>
         <div>
@@ -180,51 +188,57 @@ const HeroSection = () => {
       <div className={`flex flex-col items-center pr-1 relative`}>
         {/* Khối Thống kê (18+ năm / 5+ năm) */}
         <div
-          className={`absolute top-0 left-[5%] flex flex-col justify-center gap-5 w-3/8 mb-8`}
+          className={`absolute top-0 left-[2%] flex flex-col justify-center gap-0 w-7/16 mb-8`}
         >
           {/* Item 1 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className={`w-full`}
+            className={`w-full scale-80`}
           >
             <div
               className={`w-full h-full text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-54% to-transparent`}
             >
               <div
                 className={cl(
-                  "flex items-baseline justify-center leading-none font-bold",
-                  "text-[clamp(3rem,1.5rem+6vw,8rem)]", // Hạ max từ 15rem xuống 8rem để trông tinh tế hơn
+                  "flex items-center justify-center leading-none font-bold", // Thêm flex và items-center
+                  "text-[clamp(3rem,2rem+7vw,12rem)]",
                 )}
               >
-                <span className="text-[0.4em] self-center mr-1">+</span>
+                {/* Dấu + sẽ tự động căn giữa theo chiều dọc của số 18 */}
+                <span className="text-[clamp(2rem,1.5rem+5vw,8rem)] leading-[0.3]">
+                  +
+                </span>
                 <CountUp
                   end={18}
                   duration={stat1Time}
                   scrollSpyDelay={1000}
                   enableScrollSpy
                   scrollSpyOnce
+                  className={``}
                 >
                   {({ countUpRef }) => (
                     <span
-                      className="tracking-tight leading-tight"
+                      className={`leading-tight inline-block tracking-tighter`}
                       ref={countUpRef}
                     />
                   )}
                 </CountUp>
-                <span className="text-[clamp(0.7rem,0.4rem+1vw,1rem)] ml-1 font-bold uppercase">
-                  {lang === "Viet" ? " năm" : " years"}
-                </span>
+                <div className={`leading-none`}>
+                  <span className="text-[clamp(1rem,0.485rem+2.095vw,3rem)] ml-2 font-bold opacity-90">
+                    {lang === "Viet" ? " năm" : " years"}
+                  </span>
+                </div>
               </div>
 
               {/* CHỮ MÔ TẢ: Nhỏ và mảnh hơn */}
-              <div className="text-[clamp(5px,0.4rem+0.5vw,7px)] text-black text-balance font-normal opacity-80 tracking-wider uppercase mt-[-5px]">
+              <div className="text-[8px] text-black text-balance font-semibold opacity-100 tracking-wider uppercase mt-[-5px]">
                 {lang == "Viet"
                   ? "Quản lý cấp cao ngành"
                   : "Senior Executive in Consumer"}
                 <br />
-                <span className="font-normal opacity-100">
+                <span className="font-semibold opacity-100">
                   {lang == "Viet"
                     ? "Tài chính tiêu dùng và Ngân hàng số"
                     : "Finance and Digital Banking"}
@@ -238,43 +252,49 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: stat1Time - 1 }}
-            className={`w-full`}
+            className={`w-full scale-80`}
           >
             <div
               className={`w-full h-full text-center text-white bg-linear-to-b from-[#042B63] via-[#0957C9]/50 via-54% to-transparent`}
             >
               <div
                 className={cl(
-                  "flex items-baseline justify-center leading-none font-bold",
-                  "text-[clamp(3rem,1.5rem+6vw,8rem)]",
+                  "flex items-center justify-center leading-none font-bold", // Thêm flex và items-center
+                  "text-[clamp(3rem,2rem+7vw,12rem)]",
                 )}
               >
-                <span className="text-[0.4em] self-center mr-1">+</span>
+                {/* Dấu + sẽ tự động căn giữa theo chiều dọc của số 18 */}
+                <span className="text-[clamp(2rem,1.5rem+5vw,8rem)] leading-[0.3]">
+                  +
+                </span>
                 <CountUp
                   end={5}
                   duration={stat2Time}
                   scrollSpyDelay={(stat1Time - 0.5) * 1000}
                   enableScrollSpy
                   scrollSpyOnce
+                  className={``}
                 >
                   {({ countUpRef }) => (
                     <span
-                      className="tracking-tight leading-tight"
+                      className={`leading-tight inline-block tracking-tighter`}
                       ref={countUpRef}
                     />
                   )}
                 </CountUp>
-                <span className="text-[clamp(0.7rem,0.4rem+1vw,1rem)] ml-1 font-bold opacity uppercase">
-                  {lang === "Viet" ? " năm" : " years"}
-                </span>
+                <div className={`leading-none`}>
+                  <span className="text-[clamp(1rem,0.485rem+2.095vw,3rem)] ml-2 font-bold opacity-90">
+                    {lang === "Viet" ? " năm" : " years"}
+                  </span>
+                </div>
               </div>
 
-              <div className="text-[clamp(5px,0.4rem+0.5vw,7px)] text-balance opacity-80 font-normal tracking-wider uppercase mt-[-5px] text-black">
+              <div className="text-[8px] text-balance opacity-100 font-semibold tracking-wider uppercase mt-[-5px] text-black">
                 {lang == "Viet"
                   ? "Chuyên gia trong mảng"
                   : "Expert in Digital Bankings"}
                 <br />
-                <span className="font-normal opacity-100">
+                <span className="font-semibold opacity-100">
                   {lang == "Viet"
                     ? "Digital Bank và ứng dụng AI"
                     : "and AI Applications"}
@@ -283,16 +303,30 @@ const HeroSection = () => {
             </div>
           </motion.div>
         </div>
-
+        <a
+          href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`absolute top-0 right-5`}
+        >
+          <div
+            className={`bg-[radial-gradient(circle,#5268D2_35%,#7DB3E2_100%)] rounded-xl aspect-square p-3 lg:p-5 flex items-center`}
+          >
+            <FontAwesomeIcon
+              icon={faLinkedinIn}
+              className="text-lg lg:text-8xl! text-white hover:text-[#d9d9d9] transition-colors! "
+            />
+          </div>
+        </a>
         {/* Hình ảnh nhân vật */}
         <Image
           src={TuongVyMobileImage}
           alt="Tuong Vy Image"
-          className={`w-8/10 h-auto ml-auto mb-6`}
+          className={`w-9/10 h-auto mx-auto mt-17`}
         />
 
         {/* Khối Tên */}
-        <div className="text-center w-full space-y-2 mb-5">
+        <div className="text-center w-full space-y-2 -mt-2 mb-5">
           <div className="bg-linear-to-br from-[#ffffff] to-[#a8abab] bg-clip-text text-transparent font-bold leading-[1.1]">
             <div className="text-[clamp(2.5rem,10vw,3.5rem)]">
               {lang == "Viet" ? "TRẦN THANH NỮ" : "TRAN THANH NU"}
@@ -307,18 +341,20 @@ const HeroSection = () => {
         </div>
 
         {/* Nút bấm (Xếp dọc trên Mobile) */}
-        <div className="flex flex-col gap-3 w-full px-4 pb-10 lg:pb-0">
+        <div className="flex flex-col gap-3 w-full px-4 pb-10 lg:pb-0 justify-center items-center">
           <Button
             unstyled
-            className="bg-linear-to-r from-[#07367B] to-[#1F2833] border border-white rounded-xl py-3 px-10 text-white text-md font-bold uppercase tracking-wider w-fit mx-auto"
+            className="bg-linear-to-r from-[#07367B] to-[#1F2833] border border-white rounded-2xl py-3 px-10 text-white text-md font-bold uppercase tracking-wider w-fit mx-auto animate-heartbeat"
             label={lang == "Viet" ? "KHÁM PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
             onClick={openContactForm}
           />
-          <Button
-            unstyled
-            className="border border-white rounded-xl py-3 px-8 text-white text-sm font-bold uppercase tracking-wider w-fit mx-auto"
-            label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
-          />
+          <a href="#latest-events">
+            <Button
+              unstyled
+              className="border border-white rounded-2xl py-3 px-8 text-white text-sm font-bold uppercase tracking-wider w-fit mx-auto"
+              label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
+            />
+          </a>
         </div>
       </div>
     );

@@ -1,8 +1,13 @@
 $bg-image-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-1.png");
+$bg-image-mobile-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-mobile-1.png");
 
 .container {
   background-image: $bg-image-url;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
+  @media (max-width: 767px) {
+    background-image: $bg-image-mobile-url;
+    background-position: top center;
+  }
 }

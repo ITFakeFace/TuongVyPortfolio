@@ -37,7 +37,7 @@ const NavigationBar = () => {
     },
     {
       key: "events",
-      id: "events",
+      id: "latest-events",
       value: {
         Eng: "Events",
         Viet: "Sự kiện",
@@ -89,7 +89,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <header className="absolute top-0 w-full bg-[#0957C9]/20 shadow-lg py-2 px-5 z-100">
+    <header className="absolute top-0 w-full bg-[#0957C9]/5 shadow-lg py-2 px-5 z-100">
       <div className="w-full flex items-center justify-between mx-auto">
         {/* NÚT BARS: Hiện khi (isOverflowing) HOẶC (màn hình nhỏ < md) */}
         <button
@@ -100,7 +100,7 @@ const NavigationBar = () => {
         </button>
 
         {/* LOGO */}
-        <div className="text-white text-2xl md:text-2xl font-bold tracking-tighter shrink-0 ml-20">
+        <div className="text-white text-xl lg:text-2xl md:text-2xl font-bold tracking-tighter shrink-0 lg:ml-20">
           {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
         </div>
 
@@ -144,8 +144,8 @@ const NavigationBar = () => {
           onHide={() => setVisible(false)}
           // 2/ Nền đen mờ ảo (backdrop-blur)
           style={{
-            background: "rgba(0, 0, 0, 0.3)",
-            backdropFilter: "blur(10px)",
+            background: "rgba(0, 0, 0, 0)",
+            backdropFilter: "blur(5px)",
             width: "350px",
           }}
           // Tùy chỉnh icon đóng (X) sang màu trắng
@@ -155,7 +155,7 @@ const NavigationBar = () => {
             </button>
           }
           header={
-            <div className="font-bold text-2xl text-[#7c9abe] tracking-widest pl-4">
+            <div className="font-bold text-2xl text-white tracking-widest pl-4 font-montserrat">
               {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
             </div>
           }

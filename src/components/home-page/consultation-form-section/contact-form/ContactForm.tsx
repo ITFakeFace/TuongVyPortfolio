@@ -59,7 +59,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
       type: "text",
       keyfilter: "num",
       // Thu nhỏ width trên mobile
-      mobileSMWidth: "w-1/2",
+      // mobileSMWidth: "w-1/2",
       mobileMDWidth: "md:w-full",
     },
     {
@@ -186,7 +186,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className=" bg-linear-to-br from-[#FFFFFF]/30 to-[#0957C9]/30 border-white border-3 text-[#011B40] w-full p-5 md:p-12! rounded-[3rem] shadow-2xl flex flex-col gap-2">
           <h2
-            className={`${lang == "Viet" ? "text-3xl" : "text-[1.3rem]"} md:text-3xl font-bold text-center mb-3 uppercase tracking-wider bg-clip-text bg-linear-to-r from-[#011B40] to-[#0346A6]`}
+            className={`${lang == "Viet" ? "text-md" : "text-[1.3rem]"} md:text-4xl font-bold text-center mb-3 uppercase tracking-wider bg-clip-text bg-linear-to-r from-[#011B40] to-[#0346A6]`}
           >
             {lang === "Viet"
               ? "Đặt lịch trao đổi trực tiếp"
@@ -208,11 +208,11 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
                 render={({ field: controllerField, fieldState }) => (
                   <>
                     <label
-                      className={`${fieldState.error ? "text-red-400!" : "text-[#011B40]"} font-bold mb-2 ml-1 text-lg! md:text-base`}
+                      className={`${fieldState.error ? "text-red-400!" : "text-[#011B40]"} font-bold mb-2 ml-1 text-sm md:text-2xl!`}
                     >
                       {field.label}{" "}
                       {field.required && (
-                        <span className="text-red-400!">*</span>
+                        <span className="text-red-400! text-sm!">*</span>
                       )}
                     </label>
                     <div className="flex flex-col">
@@ -222,7 +222,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
                           rows={3}
                           autoResize
                           className={classNames(
-                            "p-3 rounded-3xl! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5 ",
+                            "p-1 lg:p-3 rounded-2xl lg:rounded-3xl! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5 ",
                             { "!border-red-400 bg-red-50": fieldState.error },
                           )}
                         />
@@ -231,13 +231,13 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
                           {...controllerField}
                           keyfilter={field.keyfilter}
                           className={classNames(
-                            "p-2 rounded-full! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5",
+                            "p-1 lg:p-2 rounded-2xl lg:rounded-full! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5",
                             { "!border-red-500 bg-red-50": fieldState.error },
                           )}
                         />
                       )}
                       {fieldState.error && (
-                        <span className="p-error block mt-1 ml-2 text-red-400! text-lg! font-medium animate-fade-in">
+                        <span className="p-error block mt-1 ml-2 text-red-400! text-sm lg:text-lg! font-medium animate-fade-in">
                           {fieldState.error.message}
                         </span>
                       )}
@@ -247,21 +247,21 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
               />
             </div>
           ))}
-          <div className="mt-4 flex justify-center md:hidden w-1/2">
+          <div className="mt-4 flex justify-start md:hidden w-1/2">
             <Button
               type="submit"
               unstyled
-              label={lang === "Viet" ? "Gửi đi >>" : "SUBMIT"}
-              className={`${lang == "Viet" ? "px-8!" : "px-3!"} md:px-16! py-3! text-lg md:text-4xl border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
+              label={lang === "Viet" ? "Gửi đi" : "SUBMIT"}
+              className={`${lang == "Viet" ? "px-8!" : "px-3!"} md:px-16! py-2 lg:py-3! text-lg md:text-4xl border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
             />
           </div>
         </div>
 
-        <div className="mt-4 md:flex justify-center hidden">
+        <div className="mt-15 md:flex justify-center hidden mb-15">
           <Button
             type="submit"
             unstyled
-            label={lang === "Viet" ? "Gửi đi >>" : "SUBMIT"}
+            label={lang === "Viet" ? "Gửi đi" : "SUBMIT"}
             className={`px-16! py-3! md:text-4xl! ${lang == "Viet" ? "text-2xl!" : "text-lg!"} border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
           />
         </div>

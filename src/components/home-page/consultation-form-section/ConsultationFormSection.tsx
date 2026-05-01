@@ -14,7 +14,7 @@ const ConsultationFormSection = () => {
       <div className={`lg:mb-15 mb-5`}>
         <div>
           <div
-            className={`flex flex-row justify-center text-[35px] lg:text-[80px] gap-2 lg:gap-4 font-bold 
+            className={`flex flex-row justify-center text-[30px] lg:text-[80px] gap-2 lg:gap-4 font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
                 `}
           >
@@ -65,8 +65,8 @@ const ConsultationFormSection = () => {
         alt="Logo List"
         className="w-9/10 lg:w-4/5 h-auto object-contain mx-auto mb-10 lg:mb-0"
       />
-      <div className={`flex flex-col lg:flex-row relative`}>
-        <div className={`w-full lg:w-1/2`}>
+      <div className={`flex flex-col lg:flex-row relative mt-20 pb-20 lg:pb-0`}>
+        <div className={`w-full lg:w-1/2 flex`}>
           <Image
             src={TuongVyImage}
             alt="Tuong Vy"
@@ -74,7 +74,7 @@ const ConsultationFormSection = () => {
           />
         </div>
         <div className={`w-full lg:w-1/2 lg:pt-10`}>
-          <div className={`w-8/10 mr-auto`}>
+          <div className={`w-9/10 lg:w-8/10 mx-auto lg:mr-auto`}>
             <ContactForm lang={lang} />
           </div>
         </div>

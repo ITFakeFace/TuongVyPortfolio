@@ -15,6 +15,8 @@ import ExpImage4 from "@/assets/images/assets/ExperienceSection-ExpImage-4.png";
 import ExpImage5 from "@/assets/images/assets/ExperienceSection-ExpImage-5.png";
 import ExpImage6 from "@/assets/images/assets/ExperienceSection-ExpImage-6.png";
 import ExpImage8 from "@/assets/images/assets/ExperienceSection-ExpImage-8.png";
+import ExpImage9 from "@/assets/images/assets/ExperienceSection-ExpImage-9.png";
+import ExpImage10 from "@/assets/images/assets/ExperienceSection-ExpImage-10.png";
 import ExpImageTemp from "@/assets/images/assets/ExperienceSection-ExpTempImage-1.png";
 import FintechLogo from "@/assets/images/assets/ExperienceSection-FintechFarmLogo-1.png";
 import LiobankLogo from "@/assets/images/assets/ExperienceSection-LiobankLogo-1.png";
@@ -76,20 +78,20 @@ const ExperienceSection = () => {
     ChoTotLogo,
     VDSLogo,
     VNPayLogo,
-    ZaloPayLogo,
     DiDongVietLogo,
     WinCommerceLogo,
     VMGLogo,
     MFastLogo,
+    ZaloPayLogo,
   ];
   const FilmList2 = [
-    SharpLogo,
-    NestleLogo,
-    SmartFinanceLogo,
+    TrustingSocialLogo,
+    AhamoveLogo,
     NTVLogo,
     KimberlyClarkLogo,
-    AhamoveLogo,
-    TrustingSocialLogo,
+    NestleLogo,
+    SharpLogo,
+    SmartFinanceLogo,
   ];
   const ImageBox = ({
     src,
@@ -146,7 +148,7 @@ const ExperienceSection = () => {
             {title}
           </div>
           <div
-            className={`mt-4 px-5 py-3 text-white ${childrenClassName} 
+            className={`mt-4 px-5 py-3 lg:pb-5 text-white ${childrenClassName} 
               bg-[linear-gradient(45deg,rgba(31,40,51,0.2)_0%,rgba(255,255,255,0.2)_29%,rgba(255,255,255,0.2)_70%,rgba(31,40,51,0.2)_100%)] 
               border-2 border-[#C8E5FC] rounded-3xl w-fit
             `}
@@ -159,9 +161,9 @@ const ExperienceSection = () => {
   };
 
   return (
-    <div className={`${styles.container} -mt-1`}>
+    <div id="experience" className={`${styles.container} -mt-1`}>
       <div
-        className={`text-transparent bg-clip-text font-bold text-6xl bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] text-center py-10`}
+        className={`text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text font-bold text-2xl lg:text-5xl  text-center py-15 lg:py-20`}
       >
         {lang == "Viet" ? "KINH NGHIỆM THỰC CHIẾN" : "PRACTICAL EXPERIENCE"}
       </div>
@@ -171,17 +173,19 @@ const ExperienceSection = () => {
           title={lang == "Viet" ? "2025 - Hiện tại" : "2025 - now"}
           direction="left"
         >
-          <div className={`grid grid-cols-1 lg:grid-cols-2 gap-2`}>
+          <div
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-2 pb-3 lg:pb-0`}
+          >
             <div className={``}>
               <div
-                className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+                className={`font-bold text-[16px] lg:text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
               >
                 {lang == "Viet" ? "Phó Giám Đốc" : "Deputy Director"}
               </div>
-              <div className={`text-center text-[15px] lg:text-[20px]`}>
+              <div className={`text-center text-[12px] lg:text-[20px]`}>
                 Fintech Farm UK
               </div>
-              <div className={`mt-3 text-center text-[15px] lg:text-[20px]`}>
+              <div className={`mt-3 text-center text-[12px] lg:text-[20px]`}>
                 {lang == "Viet"
                   ? "Đối tác chiến lược với OCB Bank - Đơn vị sở hữu nền tảng Liobank by OCB"
                   : "Strategic Partner with OCB Bank – Owner of the Liobank by OCB platform"}
@@ -189,25 +193,24 @@ const ExperienceSection = () => {
               <Image
                 src={FintechLogo}
                 alt="Fintech Farm Logo"
-                className={`object-cover w-1/3 h-auto mt-3 mx-auto my-auto`}
+                className={`object-cover w-1/2 lg:w-1/3 h-auto mt-3 mx-auto my-auto`}
               />
             </div>
             <div className={`h-full flex flex-col justify-between`}>
               <div>
                 <div
-                  className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+                  className={`font-bold text-[16px] lg:text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
                 >
                   {lang == "Viet" ? "Cố vấn Cấp cao" : "Senior Advisor"}
                 </div>
-                <div className={`text-center text-[15px] lg:text-[20px]`}>
-                  {" "}
+                <div className={`text-center text-[12px] lg:text-[20px]`}>
                   Liobank by OCB
                 </div>
               </div>
               <Image
                 src={LiobankLogo}
                 alt="Liobank Logo"
-                className={`object-cover w-2/3 h-auto mx-auto`}
+                className={`object-cover w-3/4 lg:w-2/3 h-auto mx-auto mt-5 lg:mt-0`}
               />
             </div>
           </div>
@@ -219,20 +222,20 @@ const ExperienceSection = () => {
         >
           <div className={``}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[16px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
               {lang == "Viet" ? "Nhà sáng lập" : "Founder"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
               FIA Investment and Development LLC
             </div>
             <div
-              className={`bg-white rounded-2xl w-1/2 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+              className={`bg-white rounded-2xl w-3/4 lg:w-1/2 mx-auto mt-3 p-2 text-center text-[12px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={FIALogo}
                 alt="FIA Logo"
-                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+                className={`object-cover w-full h-auto flex items-center justify-center px-3 lg:px-0`}
               />
             </div>
           </div>
@@ -244,20 +247,20 @@ const ExperienceSection = () => {
         >
           <div className={``}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[14px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
               {lang == "Viet" ? "Phó Tổng Giám Đốc" : "Deputy CEO"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
               CAKE by VPBank
             </div>
             <div
-              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+              className={`bg-white rounded-2xl w-3/4 lg:w-1/2 mx-auto mt-3 px-3 lg:px-7 py-2 lg:py-5 text-center text-[12px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={CakeLogo}
                 alt="SHB Finance Logo"
-                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+                className={`object-cover w-full h-auto flex items-center justify-center`}
               />
             </div>
           </div>
@@ -266,77 +269,78 @@ const ExperienceSection = () => {
           image={ExpImage4}
           title={"2022 - 2023"}
           direction="right"
+          childrenClassName="lg:w-[650px]!"
         >
-          <div className={``}>
+          <div className={`pb-2 lg:pb-0`}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center text-balance leading-normal`}
+              className={`font-bold text-[16px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center text-balance leading-normal `}
             >
               {lang == "Viet"
                 ? "Thành viên Ban Điều hành Câu lạc bộ Tài chính Tiêu dùng "
                 : "Executive Committee Member, Consumer Finance Club"}
             </div>
-            <div className={`text-center text-[12px] lg:text-[20px]`}>
+            <div className={`text-center text-[8px] lg:text-[20px]`}>
               {lang == "Viet"
                 ? "Hiệp hội Ngân hàng Việt Nam"
                 : "Vietnam Banks Association"}
             </div>
             <div
-              className={`bg-white rounded-2xl w-1/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+              className={`bg-white rounded-2xl w-3/4 lg:w-1/2 mx-auto mt-3 px-3 lg:px-7 p-3 lg:py-5 text-center text-[15px] lg:text-[20px]`}
             >
               <Image
                 src={VNBALogo}
                 alt="VNBALogo"
-                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+                className={`object-cover w-full h-auto flex items-center justify-center`}
               />
             </div>
           </div>
         </ExperienceItem>
         <ExperienceItem
-          image={ExpImage3}
+          image={ExpImage10}
           title={"7/2018 - 10/2023"}
           direction="left"
         >
           <div className={``}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[14px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
               {lang == "Viet" ? "Phó Tổng Giám Đốc" : "Deputy CEO"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
               SHB Finance (SHBFC)
             </div>
             <div
-              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+              className={`bg-white rounded-lg lg:rounded-2xl w-3/4 lg:w-2/3 mx-auto mt-3 py-3 lg:py-5 text-center text-[12px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={SHBFinanceLogo}
                 alt="SHB Finance Logo"
-                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+                className={`object-cover w-4/5 mx-auto h-auto flex items-center justify-center`}
               />
             </div>
           </div>
         </ExperienceItem>
         <ExperienceItem
-          image={ExpImage4}
+          image={ExpImage9}
           title={"6/2016 - 6/2018"}
           direction="right"
         >
           <div className={``}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[16px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
               {lang == "Viet" ? "Phó Giám Đốc" : "Deputy Director"}
             </div>
-            <div className={`text-center text-[12px] lg:text-[20px]`}>
+            <div className={`text-center text-[10px] lg:text-[20px]`}>
               OCB Community Banking Division (COM-B)
             </div>
             <div
-              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 p-2 text-center text-[15px] lg:text-[20px]`}
+              className={`bg-white rounded-2xl w-3/4 lg:w-2/3 mx-auto mt-3 py-5 text-center text-[15px] lg:text-[20px]`}
             >
               <Image
                 src={ComBLogo}
                 alt="COM-B Logo"
-                className={`object-cover w-full h-auto mt-3 flex items-center justify-center`}
+                className={`object-cover w-3/4 mx-auto h-auto flex items-center justify-center`}
               />
             </div>
           </div>
@@ -346,22 +350,22 @@ const ExperienceSection = () => {
           title={"8/2015 - 6/2016"}
           direction="left"
         >
-          <div className={``}>
+          <div className={`lg:py-5`}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[14px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal `}
             >
               {lang == "Viet" ? "Quản lý Kinh doanh" : "Business Manager"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
               FE CREDIT
             </div>
             <div
-              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 px-5 py-3 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
+              className={`bg-white rounded-lg lg:rounded-2xl lg:w-2/3 mx-auto mt-3 lg:px-5 py-3 lg:py-6 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={FECreditLogo}
                 alt="FE CREDIT Logo"
-                className={`object-cover w-full h-auto mt-3 mx-auto my-auto`}
+                className={`object-cover w-3/4 mx-auto h-auto flex items-center justify-center`}
               />
             </div>
           </div>
@@ -371,27 +375,27 @@ const ExperienceSection = () => {
           title={lang == "Viet" ? "1/2011 - 8/2015" : "1/2011 - 8/2015"}
           direction="right"
         >
-          <div className={``}>
+          <div className={`lg:mx-15`}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[16px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal `}
             >
               {lang == "Viet" ? "Trưởng phòng Kinh doanh" : "Head of Sales"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[10px] lg:text-[20px]`}>
               PRUDENTIAL VIETNAM FINANCIAL
             </div>
-            <div className={`mt-3 text-center text-[15px] lg:text-[20px]`}>
+            <div className={`mt-3 text-center text-[12px] lg:text-[20px]`}>
               {lang == "Viet"
                 ? "Kênh Bán hàng Chi nhánh, Quận 1"
                 : "Branch Sales Channel, District 1"}
             </div>
             <div
-              className={`bg-white rounded-2xl w-1/2 mx-auto mt-3 px-5 py-1 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
+              className={`bg-white rounded-2xl w-2/3 lg:w-1/2 mx-auto mt-3 px-2 lg:px-0 py-5 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={PrudentialLogo}
                 alt="Prudential Logo"
-                className={`object-cover w-full h-auto mt-3 mx-auto my-auto`}
+                className={`object-cover w-4/5 mx-auto h-auto flex items-center justify-center`}
               />
             </div>
           </div>
@@ -403,27 +407,27 @@ const ExperienceSection = () => {
         >
           <div className={``}>
             <div
-              className={`font-bold text-[clamp(20px,0.625rem+1.3vw,25px)] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
+              className={`font-bold text-[16px] lg:text-[clamp(30px,0.625rem+1.3vw,35px)] text-center leading-normal`}
             >
               {lang == "Viet" ? "Trưởng nhóm Kinh doanh" : "Sales Team Leader"}
             </div>
-            <div className={`text-center text-[15px] lg:text-[20px]`}>
+            <div className={`text-center text-[12px] lg:text-[20px]`}>
               ANZ Bank
             </div>
             <div
-              className={`bg-white rounded-2xl w-2/3 mx-auto mt-3 px-5 py-3 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
+              className={`bg-white rounded-2xl w-4/5 mx-auto mt-3 px-3 lg:px-5 py-3 lg:py-3 text-center text-[15px] lg:text-[20px] flex items-center justify-center`}
             >
               <Image
                 src={ANZLogo}
                 alt="ANZ Bank Logo"
-                className={`object-cover w-full h-auto mt-3 mx-auto my-auto`}
+                className={`object-cover w-4/5 h-auto mx-auto my-auto`}
               />
             </div>
           </div>
         </ExperienceItem>
       </div>
       <div
-        className={`my-10 text-[45px] text-center text-transparent font-bold bg-clip-text bg-linear-to-r from-white from-57% to-[#999999]`}
+        className={`my-10 mt-30 text-[25px] lg:text-[45px] text-center text-transparent font-bold bg-clip-text bg-linear-to-r from-white from-57% to-[#999999]`}
       >
         {lang == "Viet"
           ? "PHÁT TRIỂN TRÊN HÀNH TRÌNH MỞ RỘNG HỢP TÁC"
@@ -448,47 +452,49 @@ const ExperienceSection = () => {
       <div
         className={`flex flex-col-reverse lg:flex-row w-full lg:w-9/10 mx-auto items-center justify-center mt-10 lg:mt-0 pb-10 lg:pb-0`}
       >
-        <Button
-          unstyled
-          className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-4xl border-2 border-white text-[24px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
-          label={
-            lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
-          }
-          onClick={openContactForm}
-        />
+        <a href="#covid-period">
+          <Button
+            unstyled
+            className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-2xl lg:rounded-4xl border-2 border-white text-[16px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
+            label={
+              lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
+            }
+          />
+        </a>
         <Image
           src={TuongVyImage}
           alt="Tuong Vy"
-          className={`object-cover w-8/10 lg:w-7/20 h-auto lg:mt-10 rounded-2xl lg:rounded-4xl z-20 relative`}
+          className={`object-cover w-5/10 lg:w-7/21 h-auto lg:mt-10 rounded-2xl lg:rounded-4xl z-20 relative`}
         />
         <div className={`flex flex-col justify-center lg:gap-10`}>
           <blockquote
             className={`relative pt-10 pl-16 text-white p-8 rounded-lg
             before:content-['“'] 
-            before:absolute before:top-0 before:left-0 
-            before:text-[150px] before:font-serif before:leading-none 
+            before:absolute before:top-0 before:left-8 lg:before:-left-5 
+            before:text-[50px] lg:before:text-[150px] before:font-bold before:italic before:font-serif before:leading-none 
             before:text-white/80 /* Độ mờ của quote */
-            before:transform before:-translate-x-2 before:-translate-y-4
+            before:transform before:translate-x-0 lg:before:-translate-x-2 before:translate-y-2 lg:before:-translate-y-4
           `}
           >
-            <p className="font-bold text-xl lg:text-[clamp(45px,-15px+3.9vw,60px)] leading-tight relative z-10 lg:w-auto text-center">
+            <p className="font-semibold text-md lg:text-[clamp(40px,2.6042vw,50px)] italic leading-tight relative z-10 lg:w-auto text-center">
               {lang == "Viet"
-                ? "Chọn ra khỏi vùng an toàn"
+                ? "Chỉ khi bước ra khỏi vùng an toàn,"
                 : "Step Out of Your Comfort"}
               <br />
               {lang == "Viet"
-                ? "để tạo sự tăng trưởng"
+                ? "tăng trưởng mới thực sự bắt đầu"
                 : "Zone to Drive Growth"}
             </p>
           </blockquote>
-          <Button
-            unstyled
-            className={`hidden lg:block mt-5 px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-4xl border-2 border-white text-[24px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
-            label={
-              lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
-            }
-            onClick={openContactForm}
-          />
+          <a href="#covid-period">
+            <Button
+              unstyled
+              className={`hidden lg:block mt-5 px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-4xl border-2 border-white text-[24px] lg:text-[28px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
+              label={
+                lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
+              }
+            />
+          </a>
         </div>
       </div>
     </div>

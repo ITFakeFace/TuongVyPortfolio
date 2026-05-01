@@ -32,10 +32,49 @@
     }
   }
 
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1.1); /* Lên 110% */
+    }
+    50% {
+      transform: scale(0.9); /* Xuống 90% */
+    }
+  }
+
+  @keyframes light-heartbeat {
+    0%,
+    100% {
+      transform: scale(1.02); /* Lên 110% */
+    }
+    50% {
+      transform: scale(0.98); /* Xuống 90% */
+    }
+  }
+
+  @keyframes sequence-heartbeat {
+    0%,
+    33.3% {
+      transform: scale(0.9);
+    } /* Nghỉ */
+    16.6% {
+      transform: scale(1.1);
+    } /* Đập ở giữa quãng của nó */
+    33.4%,
+    100% {
+      transform: scale(0.9);
+    } /* Nghỉ phần còn lại */
+  }
+
   /* Chỉ định nghĩa keyframes, timing và loop. 
      Bỏ qua duration hoặc để mặc định rất nhỏ để dễ nhận biết khi bị ghi đè */
   --animate-scroll-left: marquee linear infinite;
   --animate-scroll-right: marquee linear infinite reverse;
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  --animate-light-heartbeat: light-heartbeat 2s ease-in-out infinite;
+  --animate-sequence-heartbeat-1: sequence-heartbeat 6s infinite;
+  --animate-sequence-heartbeat-2: sequence-heartbeat 6s infinite 2s;
+  --animate-sequence-heartbeat-3: sequence-heartbeat 6s infinite 4s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,10 +83,13 @@
     --foreground: #ededed;
   }
 }
+html {
+  scroll-behavior: smooth !important;
+}
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-montserrat) !important;
 }

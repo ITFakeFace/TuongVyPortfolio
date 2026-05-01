@@ -16,17 +16,18 @@ const IntroductionSection = () => {
   );
   return (
     <div
-      className={`${styles.container} w-full relative flex flex-col-reverse lg:flex-row lg:px-20`}
+      id="about"
+      className={`${styles.container} w-full relative flex flex-col-reverse lg:flex-row lg:pr-20`}
     >
-      <div className={`w-full lg:w-7/20 z-20`}>
+      <div className={`w-full lg:w-6/20 z-20`}>
         <Image
           src={TuongVyImage}
           alt="Tuong Vy"
-          className="object-cover w-5/10 ml-10 lg:ml-2 lg:w-full h-auto"
+          className="object-cover w-5/10 ml-0 lg:ml-0 lg:w-full h-auto"
         />
       </div>
       <div
-        className={`pt-10 px-5 text-center lg:text-right w-full lg:w-13/20 lg:px-0 lg:pt-10`}
+        className={`pt-10 px-5 text-center lg:text-right w-full lg:w-13/20 lg:pl-5 lg:px-0 lg:pt-10`}
       >
         <div
           className={`text-white font-medium text-md lg:text-[3rem] leading-none italic`}
@@ -41,7 +42,7 @@ const IntroductionSection = () => {
             : "I AM TRAN THANH NU TUONG VY"}
         </div>
         <div
-          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(17px,-7px+1.5625vw,23px)] text-white font-normal mt-5`}
+          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(14px,-10px+1.5625vw,20px)] text-white font-normal mt-5`}
         >
           <div>
             <span className={`font-bold`}>
@@ -80,7 +81,7 @@ const IntroductionSection = () => {
       <FilmStrip
         items={[FilmImage1, FilmImage2, FilmImage3]}
         gap={"gap-[30px]"}
-        className={`mt-10 absolute left-0 bottom-[10%] lg:bottom-[5%]`}
+        className={`mt-10 absolute left-0 bottom-[15%] lg:bottom-[5%]`}
         itemClassName="w-[60vw] lg:w-[25vw] h-auto"
         imageClassName="object-contain"
       />

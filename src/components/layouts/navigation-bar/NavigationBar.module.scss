@@ -44,6 +44,10 @@ $transition-speed: 0.2s;
       box-shadow: none !important;
       outline: none !important;
     }
+    @media (max-width: 767px) {
+      font-size: 8px !important;
+      padding: 4px 10px !important;
+    }
   }
 }
 

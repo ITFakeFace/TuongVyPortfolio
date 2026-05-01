@@ -49,24 +49,24 @@ const HotTopicsSection = () => {
     className: string,
   ) => {
     return (
-      <div className={cl(`w-full flex flex-row gap-8`, className)}>
+      <div className={cl(`w-full flex flex-row gap-3 lg:gap-8`, className)}>
         <div
           className={`
                 w-[clamp(50px,44.846px+1.311vw,70px)]
                 h-[clamp(50px,44.846px+1.311vw,70px)]
-                text-[clamp(30px,26.136px+0.982vw,45px)]
-                aspect-square shrink-0 p-7 lg:p-10
-                rounded-full border-4 border-white 
+                text-[20px] lg:text-[clamp(30px,26.136px+0.982vw,45px)]
+                aspect-square shrink-0 p-4 lg:p-10
+                rounded-full border-3 lg:border-4 border-white 
                 text-white font-bold flex items-center justify-center 
             `}
         >
           {index}
         </div>
         <div className="">
-          <h3 className="text-[clamp(20px,16.907px+0.786vw,32px)] font-bold text-white">
+          <h3 className="text-[16px] lg:text-[clamp(20px,16.907px+0.786vw,32px)] font-bold text-white">
             {title}
           </h3>
-          <p className="text-[clamp(14px,11.423px+0.655vw,24px)] text-white mt-2">
+          <p className="text-[12px] lg:text-[clamp(14px,11.423px+0.655vw,24px)] text-white mt-2">
             {description}
           </p>
         </div>
@@ -202,27 +202,27 @@ const HotTopicsSection = () => {
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
-        <div className="w-full flex-1 flex flex-col justify-between gap-6">
-          <div className="w-full text-xl md:text-4xl font-bold leading-snug text-center line-clamp-2 min-h-[2.4em] md:min-h-[2.8em] flex items-center justify-center">
+        <div className="w-full flex-1 flex flex-col justify-between gap-2 lg:gap-6">
+          <div className="w-full text-[20px] md:text-4xl font-bold leading-snug text-center line-clamp-2 min-h-[2.4em] md:min-h-[2.8em] flex items-center justify-center">
             {item.text[lang].title}
           </div>
           {/* Khối chữ */}
-          <div className="flex flex-col gap-4 text-justify">
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+          <div className="flex flex-col gap-1 lg:gap-4 text-justify">
+            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
               <span className="font-semibold">
                 {lang == "Viet" ? "Đơn vị hợp tác: " : "Partner: "}
               </span>
               {item.text[lang].partner}
             </div>
 
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
               <span className="font-semibold">
                 {lang == "Viet" ? "Vai trò hợp tác: " : "Role: "}
               </span>
               {item.text[lang].role}
             </div>
 
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
+            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
               <span className="font-semibold">
                 {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
               </span>
@@ -231,11 +231,12 @@ const HotTopicsSection = () => {
           </div>
 
           {/* Khối nút: Luôn nằm dưới cùng nhờ justify-between của div cha hoặc mt-auto */}
-          <div className="lg:pt-6 w-full flex justify-center mt-auto">
+          <div className="pt-5 lg:pt-6 w-full flex justify-center mt-auto">
             <Button
               unstyled
               label={lang == "Viet" ? "LIÊN HỆ ĐÀO TẠO" : "TRAINING INQUIRIES"}
-              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[14px] lg:text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300"
+              onClick={openContactForm}
             />
           </div>
         </div>
@@ -352,7 +353,7 @@ const HotTopicsSection = () => {
     return (
       <div
         className={`flex flex-col w-[90%] gap-4 text-[#011B40] items-center mx-auto min-h-full 
-        bg-[linear-gradient(to_right,rgba(153,153,153,0.3)_0%,rgba(255,255,255,0.3)_32%,rgba(255,255,255,0.3)_72%,rgba(153,153,153,0.3)_100%)]
+        bg-[linear-gradient(to_bottom,rgba(153,153,153,0.5)_0%,rgba(255,255,255,0.5)_10%,rgba(255,255,255,0.5)_84%,rgba(153,153,153,0.5)_100%)]
             px-5 py-5 lg:px-10 lg:py-10 border-4 border-[#C9FDFF] rounded-2xl lg:rounded-4xl
         `}
       >
@@ -364,27 +365,27 @@ const HotTopicsSection = () => {
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
-        <div className="w-full flex flex-col justify-between gap-6">
-          <div className="w-full text-xl md:text-4xl font-bold leading-snug text-center">
+        <div className="w-full flex flex-col justify-between gap-4 lg:gap-4">
+          <div className="w-full text-xl md:text-3xl font-bold leading-snug text-center lg:mt-5">
             {item.text[lang].title}
           </div>
           {/* Khối chữ */}
-          <div className="flex flex-col gap-4 text-justify">
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+          <div className="flex flex-col gap-1 lg:gap-2 text-justify">
+            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
               <span className="font-semibold">
                 {lang == "Viet" ? "Đơn vị hợp tác: " : "Partner: "}
               </span>
               {item.text[lang].partner}
             </div>
 
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
               <span className="font-semibold">
                 {lang == "Viet" ? "Vai trò hợp tác: " : "Role: "}
               </span>
               {item.text[lang].role}
             </div>
 
-            <div className="text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
+            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
               <span className="font-semibold">
                 {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
               </span>
@@ -400,7 +401,7 @@ const HotTopicsSection = () => {
     <div
       className={`${styles.container} relative overflow-hidden pb-110 lg:pb-120`}
     >
-      <div className={`flex flex-col lg:flex-row relative`}>
+      <div className={`flex flex-col lg:flex-row relative pt-5 lg:pt-20`}>
         <Image
           src={HotTopicImage}
           alt="Hot Topic"
@@ -410,11 +411,11 @@ const HotTopicsSection = () => {
           <Image
             src={TuongVyImage2}
             alt="Tuong Vy"
-            className="w-11/14 h-auto block align-bottom z-30 translate-x-[-10%] lg:translate-x-[0%]"
+            className="w-6/10 lg:w-11/14 h-auto block align-bottom z-30 translate-x-[-30%] lg:translate-x-[0%]"
           />
         </div>
-        <div className={`w-full lg:w-1/2 lg:pt-10`}>
-          <div className={`mb-10 lg:mb-15 lg:w-4/5`}>
+        <div className={`w-full lg:w-1/2 lg:pt-10 z-30`}>
+          <div className={`mb-10 lg:mb-10 lg:w-4/5`}>
             <div className="relative w-full h-[9px]">
               <svg
                 className="absolute block inset-0 size-full"
@@ -501,58 +502,58 @@ const HotTopicsSection = () => {
               </svg>
             </div>
           </div>
-          <div className={`flex flex-col gap-5 lg:gap-10`}>
+          <div className={`flex flex-col gap-5 lg:gap-10 items-center`}>
             {lang == "Viet"
               ? renderTopicItem(
                   "01",
                   "TRÍ TUỆ NHÂN TẠO (AI)",
                   "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
-                  "ml-4 lg:w-3/4",
+                  "ml-4 w-6/7 lg:w-3/4",
                 )
               : renderTopicItem(
                   "01",
                   "ARTIFICIAL INTELLIGENCE (AI)",
                   "AI won’t replace you—but those who use AI will.",
-                  "ml-4 lg:w-3/4",
+                  "ml-4 w-6/7 lg:w-3/4",
                 )}
             {lang == "Viet"
               ? renderTopicItem(
                   "02",
                   "KỸ NĂNG LÃNH ĐẠO",
                   "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
-                  "ml-4 lg:ml-16 lg:w-3/4",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-3/4",
                 )
               : renderTopicItem(
                   "02",
                   "LEADERSHIP SKILLS",
                   "Leadership is about building effective systems, not just managing people.",
-                  "ml-4 lg:ml-16 lg:w-3/4",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-3/4",
                 )}
             {lang == "Viet"
               ? renderTopicItem(
                   "03",
                   "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
                   "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
-                  "ml-4 lg:ml-16 lg:w-4/5",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-4/5",
                 )
               : renderTopicItem(
                   "03",
                   "FIANANCE & DIGITAL TRANSFORMATION",
                   "A pivotal phase for businesses in the digital banking era.",
-                  "ml-4 lg:ml-16 lg:w-4/5",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-4/5",
                 )}
             {lang == "Viet"
               ? renderTopicItem(
                   "04",
                   "KINH TẾ THỊ TRƯỜNG",
                   "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
-                  "ml-4 lg:w-3/4",
+                  "ml-4 w-6/7 lg:w-3/4",
                 )
               : renderTopicItem(
                   "04",
                   "MARKET ECONOMY",
                   "Understanding the market means understanding cash flow and customer behavior.",
-                  "ml-4 lg:w-3/4",
+                  "ml-4 w-6/7 lg:w-3/4",
                 )}
           </div>
           <div className={`w-full lg:w-4/5 flex justify-center mt-5 lg:mt-5`}>
@@ -565,7 +566,7 @@ const HotTopicsSection = () => {
                       text-[16px] lg:text-[30px] font-bold text-white
                       px-4 lg:px-12 py-2 lg:py-4 mt-3 lg:mt-5
                       transition-all duration-300 hover:brightness-110
-                      relative z-20 
+                      relative z-20  hover:cursor-pointer
                     `}
               onClick={openContactForm}
             >
@@ -576,7 +577,8 @@ const HotTopicsSection = () => {
       </div>
       <div>
         <div
-          className={`flex flex-row justify-center text-[25px] lg:text-[55px] gap-2 lg:gap-4 font-bold 
+          id="partners"
+          className={`flex flex-row justify-center text-[20px] lg:text-[55px] gap-2 lg:gap-4 font-extrabold lg:font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]/93
                     my-10 lg:my-15
                 `}
@@ -616,65 +618,66 @@ const HotTopicsSection = () => {
       </div>
       <div
         className={`bg-linear-to-br from-[#1F2833] from-33% to-[#0957C9] to-85%
-            border-3 border-white
-            flex flex-col lg:flex-row w-9/10 mx-auto mt-20
-            items-center lg:items-end /* Thay đổi ở đây để đẩy mọi thứ xuống đáy trên desktop */
-            pl-5 lg:pl-25 pr-5 lg:pr-0 pt-5 lg:pt-10 pb-0 lg:pb-0 rounded-4xl relative z-10`}
+            border-3 lg:border-4 border-white
+            flex flex-col lg:flex-row w-8/10 mx-auto mt-20
+            justify-center items-center /* Thay đổi ở đây để đẩy mọi thứ xuống đáy trên desktop */
+            pl-5 lg:pl-20 pr-5 lg:pr-0 pt-5 lg:pt-10 pb-0 lg:pb-0 rounded-4xl lg:rounded-[60px] relative z-10`}
       >
         <div
-          className={`lg:w-5/7 text-center lg:text-left text-white lg:pb-10`}
+          className={` lg:w-5/7 text-center lg:text-left text-white lg:pb-10 flex flex-col justify-center items-start`}
         >
           {/* Thêm lg:pb-10 để phần chữ không dính sát đáy như ảnh */}
+          <div>
+            <div
+              className={`font-semibold italic text-[22px] lg:text-[clamp(25px,17.273px+1.965vw,55px)]`}
+            >
+              {lang == "Viet" ? "ĐÀO TẠO" : "TRAINING"}
+            </div>
 
-          <div
-            className={`font-semibold italic text-[clamp(25px,17.273px+1.965vw,55px)]`}
-          >
-            {lang == "Viet" ? "ĐÀO TẠO" : "TRAINING"}
-          </div>
+            <div
+              className={`text-[30px] lg:text-[clamp(30px,19.705px+2.62vw,70px)] leading-tight font-bold lg:font-bold mt-1 lg:mt-0`}
+            >
+              {lang == "Viet" ? "PHƯƠNG PHÁP" : "TAILORED"}
+              <br />
+              {lang == "Viet" ? "RIÊNG BIỆT" : "METHODOLOGIES"}
+              <br />
+              {lang == "Viet" ? "CHO DOANH NGHIỆP" : "FOR ENTERPRISES"}
+            </div>
 
-          <div
-            className={`text-[clamp(30px,17.13px+3.274vw,80px)] leading-tight font-bold`}
-          >
-            {lang == "Viet" ? "PHƯƠNG PHÁP" : "TAILORED"}
-            <br />
-            {lang == "Viet" ? "RIÊNG BIỆT" : "METHODOLOGIES"}
-            <br />
-            {lang == "Viet" ? "CHO DOANH NGHIỆP" : "FOR ENTERPRISES"}
-          </div>
+            {/* List description */}
+            <div
+              className={`flex items-center justify-center text-left text-[12px] lg:text-[clamp(16px,14.456px+0.393vw,22px)] lg:w-5/7 mt-5 lg:mt-10`}
+            >
+              <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Thiết kế chương trình đạo tạo và truyền tải cụ thể trên case study thực tế của doanh nghiệp."
+                    : "Design customized training programs delivered through real business case studies."}
+                </li>
 
-          {/* List description */}
-          <div
-            className={`text-left text-[clamp(16px,12px+0.8vw,25px)] lg:w-5/7 mt-10`}
-          >
-            <ul className={`list-disc list-outside pl-10`}>
-              <li>
-                {lang == "Viet"
-                  ? "Thiết kế chương trình đạo tạo và truyền tải cụ thể trên case study thực tế của doanh nghiệp."
-                  : "Design customized training programs delivered through real business case studies."}
-              </li>
-
-              <li>
-                {lang == "Viet"
-                  ? "Đưa ra tư duy giải quyết vấn đề về bài toán nhân sự, mô hình vận hành,...."
-                  : "Provide problem-solving frameworks for HR challenges, operating models, and more."}
-              </li>
-            </ul>
+                <li>
+                  {lang == "Viet"
+                    ? "Đưa ra tư duy giải quyết vấn đề về bài toán nhân sự, mô hình vận hành,...."
+                    : "Provide problem-solving frameworks for HR challenges, operating models, and more."}
+                </li>
+              </ul>
+            </div>
           </div>
 
           <Button
             unstyled
             label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "DIRECT CONSULTATION"}
-            className="mt-10 mb-10 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-3xl border-2 border-white w-fit px-10 py-2 cursor-pointer hover:scale-110 transition-all duration-300"
+            className="w-fit mt-10 lg:mt-15 mb-5 lg:mb-10 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[15px] lg:text-[clamp(18px,15.426px+0.655vw,28px)] font-bold rounded-2xl lg:rounded-3xl border-2 border-white px-10 lg:px-15 py-2 lg:py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto lg:mx-0 animate-light-heartbeat"
             onClick={openContactForm}
           />
         </div>
 
         {/* Khối chứa ảnh */}
-        <div className={`lg:w-3/7 flex items-end justify-end lg:h-full`}>
+        <div className={`lg:w-4/9 flex items-end justify-end lg:h-full`}>
           <Image
             src={TuongVyImage3}
             alt="Tuong Vy"
-            className="w-4/5 lg:w-full h-auto object-contain block align-bottom"
+            className="w-8/10 lg:w-full h-auto object-contain block align-bottom lg:translate-x-[-10%] translate-x-[0%] mx-auto lg:mx-0"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
           />
         </div>
@@ -682,10 +685,10 @@ const HotTopicsSection = () => {
       <div
         className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between mt-10 lg:mt-20 text-white w-9/10 mx-auto`}
       >
-        <div className={`w-full lg:w-1/2`}>
+        <div className={`w-full lg:w-1/2 lg:pt-20`}>
           <div
             className={`bg-clip-text text-transparent bg-linear-to-r from-[#FFFFFF] from-24% to-[#12F4FE]
-            font-extrabold lg:font-bold text-[clamp(30px,17.13px+3.274vw,80px)]
+            font-extrabold lg:font-extrabold text-[clamp(30px,17.13px+3.274vw,80px)] leading-tight
             `}
           >
             {lang == "Viet" ? "ĐỒNG HÀNH" : "SUPPORTING"}
@@ -696,8 +699,9 @@ const HotTopicsSection = () => {
           <Button
             unstyled
             label={lang == "Viet" ? "LIÊN HỆ NGAY" : "CONTACT NOW"}
-            className={`mt-5 lg:mt-5 lg:mb-0 bg-linear-to-r from-[#12F4FE] from-69% to-[#FFFFFF] text-black text-[clamp(18px,12.336px+1.441vw,40px)] font-bold 
-            rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300`}
+            className={`mt-5 lg:mt-25 lg:mb-0 bg-linear-to-r from-[#12F4FE] from-69% to-[#FFFFFF] text-black text-[16px] lg:text-[clamp(18px,14.397px+0.917vw,32px)] font-bold 
+            rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300
+            `}
             onClick={openContactForm}
           />
         </div>

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 // Khởi tạo font với các cấu hình mong muốn
 const montserrat = Montserrat({
   subsets: ["vietnamese"], // Quan trọng để hiển thị tiếng Việt không lỗi
-  weight: ["400", "500", "600", "700"], // Các độ dày bạn muốn dùng
+  weight: ["400", "500", "600", "700", "800", "900"], // Các độ dày bạn muốn dùng
   variable: "--font-montserrat", // Tạo một CSS variable
 });
 

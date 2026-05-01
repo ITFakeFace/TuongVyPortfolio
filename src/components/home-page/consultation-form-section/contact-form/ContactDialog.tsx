@@ -169,11 +169,11 @@ const ContactDialog = ({
           },
           header: {
             className:
-              "!bg-[#1a1d05] !text-[#b5bc4f] !pt-10 !px-8 !font-bold !text-2xl md:!text-3xl !text-center !block !border-none",
+              "!bg-gradient-to-tr !from-[#1F2833] !to-[#0957C9] !text-[#b5bc4f] !pt-10 !px-8 !font-bold !text-2xl md:!text-3xl !text-center !block !border-none",
           },
           content: {
             className:
-              "!bg-gradient-to-b !from-[#1a1d05] !to-[#3b4118] !px-8 !pb-10 !border-none",
+              "!bg-gradient-to-br !from-[#1F2833] !to-[#0957C9] !px-8 !pb-10 !border-none",
           },
           mask: { className: "!backdrop-blur-md !bg-black/40 !z-[10000]" },
         }}
@@ -359,7 +359,7 @@ const ContactDialog = ({
             pt={{
               root: {
                 className:
-                  "!mt-4 !w-full !py-4 !rounded-2xl !bg-gradient-to-r !from-[#737c12] !to-[#202305] !text-white !font-bold !border-none !shadow-xl hover:!scale-105 !transition-transform !duration-300",
+                  "!mt-4 !w-full !py-4 !rounded-2xl !bg-gradient-to-br !from-[#1F2833] !to-[#0957C9] !text-white !font-bold !border-none !shadow-xl hover:!scale-105 !transition-transform !duration-300",
               },
             }}
           />

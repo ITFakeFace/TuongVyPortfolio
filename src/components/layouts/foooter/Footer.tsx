@@ -9,7 +9,9 @@ const Footer = () => {
   const { lang } = useLanguage();
   return (
     <div className={`${styles.container}`}>
-      <div className={`flex flex-col lg:flex-row px-10 lg:px-50 py-5 lg:py-20`}>
+      <div
+        className={`flex flex-col lg:flex-row px-10 lg:px-50 py-5 lg:py-20 gap-5 lg:gap-0`}
+      >
         <div className={`w-full lg:w-1/2`}>
           <div
             className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-[clamp(25px,13.418px+2.947vw,70px)] text-transparent 
@@ -24,18 +26,23 @@ const Footer = () => {
         <div
           className={`w-full lg:w-1/2 flex flex-row items-center justify-center gap-5 lg:gap-10`}
         >
-          <Button
-            unstyled
-            className={`bg-[radial-gradient(circle,#5268D2_35%,#7DB3E2_100%)] rounded-2xl lg:rounded-4xl aspect-square p-3 lg:p-5`}
+          <a
+            href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FontAwesomeIcon
-              icon={faLinkedinIn}
-              className="text-lg lg:text-8xl! text-white hover:text-[#d9d9d9] transition-colors! "
-            />
-          </Button>
+            <div
+              className={`bg-[radial-gradient(circle,#5268D2_35%,#7DB3E2_100%)] rounded-2xl lg:rounded-4xl aspect-square p-3 lg:p-5 flex items-center`}
+            >
+              <FontAwesomeIcon
+                icon={faLinkedinIn}
+                className="text-lg lg:text-8xl! text-white hover:text-[#d9d9d9] transition-colors! "
+              />
+            </div>
+          </a>
           <div className={`lg:w-3/5 text-white `}>
             <div
-              className={`text-md lg:text-4xl italic border-b-1 border-white leading-snug`}
+              className={`text-sm lg:text-md lg:text-4xl italic border-b-1 border-white leading-snug`}
             >
               {lang == "Viet" ? "Liên hệ:" : "Contact ME:"}
             </div>

@@ -32,6 +32,7 @@ const LatestEventsSection = () => {
   const events = [
     {
       image: EventImage1,
+      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_aiesec-aiesecinvietnam-h4tf-ugcPost-7450400637424668672-o5Zv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
       title: {
         Viet: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
         Eng: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
@@ -42,6 +43,7 @@ const LatestEventsSection = () => {
     },
     {
       image: EventImage2,
+      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_for-professionals-in-banking-and-finance-share-7450433602925801472-Ft21?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
       title: {
         Viet: "WORLD FINANCIAL INNOVATION SERIES",
         Eng: "WORLD FINANCIAL INNOVATION SERIES",
@@ -63,8 +65,8 @@ const LatestEventsSection = () => {
         <div
           className={`
           /* Mobile: size nhỏ hơn, padding ít hơn */
-          text-[clamp(18px,4vw,24px)] lg:text-[clamp(25px,-15px+2.604vw,35px)]
-          min-h-[80px] lg:min-h-[clamp(105px,73px+2.083vw,113px)]
+          text-[15px] lg:text-[clamp(25px,-15px+2.604vw,35px)]
+          lg:min-h-[clamp(105px,73px+2.083vw,113px)]
           px-6 lg:px-12 
           
           leading-tight lg:leading-normal 
@@ -87,7 +89,7 @@ const LatestEventsSection = () => {
           w-full 
           
           /* Mobile: text nhỏ hơn, Desktop: 25px */
-          text-[12px] lg:text-[clamp(24px,-8px+2.083vw,32px)]
+          text-[12px] lg:text-[clamp(20px,-12px+2.083vw,28px)]
           gap-2 lg:gap-0
           ${styles.infoBox}
         `}
@@ -128,26 +130,27 @@ const LatestEventsSection = () => {
                 ? event.destination.Viet
                 : event.destination.Eng,
           )}
-
-          <Button
-            unstyled
-            className="px-10 lg:px-15 py-3 bg-linear-to-r from-[#12F4FE] to-white text-black font-bold text-[24px] lg:text-[32px] border-white border-2 rounded-4xl hover:cursor-pointer transition-transform hover:scale-105"
-          >
-            {lang === "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
-          </Button>
+          <a href={event.url} target="_blank" rel="noopener noreferrer">
+            <Button
+              unstyled
+              className="px-10 lg:px-15 py-3 bg-linear-to-r from-[#12F4FE] to-white text-black font-bold text-[16px] lg:text-[28px] border-white border-2 rounded-2xl lg:rounded-4xl hover:cursor-pointer transition-transform hover:scale-105 animate-heartbeat"
+            >
+              {lang === "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+            </Button>
+          </a>
         </div>
       </div>
     );
   };
 
   return (
-    <div className={`${styles.container} py-20`}>
+    <div id="latest-events" className={`${styles.container} py-10 lg:py-20`}>
       {/* <Image
         src={lang == "Viet" ? LatestEventsText : LatestEventsText}
         alt="Latest Events"
         className="mx-auto mb-8 w-4/5"
       /> */}
-      <div className={`mb-15`}>
+      <div className={`mb-5 lg:mb-15`}>
         <div className="relative w-full h-[9px]">
           <svg
             className="absolute block inset-0 size-full"
@@ -187,7 +190,7 @@ const LatestEventsSection = () => {
           </svg>
         </div>
         <div>
-          <div className="flex flex-row justify-center text-[35px] lg:text-[65px] gap-2 lg:gap-4 font-bold">
+          <div className="flex flex-row justify-center text-[30px] lg:text-[65px] gap-2 lg:gap-4 font-bold">
             <span className={`text-white`}>
               {lang == "Viet" ? "SỰ KIỆN" : "LATEST"}
             </span>
@@ -235,7 +238,7 @@ const LatestEventsSection = () => {
           </svg>
         </div>
       </div>
-      <div className="mt-10">
+      <div className="lg:mt-10">
         <Carousel
           key={autoplay > 0 ? "auto-on" : "auto-off"}
           value={events}

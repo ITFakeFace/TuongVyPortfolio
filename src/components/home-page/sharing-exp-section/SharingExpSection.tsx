@@ -105,13 +105,13 @@ const SharingExpSection = () => {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`mx-auto`}
+            className={`mx-auto lg:mt-10`}
           >
-            <Button
-              unstyled
-              className={`bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-[15px] lg:text-[25px] border-2 border-white px-10 py-2 lg:px-15 lg:py-3 font-bold rounded-2xl lg:rounded-3xl`}
-              label={lang == "Viet" ? "XEM BÀI VIẾT" : "READ THE ARTICLE"}
-            />
+            <div
+              className={`bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-[15px] lg:text-[35px] border-2 border-white px-10 py-2 lg:px-15 lg:py-3 font-bold rounded-2xl lg:rounded-3xl`}
+            >
+              {lang == "Viet" ? "XEM BÀI VIẾT" : "READ THE ARTICLE"}
+            </div>
           </a>
         </div>
       </div>
@@ -121,7 +121,7 @@ const SharingExpSection = () => {
   return (
     <div className={`bg-linear-to-b from-[#0957C9] to-[#1F2833]`}>
       <div
-        className={`pt-10 lg:pt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
+        className={`pt-10 lg:pt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] lg:pb-10
         text-transparent lg:mx-30 text-center lg:text-left text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold `}
       >
         {lang === "Viet" ? "TỌA ĐÀM NỔI BẬT" : "FEATURED PANEL DISCUSSIONS"}
@@ -131,7 +131,7 @@ const SharingExpSection = () => {
       >
         <div className="">
           <Carousel
-            value={sharingExpItems} // Đã sửa Harvard đúng chính tả
+            value={sharingExpItems}
             itemTemplate={renderSharingExpCarouselItems}
             showIndicators={false}
             numVisible={1}
@@ -144,7 +144,7 @@ const SharingExpSection = () => {
           />
         </div>
       </div>
-      <div className={`mt-10 lg:mt-15`}>
+      <div className={`mt-10 lg:mt-30`}>
         <Image
           src={ImageGroup}
           alt="Image Group"

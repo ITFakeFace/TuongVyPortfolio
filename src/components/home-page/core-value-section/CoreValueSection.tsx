@@ -37,8 +37,8 @@ const CoreValueSection = () => {
         >
           {index}
         </div>
-        <div className="">
-          <p className="text-[clamp(10px,3.565px+1.637vw,35px)] text-white mt-2 font-semibold">
+        <div className="h-full flex items-center">
+          <p className="text-[11px] lg:text-[clamp(10px,3.565px+1.637vw,35px)] text-white mt-2 font-semibold">
             {description}
           </p>
         </div>
@@ -59,7 +59,7 @@ const CoreValueSection = () => {
         )}
       >
         <div className="">
-          <p className="text-[clamp(10px,3.565px+1.637vw,35px)] text-[#011B40] mt-2 font-semibold">
+          <p className="text-[11px] lg:text-[clamp(10px,3.565px+1.637vw,35px)] text-[#011B40] mt-2 font-semibold">
             {description}
           </p>
         </div>
@@ -88,16 +88,18 @@ const CoreValueSection = () => {
           className={`absolute w-8/19 h-auto object-cover bottom-[-3%] lg:bottom-[-7%] left-[50%] -translate-x-1/2 z-100`}
         />
         <div
-          className={`w-1/2 pt-10 bg-[linear-gradient(to_bottom,#08377C_8%,#84BBE27D_85%,#FFFFFF00_100%)] pl-[5%] pr-5 lg:pr-0`}
+          className={`w-1/2 pt-10 bg-[linear-gradient(to_bottom,#08377C_8%,#84BBE27D_85%,#FFFFFF00_100%)]  pr-5 lg:pr-0`}
         >
           <div
             className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-transparent
-                text-[clamp(20px,4.565px+3.929vw,80px)] font-bold lg:mt-20`}
+                text-[21px] lg:text-[clamp(20px,3.271px+4.257vw,85px)] font-extrabold ml-4 lg:ml-0 lg:mt-20 w-fit mx-auto`}
           >
             {lang == "Viet" ? "07 NĂNG LỰC" : "07 CORE "} <br />
             {lang == "Viet" ? "CỐT LÕI" : "COMPETENCIES"}
           </div>
-          <div className={`flex flex-col mt-10 lg:mt-30 mb-50 gap-10`}>
+          <div
+            className={`flex flex-col mt-10 lg:mt-10 mb-50 gap-5 lg:gap-10 pl-[5%]`}
+          >
             {renderLeftItem(
               "01",
               lang == "Viet"
@@ -117,13 +119,13 @@ const CoreValueSection = () => {
               lang == "Viet"
                 ? "Xây dựng nền tảng và vận hành doanh nghiệp"
                 : "Business Foundation Development and Operations",
-              "lg:w-3/5",
+              "lg:w-7/10",
             )}
           </div>
         </div>
         <div className={`w-1/2 pt-10 bg-[#E6F4FF] pl-5 lg:pl-0`}>
           <div
-            className={`flex flex-col pr-[5%] w-full items-end mt-15 lg:mt-100 gap-10`}
+            className={`flex flex-col pr-[5%] w-full items-end mt-15 lg:mt-60 gap-5 lg:gap-10`}
           >
             {renderRightItem(
               "04",
@@ -144,14 +146,14 @@ const CoreValueSection = () => {
               lang == "Viet"
                 ? "Tối ưu chi phí và giám sát tài chính"
                 : "Cost Optimization & Financial Oversight",
-              "lg:w-1/2",
+              "lg:w-6/10",
             )}
             {renderRightItem(
               "07",
               lang == "Viet"
                 ? "Quản trị quan hệ đối tác và Đàm phán"
                 : "Partnership Management and Negotiation",
-              "lg:w-1/2",
+              "lg:w-6/10",
             )}
           </div>
         </div>

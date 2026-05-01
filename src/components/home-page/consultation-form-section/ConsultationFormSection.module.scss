@@ -1,4 +1,5 @@
-$bg-image-url: url("../../../assets/images/backgrounds/ConsultaionFormSection-bg-image-1.png");
+$bg-image-url: url("../../../assets/images/backgrounds/ConsultationFormSection-bg-1.webp");
+$bg-image-mobile-url: url("../../../assets/images/backgrounds/ConsultationFormSection-bg-mobile-1.webp");
 
 .container {
   // Nhớ: Gradient trước, url sau. Các màu ngăn cách bằng dấu phẩy.
@@ -16,4 +17,17 @@ $bg-image-url: url("../../../assets/images/backgrounds/ConsultaionFormSection-bg
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+    background-image:
+      linear-gradient(
+        to bottom right,
+        rgba(32, 49, 71, 0.8) 0%,
+        rgba(51, 65, 81, 0.8) 35%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(157, 188, 234, 0.8) 64%,
+        rgba(9, 87, 201, 0.8) 75%
+      ),
+      $bg-image-mobile-url;
+  }
 }
