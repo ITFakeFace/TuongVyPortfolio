@@ -5,6 +5,7 @@ import Image from "next/image";
 import CareerPath1 from "@/assets/images/assets/CareerPathSection-CareerPathImage-1.png";
 import CareerPathEng1 from "@/assets/images/assets/CareerPathSection-CareerPathImageEng-1.png";
 import CareerPathMobile1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImage-1.png";
+import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageeNG-1.png";
 import { Carousel } from "primereact/carousel";
 import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-2.png";
 import { Button } from "primereact/button";
@@ -109,7 +110,7 @@ const CareerPathSection = () => {
           className={`w-full lg:w-9/20 lg:pl-30 text-center lg:text-left flex flex-col justify-center items-center lg:items-start`}
         >
           <div
-            className={`text-[#011B40] text-[clamp(25px,19.7px+2.62vw,70px)] font-bold leading-tight`}
+            className={`text-[#011B40] text-[clamp(25px,19.7px+2.62vw,70px)] font-bold leading-tight mx-1 lg:mx-0`}
           >
             {lang == "Viet"
               ? "LEADER TRẺ RẤT DỄ “MẮC BẪY”"
@@ -218,10 +219,10 @@ const CareerPathSection = () => {
           <Image
             src={TuongVyImage}
             alt="Career Path Section Image"
-            className={`w-8/10 lg:w-4/9 h-auto mx-auto lg:mt-25`}
+            className={`w-6/10 lg:w-4/9 h-auto mx-auto lg:mt-25`}
           />
           <div
-            className={`w-19/20 bg-linear-to-b from-[#0D60F1] shadow-[0px_10px_15px_0px_#7DB3E2] from-44% to-white mx-auto pt-5 rounded-3xl lg:rounded-t-4xl -mt-3 lg:-mt-5 text-center text-white font-bold text-[clamp(12px,6.136px+0.982vw,25px)]`}
+            className={`w-14/20 lg:w-19/20 bg-linear-to-b from-[#0D60F1] shadow-[0px_10px_15px_0px_#7DB3E2] from-44% to-white mx-auto pt-5 rounded-3xl lg:rounded-t-4xl -mt-3 lg:-mt-5 text-center text-white font-bold text-[clamp(12px,6.136px+0.982vw,25px)]`}
           >
             <Image
               src={lang == "Viet" ? CareerPath1 : CareerPathEng1}
@@ -229,7 +230,7 @@ const CareerPathSection = () => {
               className={`w-full h-auto hidden lg:block`}
             />
             <Image
-              src={CareerPathMobile1}
+              src={lang == "Viet" ? CareerPathMobile1 : CareerPathMobileEng1}
               alt="Career Path Section Image"
               className={`w-9/10 lg:w-full h-auto block lg:hidden mx-auto mt-2 lg:mt-0`}
             />
@@ -387,14 +388,15 @@ const CareerPathSection = () => {
         >
           {lang == "Viet" ? "HÀNH ĐỘNG HIỆU QUẢ" : "DRIVE EFFECTIVE ACTION"}
         </div>
-        <a href="#latest-events">
-          <Button
-            unstyled
-            className={` bg-linear-to-r from-[#0957C9] from-65% to-[#5268D2] text-white font-bold lg:px-15 lg:py-3 px-5 py-2 rounded-full lg:rounded-4xl
+        {/* <a href="#latest-events"> */}
+        <Button
+          unstyled
+          onClick={openContactForm}
+          className={` bg-linear-to-r from-[#0957C9] from-65% to-[#5268D2] text-white font-bold lg:px-15 lg:py-3 px-5 py-2 rounded-full lg:rounded-4xl
             mt-5 lg:mt-10 text-[clamp(15px,9.851px+1.31vw,35px)] border-2 border-white hover:cursor-pointer transition-all hover:scale-105 duration-300 animate-bounce`}
-            label={lang == "Viet" ? "KHAI PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
-          />
-        </a>
+          label={lang == "Viet" ? "KHAI PHÁ CÙNG TÔI" : "EXPLORE WITH ME"}
+        />
+        {/* </a> */}
         <div
           className={`flex flex-row absolute bottom-10 left-0 w-[120%] -translate-x-[10%] gap-5 justify-center items-center`}
         >

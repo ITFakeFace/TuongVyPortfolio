@@ -22,7 +22,7 @@ const HeroSection = () => {
     return (
       <div className={``}>
         <div className={`flex lg:flex-col mt-[-20px] gap-5`}>
-          <div className={`flex lg:flex-row gap-0 lg:ml-20 translate-y-5`}>
+          <div className={`flex lg:flex-row gap-0 lg:ml-3 translate-y-5`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

@@ -64,7 +64,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     },
     {
       name: "organization",
-      label: lang === "Viet" ? "Đơn vị/ Tổ chức" : "Company/ Organization",
+      label: lang === "Viet" ? "Cá nhân/ Tổ chức" : "Individual/ Organization",
       type: "text",
       // Thu nhỏ width trên mobile
       mobileSMWidth: "w-1/2",
@@ -72,10 +72,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     },
     {
       name: "content",
-      label:
-        lang === "Viet"
-          ? "Khóa học/Nội dung tư vấn"
-          : "Course/Consultation Content",
+      label: lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content",
       type: "textarea",
       // Thu nhỏ width trên mobile
       mobileSMWidth: "w-1/2",

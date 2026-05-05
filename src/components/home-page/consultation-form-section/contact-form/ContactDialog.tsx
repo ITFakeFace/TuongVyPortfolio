@@ -308,7 +308,9 @@ const ContactDialog = ({
           {/* Tổ chức */}
           <div className="flex flex-col gap-1">
             <label className="text-white font-bold ml-1 text-lg">
-              {lang === "Viet" ? "Đơn vị/ Tổ chức" : "Organization"}
+              {lang === "Viet"
+                ? "Cá nhân/ Tổ chức"
+                : "Individual/ Organization"}
             </label>
             <Controller
               name="organization"
@@ -330,9 +332,7 @@ const ContactDialog = ({
           {/* Nội dung */}
           <div className="flex flex-col gap-1">
             <label className="text-white font-bold ml-1 text-lg">
-              {lang === "Viet"
-                ? "Khóa học/Nội dung tư vấn"
-                : "Course/Consultation Content"}
+              {lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content"}
             </label>
             <Controller
               name="content"

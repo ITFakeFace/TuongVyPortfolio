@@ -17,6 +17,8 @@ import ExpImage6 from "@/assets/images/assets/ExperienceSection-ExpImage-6.png";
 import ExpImage8 from "@/assets/images/assets/ExperienceSection-ExpImage-8.png";
 import ExpImage9 from "@/assets/images/assets/ExperienceSection-ExpImage-9.png";
 import ExpImage10 from "@/assets/images/assets/ExperienceSection-ExpImage-10.png";
+import ExpImage11 from "@/assets/images/assets/ExperienceSection-ExpImage-11.png";
+import ExpImage12 from "@/assets/images/assets/ExperienceSection-ExpImage-12.png";
 import ExpImageTemp from "@/assets/images/assets/ExperienceSection-ExpTempImage-1.png";
 import FintechLogo from "@/assets/images/assets/ExperienceSection-FintechFarmLogo-1.png";
 import LiobankLogo from "@/assets/images/assets/ExperienceSection-LiobankLogo-1.png";
@@ -163,7 +165,7 @@ const ExperienceSection = () => {
   return (
     <div id="experience" className={`${styles.container} -mt-1`}>
       <div
-        className={`text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text font-bold text-2xl lg:text-5xl  text-center py-15 lg:py-20`}
+        className={`text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text font-bold text-2xl lg:text-5xl  text-center py-10 lg:py-15`}
       >
         {lang == "Viet" ? "KINH NGHIỆM THỰC CHIẾN" : "PRACTICAL EXPERIENCE"}
       </div>
@@ -346,7 +348,7 @@ const ExperienceSection = () => {
           </div>
         </ExperienceItem>
         <ExperienceItem
-          image={ExpImageTemp}
+          image={ExpImage11}
           title={"8/2015 - 6/2016"}
           direction="left"
         >
@@ -401,7 +403,7 @@ const ExperienceSection = () => {
           </div>
         </ExperienceItem>
         <ExperienceItem
-          image={ExpImageTemp}
+          image={ExpImage12}
           title={"1/2010 - 1/2011"}
           direction="left"
         >
@@ -457,7 +459,7 @@ const ExperienceSection = () => {
             unstyled
             className={`lg:hidden px-5 lg:px-15 py-2 lg:py-4 bg-linear-to-r from-[#07367B] to-[#1F2833] rounded-2xl lg:rounded-4xl border-1 border-white text-[16px] lg:text-[32px]! lg:text-base font-bold text-white relative mx-auto hover:cursor-pointer hover:scale-105 transition-transform duration-300`}
             label={
-              lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DO IT!"
+              lang == "Viet" ? "ĐÂY LÀ CÁCH TÔI LÀM!" : "THIS IS HOW I DID!"
             }
           />
         </a>

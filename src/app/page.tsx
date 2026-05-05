@@ -9,6 +9,7 @@ import HeroSection from "@/components/home-page/hero-section/HeroSection";
 import HotTopicsSection from "@/components/home-page/hot-topics-section/HotTopicsSection";
 import IntroductionSection from "@/components/home-page/introduction-section/IntroductionSection";
 import LatestEventsSection from "@/components/home-page/latest-events-section/LatestEventsSection";
+import SelftSolutionSection from "@/components/home-page/self-solution-section/SelfSolutionSection";
 import SharingExpSection from "@/components/home-page/sharing-exp-section/SharingExpSection";
 import TrainingInformationSection from "@/components/home-page/training-information-section/TrainingInformationSection";
 import { ContactProvider } from "@/context/ContactContext";
@@ -23,11 +24,11 @@ export default function Home() {
       <ContactProvider lang={lang}>
         <HeroSection />
         <IntroductionSection />
+        <SelftSolutionSection />
         <ExperienceSection />
         <LatestEventsSection />
         <CoreValueSection />
         <ExplotionPeriodSection />
-        {/* <TrainingInformationSection /> */}
         <CareerPathSection />
         <HotTopicsSection />
         <CertificateSection />

@@ -42,7 +42,7 @@ const IntroductionSection = () => {
             : "I AM TRAN THANH NU TUONG VY"}
         </div>
         <div
-          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(14px,-10px+1.5625vw,20px)] text-white font-normal mt-5`}
+          className={`flex flex-col gap-[clamp(1.25rem,-3.75rem+4.16vw,2.5rem)] text-center lg:text-right text-[10px] lg:text-[clamp(16px,-8px+1.563vw,22px)] text-white font-normal mt-5`}
         >
           <div>
             <span className={`font-bold`}>

@@ -20,11 +20,19 @@ import StreakImageEng2 from "@/assets/images/assets/ExplotionPeriodSection-Strea
 import StreakMobileImage1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-1.png";
 import StreakMobileImage2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-2.png";
 import StreakMobileImage3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-3.png";
-import MethodEnd from "@/assets/images/assets/ExplotionPeriodSection-MethodEnd-1.png";
+import StreakMobileImageEng1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-1.png";
+import StreakMobileImageEng2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-2.png";
+import StreakMobileImageEng3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-3.png";
+import MethodEnd from "@/assets/images/assets/ExplotionPeriodSection-MethodEnd-2.png";
 import EndImage from "@/assets/images/assets/ExplotionPeriodSection-EndImage-1.png";
 import EndImageEng from "@/assets/images/assets/ExplotionPeriodSection-EndImageEng-1.png";
 import EndMobileImage from "@/assets/images/assets/ExplotionPeriodSection-EndMobileImage-1.png";
+import EndMobileImageEng from "@/assets/images/assets/ExplotionPeriodSection-EndMobileImageEng-1.png";
+import BusinessGrowth from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowth-1.png";
+import BusinessGrowthEng from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowthEng-1.png";
+import HumanImage from "@/assets/images/assets/ExplotionPeriodSection-HumanImage-1.png";
 import { useContactForm } from "@/context/ContactContext";
+import { motion } from "framer-motion";
 
 interface Event {
   image: StaticImageData | string;
@@ -36,6 +44,7 @@ interface Event {
 
 const EventSwiper = ({ events }: { events: Event[] }) => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
   const swiperConfig: SwiperOptions = {
     modules: [Navigation, Pagination, EffectCoverflow],
     loop: true,
@@ -201,11 +210,11 @@ const ExplotionPeriodSection = () => {
         <div
           className={`lg:hidden bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900] text-[clamp(16px,3.389px+3.209vw,65px)] font-extrabold text-center pt-10 lg:mt-0`}
         >
-          {lang == "Viet" ? "CHINH PHỤC THÀNH CÔNG" : "CHINH PHỤC THÀNH CÔNG"}
-          <br />
           {lang == "Viet"
-            ? "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH"
-            : "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH"}
+            ? "CHINH PHỤC THÀNH CÔNG"
+            : "CONQUERING SUCCESS DURING"}
+          <br />
+          {lang == "Viet" ? "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH" : "INDUSTRY CRISIS"}
         </div>
         <div
           className={`w-full relative aspect-19/12 max-w-480 flex flex-col items-center lg:gap-10 lg:py-35`}
@@ -245,6 +254,7 @@ const ExplotionPeriodSection = () => {
               bg-[linear-gradient(90deg,#1F2833,#042B63)]
               text-[clamp(16px,2.273px+1.964vw,35px)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer
               `}
+              onClick={openContactForm}
             >
               {/* overlay để làm màu sâu hơn */}
               <div className="absolute inset-0 bg-black/10" />
@@ -255,7 +265,9 @@ const ExplotionPeriodSection = () => {
                 bg-clip-text text-transparent font-bold
                 `}
               >
-                {lang == "Viet" ? "TÌM HIỂU NGAY" : "EXPLORE MORE"}
+                {lang == "Viet"
+                  ? "Nhận chiến lược riêng cho bạn"
+                  : "Get Your Personalized Strategy"}
               </span>
             </Button>
           </div>
@@ -294,12 +306,12 @@ const ExplotionPeriodSection = () => {
 
         <div className={`block lg:hidden`}>
           <Image
-            src={StreakMobileImage1}
+            src={lang == "Viet" ? StreakMobileImage1 : StreakMobileImageEng1}
             alt="Streak Mobile Image"
             className={`w-full h-auto mt-15 lg:mt-20`}
           />
           <Image
-            src={StreakMobileImage2}
+            src={lang == "Viet" ? StreakMobileImage2 : StreakMobileImageEng2}
             alt="Streak Mobile Image"
             className={`w-full h-auto mt-10 lg:mt-20`}
           />
@@ -309,16 +321,16 @@ const ExplotionPeriodSection = () => {
           >
             {lang == "Viet"
               ? "TƯ DUY PHÁT TRIỂN DOANH"
-              : "TƯ DUY PHÁT TRIỂN DOANH"}
+              : "BUSINESS DEVELOPMENT "}
             <br />
             {lang == "Viet"
               ? "DOANH NGHIỆP TRƯỚC THIÊN TAI"
-              : "DOANH NGHIỆP TRƯỚC THIÊN TAI"}
+              : "MINDSET IN TIMES OF CRISIS"}
           </div>
           <Image
-            src={StreakMobileImage3}
+            src={lang == "Viet" ? StreakMobileImage3 : StreakMobileImageEng3}
             alt="Streak Mobile Image"
-            className={`w-full lg:w-19/20 h-auto mx-auto mt-5`}
+            className={`w-19/20 lg:w-19/20 h-auto mx-auto mt-5`}
           />
         </div>
 
@@ -390,7 +402,7 @@ const ExplotionPeriodSection = () => {
           className={`flex flex-col lg:flex-row mt-15 lg:mt-30 relative z-20 items-center`}
         >
           <div
-            className={`text-center lg:text-left lg:pl-[10%] w-fit shrink-0 mx-auto lg:mx-0`}
+            className={`text-center lg:text-left lg:pl-[5%] w-fit shrink-0 mx-auto lg:mx-0`}
           >
             <div
               className={`text-white italic font-medium text-[16px] lg:text-[clamp(25px,22.427px+0.655vw,35px)] leading-loose mb-2 lg:mb-0`}
@@ -409,16 +421,66 @@ const ExplotionPeriodSection = () => {
               <div>{lang == "Viet" ? "PHÁT TRIỂN" : "GROWTH"}</div>
               <div>{lang == "Viet" ? "DOANH NGHIỆP" : "SOLUTIONS"}</div>
             </div>
+            <div
+              className={`w-8/10 lg:w-full text-white font-bold text-sm lg:text-[clamp(25px,5px+1.302vw,30px)] mx-auto lg:mx-0 mt-3`}
+            >
+              {lang == "Viet"
+                ? "Quản lý tốt mô hình doanh nghiệp từ"
+                : "Effectively manage your business model from"}
+            </div>
+            <div
+              className={`flex flex-row gap-3 lg:gap-5 items-center mt-10 mx-auto lg:mx-0`}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 30 }} // Bắt đầu ở dưới và mờ
+                whileInView={{ opacity: 1, y: 0 }} // Khi hiện vào màn hình thì hiện lên
+                viewport={{ once: true }} // Chỉ chạy một lần
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+                className={`text-white font-bold text-center 
+                  bg-linear-to-br from-[#999999]/30 via-[#FFFFFF]/30 via-48% to-[#999999]/30 
+                  text-[40px] lg:text-[clamp(80px,5.208vw,100px)] leading-tight px-5 lg:px-8 pb-2 lg:pb-3 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
+              >
+                +50 <br />
+                <div className={`text-sm lg:text-[25px]`}>
+                  {lang == "Viet" ? "Nhân sự" : "Employees"}
+                </div>
+              </motion.div>
+              <span className={`text-sm lg:text-[25px] font-bold text-white`}>
+                {lang == "Viet" ? " đến " : " to "}
+              </span>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }} // Bắt đầu ở dưới và mờ
+                whileInView={{ opacity: 1, y: 0 }} // Khi hiện vào màn hình thì hiện lên
+                viewport={{ once: true }} // Chỉ chạy một lần
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  delay: 0.8, // Delay để tạo hiệu ứng nối tiếp
+                }}
+                className={`text-white font-bold text-center 
+                  bg-linear-to-br from-[#999999]/30 via-[#FFFFFF]/30 via-48% to-[#999999]/30 
+                  text-[40px] lg:text-[clamp(80px,5.208vw,100px)] leading-tight px-5 lg:px-8 pb-2 lg:pb-3 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
+              >
+                +5000
+                <br />
+                <div className={`text-sm lg:text-[25px]`}>
+                  {lang == "Viet" ? "Nhân sự" : "Employees"}
+                </div>
+              </motion.div>
+            </div>
             <Button
               unstyled
               className={`
-              relative overflow-hidden
-              px-10 lg:px-35 py-2 lg:py-4 mt-5 lg:mt-15
-              rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
-              bg-[linear-gradient(90deg,#1F2833,#042B63)]
-              text-[20px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
-              animate-heartbeat
-              hover:cursor-pointer hover:opacity-80 opacity-100 transition-all duration-300
+                relative overflow-hidden
+                px-10 lg:px-35 py-2 lg:py-4 mt-5 lg:mt-15
+                rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
+                bg-[linear-gradient(90deg,#1F2833,#042B63)]
+                text-[20px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
+                animate-heartbeat
+                hover:cursor-pointer hover:opacity-80 opacity-100 transition-all duration-300
               `}
               onClick={openContactForm}
             >
@@ -434,20 +496,30 @@ const ExplotionPeriodSection = () => {
             </Button>
           </div>
           <div
-            className={`lg:w-9/20! w-17/20 h-auto lg:h-120 bg-transparent mx-auto mt-10 lg:mt-0`}
+            className={`lg:w-10/20! w-17/20 h-auto bg-transparent mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0 lg:pl-10`}
           >
             <Image
               src={MethodEnd}
               alt="Method End"
-              className={`w-full h-full object-cover rounded-2xl lg:rounded-none`}
+              className={`w-full h-full object-contain rounded-2xl lg:rounded-none`}
             />
           </div>
         </div>
+        <Image
+          src={lang == "Viet" ? BusinessGrowth : BusinessGrowthEng}
+          alt="Hard Period"
+          className={`w-full h-auto bottom-0 left-0 z-0 pb-35 lg:pb-0 mt-10 lg:mt-20`}
+        />
+        <Image
+          src={HumanImage}
+          alt="Hard Period"
+          className={`w-full h-auto absolute bottom-35 lg:bottom-0 left-0 z-10`}
+        />
         <div
-          className={`relative z-20 mt-15 lg:mt-40 w-9/10 lg:w-15/20 text-center mx-auto lg:pb-10`}
+          className={`absolute bottom-0 left-0 z-20 h-150 lg:h-200 flex justify-center items-center w-full bg-linear-to-t from-[#095DF1] from-22% to-transparent to-44%`}
         >
           <div
-            className={`mt-auto text-[14px] lg:text-[clamp(13px,8.625px+1.113vw,30px)] text-white pt-10 lg:pt-20 pb-20 lg:pb-10`}
+            className={`mt-auto text-[14px] lg:text-[clamp(13px,8.625px+1.113vw,30px)] text-white pt-10 lg:pt-20 pb-20 lg:pb-20 text-center`}
           >
             <div>
               {lang == "Viet"
@@ -464,9 +536,6 @@ const ExplotionPeriodSection = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`absolute bottom-0 left-0 z-0 h-150 lg:h-200 w-full bg-linear-to-t from-[#095DF1] from-22% to-transparent to-44%`}
-        ></div>
       </div>
       <Image
         src={lang == "Viet" ? EndImage : EndImageEng}
@@ -474,7 +543,7 @@ const ExplotionPeriodSection = () => {
         className={`w-full h-auto hidden lg:block -mt-10`}
       />
       <Image
-        src={EndMobileImage}
+        src={lang == "Viet" ? EndMobileImage : EndMobileImageEng}
         alt="End Mobile Image"
         className={`w-full h-auto block lg:hidden`}
       />

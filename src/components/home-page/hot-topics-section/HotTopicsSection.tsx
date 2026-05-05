@@ -143,7 +143,7 @@ const HotTopicsSection = () => {
             "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
         },
         Eng: {
-          title: "AI UNLIMITED FUTURE: HỘI NGHỊ ĐỔI MỚI SÁNG TẠO VIỆT NAM",
+          title: "AI UNLIMITED FUTURE: VIETNAM INNOVATION SUMMIT",
           partner: "BOSSKOL",
           role: "Training & Coaching",
           description:
@@ -502,7 +502,9 @@ const HotTopicsSection = () => {
               </svg>
             </div>
           </div>
-          <div className={`flex flex-col gap-5 lg:gap-10 items-center`}>
+          <div
+            className={`flex flex-col gap-5 lg:gap-10 items-center lg:items-start justify-between`}
+          >
             {lang == "Viet"
               ? renderTopicItem(
                   "01",
@@ -521,26 +523,26 @@ const HotTopicsSection = () => {
                   "02",
                   "KỸ NĂNG LÃNH ĐẠO",
                   "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-3/4",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-5/6",
                 )
               : renderTopicItem(
                   "02",
                   "LEADERSHIP SKILLS",
                   "Leadership is about building effective systems, not just managing people.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-3/4",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-5/6",
                 )}
             {lang == "Viet"
               ? renderTopicItem(
                   "03",
                   "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
                   "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-4/5",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
                 )
               : renderTopicItem(
                   "03",
                   "FIANANCE & DIGITAL TRANSFORMATION",
                   "A pivotal phase for businesses in the digital banking era.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-4/5",
+                  "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
                 )}
             {lang == "Viet"
               ? renderTopicItem(
@@ -580,7 +582,7 @@ const HotTopicsSection = () => {
           id="partners"
           className={`flex flex-row justify-center text-[20px] lg:text-[55px] gap-2 lg:gap-4 font-extrabold lg:font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]/93
-                    my-10 lg:my-15
+                    my-10 lg:my-15 text-center 
                 `}
         >
           {lang == "Viet"
