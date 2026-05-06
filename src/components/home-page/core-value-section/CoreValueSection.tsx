@@ -797,7 +797,7 @@ const CoreValueSection = () => {
         >
           <div
             className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-transparent leading-tight
-                text-[21px] lg:text-[clamp(70px,30.1px+2.604vw,80px)] font-extrabold ml-4 lg:ml-20 lg:mt-20 w-fit mx-auto`}
+                text-[18px] lg:text-[clamp(70px,30.1px+2.604vw,80px)] font-extrabold ml-4 lg:ml-20 lg:mt-20 w-fit mx-auto`}
           >
             {lang == "Viet" ? "07 NĂNG LỰC" : "07 CORE "} <br />
             {lang == "Viet"
@@ -816,7 +816,7 @@ const CoreValueSection = () => {
             <b>{lang == "Viet" ? " C - Levels" : " C - Levels"}</b>
           </div>
           <div
-            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "3xl:mb-170 lg:mb-110 mb-90" : "3xl:mb-130 lg:mb-130"} gap-5 lg:gap-10 pl-[5%] lg:pl-30 lg:pt-10`}
+            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "3xl:mb-170 lg:mb-110 mb-90" : "3xl:mb-130 lg:mb-130 mb-60"} gap-5 lg:gap-10 pl-[5%] lg:pl-30 lg:pt-10`}
           >
             <LeftItem
               index="01"
