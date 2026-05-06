@@ -816,7 +816,7 @@ const CoreValueSection = () => {
             <b>{lang == "Viet" ? " C - Levels" : " C - Levels"}</b>
           </div>
           <div
-            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "3xl:mb-170 lg:mb-110 mb-90" : "3xl:mb-130 lg:mb-130 mb-60"} gap-5 lg:gap-10 pl-[5%] lg:pl-30 lg:pt-10`}
+            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "3xl:mb-170 lg:mb-110 mb-90" : "3xl:mb-130 lg:mb-130 mb-70"} gap-5 lg:gap-10 pl-[5%] lg:pl-30 lg:pt-10`}
           >
             <LeftItem
               index="01"
