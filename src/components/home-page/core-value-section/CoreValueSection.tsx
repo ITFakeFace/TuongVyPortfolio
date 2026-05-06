@@ -848,7 +848,7 @@ const CoreValueSection = () => {
             />
           </div>
         </div>
-        <div className={`w-1/2 pt-10 bg-[#E6F4FF] pl-3 lg:pl-5`}>
+        <div className={`w-1/2 pt-10 bg-[#E6F4FF] pl-3 lg:pl-5 lg:pb-20`}>
           <div
             className={`flex flex-col pr-[5%] w-full items-end mt-15 lg:mt-60 gap-5 lg:gap-10`}
           >
@@ -900,8 +900,8 @@ const CoreValueSection = () => {
                   : "Financial & Unit Economics Control"
               }
               className=""
-              containerClassName="lg:w-10/10"
-              contentClassName="lg:w-8/10"
+              containerClassName="lg:w-8/10"
+              contentClassName="lg:w-9/10"
               vietContent={[
                 "Quản lý chỉ số P&L với quy mô danh mục đạt mức hàng nghìn tỷ VNĐ",
                 "Tối ưu hóa CAC, tỷ lệ duyệt hồ sơ và chi phí rủi ro nhằm cải thiện biên lợi nhuận ròng",
@@ -921,8 +921,8 @@ const CoreValueSection = () => {
                   : "Partnership Development & Strategic Negotiation"
               }
               className=""
-              containerClassName="lg:w-15/20"
-              contentClassName="lg:w-16/20"
+              containerClassName="lg:w-12/20"
+              contentClassName="lg:w-18/20"
               vietContent={[
                 "Thiết lập và mở rộng mạng lưới đối tác trong các lĩnh vực Retail, Fintech, Payment",
                 "Dẫn dắt đàm phán các hợp đồng chiến lược quy mô lớn",
