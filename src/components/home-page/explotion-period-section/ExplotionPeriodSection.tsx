@@ -31,6 +31,7 @@ import EndMobileImageEng from "@/assets/images/assets/ExplotionPeriodSection-End
 import BusinessGrowth from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowth-1.png";
 import BusinessGrowthEng from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowthEng-1.png";
 import HumanImage from "@/assets/images/assets/ExplotionPeriodSection-HumanImage-1.png";
+import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-1.png";
 import { useContactForm } from "@/context/ContactContext";
 import { motion } from "framer-motion";
 
@@ -504,6 +505,20 @@ const ExplotionPeriodSection = () => {
               className={`w-full h-full object-contain rounded-2xl lg:rounded-none`}
             />
           </div>
+        </div>
+        <div className={`w-full flex flex-col`}>
+          <div
+            className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent`}
+          >
+            {lang == "Viet"
+              ? "Nâng cấp doanh nghiệp cùng đội ngũ chuyên gia tại PNP"
+              : "Upgrade your business with the expert team at PNP"}
+          </div>
+          <Image
+            src={BannerImage}
+            alt="Banner Image"
+            className={`w-full h-auto mt-5`}
+          />
         </div>
         <Image
           src={lang == "Viet" ? BusinessGrowth : BusinessGrowthEng}

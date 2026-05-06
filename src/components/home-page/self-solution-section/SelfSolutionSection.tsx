@@ -30,7 +30,7 @@ const SelftSolutionSection = () => {
       <div
         className={`grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 `}
       >
-        <Link href="#covid-period" className={`relative`}>
+        <a href="#covid-period" className={`relative`}>
           <Image
             src={ImageBox1}
             alt="Image Box 1"
@@ -63,8 +63,8 @@ const SelftSolutionSection = () => {
                 : "From a remarkable transformation during the pandemic, let’s uncover practical solutions for your business."}
             </div>
           </div>
-        </Link>
-        <Link href="#training-partners" className={`relative`}>
+        </a>
+        <a href="#training-partners" className={`relative`}>
           <Image
             src={ImageBox2}
             alt="Image Box 2"
@@ -95,8 +95,8 @@ const SelftSolutionSection = () => {
                 : "To ensure your team never falls behind in capability amid rapid change, customized training programs are designed to align with your business direction."}
             </div>
           </div>
-        </Link>
-        <Link href="#growth-hack" className={`relative`}>
+        </a>
+        <a href="#growth-hack" className={`relative`}>
           <Image
             src={ImageBox3}
             alt="Image Box 3"
@@ -123,12 +123,12 @@ const SelftSolutionSection = () => {
               className={`font-medium text-sm lg:text-[clamp(20px,1.302vw,25px)]`}
             >
               {lang == "Viet"
-                ? "Bạn là Leader nhưng đang cảm thấy “bế tắc” trong việc phát triển nghề nghiệp,hãy để tôi “tháo gỡ điểm nghẽn” đó cho bạn."
+                ? "Bạn là Leader nhưng đang cảm thấy “bế tắc” trong việc phát triển nghề nghiệp, hãy để tôi “tháo gỡ điểm nghẽn” đó cho bạn."
                 : "If you’re a leader feeling “stuck” in your career growth, let me help you remove those bottlenecks."}
             </div>
           </div>
-        </Link>
-        <Link href="#young-partners" className={`relative`}>
+        </a>
+        <a href="#young-partners" className={`relative`}>
           <Image
             src={ImageBox4}
             alt="Image Box 4"
@@ -161,7 +161,7 @@ const SelftSolutionSection = () => {
                 : "Committed to supporting young professionals, I aim to share my experience and create value in nurturing the next generation of talent."}
             </div>
           </div>
-        </Link>
+        </a>
       </div>
       <div
         className={`h-10 lg:h-15 bg-linear-to-b from-[#1e2936] to-[#0a3472]`}
