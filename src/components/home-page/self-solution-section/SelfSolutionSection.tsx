@@ -28,7 +28,7 @@ const SelftSolutionSection = () => {
         </div>
       </div>
       <div
-        className={`grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 `}
+        className={`grid grid-cols-2 grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 lg:gap-25 lg:mx-15`}
       >
         <a href="#covid-period" className={`relative`}>
           <Image
@@ -49,14 +49,14 @@ const SelftSolutionSection = () => {
             `}
           >
             <div
-              className={`font-bold text-lg lg:text-[clamp(40px,2.604vw,50px)]`}
+              className={`font-bold text-lg lg:text-[clamp(30px,10.05px+1.302vw,35px)]`}
             >
               {lang == "Viet"
                 ? "TƯ VẤN CHIẾN LƯỢC PHÁT TRIỂN DOANH NGHIỆP"
                 : "STRATEGIC BUSINESS DEVELOPMENT CONSULTING"}
             </div>
             <div
-              className={`font-medium text-sm lg:text-[clamp(20px,1.302vw,25px)]`}
+              className={`font-medium text-sm lg:text-[clamp(15px,-4.92px+1.302vw,20px)]`}
             >
               {lang == "Viet"
                 ? "Từ câu chuyện chuyển mình đầy “ngoạn mục” mùa đại dịch, hãy cùng tôi tìm kiếm giải pháp thực tế cho doanh nghiệp của bạn."
@@ -82,13 +82,15 @@ const SelftSolutionSection = () => {
               before:transition-opacity before:duration-300 before:-z-10
             `}
           >
-            <div className={`font-bold lg:text-[clamp(40px,2.604vw,50px)]`}>
+            <div
+              className={`font-bold lg:text-[clamp(30px,10.05px+1.302vw,35px)]`}
+            >
               {lang == "Viet"
                 ? "CHƯƠNG TRÌNH ĐÀO TẠO NỘI BỘ"
                 : "INTERNAL TRAINING PROGRAMS"}
             </div>
             <div
-              className={`font-medium text-sm lg:text-[clamp(20px,1.302vw,25px)]`}
+              className={`font-medium text-sm lg:text-[clamp(15px,-4.92px+1.302vw,20px)]`}
             >
               {lang == "Viet"
                 ? "Để nhân sự không bao giờ rơi vào trạng thái “đuối năng lực” trước sự phát triển nhanh chóng, chương trình đào tạo nội bộ được xây dựng riêng phù hợp với định hướng doanh nghiệp."
@@ -114,13 +116,15 @@ const SelftSolutionSection = () => {
               before:transition-opacity before:duration-300 before:-z-10
             `}
           >
-            <div className={`font-bold lg:text-[clamp(40px,2.604vw,50px)]`}>
+            <div
+              className={`font-bold lg:text-[clamp(30px,10.05px+1.302vw,35px)]`}
+            >
               {lang == "Viet"
                 ? "BÍ KÍP BỨT PHÁ SỰ NGHIỆP TÀI CHÍNH"
                 : "CAREER BREAKTHROUGH IN FINANCE"}
             </div>
             <div
-              className={`font-medium text-sm lg:text-[clamp(20px,1.302vw,25px)]`}
+              className={`font-medium text-sm lg:text-[clamp(15px,-4.92px+1.302vw,20px)]`}
             >
               {lang == "Viet"
                 ? "Bạn là Leader nhưng đang cảm thấy “bế tắc” trong việc phát triển nghề nghiệp, hãy để tôi “tháo gỡ điểm nghẽn” đó cho bạn."
@@ -147,14 +151,14 @@ const SelftSolutionSection = () => {
             `}
           >
             <div
-              className={`font-bold text-lg lg:text-[clamp(40px,2.604vw,50px)]`}
+              className={`font-bold text-lg lg:text-[clamp(30px,10.05px+1.302vw,35px)]`}
             >
               {lang == "Viet"
                 ? "DIỄN GIẢ CÙNG NGƯỜI TRẺ PHÁT TRIỂN"
                 : "SPEAKING & YOUTH DEVELOPMENT"}
             </div>
             <div
-              className={`font-medium text-sm lg:text-[clamp(20px,1.302vw,25px)]`}
+              className={`font-medium text-sm lg:text-[clamp(15px,-4.92px+1.302vw,20px)]`}
             >
               {lang == "Viet"
                 ? "Luôn đồng hành cùng người trẻ, hãy để tôi lan tỏa giá trị và kinh nghiệm của mình để đóng góp thêm vào hành trình nuôi dưỡng nhân tài trẻ."

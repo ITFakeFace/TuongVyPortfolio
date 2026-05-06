@@ -506,9 +506,9 @@ const ExplotionPeriodSection = () => {
             />
           </div>
         </div>
-        <div className={`w-full flex flex-col`}>
+        <div className={`w-full flex flex-col mt-15 lg:mt-25 mb-15 lg:mb-15`}>
           <div
-            className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent`}
+            className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent text-xl w-8/10 mx-auto lg:mx-0 lg:w-full lg:text-[clamp(43px,15.8px+1.771vw,50px)] font-bold text-center`}
           >
             {lang == "Viet"
               ? "Nâng cấp doanh nghiệp cùng đội ngũ chuyên gia tại PNP"
