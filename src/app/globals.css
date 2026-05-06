@@ -22,6 +22,7 @@
 
 @theme {
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-3xl: 120rem;
 
   @keyframes marquee {
     from {

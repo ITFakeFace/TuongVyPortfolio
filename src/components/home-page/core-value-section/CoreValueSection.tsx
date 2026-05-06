@@ -655,7 +655,7 @@ const CoreValueSection = () => {
       <div className={cl(`flex flex-col justify-start`, containerClassName)}>
         <div
           className={cl(
-            `w-full flex flex-row gap-2 lg:gap-8 items-center`,
+            `w-full flex flex-row gap-2 lg:gap-4 items-start`,
             className,
           )}
         >
@@ -672,16 +672,30 @@ const CoreValueSection = () => {
           >
             {index}
           </div>
-          <div className="h-full flex items-center">
-            <p className="text-[10px] lg:text-[clamp(10px,3.565px+1.637vw,35px)] text-white mt-2 font-semibold">
+          <div className="h-full flex flex-col items-start">
+            <p className="text-[10px] lg:text-[clamp(25px,5.05px+1.302vw,30px)] text-white mt-2 font-semibold">
               {description}
             </p>
+            {/* Phần render danh sách li */}
+            <div
+              className={cl(
+                "mt-2 justify-start ml-3 lg:ml-5 text-[8px] lg:text-[clamp(12px,0.04px+0.781vw,15px)] hidden lg:flex",
+                contentClassName,
+              )}
+            >
+              <ul className="list-disc list-inside text-white lg:list-outside text-left font-medium">
+                {currentContent?.map((item, i) => (
+                  <li key={i} className="mb-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        {/* Phần render danh sách li */}
         <div
           className={cl(
-            "mt-2 flex justify-start ml-3 lg:ml-10 text-[8px] lg:text-[clamp(18px,10px+0.521vw,20px)]",
+            "mt-2 flex justify-start ml-3 lg:ml-5 text-[8px] lg:text-[clamp(12px,0.04px+0.781vw,15px)] lg:hidden",
             contentClassName,
           )}
         >
@@ -713,14 +727,29 @@ const CoreValueSection = () => {
       <div className={cl(`flex flex-col w-full items-end`, containerClassName)}>
         <div
           className={cl(
-            `w-full flex flex-row gap-2 lg:gap-8 items-center justify-end`,
+            `w-full flex flex-row gap-2 lg:gap-4 items-start justify-end`,
             className,
           )}
         >
-          <div className="">
-            <p className="text-[10px] lg:text-[clamp(10px,3.565px+1.637vw,35px)] text-[#011B40] mt-2 font-semibold text-right">
+          <div className=" flex flex-col items-start h-full justify-center">
+            <p className="text-[10px] lg:text-[clamp(25px,5.05px+1.302vw,30px)] text-[#011B40] mt-2 font-semibold text-left">
               {description}
             </p>
+            {/* Phần render danh sách li */}
+            <div
+              className={cl(
+                "mt-2 justify-start ml-3 lg:ml-5 text-[8px] lg:text-[clamp(12px,0.04px+0.781vw,15px)] hidden lg:flex",
+                contentClassName,
+              )}
+            >
+              <ul className="list-disc list-inside text-[#011B40] lg:list-outside text-left font-medium">
+                {currentContent?.map((item, i) => (
+                  <li key={i + "desktop"} className="mb-1">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           <div
             className={`
@@ -736,17 +765,16 @@ const CoreValueSection = () => {
             {index}
           </div>
         </div>
-
         {/* Phần render danh sách li */}
         <div
           className={cl(
-            "mt-2 flex justify-start ml-3 lg:ml-10 text-[8px] lg:text-[clamp(18px,10px+0.521vw,20px)]",
+            "mt-2 flex justify-start ml-1 lg:ml-5 text-[8px] lg:text-[clamp(12px,0.04px+0.781vw,15px)] lg:hidden",
             contentClassName,
           )}
         >
           <ul className="list-disc list-inside text-[#011B40] lg:list-outside text-left font-medium">
             {currentContent?.map((item, i) => (
-              <li key={i} className="mb-1">
+              <li key={i + "mobile"} className="mb-1">
                 {item}
               </li>
             ))}
@@ -765,16 +793,20 @@ const CoreValueSection = () => {
           className={`absolute w-12/19 lg:w-8/19 h-auto object-cover bottom-[-3%] lg:bottom-[-7%] left-[50%] -translate-x-1/2 z-100`}
         />
         <div
-          className={`w-1/2 pt-10 bg-[linear-gradient(to_bottom,#08377C_8%,#84BBE27D_85%,#FFFFFF00_100%)]  pr-3 lg:pr-5`}
+          className={`w-1/2 pt-10 bg-[linear-gradient(to_bottom,#08377C_8%,#84BBE27D_85%,#FFFFFF00_100%)] pr-3 lg:pr-5`}
         >
           <div
-            className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-transparent
-                text-[21px] lg:text-[clamp(20px,3.271px+4.257vw,85px)] font-extrabold ml-4 lg:ml-10 lg:mt-20 w-fit mx-auto`}
+            className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-transparent leading-tight
+                text-[21px] lg:text-[clamp(70px,30.1px+2.604vw,80px)] font-extrabold ml-4 lg:ml-20 lg:mt-20 w-fit mx-auto`}
           >
             {lang == "Viet" ? "07 NĂNG LỰC" : "07 CORE "} <br />
-            {lang == "Viet" ? "CỐT LÕI" : "COMPETENCIES"}
+            {lang == "Viet"
+              ? "CỐT LÕI - ĐỊNH HƯỚNG - TÁC ĐỘNG"
+              : "CAPABILITIES – IMPACT - DRIVEN"}
           </div>
-          <div className={`text-white text-[10px] ml-4 lg:ml-10`}>
+          <div
+            className={`text-white text-[10px] lg:text-[clamp(30px,10.05px+1.302vw,35px)] ml-4 lg:ml-20`}
+          >
             {lang == "Viet"
               ? "Phát triển doanh nghiệp từ"
               : "Scaling businesses from"}
@@ -784,7 +816,7 @@ const CoreValueSection = () => {
             <b>{lang == "Viet" ? " C - Levels" : " C - Levels"}</b>
           </div>
           <div
-            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "mb-95" : "mb-75"} gap-5 lg:gap-10 pl-[5%]`}
+            className={`flex flex-col mt-10 lg:mt-10 ${lang == "Viet" ? "3xl:mb-170 lg:mb-110 mb-90" : "3xl:mb-130 lg:mb-130"} gap-5 lg:gap-10 pl-[5%] lg:pl-30 lg:pt-10`}
           >
             <LeftItem
               index="01"
@@ -793,7 +825,8 @@ const CoreValueSection = () => {
                   ? "Lãnh đạo xây dựng tổ chức & phát triển đội ngũ hiệu suất cao"
                   : "Leadership in Organizational Building & High-Performance Team Development"
               }
-              className="lg:w-9/10"
+              className=""
+              containerClassName="lg:w-10/10"
               contentClassName="w-full lg:w-9/10"
               vietContent={[
                 "Xây dựng và mở rộng lực lượng bán hàng lên 3.000 – 5.000 nhân sự & đại lý toàn quốc (50+ tỉnh)",
@@ -813,8 +846,9 @@ const CoreValueSection = () => {
                   ? "Quản trị hiệu suất dựa trên KPI và dữ liệu"
                   : "Data-driven Performance"
               }
-              className="lg:w-4/5"
-              contentClassName="lg:w-4/5"
+              className=""
+              containerClassName="lg:w-10/10"
+              contentClassName="lg:w-9/10"
               vietContent={[
                 "Thiết kế hệ thống KPI end-to-end (Acquisition → Approval → Disbursement → Collection)",
                 "Tối ưu conversion funnel giúp tăng hiệu quả bán hàng +15–25%",
@@ -833,8 +867,9 @@ const CoreValueSection = () => {
                   ? "Xây dựng và mở rộng nền tảng kinh doanh"
                   : "Business Platform Build & Scale"
               }
-              className="lg:w-7/10"
-              contentClassName="w-7/10"
+              className=""
+              containerClassName="lg:w-10/10"
+              contentClassName="w-8/10"
               vietContent={[
                 "Xây dựng mô hình kinh doanh từ 0 → scale với doanh thu đạt multi-million USD / năm",
                 "Thiết kế hệ thống vận hành tích hợp Sales – Risk – Ops",
@@ -848,9 +883,11 @@ const CoreValueSection = () => {
             />
           </div>
         </div>
-        <div className={`w-1/2 pt-10 bg-[#E6F4FF] pl-3 lg:pl-5 lg:pb-20`}>
+        <div
+          className={`w-1/2 pt-10 lg:pt-60 bg-[#E6F4FF] pl-3 lg:pl-5 lg:pb-20`}
+        >
           <div
-            className={`flex flex-col pr-[5%] w-full items-end mt-15 lg:mt-60 gap-5 lg:gap-10`}
+            className={`flex flex-col pr-[5%] lg:pr-25 w-full items-end mt-15 lg:mt-60 gap-5 lg:gap-10`}
           >
             <RightItem
               index="04"
@@ -900,8 +937,8 @@ const CoreValueSection = () => {
                   : "Financial & Unit Economics Control"
               }
               className=""
-              containerClassName="lg:w-8/10"
-              contentClassName="lg:w-9/10"
+              containerClassName="lg:w-10/10"
+              contentClassName="lg:w-10/10"
               vietContent={[
                 "Quản lý chỉ số P&L với quy mô danh mục đạt mức hàng nghìn tỷ VNĐ",
                 "Tối ưu hóa CAC, tỷ lệ duyệt hồ sơ và chi phí rủi ro nhằm cải thiện biên lợi nhuận ròng",
@@ -921,8 +958,8 @@ const CoreValueSection = () => {
                   : "Partnership Development & Strategic Negotiation"
               }
               className=""
-              containerClassName="lg:w-12/20"
-              contentClassName="lg:w-18/20"
+              containerClassName="lg:w-15/20"
+              contentClassName="lg:w-18/20 lg:self-end"
               vietContent={[
                 "Thiết lập và mở rộng mạng lưới đối tác trong các lĩnh vực Retail, Fintech, Payment",
                 "Dẫn dắt đàm phán các hợp đồng chiến lược quy mô lớn",
