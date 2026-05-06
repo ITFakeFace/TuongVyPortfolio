@@ -53,7 +53,7 @@ const NavigationBar = () => {
     },
     {
       key: "partner",
-      id: "partners",
+      id: "strategic-partnerships",
       value: {
         Eng: "Partners",
         Viet: "Đối tác",

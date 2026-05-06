@@ -12,6 +12,7 @@ interface FilmStripProps {
   pauseOnHover?: boolean;
   imageClassName?: string;
   gap?: string; // Thay đổi từ number thành string (vd: "gap-4", "gap-10")
+  sideFaded?: boolean;
 }
 
 export default function FilmStrip({
@@ -23,6 +24,7 @@ export default function FilmStrip({
   pauseOnHover = true,
   imageClassName,
   gap = "gap-0", // Mặc định là string class
+  sideFaded = true,
 }: FilmStripProps) {
   const regionId = useId();
   const trackRef = useRef<HTMLDivElement>(null);
@@ -148,9 +150,12 @@ export default function FilmStrip({
           </div>
         ))}
       </div>
-
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black/40 to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black/40 to-transparent z-10" />
+      {sideFaded && (
+        <>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black/40 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black/40 to-transparent z-10" />
+        </>
+      )}
     </section>
   );
 }

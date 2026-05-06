@@ -5,7 +5,7 @@ import Image from "next/image";
 import CareerPath1 from "@/assets/images/assets/CareerPathSection-CareerPathImage-1.png";
 import CareerPathEng1 from "@/assets/images/assets/CareerPathSection-CareerPathImageEng-1.png";
 import CareerPathMobile1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImage-1.png";
-import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageeNG-1.png";
+import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageEng-1.png";
 import { Carousel } from "primereact/carousel";
 import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-2.png";
 import { Button } from "primereact/button";
@@ -222,7 +222,7 @@ const CareerPathSection = () => {
             className={`w-6/10 lg:w-4/9 h-auto mx-auto lg:mt-25`}
           />
           <div
-            className={`w-14/20 lg:w-19/20 bg-linear-to-b from-[#0D60F1] shadow-[0px_10px_15px_0px_#7DB3E2] from-44% to-white mx-auto pt-5 rounded-3xl lg:rounded-t-4xl -mt-3 lg:-mt-5 text-center text-white font-bold text-[clamp(12px,6.136px+0.982vw,25px)]`}
+            className={`w-17/20 lg:w-19/20 bg-linear-to-b from-[#0D60F1] shadow-[0px_10px_15px_0px_#7DB3E2] from-44% to-white mx-auto pt-5 rounded-3xl lg:rounded-t-4xl -mt-2 lg:-mt-5 text-center text-white font-bold text-[clamp(12px,6.136px+0.982vw,25px)] overflow-hidden`}
           >
             <Image
               src={lang == "Viet" ? CareerPath1 : CareerPathEng1}
@@ -232,7 +232,7 @@ const CareerPathSection = () => {
             <Image
               src={lang == "Viet" ? CareerPathMobile1 : CareerPathMobileEng1}
               alt="Career Path Section Image"
-              className={`w-9/10 lg:w-full h-auto block lg:hidden mx-auto mt-2 lg:mt-0`}
+              className={`w-19/20 lg:w-full h-auto block lg:hidden mx-auto mt-0 lg:mt-0`}
             />
           </div>
         </div>

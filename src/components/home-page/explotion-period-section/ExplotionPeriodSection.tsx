@@ -249,10 +249,10 @@ const ExplotionPeriodSection = () => {
               unstyled
               className={`
               relative overflow-hidden
-              px-15 py-4 lg:px-30 lg:py-6 lg:p-5
+              px-5 py-4 lg:px-30 lg:py-6 lg:p-5
               rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
               bg-[linear-gradient(90deg,#1F2833,#042B63)]
-              text-[clamp(16px,2.273px+1.964vw,35px)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer
+              text-sm lg:text-[clamp(16px,2.273px+1.964vw,35px)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer
               `}
               onClick={openContactForm}
             >
@@ -422,14 +422,14 @@ const ExplotionPeriodSection = () => {
               <div>{lang == "Viet" ? "DOANH NGHIỆP" : "SOLUTIONS"}</div>
             </div>
             <div
-              className={`w-8/10 lg:w-full text-white font-bold text-sm lg:text-[clamp(25px,5px+1.302vw,30px)] mx-auto lg:mx-0 mt-3`}
+              className={`w-full lg:w-full text-white font-bold text-sm lg:text-[clamp(25px,5px+1.302vw,30px)] mx-auto lg:mx-0 mt-3`}
             >
               {lang == "Viet"
                 ? "Quản lý tốt mô hình doanh nghiệp từ"
                 : "Effectively manage your business model from"}
             </div>
             <div
-              className={`flex flex-row gap-3 lg:gap-5 items-center mt-10 mx-auto lg:mx-0`}
+              className={`flex flex-row gap-3 lg:gap-5 items-center mt-5 mx-auto lg:mx-0`}
             >
               <motion.div
                 initial={{ opacity: 0, y: 30 }} // Bắt đầu ở dưới và mờ
@@ -508,7 +508,7 @@ const ExplotionPeriodSection = () => {
         <Image
           src={lang == "Viet" ? BusinessGrowth : BusinessGrowthEng}
           alt="Hard Period"
-          className={`w-full h-auto bottom-0 left-0 z-0 pb-35 lg:pb-0 mt-10 lg:mt-20`}
+          className={`w-9/10 h-auto bottom-0 left-0 z-0 pb-40 lg:pb-10 mt-10 lg:mt-40 mx-auto`}
         />
         <Image
           src={HumanImage}
@@ -519,6 +519,7 @@ const ExplotionPeriodSection = () => {
           className={`absolute bottom-0 left-0 z-20 h-150 lg:h-200 flex justify-center items-center w-full bg-linear-to-t from-[#095DF1] from-22% to-transparent to-44%`}
         >
           <div
+            id="growth-hack"
             className={`mt-auto text-[14px] lg:text-[clamp(13px,8.625px+1.113vw,30px)] text-white pt-10 lg:pt-20 pb-20 lg:pb-20 text-center`}
           >
             <div>

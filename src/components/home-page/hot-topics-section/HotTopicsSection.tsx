@@ -577,7 +577,7 @@ const HotTopicsSection = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div id="training-partners">
         <div
           id="partners"
           className={`flex flex-row justify-center text-[20px] lg:text-[55px] gap-2 lg:gap-4 font-extrabold lg:font-bold 
@@ -685,6 +685,7 @@ const HotTopicsSection = () => {
         </div>
       </div>
       <div
+        id="young-partners"
         className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between mt-10 lg:mt-20 text-white w-9/10 mx-auto`}
       >
         <div className={`w-full lg:w-1/2 lg:pt-20`}>

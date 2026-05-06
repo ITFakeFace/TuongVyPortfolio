@@ -11,7 +11,7 @@ const ConsultationFormSection = () => {
   const { lang } = useLanguage();
   return (
     <div className={`${styles.container} pt-110 lg:pt-120`}>
-      <div className={`lg:mb-15 mb-5`}>
+      <div id="strategic-partnerships" className={`lg:mb-15 mb-5`}>
         <div>
           <div
             className={`flex flex-row justify-center text-[30px] lg:text-[80px] gap-2 lg:gap-4 font-bold 
