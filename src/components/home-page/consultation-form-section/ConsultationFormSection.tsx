@@ -10,11 +10,11 @@ import ContactForm from "./contact-form/ContactForm";
 const ConsultationFormSection = () => {
   const { lang } = useLanguage();
   return (
-    <div className={`${styles.container} pt-110 lg:pt-120`}>
-      <div id="strategic-partnerships" className={`lg:mb-15 mb-5`}>
+    <div className={`${styles.container} pt-180 lg:pt-120 pb-40 lg:pb-40 `}>
+      <div id="strategic-partnerships" className={`lg:pb-15 pb-5 lg:px-[15%]`}>
         <div>
           <div
-            className={`flex flex-row justify-center text-[30px] lg:text-[80px] gap-2 lg:gap-4 font-bold 
+            className={`flex flex-row justify-center text-[1.5rem] lg:text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)] gap-2 lg:gap-4 font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
                 `}
           >
@@ -34,7 +34,7 @@ const ConsultationFormSection = () => {
               cx="50" // Đưa vào chính giữa theo trục X
               cy="5" // Đưa vào chính giữa theo trục Y
               rx="50" // Bán kính 50 (tổng đường kính là 100, tức full width)
-              ry="3" // Độ dẹt của elipse
+              ry="1" // Độ dẹt của elipse
               fill="url(#paint0_radial_custom)"
             />
             <defs>
@@ -59,25 +59,23 @@ const ConsultationFormSection = () => {
             </defs>
           </svg>
         </div>
+        <div
+          className={`text-white font-playfair text-center text-[10px] lg:text-[clamp(1.125rem,-0.1875rem+1.3672vw,2rem)]`}
+        >
+          {lang == "Viet"
+            ? "18 năm hành trình hợp tác cùng các tổ chức"
+            : "18 years of collaborating with organizations"}
+        </div>
       </div>
       <Image
         src={LogoListImage}
         alt="Logo List"
-        className="w-9/10 lg:w-4/5 h-auto object-contain mx-auto mb-10 lg:mb-0"
+        className="lg:px-[15%] w-9/10 lg:w-full h-auto object-contain mx-auto pb-10 lg:pb-0"
       />
-      <div className={`flex flex-col lg:flex-row relative mt-20 pb-20 lg:pb-0`}>
-        <div className={`w-full lg:w-1/2 flex`}>
-          <Image
-            src={TuongVyImage}
-            alt="Tuong Vy"
-            className="absolute lg:static w-4/7 lg:w-3/5 lg:mr-30 h-auto object-cover ml-auto bottom-0 right-0"
-          />
-        </div>
-        <div className={`w-full lg:w-1/2 lg:pt-10`}>
-          <div className={`w-9/10 lg:w-8/10 mx-auto lg:mr-auto`}>
-            <ContactForm lang={lang} />
-          </div>
-        </div>
+      <div
+        className={`w-full lg:w-full lg:px-[15%] mx-auto lg:mr-auto lg:my-60 lg:py-20 bg-[radial-gradient(circle_at_center,_#011B40_9%,_#0346A6_100%)]`}
+      >
+        <ContactForm lang={lang} />
       </div>
     </div>
   );

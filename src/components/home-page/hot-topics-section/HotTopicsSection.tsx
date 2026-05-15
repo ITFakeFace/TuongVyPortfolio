@@ -4,7 +4,7 @@ import styles from "./HotTopicsSection.module.scss";
 import { cl } from "@/utils/cn";
 import HotTopicImage from "@/assets/images/assets/HotTopicsSection-HotTopicImage-1.png";
 import TuongVyImage from "@/assets/images/assets/HotTopicsSection-TuongVyImage-1.png";
-import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-3.png";
+import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-4.png";
 import TuongVyImage2 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-2.png";
 import PartnerImage1 from "@/assets/images/assets/HotTopicsSection-PartnerImage-1.png";
 import PartnerImage2 from "@/assets/images/assets/HotTopicsSection-PartnerImage-2.png";
@@ -17,10 +17,15 @@ import YoungPartnerImage2 from "@/assets/images/assets/HotTopicsSection-YoungPar
 import YoungPartnerImage3 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-3.png";
 import YoungPartnerImage4 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-4.png";
 import YoungPartnerImage5 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-5.png";
+import YoungPartnerImage6 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-6.png";
+import TrainingDecor from "@/assets/images/assets/HotTopicsSection-TrainingDecor-1.png";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "primereact/button";
 import { Carousel } from "primereact/carousel";
 import { useContactForm } from "@/context/ContactContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import LatestEventsSection from "../latest-events-section/LatestEventsSection";
 
 interface TrainingPartnerItemProps {
   image: string | StaticImageData;
@@ -52,21 +57,21 @@ const HotTopicsSection = () => {
       <div className={cl(`w-full flex flex-row gap-3 lg:gap-8`, className)}>
         <div
           className={`
-                w-[clamp(50px,44.846px+1.311vw,70px)]
-                h-[clamp(50px,44.846px+1.311vw,70px)]
-                text-[20px] lg:text-[clamp(30px,26.136px+0.982vw,45px)]
-                aspect-square shrink-0 p-4 lg:p-10
-                rounded-full border-3 lg:border-4 border-white 
-                text-white font-bold flex items-center justify-center 
+                w-[clamp(3rem,0.75rem+2.3438vw,4.5rem)]
+                h-[clamp(3rem,0.75rem+2.3438vw,4.5rem)]
+                text-[20px] lg:text-[clamp(1.75rem,0.25rem+1.5625vw,2.75rem)]
+                aspect-square shrink-0 p-4 lg:p-8 4xl:p-15
+                rounded-full border-3 lg:border-2 4xl:border-4 border-white 
+                text-white font-semibold 4xl:font-bold flex items-center justify-center 
             `}
         >
           {index}
         </div>
         <div className="">
-          <h3 className="text-[16px] lg:text-[clamp(20px,16.907px+0.786vw,32px)] font-bold text-white">
+          <h3 className="text-[16px] lg:text-[clamp(1.125rem,-0.1875rem+1.3672vw,2rem)] font-bold text-white">
             {title}
           </h3>
-          <p className="text-[12px] lg:text-[clamp(14px,11.423px+0.655vw,24px)] text-white mt-2">
+          <p className="text-[12px] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] text-white mt-2">
             {description}
           </p>
         </div>
@@ -193,7 +198,7 @@ const HotTopicsSection = () => {
 
   const renderPartnerItem = (item: TrainingPartnerItemProps) => {
     return (
-      <div className="flex flex-col w-[90%] gap-4 text-white items-center mx-auto min-h-full">
+      <div className="flex flex-col w-8/10 gap-4 text-white items-center mx-auto min-h-full">
         {/* Phần ảnh */}
         <Image
           src={item.image}
@@ -202,27 +207,30 @@ const HotTopicsSection = () => {
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
-        <div className="w-full flex-1 flex flex-col justify-between gap-2 lg:gap-6">
-          <div className="w-full text-[20px] md:text-4xl font-bold leading-snug text-center line-clamp-2 min-h-[2.4em] md:min-h-[2.8em] flex items-center justify-center">
+        <div className="w-full flex-1 flex flex-col justify-between gap-2 lg:gap-4">
+          <div className="w-full text-lg md:text-[clamp(1.5rem,0.375rem+1.1719vw,2.25rem)] font-bold leading-snug text-center line-clamp-2 min-h-[2.4em] md:min-h-[2.8em] flex items-center justify-center">
             {item.text[lang].title}
           </div>
           {/* Khối chữ */}
-          <div className="flex flex-col gap-1 lg:gap-4 text-justify">
-            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+          <div
+            className={`flex flex-col gap-1 lg:gap-2 text-justify 
+            text-[12px] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] leading-loose`}
+          >
+            <div className="">
               <span className="font-semibold">
                 {lang == "Viet" ? "Đơn vị hợp tác: " : "Partner: "}
               </span>
               {item.text[lang].partner}
             </div>
 
-            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
+            <div className="">
               <span className="font-semibold">
                 {lang == "Viet" ? "Vai trò hợp tác: " : "Role: "}
               </span>
               {item.text[lang].role}
             </div>
 
-            <div className="text-[12px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
+            <div className="">
               <span className="font-semibold">
                 {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
               </span>
@@ -231,11 +239,11 @@ const HotTopicsSection = () => {
           </div>
 
           {/* Khối nút: Luôn nằm dưới cùng nhờ justify-between của div cha hoặc mt-auto */}
-          <div className="pt-5 lg:pt-6 w-full flex justify-center mt-auto">
+          <div className="pt-5 lg:pt-4 w-full flex justify-center mt-auto">
             <Button
               unstyled
               label={lang == "Viet" ? "LIÊN HỆ ĐÀO TẠO" : "TRAINING INQUIRIES"}
-              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[14px] lg:text-[clamp(18px,12px+1.5vw,32px)] font-bold rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[14px] lg:text-[clamp(1rem,-0.5rem+1.5625vw,2rem)] font-bold rounded-full border-2 border-white w-fit px-10 lg:px-15 4xl:px-20 py-2 lg:py-3 4xl:py-5 cursor-pointer hover:scale-110 transition-all duration-300"
               onClick={openContactForm}
             />
           </div>
@@ -347,14 +355,32 @@ const HotTopicsSection = () => {
         },
       },
     },
+    {
+      image: YoungPartnerImage6,
+      text: {
+        Eng: {
+          title: "WORKSHOP: WHO’S REALLY IN CONTROL?",
+          partner: "AIESEC",
+          role: "Speaker",
+          description:
+            "Offering new perspectives to help young people switch off autopilot mode, overcome fear, and build deeper self-awareness—enabling stronger thinking and more confident career direction.",
+        },
+        Viet: {
+          title: "WORKSHOP: WHO’S REALLY IN CONTROL?",
+          partner: "AIESEC",
+          role: "Diễn giả",
+          description:
+            "Mở ra góc nhìn mới giúp người trẻ tắt chế độ tự động, vượt qua nỗi sợ để nhận thức bản thân sâu sắc, từ đó làm chủ tư duy và định hướng sự nghiệp vững vàng.",
+        },
+      },
+    },
   ];
 
   const renderYoungPartnerItem = (item: YoungPartnerItemProps) => {
     return (
       <div
-        className={`flex flex-col w-[90%] gap-4 text-[#011B40] items-center mx-auto min-h-full 
-        bg-[linear-gradient(to_bottom,rgba(153,153,153,0.5)_0%,rgba(255,255,255,0.5)_10%,rgba(255,255,255,0.5)_84%,rgba(153,153,153,0.5)_100%)]
-            px-5 py-5 lg:px-10 lg:py-10 border-4 border-[#C9FDFF] rounded-2xl lg:rounded-4xl
+        className={`flex flex-col w-[90%] gap-4 text-[#white] items-center mx-auto min-h-full 
+            px-5 py-5 lg:px-10 lg:py-10 rounded-2xl lg:rounded-4xl
         `}
       >
         {/* Phần ảnh */}
@@ -365,32 +391,40 @@ const HotTopicsSection = () => {
         />
 
         {/* Phần nội dung: Sử dụng flex-1 và flex-col để đẩy nút xuống */}
-        <div className="w-full flex flex-col justify-between gap-4 lg:gap-4">
-          <div className="w-full text-xl md:text-3xl font-bold leading-snug text-center lg:mt-5">
+        <div className="w-full flex flex-col justify-between gap-4 lg:gap-6 4xl:gap-8 ">
+          <div className="w-full text-base md:text-[clamp(1.5rem,-0.375rem+1.9531vw,2.75rem)] font-bold leading-relaxed lg:leading-snug text-center lg:mt-5">
             {item.text[lang].title}
           </div>
           {/* Khối chữ */}
-          <div className="flex flex-col gap-1 lg:gap-2 text-justify">
-            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
-              <span className="font-semibold">
-                {lang == "Viet" ? "Đơn vị hợp tác: " : "Partner: "}
-              </span>
-              {item.text[lang].partner}
-            </div>
-
-            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed">
-              <span className="font-semibold">
-                {lang == "Viet" ? "Vai trò hợp tác: " : "Role: "}
-              </span>
-              {item.text[lang].role}
-            </div>
-
-            <div className="text-[14px] lg:text-[clamp(18px,14.073px+1.0vw,24px)] leading-relaxed text-left">
-              <span className="font-semibold">
-                {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
-              </span>
-              {item.text[lang].description}
-            </div>
+          <div className="flex flex-col gap-1 lg:gap-2 text-justify text-[10px] lg:text-[clamp(1.0625rem,-0.3437rem+1.4648vw,2rem)] ">
+            <ul
+              className={`list-disc list-outside lg:pl-10 font-light leading-loose`}
+            >
+              <li>
+                <div className="">
+                  <span className="font-semibold">
+                    {lang == "Viet" ? "Đơn vị hợp tác: " : "Partner: "}
+                  </span>
+                  {item.text[lang].partner}
+                </div>
+              </li>
+              <li>
+                <div className="">
+                  <span className="font-semibold">
+                    {lang == "Viet" ? "Vai trò hợp tác: " : "Role: "}
+                  </span>
+                  {item.text[lang].role}
+                </div>
+              </li>
+              <li>
+                <div className="">
+                  <span className="font-semibold">
+                    {lang == "Viet" ? "Nội dung chương trình: " : "Content: "}
+                  </span>
+                  {item.text[lang].description}
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -399,188 +433,123 @@ const HotTopicsSection = () => {
 
   return (
     <div
-      className={`${styles.container} relative overflow-hidden pb-110 lg:pb-120`}
+      className={`${styles.container} relative overflow-hidden pb-110 4xl:pb-120 lg:pb-80`}
     >
-      <div className={`flex flex-col lg:flex-row relative pt-5 lg:pt-20`}>
+      <div
+        className={`flex flex-col-reverse lg:flex-row relative pt-5 lg:py-40 4xl:py-60 lg:px-[15%] items-stretch`}
+      >
+        {/* Background Image của Section */}
         <Image
           src={HotTopicImage}
           alt="Hot Topic"
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-70 lg:opacity-100"
         />
-        <div className="w-full h-full lg:w-1/2 relative flex justify-end items-end">
-          <Image
-            src={TuongVyImage2}
-            alt="Tuong Vy"
-            className="w-6/10 lg:w-11/14 h-auto block align-bottom z-30 translate-x-[-30%] lg:translate-x-[0%]"
-          />
-        </div>
-        <div className={`w-full lg:w-1/2 lg:pt-10 z-30`}>
-          <div className={`mb-10 lg:mb-10 lg:w-4/5`}>
-            <div className="relative w-full h-[9px]">
-              <svg
-                className="absolute block inset-0 size-full"
-                width="100%"
-                height="100%"
-                fill="none"
-                preserveAspectRatio="none"
-                viewBox="0 0 100 10" // Dùng hệ tọa độ đơn giản cho dễ quản lý
-              >
-                <ellipse
-                  cx="50" // Đưa vào chính giữa theo trục X
-                  cy="5" // Đưa vào chính giữa theo trục Y
-                  rx="50" // Bán kính 50 (tổng đường kính là 100, tức full width)
-                  ry="3" // Độ dẹt của elipse
-                  fill="url(#paint0_radial_custom)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_radial_custom"
-                    cx="50%" // Tâm gradient tại 50%
-                    cy="50%"
-                    r="50%" // Bán kính gradient lan ra hết elipse
-                    fx="50%"
-                    fy="50%"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    {/* Điểm trung tâm sáng nhất */}
-                    <stop offset="0%" stopColor="#F9FCFF" />
 
-                    {/* Thu nhỏ dần/Mờ dần. Offset 50% sẽ làm vùng sáng tập trung ở giữa */}
-                    <stop offset="50%" stopColor="#4E70FF" stopOpacity="0.5" />
-
-                    {/* Kết thúc mờ hẳn tại biên */}
-                    <stop offset="100%" stopColor="#4E70FF" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-              </svg>
-            </div>
-            <div>
-              <div
-                className={`flex flex-row justify-center text-[35px] lg:text-[65px] gap-2 lg:gap-4 font-bold 
-                    text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
-                `}
-              >
-                {lang == "Viet" ? "CHỦ ĐỀ NỔI BẬT" : "FEATURED TOPICS"}
-              </div>
-            </div>
-            <div className="relative w-full h-[9px]">
-              <svg
-                className="absolute block inset-0 size-full"
-                width="100%"
-                height="100%"
-                fill="none"
-                preserveAspectRatio="none"
-                viewBox="0 0 100 10" // Dùng hệ tọa độ đơn giản cho dễ quản lý
-              >
-                <ellipse
-                  cx="50" // Đưa vào chính giữa theo trục X
-                  cy="5" // Đưa vào chính giữa theo trục Y
-                  rx="50" // Bán kính 50 (tổng đường kính là 100, tức full width)
-                  ry="3" // Độ dẹt của elipse
-                  fill="url(#paint0_radial_custom)"
-                />
-                <defs>
-                  <radialGradient
-                    id="paint0_radial_custom"
-                    cx="50%" // Tâm gradient tại 50%
-                    cy="50%"
-                    r="50%" // Bán kính gradient lan ra hết elipse
-                    fx="50%"
-                    fy="50%"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    {/* Điểm trung tâm sáng nhất */}
-                    <stop offset="0%" stopColor="#F9FCFF" />
-
-                    {/* Thu nhỏ dần/Mờ dần. Offset 50% sẽ làm vùng sáng tập trung ở giữa */}
-                    <stop offset="50%" stopColor="#4E70FF" stopOpacity="0.5" />
-
-                    {/* Kết thúc mờ hẳn tại biên */}
-                    <stop offset="100%" stopColor="#4E70FF" stopOpacity="0" />
-                  </radialGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
+        {/* BOX TRÁI: Chứa Ảnh nhân vật và Button */}
+        <div className="flex-1 w-full lg:w-1/2 relative flex flex-col z-20 pt-10 lg:pt-0">
           <div
-            className={`flex flex-col gap-5 lg:gap-10 items-center lg:items-start justify-between`}
+            className={`flex-1 w-full h-full flex flex-col justify-end items-center`}
           >
-            {lang == "Viet"
-              ? renderTopicItem(
-                  "01",
-                  "TRÍ TUỆ NHÂN TẠO (AI)",
-                  "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
-                  "ml-4 w-6/7 lg:w-3/4",
-                )
-              : renderTopicItem(
-                  "01",
-                  "ARTIFICIAL INTELLIGENCE (AI)",
-                  "AI won’t replace you—but those who use AI will.",
-                  "ml-4 w-6/7 lg:w-3/4",
-                )}
-            {lang == "Viet"
-              ? renderTopicItem(
-                  "02",
-                  "KỸ NĂNG LÃNH ĐẠO",
-                  "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-5/6",
-                )
-              : renderTopicItem(
-                  "02",
-                  "LEADERSHIP SKILLS",
-                  "Leadership is about building effective systems, not just managing people.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-5/6",
-                )}
-            {lang == "Viet"
-              ? renderTopicItem(
-                  "03",
-                  "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
-                  "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
-                )
-              : renderTopicItem(
-                  "03",
-                  "FIANANCE & DIGITAL TRANSFORMATION",
-                  "A pivotal phase for businesses in the digital banking era.",
-                  "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
-                )}
-            {lang == "Viet"
-              ? renderTopicItem(
-                  "04",
-                  "KINH TẾ THỊ TRƯỜNG",
-                  "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
-                  "ml-4 w-6/7 lg:w-3/4",
-                )
-              : renderTopicItem(
-                  "04",
-                  "MARKET ECONOMY",
-                  "Understanding the market means understanding cash flow and customer behavior.",
-                  "ml-4 w-6/7 lg:w-3/4",
-                )}
-          </div>
-          <div className={`w-full lg:w-4/5 flex justify-center mt-5 lg:mt-5`}>
+            <Image
+              src={TuongVyImage2}
+              alt="Tuong Vy"
+              className="w-5/10 lg:w-9/15 h-auto block align-bottom z-30  lg:translate-x-[0%]"
+            />
             <Button
               unstyled
               className={`
-                      bg-linear-to-r from-[#042B63] from-50% to-[#2F3945] 
-                      border-2 lg:border-3 border-white rounded-2xl lg:rounded-4xl
-                      /* Font size & Padding thu nhỏ */
-                      text-[16px] lg:text-[30px] font-bold text-white
-                      px-4 lg:px-12 py-2 lg:py-4 mt-3 lg:mt-5
-                      transition-all duration-300 hover:brightness-110
-                      relative z-20  hover:cursor-pointer
-                    `}
+            bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] 
+            border-2 lg:border-1 border-white rounded-2xl lg:rounded-full
+            text-[16px] lg:text-[clamp(1.25rem,-1rem+2.3438vw,2.75rem)] font-bold text-white
+            px-4 lg:px-20 py-2 lg:py-4
+            transition-all duration-300 hover:brightness-110
+            relative z-20 hover:cursor-pointer
+          `}
               onClick={openContactForm}
             >
               {lang == "Viet" ? "TRAO ĐỔI TRỰC TIẾP" : "LET’S DISCUSSION"}
             </Button>
           </div>
         </div>
+
+        {/* BOX PHẢI: Chứa Tiêu đề và Danh sách Topic */}
+        <div
+          className={`flex-1 w-full lg:w-1/2 pt-20 lg:pt-10 z-30 flex flex-col`}
+        >
+          <div className="flex-1 flex flex-col lg:items-center lg:justify-center">
+            <div className={`mb-5 lg:mb-10`}>
+              <div
+                className={`flex flex-row justify-center text-[35px] lg:text-[clamp(2.5rem,-0.5rem+3.125vw,4.5rem)] gap-2 lg:gap-4 font-bold 
+            text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
+          `}
+              >
+                {lang == "Viet" ? "CHỦ ĐỀ NỔI BẬT" : "FEATURED TOPICS"}
+              </div>
+            </div>
+
+            <div
+              className={`flex flex-col gap-5 lg:gap-12 4xl:gap-20 items-center lg:items-start justify-between`}
+            >
+              {lang == "Viet"
+                ? renderTopicItem(
+                    "01",
+                    "TRÍ TUỆ NHÂN TẠO (AI)",
+                    "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
+                    "ml-4 w-6/7 lg:w-6/7",
+                  )
+                : renderTopicItem(
+                    "01",
+                    "ARTIFICIAL INTELLIGENCE (AI)",
+                    "AI won’t replace you—but those who use AI will.",
+                    "ml-4 w-6/7 lg:w-6/7",
+                  )}
+              {lang == "Viet"
+                ? renderTopicItem(
+                    "02",
+                    "KỸ NĂNG LÃNH ĐẠO",
+                    "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
+                    "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
+                  )
+                : renderTopicItem(
+                    "02",
+                    "LEADERSHIP SKILLS",
+                    "Leadership is about building effective systems, not just managing people.",
+                    "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
+                  )}
+              {lang == "Viet"
+                ? renderTopicItem(
+                    "03",
+                    "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
+                    "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
+                    "ml-4 w-6/7 lg:ml-16 lg:w-6/7 ",
+                  )
+                : renderTopicItem(
+                    "03",
+                    "FINANCE & DIGITAL TRANSFORMATION",
+                    "A pivotal phase for businesses in the digital banking era.",
+                    "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
+                  )}
+              {lang == "Viet"
+                ? renderTopicItem(
+                    "04",
+                    "KINH TẾ THỊ TRƯỜNG",
+                    "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
+                    "ml-4 w-6/7 lg:w-6/7",
+                  )
+                : renderTopicItem(
+                    "04",
+                    "MARKET ECONOMY",
+                    "Understanding the market means understanding cash flow and customer behavior.",
+                    "ml-4 w-6/7 lg:w-6/7",
+                  )}
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="training-partners">
+      <div id="training-partners" className={`pt-20 lg:pt-20`}>
         <div
           id="partners"
-          className={`flex flex-row justify-center text-[20px] lg:text-[55px] gap-2 lg:gap-4 font-extrabold lg:font-bold 
+          className={`flex flex-row justify-center text-[1.125rem] lg:text-[clamp(3rem,2.25rem+0.7813vw,3.5rem)] gap-2 lg:gap-4 font-extrabold lg:font-bold 
                     text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]/93
                     my-10 lg:my-15 text-center 
                 `}
@@ -590,7 +559,7 @@ const HotTopicsSection = () => {
             : "TRAINING & DEVELOPMENT PARTNERS"}
         </div>
         <div className={`${styles.carouselWrapper} w-full`}>
-          <div className="">
+          <div className="w-full">
             <Carousel
               value={partners} // Đã sửa Harvard đúng chính tả
               itemTemplate={renderPartnerItem}
@@ -611,33 +580,47 @@ const HotTopicsSection = () => {
                 },
               ]}
               autoplayInterval={8000}
-              prevIcon={<i className="pi pi-chevron-left text-3xl!" />}
-              nextIcon={<i className="pi pi-chevron-right text-3xl!" />}
-              className="w-4/5 mx-auto"
+              prevIcon={
+                <FontAwesomeIcon
+                  icon={faArrowLeft}
+                  className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+                />
+              }
+              nextIcon={
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+                />
+              }
+              className="w-full mx-auto"
             />
           </div>
         </div>
       </div>
       <div
-        className={`bg-linear-to-br from-[#1F2833] from-33% to-[#0957C9] to-85%
-            border-3 lg:border-4 border-white
-            flex flex-col lg:flex-row w-8/10 mx-auto mt-20
-            justify-center items-center /* Thay đổi ở đây để đẩy mọi thứ xuống đáy trên desktop */
-            pl-5 lg:pl-20 pr-5 lg:pr-0 pt-5 lg:pt-10 pb-0 lg:pb-0 rounded-4xl lg:rounded-[60px] relative z-10`}
+        className={`relative px-5 lg:px-[15%] flex flex-row lg:justify-center items-end pt-50 lg:pt-40 4xl:pt-80`}
       >
+        <Image
+          src={TrainingDecor}
+          alt="Training Decor"
+          className={`absolute h-[39%] lg:h-[38%] left-0 bottom-0 z-10`}
+        />
         <div
-          className={` lg:w-5/7 text-center lg:text-left text-white lg:pb-10 flex flex-col justify-center items-start`}
+          className={`w-5/7 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
         >
           {/* Thêm lg:pb-10 để phần chữ không dính sát đáy như ảnh */}
-          <div>
+          <div
+            className={`bg-clip-text text-transparent bg-gradient-to-br from-[#FFFFFF] to-[#5A5B5B]`}
+          >
             <div
-              className={`font-semibold italic text-[22px] lg:text-[clamp(25px,17.273px+1.965vw,55px)]`}
+              className={`bg-clip-text text-transparent bg-gradient-to-br from-[#FFFFFF] to-[#5A5B5B]
+                font-playfair font-semibold italic text-[12px] lg:text-[clamp(2rem,-0.25rem+2.3438vw,3.5rem)]`}
             >
-              {lang == "Viet" ? "ĐÀO TẠO" : "TRAINING"}
+              {lang == "Viet" ? "Đào tạo nội bộ" : "In-house training"}
             </div>
 
             <div
-              className={`text-[30px] lg:text-[clamp(30px,19.705px+2.62vw,70px)] leading-tight font-bold lg:font-bold mt-1 lg:mt-0`}
+              className={`text-[1rem] lg:text-[clamp(3rem,-0.375rem+3.5156vw,5.25rem)] leading-tight font-bold lg:font-bold mt-1 lg:mt-0`}
             >
               {lang == "Viet" ? "PHƯƠNG PHÁP" : "TAILORED"}
               <br />
@@ -648,7 +631,7 @@ const HotTopicsSection = () => {
 
             {/* List description */}
             <div
-              className={`flex items-center justify-center text-left text-[14px] lg:text-[clamp(16px,14.456px+0.393vw,22px)] leading-relaxed lg:leading-normal lg:w-5/7 mt-5 lg:mt-10`}
+              className={`lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-8 lg:mt-10 4xl:mt-20`}
             >
               <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
                 <li>
@@ -665,50 +648,64 @@ const HotTopicsSection = () => {
               </ul>
             </div>
           </div>
-
-          <Button
-            unstyled
-            label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "DIRECT CONSULTATION"}
-            className="w-fit mt-10 lg:mt-15 mb-5 lg:mb-10 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[15px] lg:text-[clamp(18px,15.426px+0.655vw,28px)] font-bold rounded-2xl lg:rounded-3xl border-2 border-white px-10 lg:px-15 py-2 lg:py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto lg:mx-0 animate-light-heartbeat"
-            onClick={openContactForm}
-          />
+          <div className={`lg:w-full flex justify-center items-center`}>
+            <Button
+              unstyled
+              label={
+                lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "DIRECT CONSULTATION"
+              }
+              className="w-fit mt-5 lg:mt-15 mb-5 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold rounded-full border-2 border-white px-5 lg:px-15 py-2 lg:py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto lg:mx-0 animate-light-heartbeat"
+              onClick={openContactForm}
+            />
+          </div>
         </div>
 
         {/* Khối chứa ảnh */}
-        <div className={`lg:w-4/9 flex items-end justify-end lg:h-full`}>
+        <div
+          className={`w-9/20 lg:w-auto lg:h-full flex items-end justify-end z-50 absolute lg:static -right-5 bottom-0`}
+        >
           <Image
             src={TuongVyImage3}
             alt="Tuong Vy"
-            className="w-7/10 lg:w-full h-auto object-contain block align-bottom lg:translate-x-[-10%] translate-x-[0%] mx-auto lg:mx-0"
+            className="w-full lg:w-9/10  h-auto object-contain block align-bottom mx-auto lg:mx-0"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
           />
         </div>
       </div>
+
       <div
         id="young-partners"
-        className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between mt-10 lg:mt-20 text-white w-9/10 mx-auto`}
+        className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between pt-30 lg:pt-60 4xl:pt-80 lg:pb-0 text-white w-9/10 lg:w-full lg:pl-[15%] mx-auto`}
       >
-        <div className={`w-full lg:w-1/2 lg:pt-20`}>
+        <div className={`w-full lg:w-3/9 lg:pt-20`}>
           <div
-            className={`bg-clip-text text-transparent bg-linear-to-r from-[#FFFFFF] from-24% to-[#12F4FE]
-            font-extrabold lg:font-extrabold text-[clamp(30px,17.13px+3.274vw,80px)] leading-tight
+            className={`bg-clip-text text-transparent bg-linear-to-bl from-[#FFFFFF] to-[#5A5B5B]
+            font-extrabold lg:font-extrabold text-[1.5rem] lg:text-[clamp(3.5rem,0.125rem+3.5156vw,5.75rem)] leading-tight
             `}
           >
-            {lang == "Viet" ? "ĐỒNG HÀNH" : "SUPPORTING"}
-            <br />
-            {lang == "Viet" ? "CÙNG SỰ" : "YOUNG TALENT"} <br />
-            {lang == "Viet" ? "PHÁT TRIỂN TRẺ" : "DEVELOPMENT"}
+            {lang == "Viet" ? "DẤU ẤN " : "COMMUNITY "}
+            <br className={`hidden`} />
+            {lang == "Viet" ? "CỘNG ĐỒNG" : "IMPACT"}
+          </div>
+          <div
+            className={`font-playfair pt-2 lg:pt-0 lg:pl-1 4xl:pl-2 italic bg-clip-text text-transparent bg-linear-to-bl from-[#FFFFFF] to-[#5A5B5B] lg:w-full w-7/10 mx-auto lg:mx-0 text-[7px] lg:text-[clamp(1.5rem,0.75rem+0.7813vw,2rem)]`}
+          >
+            {lang == "Viet"
+              ? "Chia sẻ về hành trình lan tỏa giá trị và kiến thức giúp phát triển cộng đồng trẻ"
+              : "Sharing my journey of creating value and knowledge to empower the younger generation"}
           </div>
           <Button
             unstyled
-            label={lang == "Viet" ? "LIÊN HỆ NGAY" : "CONTACT NOW"}
-            className={`mt-5 lg:mt-25 lg:mb-0 bg-linear-to-r from-[#12F4FE] from-69% to-[#FFFFFF] text-black text-[16px] lg:text-[clamp(18px,14.397px+0.917vw,32px)] font-bold 
-            rounded-2xl lg:rounded-4xl border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300
+            label={
+              lang == "Viet" ? "ĐẶT LỊCH CHIA SẺ" : "BOOK A SPEAKING SESSION"
+            }
+            className={`mt-10 lg:mt-15 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[12px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold 
+            rounded-full border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300
             `}
             onClick={openContactForm}
           />
         </div>
-        <div className={`w-full lg:w-1/2 mt-10 lg:mt-0`}>
+        <div className={`w-full lg:w-3/5 mt-10 lg:mt-0`}>
           <div className={`${styles.carouselWrapper2} w-full`}>
             <div className="">
               <Carousel
@@ -719,14 +716,26 @@ const HotTopicsSection = () => {
                 numScroll={1}
                 circular
                 autoplayInterval={8000}
-                prevIcon={<i className="pi pi-chevron-left text-3xl!" />}
-                nextIcon={<i className="pi pi-chevron-right text-3xl!" />}
+                prevIcon={
+                  <FontAwesomeIcon
+                    icon={faArrowLeft}
+                    className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+                  />
+                }
+                nextIcon={
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+                  />
+                }
                 className="w-full mx-auto"
               />
             </div>
           </div>
         </div>
       </div>
+
+      <LatestEventsSection />
     </div>
   );
 };

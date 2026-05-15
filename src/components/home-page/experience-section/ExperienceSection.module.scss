@@ -1,13 +1,24 @@
-$bg-image-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-1.png");
-$bg-image-mobile-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-mobile-1.png");
+$bg-image-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-2.png");
+$bg-image-mobile-url: url("../../../assets/images/backgrounds/ExperienceSection-bg-mobile-2.png");
 
 .container {
+  // Kích thước phủ kín màn hình
+  width: 100%;
+  min-height: 100vh;
+
+  // Thiết lập Background
   background-image: $bg-image-url;
   background-size: cover;
-  background-position: top center;
+  background-position: center; // Căn giữa nội dung ảnh
   background-repeat: no-repeat;
+
+  // Quan trọng: Giữ background đứng yên khi scroll
+  background-attachment: fixed;
+
   @media (max-width: 767px) {
     background-image: $bg-image-mobile-url;
-    background-position: top center;
+    // Lưu ý: Trên một số trình duyệt mobile cũ, background-attachment: fixed
+    // có thể gây lag, khi đó hãy đổi thành 'scroll' nếu cần.
+    background-attachment: fixed;
   }
 }

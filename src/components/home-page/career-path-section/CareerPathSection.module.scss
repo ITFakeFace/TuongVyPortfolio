@@ -1,0 +1,69 @@
+$bg-image-url: url("../../../assets/images/backgrounds/CareerPathSection-bg-1.png");
+$bg-image-mobile-url: url("../../../assets/images/backgrounds/CareerPathSection-bg-mobile-1.png");
+$bg-potential-box-decor: url("../../../assets/images/backgrounds/CareerPathSection-bg-PotentialBox-1.png");
+$bg-mobile-potential-box-decor: url("../../../assets/images/backgrounds/CareerPathSection-bg-mobile-PotentialBox-1.png");
+.container {
+  // Kích thước phủ kín màn hình
+  width: 100%;
+  min-height: 100vh;
+
+  // Thiết lập Background
+  background-image: $bg-image-url;
+  background-size: cover;
+  background-position: center; // Căn giữa nội dung ảnh
+  background-repeat: no-repeat;
+
+  // Quan trọng: Giữ background đứng yên khi scroll
+  background-attachment: fixed;
+
+  @media (max-width: 767px) {
+    background-image: $bg-image-mobile-url;
+    // Lưu ý: Trên một số trình duyệt mobile cũ, background-attachment: fixed
+    // có thể gây lag, khi đó hãy đổi thành 'scroll' nếu cần.
+    background-attachment: fixed;
+  }
+}
+
+.potentialBox {
+  position: relative;
+  overflow: hidden;
+
+  // Lớp màu Gradient (Overlay) nằm ở thẻ cha để luôn đậm nét
+  background-image: linear-gradient(
+    to bottom,
+    rgba(9, 87, 201, 0.85) 70%,
+    // Tăng nhẹ thông số để làm nền vững hơn
+    rgba(1, 27, 64, 0.95) 100%
+  );
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1; // Nằm dưới nội dung và Gradient của cha
+
+    // Hình ảnh decor
+    background-image: $bg-potential-box-decor;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // GIẢM OPACITY CỦA HÌNH TẠI ĐÂY
+    opacity: 0.2; // Chỉnh từ 0.1 đến 0.5 tùy độ mờ bạn muốn
+
+    // Kết hợp blend-mode nếu muốn ảnh tiệp vào màu nền của cha
+    mix-blend-mode: overlay;
+
+    @media (max-width: 767px) {
+      background-image: $bg-mobile-potential-box-decor;
+      opacity: 0.25; // Mobile thường cần mờ hơn để nổi chữ
+    }
+  }
+
+  // Đảm bảo nội dung chữ luôn nổi lên trên cùng
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+}

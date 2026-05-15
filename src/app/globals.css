@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/navigation";
@@ -20,9 +21,23 @@
   --foreground: #171717;
 }
 
+@layer utilities {
+  .font-playfair-fancy {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto; /* Kích hoạt độ mảnh theo size */
+    font-style: italic; /* Ép luyến Italic */
+    font-variant-ligatures: common-ligatures; /* Kích hoạt các nét nối chữ */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: normal;
+  }
+}
+
 @theme {
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 160rem;
+  --font-playfair: "Playfair Display", serif;
 
   @keyframes marquee {
     from {
@@ -73,6 +88,8 @@
   --animate-scroll-right: marquee linear infinite reverse;
   --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
   --animate-light-heartbeat: light-heartbeat 2s ease-in-out infinite;
+  --animate-light-heartbeat-reverse: light-heartbeat 2s ease-in-out infinite
+    reverse;
   --animate-sequence-heartbeat-1: sequence-heartbeat 6s infinite;
   --animate-sequence-heartbeat-2: sequence-heartbeat 6s infinite 2s;
   --animate-sequence-heartbeat-3: sequence-heartbeat 6s infinite 4s;
@@ -93,4 +110,20 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-montserrat) !important;
+}
+
+.font-playfair {
+  font-family: "Playfair Display", serif;
+  font-style: italic; /* Bắt buộc phải có */
+  font-optical-sizing: auto;
+
+  /* Kích hoạt các tính năng "luyến" đặc biệt của Font */
+  /* font-feature-settings:
+    "ital" 1,
+    "swsh" 1,
+    "salt" 1,
+    "kern" 1; */
+  font-variant-ligatures: common-ligatures;
+
+  -webkit-font-smoothing: antialiased;
 }

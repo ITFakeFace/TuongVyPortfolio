@@ -12,15 +12,17 @@ import Image, { StaticImageData } from "next/image";
 import { SwiperOptions } from "swiper/types";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "primereact/button";
-import DecorBGImage from "@/assets/images/assets/ExplotionPeriodSection-DecorBGImage-1.png";
+import DecorBGImage from "@/assets/images/assets/ExplotionPeriodSection-DecorBGImage-2.png";
 import StreakImage from "@/assets/images/assets/ExplotionPeriodSection-StreakImage-1.png";
 import StreakImage2 from "@/assets/images/assets/ExplotionPeriodSection-StreakImage-2.png";
+import StreakImage3 from "@/assets/images/assets/ExplotionPeriodSection-StreakImage-3.png";
 import StreakImageEng from "@/assets/images/assets/ExplotionPeriodSection-StreakImageEng-1.png";
 import StreakImageEng2 from "@/assets/images/assets/ExplotionPeriodSection-StreakImageEng-2.png";
+import StreakImageEng3 from "@/assets/images/assets/ExplotionPeriodSection-StreakImageEng-3.png";
 import StreakMobileImage1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-1.png";
 import StreakMobileImage2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-2.png";
 import StreakMobileImage3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-3.png";
-import StreakMobileImageEng1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-1.png";
+import StreakMobileImageEng1 from "@/assets/images/assets/ExplotionPeriodSection-StreakImageMobileEng-1.png";
 import StreakMobileImageEng2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-2.png";
 import StreakMobileImageEng3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-3.png";
 import MethodEnd from "@/assets/images/assets/ExplotionPeriodSection-MethodEnd-2.png";
@@ -88,6 +90,7 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
         <Swiper
           {...swiperConfig}
           className={`w-full !overflow-hidden ${styles.mySwiper}`}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
         >
           {[...events, ...events].map((event, index) => (
             <SwiperSlide
@@ -118,19 +121,19 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
                   </div>
 
                   {/* Content */}
-                  <div className="text-center mt-3 lg:mt-[15px] mx-2 lg:mx-5">
+                  <div className="text-center mt-3 lg:mt-[15px] mx-2 lg:mx-10 lg:px-10">
                     {/* Title: Mobile ~20px, Desktop 32px */}
-                    <div className="text-[16px] lg:text-[32px] font-bold uppercase leading-normal ">
+                    <div className="text-[16px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold uppercase leading-normal ">
                       {event.title}
                     </div>
 
                     {/* Subtitle: Mobile 14px, Desktop 18px */}
-                    <div className="text-[12px] lg:text-[18px] opacity-90">
+                    <div className="text-[12px] lg:text-[clamp(1rem,0.4375rem+0.5859vw,1.375rem)] opacity-90">
                       {event.subtitle}
                     </div>
 
                     {/* Description: Mobile 14px, Desktop 20px - Ẩn bớt trên mobile nếu quá dài */}
-                    <div className="text-[12px] lg:text-[20px] my-5 lg:my-[10px] italic leading-relaxed lg:leading-relaxed  lg:mt-5 line-clamp-3 lg:line-clamp-none">
+                    <div className="text-[12px] lg:text-[clamp(0.875rem,0.2188rem+0.6836vw,1.3125rem)] my-5 lg:my-[10px] italic leading-relaxed lg:leading-loose  lg:mt-5">
                       {event.description}
                     </div>
 
@@ -143,8 +146,8 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
                       <div
                         className={`
                           w-fit mx-auto
-                        bg-linear-to-r from-[#2F3945] to-[#042B63]
-                        border-2 lg:border-3 border-white rounded-xl lg:rounded-4xl
+                        bg-linear-to-r from-[#2F3945]/50 to-[#042B63]/50
+                        border-2 lg:border-3 border-white rounded-full
                         /* Font size & Padding thu nhỏ */
                         text-[12px] lg:text-[24px] font-bold 
                         px-10 lg:px-20 py-2 lg:py-4 mt-3 lg:mt-5
@@ -167,7 +170,7 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
         <button
           className={`custom-prev-btn absolute left-2 lg:left-[2%] top-1/2 -translate-y-1/2 z-20 
           w-10 h-10 lg:w-16 lg:h-16 flex items-center justify-center 
-          bg-white hover:bg-[#4a85f0] hover:text-white rounded-full text-[#6ca0f5] font-bold shadow-md transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer`}
+          bg-[#1F2833]/50 hover:bg-[#FFFFFF] hover:text-[#1F2833] rounded-full text-[#FFFFFF] font-bold shadow-md transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer`}
         >
           <ArrowLeft strokeWidth={3} size={24} className="lg:hidden" />{" "}
           {/* Size nhỏ cho mobile */}
@@ -183,15 +186,11 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
         <button
           className={`custom-next-btn absolute right-[2%] top-1/2 -translate-y-1/2 z-20 
           w-10 h-10 lg:w-16 lg:h-16 flex items-center justify-center 
-          bg-white hover:bg-[#4a85f0] hover:text-white rounded-full text-[#6ca0f5] font-bold shadow-md transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer`}
+          bg-[#1F2833]/50 hover:bg-[#FFFFFF] hover:text-[#1F2833] rounded-full text-[#FFFFFF] font-bold shadow-md transition-all active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed hover:cursor-pointer`}
         >
           {/* Dùng icon mũi tên mỏng, trắng */}
-          <ArrowRight strokeWidth={3} size={24} className="lg:hidden" />{" "}
-          <ArrowRight
-            strokeWidth={3}
-            size={36}
-            className="hidden lg:block"
-          />{" "}
+          <ArrowRight strokeWidth={3} size={24} className="lg:hidden" />
+          <ArrowRight strokeWidth={3} size={36} className="hidden lg:block" />
         </button>
       </div>
     </>
@@ -209,51 +208,46 @@ const ExplotionPeriodSection = () => {
         className={`${styles.container} bg-linear-to-b from-[#1F2833] to-[#07367B] relative`}
       >
         <div
-          className={`lg:hidden bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900] text-[clamp(16px,3.389px+3.209vw,65px)] font-extrabold text-center pt-10 lg:mt-0`}
-        >
-          {lang == "Viet"
-            ? "CHINH PHỤC THÀNH CÔNG"
-            : "CONQUERING SUCCESS DURING"}
-          <br />
-          {lang == "Viet" ? "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH" : "INDUSTRY CRISIS"}
-        </div>
-        <div
-          className={`w-full relative aspect-19/12 max-w-480 flex flex-col items-center lg:gap-10 lg:py-35`}
+          className={`w-full relative flex flex-col items-center gap-12 lg:gap-10 py-50 lg:py-40`}
         >
           <div
-            className={`hidden lg:block z-10 bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900] text-[clamp(16px,3.389px+3.209vw,65px)] font-extrabold text-center mb-10`}
+            className={`z-10 bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900] text-[clamp(16px,3.389px+3.209vw,65px)] font-extrabold text-center`}
           >
             {lang == "Viet"
               ? "CHINH PHỤC THÀNH CÔNG"
               : "CONQUERING SUCCESS DURING"}
             <br />
-            {lang == "Viet" ? "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH" : "INDUSTRY CRISIS"}
+            {lang == "Viet"
+              ? "GIAI ĐOẠN KHỦNG HOẢNG NGÀNH"
+              : "AN INDUSTRY CRISIS"}
           </div>
-          <div className={`text-white text-center mt-12 lg:mt-15 z-10`}>
+          <div
+            className={`text-white text-center z-10 flex flex-col gap-10 lg:gap-10`}
+          >
             <div
-              className={`font-light italic w-17/20 lg:w-13/20 text-[clamp(10px,6.136px+0.982vw,25px)] mx-auto`}
+              className={`font-light font-playfair italic w-14/20 lg:w-10/20 text-balance text-[12px] lg:text-[clamp(2rem,1.25rem+0.7813vw,2.5rem)] mx-auto`}
             >
               {lang == "Viet"
                 ? "Trong giai đoạn chống dịch, ngành tài chính Việt Nam lao đao khi phải đối mặt với loạt vấn đề. Dòng tiền tắc nghẽn, nhu cầu tín dụng giảm, nợ xấu gia tăng, buộc các tổ chức phải tái cấu trúc và siết chặt quản trị rủi ro để tồn tại."
-                : "During the pandemic, Vietnam’s financial sector faced severe disruption: cash flow constraints, declining credit demand, and rising non-performing loans, forcing institutions to restructure and tighten risk management to survive."}
+                : "During the pandemic, the banking and financial sector faced unprecedented challenges—businesses struggled, many even suspended operations. As individuals lost or saw reductions in income, credit demand increased, yet bad debt doubled, driving up credit risk, reducing revenue, and impacting the entire industry."}
             </div>
             <div
-              className={`font-bold w-18/20 lg:w-15/20 text-[13px] lg:text-[clamp(14px,8.59px+1.375vw,35px)] mx-auto mt-3 lg:mt-5`}
+              className={`font-playfair font-bold w-16/20 lg:w-13/20 text-[14px] lg:text-[clamp(14px,8.59px+1.375vw,35px)] mx-auto`}
             >
               {lang == "Viet"
-                ? "“Covid - 19 bùng nổ cũng chính là lúc các tổ chức tài chính gặp khó khăn. Nhưng với tôi, đó là lúc bắt đầu chinh phục và gặt hái thành công”"
-                : "“The outbreak of COVID-19 was when financial institutions struggled—but for me, it marked the beginning of conquering challenges and achieving success”"}
+                ? "Có thể nói: “Covid - 19 bùng nổ cũng chính là lúc các tổ chức tài chính gặp khó khăn. Nhưng với tôi, đó là lúc bắt đầu chinh phục và gặt hái thành công”"
+                : "It can be said: “The outbreak of COVID-19 was when many emerging financial institutions faced even greater challenges, as their operating models and asset structures were not yet resilient enough. But for me, it marked the beginning of conquering challenges and achieving success.”"}
             </div>
           </div>
-          <div className={`mt-15 relative z-20 flex justify-center`}>
+          <div className={` relative z-20 flex justify-center`}>
             <Button
               unstyled
               className={`
               relative overflow-hidden
               px-5 py-4 lg:px-30 lg:py-6 lg:p-5
-              rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
+              rounded-full lg:rounded-full border-2 border-[#C8971F]
               bg-[linear-gradient(90deg,#1F2833,#042B63)]
-              text-sm lg:text-[clamp(16px,2.273px+1.964vw,35px)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer
+              text-[10px] lg:text-[24px] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer
               `}
               onClick={openContactForm}
             >
@@ -267,16 +261,16 @@ const ExplotionPeriodSection = () => {
                 `}
               >
                 {lang == "Viet"
-                  ? "Nhận chiến lược riêng cho bạn"
-                  : "Get Your Personalized Strategy"}
+                  ? "TRAO ĐỔI VỀ CHIẾN LƯỢC CỦA BẠN!"
+                  : "LET’S DISCUSS YOUR STRATEGY!"}
               </span>
             </Button>
           </div>
-          <Image
+          {/* <Image
             src={DecorBGImage}
             alt="Hard Period"
-            className={`w-full h-auto absolute top-0 left-0 z-0`}
-          />
+            className={`w-full h-auto absolute top-[25%] left-0 z-0`}
+          /> */}
         </div>
 
         <div className={`hidden lg:block`}>
@@ -285,10 +279,15 @@ const ExplotionPeriodSection = () => {
             alt="Streak Image"
             className={`w-full h-auto mt-20`}
           />
+          <Image
+            src={lang == "Viet" ? StreakImage2 : StreakImageEng2}
+            alt="Streak Image"
+            className={`w-8/10 lg:w-full h-auto mt-20 lg:mt-80 mx-auto lg:px-[15%]`}
+          />
           <div
             className={`lg:text-[clamp(45px,25px+1.302vw,50px)] font-bold text-center 
             bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]
-            lg:mt-25 lg:mb-5`}
+            lg:mt-80`}
           >
             {lang == "Viet"
               ? "TƯ DUY PHÁT TRIỂN"
@@ -299,9 +298,9 @@ const ExplotionPeriodSection = () => {
               : "TIMES OF CRISIS"}
           </div>
           <Image
-            src={lang == "Viet" ? StreakImage2 : StreakImageEng2}
+            src={lang == "Viet" ? StreakImage3 : StreakImageEng3}
             alt="Streak Image"
-            className={`w-9/10 h-auto mx-auto`}
+            className={`w-7/10 lg:w-full h-auto mx-auto lg:px-[15%] lg:mt-15`}
           />
         </div>
 
@@ -309,15 +308,15 @@ const ExplotionPeriodSection = () => {
           <Image
             src={lang == "Viet" ? StreakMobileImage1 : StreakMobileImageEng1}
             alt="Streak Mobile Image"
-            className={`w-full h-auto mt-15 lg:mt-20`}
+            className={`w-full h-auto mt-20 lg:mt-20`}
           />
           <Image
             src={lang == "Viet" ? StreakMobileImage2 : StreakMobileImageEng2}
             alt="Streak Mobile Image"
-            className={`w-full h-auto mt-10 lg:mt-20`}
+            className={`w-full h-auto mt-40 lg:mt-20`}
           />
           <div
-            className={`text-[18px] lg:text-[clamp(45px,-15px+3.9vw,60px)] font-bold text-center mt-12 lg:mt-5
+            className={`text-[18px] lg:text-[clamp(45px,-15px+3.9vw,60px)] font-bold text-center mt-40 lg:mt-5
             bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]`}
           >
             {lang == "Viet"
@@ -338,9 +337,10 @@ const ExplotionPeriodSection = () => {
         <div
           className={`
           relative z-10
-          text-[20px] lg:text-[clamp(25px,19.853px+1.31vw,45px)] text-balance text-center my-5 lg:my-10 mt-15
+          text-[18px] lg:text-[clamp(25px,19.853px+1.31vw,45px)] text-balance text-center my-5 lg:my-10 mt-40
           bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]
           bg-clip-text text-transparent font-bold w-4/5 lg:w-full mx-auto
+          lg:mt-80
           `}
         >
           {lang == "Viet"
@@ -361,8 +361,8 @@ const ExplotionPeriodSection = () => {
                   : "Investment & Business Forum",
               description:
                 lang == "Viet"
-                  ? "Đại diện SHBFC nêu lên thực trạng về quy định pháp lý chưa thắt chặt đối với người tiêu dùng trong việc tuân thủ trả nợ dẫn đến thiệt hại cả về vật chất lẫn con người lại thuộc về Công ty Tài chính, được đúc kết từ dữ liệu thực tế trong khảo sát tại 6000+ doanh nghiệp SMEs mùa Covid-19"
-                  : "As a representative of SHBFC, highlighted gaps in legal enforcement on consumer debt obligations—resulting in financial and operational losses for finance companies—based on real data from a survey of 6,000+ SMEs during COVID-19.",
+                  ? "Đại diện SHBFC nêu lên thực trạng về quy định pháp lý chưa thắt chặt đối với người tiêu dùng trong việc tuân thủ trả nợ dẫn đến thiệt hại cả về vật chất lẫn con người lại thuộc về Công ty Tài chính."
+                  : "The representative of SHBFC highlighted that lax regulations on consumer debt repayment have left finance companies bearing the brunt of both financial losses and human safety risks.",
               url: "https://baodautu.vn/live-toa-dam-tai-khoi-dong-nen-kinh-te---co-hoi-cho-tai-chinh-tieu-dung-d122530.html",
             },
             {
@@ -400,34 +400,35 @@ const ExplotionPeriodSection = () => {
           ]}
         />
         <div
-          className={`flex flex-col lg:flex-row mt-15 lg:mt-30 relative z-20 items-center`}
+          className={`flex flex-col lg:flex-row mt-60 lg:mt-40 relative z-20 items-center ${styles.strategyConsultingSection}`}
         >
           <div
-            className={`text-center lg:text-left lg:pl-[5%] w-fit shrink-0 mx-auto lg:mx-0`}
+            className={`flex flex-col items-center justify-center text-center w-fit lg:w-full shrink-0 mx-auto lg:mx-0 lg:gap-2 3xl:gap-5`}
           >
             <div
-              className={`text-white italic font-medium text-[16px] lg:text-[clamp(25px,22.427px+0.655vw,35px)] leading-loose mb-2 lg:mb-0`}
+              className={`font-playfair text-white italic font-medium text-[16px] lg:text-[clamp(25px,22.427px+0.655vw,35px)] leading-loose mb-2 lg:mb-0`}
             >
-              {lang == "Viet" ? "TƯ VẤN CHIẾN LƯỢC" : "STRATEGIC CONSULTING"}
+              {lang == "Viet" ? "Tư vấn chiến lược" : "Strategic Consulting"}
             </div>
             <div
               className={`
-              text-[35px] lg:text-[clamp(40px,29.705px+2.62vw,80px)]
+              text-[20px] lg:text-[clamp(3rem,1.125rem+1.9531vw,4.25rem)]
               bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]
               bg-clip-text text-transparent font-bold
               leading-tight
               `}
             >
-              <div>{lang == "Viet" ? "GIẢI PHÁP" : "BUSINESS"}</div>
-              <div>{lang == "Viet" ? "PHÁT TRIỂN" : "GROWTH"}</div>
-              <div>{lang == "Viet" ? "DOANH NGHIỆP" : "SOLUTIONS"}</div>
+              <div>{lang == "Viet" ? "GIẢI PHÁP" : "BUSINESS GROWTH"}</div>
+              <div>
+                {lang == "Viet" ? "PHÁT TRIỂN DOANH NGHIỆP" : " SOLUTIONS"}
+              </div>
             </div>
             <div
-              className={`w-full lg:w-full text-white font-bold text-sm lg:text-[clamp(25px,5px+1.302vw,30px)] mx-auto lg:mx-0 mt-3`}
+              className={`w-full lg:w-full text-white font-semibold text-xs lg:text-[clamp(1.125rem,0.5625rem+0.5859vw,1.5rem)] mx-auto lg:mx-0 mt-3`}
             >
               {lang == "Viet"
                 ? "Quản lý tốt mô hình doanh nghiệp từ"
-                : "Effectively manage your business model from"}
+                : "Strong in managing business models from"}
             </div>
             <div
               className={`flex flex-row gap-3 lg:gap-5 items-center mt-5 mx-auto lg:mx-0`}
@@ -442,14 +443,16 @@ const ExplotionPeriodSection = () => {
                 }}
                 className={`text-white font-bold text-center 
                   bg-linear-to-br from-[#999999]/30 via-[#FFFFFF]/30 via-48% to-[#999999]/30 
-                  text-[40px] lg:text-[clamp(80px,5.208vw,100px)] leading-tight px-5 lg:px-8 pb-2 lg:pb-3 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
+                  text-[40px] lg:text-[clamp(3.5rem,1.25rem+2.3438vw,5rem)] leading-tight px-5 lg:px-15 py-2 lg:py-5 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
               >
                 +50 <br />
-                <div className={`text-sm lg:text-[25px]`}>
+                <div className={`text-sm lg:text-[20px] font-semibold`}>
                   {lang == "Viet" ? "Nhân sự" : "Employees"}
                 </div>
               </motion.div>
-              <span className={`text-sm lg:text-[25px] font-bold text-white`}>
+              <span
+                className={`text-sm lg:text-[clamp(1.125rem,0.5625rem+0.5859vw,1.5rem)] font-seminbold text-white`}
+              >
                 {lang == "Viet" ? " đến " : " to "}
               </span>
               <motion.div
@@ -463,11 +466,11 @@ const ExplotionPeriodSection = () => {
                 }}
                 className={`text-white font-bold text-center 
                   bg-linear-to-br from-[#999999]/30 via-[#FFFFFF]/30 via-48% to-[#999999]/30 
-                  text-[40px] lg:text-[clamp(80px,5.208vw,100px)] leading-tight px-5 lg:px-8 pb-2 lg:pb-3 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
+                  text-[40px] lg:text-[clamp(3.5rem,1.25rem+2.3438vw,5rem)] leading-tight px-5 lg:px-15 py-2 lg:py-5 rounded-tl-[40px] lg:rounded-tl-[70px] rounded-br-[40px] lg:rounded-br-[70px] rounded-tr-[10px] lg:rounded-tr-[20px] rounded-bl-[10px] lg:rounded-bl-[20px]`}
               >
                 +5000
                 <br />
-                <div className={`text-sm lg:text-[25px]`}>
+                <div className={`text-sm lg:text-[20px] font-semibold`}>
                   {lang == "Viet" ? "Nhân sự" : "Employees"}
                 </div>
               </motion.div>
@@ -477,7 +480,7 @@ const ExplotionPeriodSection = () => {
               className={`
                 relative overflow-hidden
                 px-10 lg:px-35 py-2 lg:py-4 mt-5 lg:mt-15
-                rounded-2xl lg:rounded-4xl border-2 border-[#C8971F]
+                rounded-full border-2 border-[#C8971F]
                 bg-[linear-gradient(90deg,#1F2833,#042B63)]
                 text-[20px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
                 animate-heartbeat
@@ -492,27 +495,43 @@ const ExplotionPeriodSection = () => {
                 bg-clip-text text-transparent font-extrabold
                 `}
               >
-                {lang == "Viet" ? "TƯ VẤN NGAY" : "GET CONSULTED"}
+                {lang == "Viet" ? "TRAO ĐỔI NGAY!" : "LET’S TALK NOW!"}
               </span>
             </Button>
           </div>
-          <div
-            className={`lg:w-10/20! w-17/20 h-auto bg-transparent mx-auto lg:mx-0 lg:ml-auto mt-10 lg:mt-0 lg:pl-10`}
-          >
-            <Image
-              src={MethodEnd}
-              alt="Method End"
-              className={`w-full h-full object-contain rounded-2xl lg:rounded-none`}
-            />
-          </div>
         </div>
-        <div className={`w-full flex flex-col mt-15 lg:mt-25 mb-15 lg:mb-15`}>
+        <div className={`w-full flex flex-col`}>
           <div
-            className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent text-xl w-8/10 mx-auto lg:mx-0 lg:w-full lg:text-[clamp(43px,15.8px+1.771vw,50px)] font-bold text-center`}
+            className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-between items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
           >
-            {lang == "Viet"
-              ? "Nâng cấp doanh nghiệp cùng đội ngũ chuyên gia tại PNP"
-              : "Upgrade your business with the expert team at PNP"}
+            <div
+              className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent 
+                text-center lg:text-left`}
+            >
+              <div
+                className={`font-playfair text-2xl lg:text-[clamp(2.25rem,-0.375rem+2.7344vw,4rem)] font-medium`}
+              >
+                {lang == "Viet" ? "Đồng hành toàn diện" : "End-to-end support"}
+              </div>
+              <div
+                className={`font-semibold text-[8px] lg:text-[clamp(1.25rem,-0.25rem+1.5625vw,2.25rem)]`}
+              >
+                {lang == "Viet"
+                  ? "Phát triển vững mạnh cùng đội ngũ chuyên gia tại PNP"
+                  : "Growing stronger with the expert team at PNP"}
+              </div>
+            </div>
+            <a>
+              <Button
+                unstyled
+                className={`px-4 lg:px-10 border-2 border-white rounded-full py-2 lg:py-4 mt-5 lg:mt-0 bg-[linear-gradient(90deg,#E3B266,#F5EEDB_91%)] text-[10px] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer`}
+                label={
+                  lang == "Viet"
+                    ? "HIỂU THÊM VỀ ĐỘI NGŨ PNP"
+                    : "LEARN ABOUT THE PNP TEAM"
+                }
+              />
+            </a>
           </div>
           <Image
             src={BannerImage}
@@ -520,35 +539,37 @@ const ExplotionPeriodSection = () => {
             className={`w-full h-auto mt-5`}
           />
         </div>
-        <Image
-          src={lang == "Viet" ? BusinessGrowth : BusinessGrowthEng}
-          alt="Hard Period"
-          className={`w-9/10 h-auto bottom-0 left-0 z-0 pb-40 lg:pb-10 mt-10 lg:mt-40 mx-auto`}
-        />
-        <Image
-          src={HumanImage}
-          alt="Hard Period"
-          className={`w-full h-auto absolute bottom-35 lg:bottom-0 left-0 z-10`}
-        />
-        <div
-          className={`absolute bottom-0 left-0 z-20 h-150 lg:h-200 flex justify-center items-center w-full bg-linear-to-t from-[#095DF1] from-22% to-transparent to-44%`}
-        >
+        <div className={`relative ${styles.growthHackSection}`}>
+          <Image
+            src={lang == "Viet" ? BusinessGrowth : BusinessGrowthEng}
+            alt="Hard Period"
+            className={`w-9/10 lg:w-7/10 h-auto bottom-0 left-0 z-0 pb-40 lg:pb-50 3xl:pb-60 4xl:pb-80 pt-10 lg:pt-40 mx-auto`}
+          />
+          <Image
+            src={HumanImage}
+            alt="Hard Period"
+            className={`w-full h-auto absolute bottom-35 lg:bottom-0 left-0 z-10`}
+          />
           <div
-            id="growth-hack"
-            className={`mt-auto text-[14px] lg:text-[clamp(13px,8.625px+1.113vw,30px)] text-white pt-10 lg:pt-20 pb-20 lg:pb-20 text-center`}
+            className={`absolute bottom-0 left-0 z-20 h-150 lg:h-200 flex justify-center items-center w-full bg-linear-to-t from-[#095DF1] from-22% to-transparent to-44%`}
           >
-            <div>
-              {lang == "Viet"
-                ? "Bạn là Leader trẻ đang cảm thấy "
-                : "Are you a young leader feeling "}
-              <span className={`text-[#12F4FE] font-bold`}>
-                {lang == "Viet" ? "“MẮC KẸT”" : "“STUCK”"}
-              </span>
-            </div>
-            <div>
-              {lang == "Viet"
-                ? "trên hành trình sự nghiệp của chính mình?"
-                : "in your own career journey?"}
+            <div
+              id="growth-hack"
+              className={`mt-auto text-[14px] lg:text-[clamp(13px,8.625px+1.113vw,30px)] text-white pt-10 lg:pt-20 pb-20 lg:pb-20 text-center`}
+            >
+              <div>
+                {lang == "Viet"
+                  ? "Bạn là Leader trẻ đang cảm thấy "
+                  : "Are you a young leader feeling "}
+                <span className={`text-[#12F4FE] font-bold`}>
+                  {lang == "Viet" ? "“MẮC KẸT”" : "“STUCK”"}
+                </span>
+              </div>
+              <div>
+                {lang == "Viet"
+                  ? "trên hành trình sự nghiệp của chính mình?"
+                  : "in your own career journey?"}
+              </div>
             </div>
           </div>
         </div>

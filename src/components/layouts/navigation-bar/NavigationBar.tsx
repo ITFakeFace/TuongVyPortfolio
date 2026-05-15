@@ -89,24 +89,24 @@ const NavigationBar = () => {
   };
 
   return (
-    <header className="absolute top-0 w-full bg-[#0957C9]/5 shadow-lg py-2 px-5 z-100">
+    <header className="absolute top-0 w-full bg-[#0957C9]/5 shadow-lg py-2 px-5 lg:px-[15%] z-100">
       <div className="w-full flex items-center justify-between mx-auto">
         {/* NÚT BARS: Hiện khi (isOverflowing) HOẶC (màn hình nhỏ < md) */}
         <button
           onClick={() => setVisible(true)}
-          className={`${isOverflowing ? "block" : "md:hidden"} text-white text-2xl p-2 active:scale-90 transition-transform`}
+          className={`${isOverflowing ? "block" : "md:hidden"} text-white text-xl p-2 active:scale-90 transition-transform`}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
 
         {/* LOGO */}
-        <div className="text-white text-xl lg:text-2xl md:text-2xl font-bold tracking-tighter shrink-0 lg:ml-20">
+        <div className="absolute left-[50%] translate-x-[-50%] lg:translate-x-0 lg:static text-white text-sm lg:text-lg 4xl:text-2xl font-bold tracking-tighter shrink-0">
           {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
         </div>
 
         <nav
           ref={navRef}
-          className={`${isOverflowing ? "invisible absolute" : "hidden md:flex"} flex-grow items-center justify-center gap-8 mx-4 flex-nowrap`}
+          className={`${isOverflowing ? "invisible absolute" : "hidden md:flex"} flex-grow items-center justify-center gap-8 mx-4 flex-nowrap text-xl lg:text-xs 4xl:text-base`}
         >
           {menuItems.map((item) => (
             <a
@@ -146,7 +146,7 @@ const NavigationBar = () => {
           style={{
             background: "rgba(0, 0, 0, 0)",
             backdropFilter: "blur(5px)",
-            width: "350px",
+            width: "300px",
           }}
           // Tùy chỉnh icon đóng (X) sang màu trắng
           icons={
@@ -155,7 +155,7 @@ const NavigationBar = () => {
             </button>
           }
           header={
-            <div className="font-bold text-2xl text-white tracking-widest pl-4 font-montserrat">
+            <div className="font-bold text-lg text-white tracking-widest pl-4 font-montserrat">
               {lang == "Viet" ? "VY TRẦN" : "VY TRAN"}
             </div>
           }
@@ -167,7 +167,7 @@ const NavigationBar = () => {
                 key={item.key}
                 href={`#${item.id}`}
                 onClick={() => setVisible(false)}
-                className="group relative overflow-hidden bg-[#152a4b]/80 hover:bg-[#7c9abe] text-white font-semibold uppercase text-xl py-2 px-4 transition-all duration-300 shadow-md"
+                className="group relative overflow-hidden bg-[#152a4b]/80 hover:bg-[#7c9abe] text-white font-semibold uppercase text-base py-2 px-4 transition-all duration-300 shadow-md"
                 style={{}}
               >
                 <div className="relative z-10 flex justify-between items-center">

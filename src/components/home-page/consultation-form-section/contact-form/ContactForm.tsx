@@ -5,7 +5,6 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { classNames } from "primereact/utils";
-import { KeyFilterType } from "primereact/keyfilter";
 import { Toast } from "primereact/toast";
 
 interface FormData {
@@ -16,69 +15,7 @@ interface FormData {
   content: string;
 }
 
-interface FormField {
-  name: keyof FormData;
-  label: string;
-  required?: string;
-  type: "text" | "textarea";
-  keyfilter?: KeyFilterType;
-  pattern?: { value: RegExp; message: string };
-  // Thêm thuộc tính để xác định chiều rộng trên mobile
-  mobileMDWidth?: string;
-  mobileSMWidth?: string;
-}
-
 const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
-  const getFormFields = (lang: string): FormField[] => [
-    {
-      name: "fullName",
-      label: lang === "Viet" ? "Họ và tên" : "Full Name",
-      required:
-        lang === "Viet" ? "Vui lòng nhập họ và tên" : "Full name is required",
-      type: "text",
-      // Họ tên thường để full width để dễ nhập
-    },
-    {
-      name: "email",
-      label: lang === "Viet" ? "Email" : "Email Address",
-      required: lang === "Viet" ? "Email là bắt buộc" : "Email is required",
-      type: "text",
-      pattern: {
-        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-        message:
-          lang === "Viet" ? "Email không hợp lệ" : "Invalid email address",
-      },
-    },
-    {
-      name: "phone",
-      label: lang === "Viet" ? "Số điện thoại" : "Phone Number",
-      required:
-        lang === "Viet"
-          ? "Vui lòng nhập số điện thoại"
-          : "Phone number is required",
-      type: "text",
-      keyfilter: "num",
-      // Thu nhỏ width trên mobile
-      // mobileSMWidth: "w-1/2",
-      mobileMDWidth: "md:w-full",
-    },
-    {
-      name: "organization",
-      label: lang === "Viet" ? "Cá nhân/ Tổ chức" : "Individual/ Organization",
-      type: "text",
-      // Thu nhỏ width trên mobile
-      mobileSMWidth: "w-1/2",
-      mobileMDWidth: "md:w-full",
-    },
-    {
-      name: "content",
-      label: lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content",
-      type: "textarea",
-      // Thu nhỏ width trên mobile
-      mobileSMWidth: "w-1/2",
-      mobileMDWidth: "md:w-full",
-    },
-  ];
   const toast = useRef<Toast>(null);
   const {
     control,
@@ -87,7 +24,6 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     reset,
   } = useForm<FormData>({
     mode: "onChange",
-    reValidateMode: "onChange",
     defaultValues: {
       fullName: "",
       email: "",
@@ -97,16 +33,10 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     },
   });
 
-  const fields = getFormFields(lang);
-
   const onSubmit = async (data: FormData) => {
-    // Thay ID_CUA_FORM bằng ID thực tế từ URL Google Form của bạn
     const GOOGLE_FORM_ACTION_URL =
       "https://docs.google.com/forms/d/e/1FAIpQLScWswC69IVdnmv_-_aMz2pJyHyKyhjQt6b4rIB-dGT20baQ1w/formResponse";
-
     const formData = new URLSearchParams();
-
-    // Ánh xạ entry ID bạn đã cung cấp vào các trường tương ứng
     formData.append("entry.1794306111", data.fullName);
     formData.append("entry.646979108", data.email);
     formData.append("entry.26443356", data.phone);
@@ -116,150 +46,205 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     try {
       await fetch(GOOGLE_FORM_ACTION_URL, {
         method: "POST",
-        mode: "no-cors", // Quan trọng để tránh lỗi CORS
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
+        mode: "no-cors",
         body: formData.toString(),
       });
-
       toast.current?.show({
         severity: "success",
         summary: lang === "Viet" ? "Thành công" : "Success",
-        detail:
-          lang === "Viet"
-            ? "Yêu cầu của bạn đã được gửi đi!"
-            : "Your request has been sent!",
+        detail: lang === "Viet" ? "Yêu cầu đã được gửi!" : "Sent!",
         life: 5000,
       });
       reset();
     } catch (error) {
-      console.error("Error submitting form:", error);
       toast.current?.show({
         severity: "error",
-        summary: lang === "Viet" ? "Lỗi" : "Error",
-        detail:
-          lang === "Viet"
-            ? "Không thể gửi dữ liệu, vui lòng thử lại."
-            : "Failed to send data.",
-        life: 3000,
+        summary: "Lỗi",
+        detail: "Không thể gửi dữ liệu.",
       });
     }
   };
 
   return (
-    <div className="mx-auto">
-      <Toast
-        ref={toast}
-        position="top-right"
-        pt={{
-          // 'message': Toàn bộ khung của 1 thông báo
-          message: () => ({
-            className: classNames(
-              "mb-3 rounded-2xl border border-white/10 shadow-2xl", // Bo góc và viền mờ
-              "bg-black/70! backdrop-blur-md", // Nền đen xám 80% + làm mờ hậu cảnh
-              "text-white", // Chữ trắng toàn bộ
-            ),
-          }),
-          // 'content': Phần nội dung bên trong khung
-          content: { className: "p-4 flex items-center gap-3" },
+    <div className="mx-auto w-full px-2 md:px-10 py-10">
+      <Toast ref={toast} />
 
-          // 'icon': Icon (Success/Error)
-          icon: { className: "text-white text-xl" },
+      {/* Header Section */}
+      <div className="text-center mb-10 text-white px-4">
+        <h2 className="md:text-[clamp(2.5rem,0.5rem+2.2vw,4rem)] font-bold mb-2 lg:mb-4 tracking-tight uppercase leading-tight">
+          {lang === "Viet"
+            ? "HÃY ĐỂ TÔI ĐỒNG HÀNH CÙNG BẠN"
+            : "LET ME WALK THIS JOURNEY WITH YOU"}
+        </h2>
+        <p className="font-playfair italic text-[0.625rem] md:text-[clamp(1.125rem,0.75rem+0.45vw,1.5rem)] opacity-80 font-light">
+          {lang === "Viet"
+            ? "Bắt đầu bằng một cuộc trò chuyện, kết thúc là chiến lược thành công mà bạn cùng tôi xây dựng nên"
+            : "Start with a conversation, and end with a success strategy we build together"}
+        </p>
+      </div>
 
-          // 'summary': Tiêu đề
-          summary: { className: "font-bold text-white block mb-1" },
-
-          // 'detail': Nội dung chi tiết
-          detail: { className: "text-white/70 text-sm block" },
-
-          // 'closeButton': Nút X tắt thông báo
-          closeButton: {
-            className:
-              "text-white hover:bg-white/10 transition-colors rounded-full!  flex items-center justify-center",
-          },
-        }}
-      />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className=" bg-linear-to-br from-[#FFFFFF]/30 to-[#0957C9]/30 border-white border-3 text-[#011B40] w-full p-5 md:p-12! rounded-[3rem] shadow-2xl flex flex-col gap-2">
-          <h2
-            className={`${lang == "Viet" ? "text-md" : "text-[1.3rem]"} md:text-4xl font-bold text-center mb-3 uppercase tracking-wider bg-clip-text bg-linear-to-r from-[#011B40] to-[#0346A6]`}
-          >
-            {lang === "Viet"
-              ? "Đặt lịch trao đổi trực tiếp"
-              : "SCHEDULE A DIRECT CONSULTATION"}
-          </h2>
-
-          {fields.map((field) => (
-            /* Sử dụng class động: Nếu có mobileMDWidth thì áp dụng, 
-               mặc định md:w-full để đảm bảo trên desktop vẫn đầy đủ 
-            */
-            <div
-              key={field.name}
-              className={`flex flex-col ${field.mobileSMWidth || "w-full "} ${field.mobileMDWidth || "md:w-full "}`}
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-5 md:space-y-10 px-5 lg:px-0"
+      >
+        {/* Grid Container: Giữ 2 cột trên cả mobile và desktop */}
+        <div className="grid grid-cols-2 gap-x-3 md:gap-x-10 gap-y-4 md:gap-y-2">
+          {/* Họ và tên */}
+          <div className="flex flex-col gap-1 md:gap-2">
+            <label
+              className={classNames(
+                "font-bold ml-1 text-xs md:text-[clamp(1.25rem,0.8rem+0.5vw,1.625rem)] transition-colors whitespace-nowrap",
+                errors.fullName ? "text-red-300" : "text-white",
+              )}
             >
-              <Controller
-                name={field.name}
-                control={control}
-                rules={{ required: field.required, pattern: field.pattern }}
-                render={({ field: controllerField, fieldState }) => (
-                  <>
-                    <label
-                      className={`${fieldState.error ? "text-red-400!" : "text-[#011B40]"} font-bold mb-2 ml-1 text-sm md:text-2xl!`}
-                    >
-                      {field.label}{" "}
-                      {field.required && (
-                        <span className="text-red-400! text-sm!">*</span>
-                      )}
-                    </label>
-                    <div className="flex flex-col">
-                      {field.type === "textarea" ? (
-                        <InputTextarea
-                          {...controllerField}
-                          rows={3}
-                          autoResize
-                          className={classNames(
-                            "p-1 lg:p-3 rounded-2xl lg:rounded-3xl! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5 ",
-                            { "!border-red-400 bg-red-50": fieldState.error },
-                          )}
-                        />
-                      ) : (
-                        <InputText
-                          {...controllerField}
-                          keyfilter={field.keyfilter}
-                          className={classNames(
-                            "p-1 lg:p-2 rounded-2xl lg:rounded-full! bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5",
-                            { "!border-red-500 bg-red-50": fieldState.error },
-                          )}
-                        />
-                      )}
-                      {fieldState.error && (
-                        <span className="p-error block mt-1 ml-2 text-red-400! text-sm lg:text-lg! font-medium animate-fade-in">
-                          {fieldState.error.message}
-                        </span>
-                      )}
-                    </div>
-                  </>
-                )}
-              />
-            </div>
-          ))}
-          <div className="mt-4 flex justify-start md:hidden w-1/2">
-            <Button
-              type="submit"
-              unstyled
-              label={lang === "Viet" ? "Gửi đi" : "SUBMIT"}
-              className={`${lang == "Viet" ? "px-8!" : "px-3!"} md:px-16! py-2 lg:py-3! text-lg md:text-4xl border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
+              {lang === "Viet" ? "Họ và tên" : "Full Name"}
+            </label>
+            <Controller
+              name="fullName"
+              control={control}
+              rules={{ required: lang === "Viet" ? "Bắt buộc" : "Required" }}
+              render={({ field, fieldState }) => (
+                <div className="flex flex-col">
+                  <InputText
+                    {...field}
+                    className={classNames(
+                      "w-full p-2! md:p-3! rounded-full! bg-white! text-black border-2 border-transparent transition-all text-sm md:text-xs",
+                      { "!border-red-500 bg-red-50!": fieldState.error },
+                    )}
+                  />
+                  {fieldState.error && (
+                    <span className="text-red-300 text-[10px] md:text-sm mt-1 ml-4 animate-fade-in font-medium">
+                      {fieldState.error.message}
+                    </span>
+                  )}
+                </div>
+              )}
+            />
+          </div>
+
+          {/* Email */}
+          <div className="flex flex-col gap-1 md:gap-2">
+            <label
+              className={classNames(
+                "font-bold ml-1 text-xs md:text-[clamp(1.25rem,0.8rem+0.5vw,1.625rem)] transition-colors",
+                errors.email ? "text-red-300" : "text-white",
+              )}
+            >
+              Email
+            </label>
+            <Controller
+              name="email"
+              control={control}
+              rules={{
+                required: lang === "Viet" ? "Bắt buộc" : "Required",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Sai định dạng",
+                },
+              }}
+              render={({ field, fieldState }) => (
+                <div className="flex flex-col">
+                  <InputText
+                    {...field}
+                    className={classNames(
+                      "w-full p-2! md:p-3! rounded-full! bg-white! text-black border-2 border-transparent transition-all text-xs md:text-xs",
+                      { "!border-red-500 bg-red-50!": fieldState.error },
+                    )}
+                  />
+                  {fieldState.error && (
+                    <span className="text-red-300 text-[10px] md:text-sm mt-1 ml-4 animate-fade-in font-medium">
+                      {fieldState.error.message}
+                    </span>
+                  )}
+                </div>
+              )}
+            />
+          </div>
+
+          {/* Số điện thoại */}
+          <div className="flex flex-col gap-1 md:gap-2">
+            <label
+              className={classNames(
+                "font-bold ml-1 text-xs md:text-[clamp(1.25rem,0.8rem+0.5vw,1.625rem)] transition-colors",
+                errors.phone ? "text-red-300" : "text-white",
+              )}
+            >
+              {lang === "Viet" ? "SĐT" : "Phone"}
+            </label>
+            <Controller
+              name="phone"
+              control={control}
+              rules={{ required: lang === "Viet" ? "Bắt buộc" : "Required" }}
+              render={({ field, fieldState }) => (
+                <div className="flex flex-col">
+                  <InputText
+                    {...field}
+                    keyfilter="num"
+                    className={classNames(
+                      "w-full p-2! md:p-3! rounded-full! bg-white! text-black border-2 border-transparent transition-all text-xs md:text-xs",
+                      { "!border-red-500 bg-red-50!": fieldState.error },
+                    )}
+                  />
+                  {fieldState.error && (
+                    <span className="text-red-300 text-[10px] md:text-sm mt-1 ml-4 animate-fade-in font-medium">
+                      {fieldState.error.message}
+                    </span>
+                  )}
+                </div>
+              )}
+            />
+          </div>
+
+          {/* Cá nhân/ Tổ chức */}
+          <div className="flex flex-col gap-1 md:gap-2">
+            <label className="text-white font-bold ml-1 text-xs md:text-[clamp(1.25rem,0.8rem+0.5vw,1.625rem)] whitespace-nowrap">
+              {lang === "Viet" ? "Cá nhân/Tổ chức" : "Individual/Organization"}
+            </label>
+            <Controller
+              name="organization"
+              control={control}
+              render={({ field }) => (
+                <InputText
+                  {...field}
+                  className="w-full p-2! md:p-3! rounded-full! bg-white! text-black border-none text-xs md:text-xs"
+                />
+              )}
+            />
+          </div>
+
+          {/* Nội dung tư vấn - Full Width */}
+          <div className="flex flex-col gap-2 col-span-2 mt-2">
+            <label className="text-white font-bold ml-1 text-xs md:text-[clamp(1.25rem,0.8rem+0.5vw,1.625rem)]">
+              {lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content"}
+            </label>
+            <Controller
+              name="content"
+              control={control}
+              render={({ field }) => (
+                <InputTextarea
+                  {...field}
+                  rows={1}
+                  autoResize
+                  className="w-full p-4 md:p-6 rounded-[2rem]! bg-white! text-black border-none text-xs md:text-xs"
+                />
+              )}
             />
           </div>
         </div>
 
-        <div className="mt-15 md:flex justify-center hidden mb-15">
+        {/* Submit Button */}
+        <div className="pt-4 md:pt-5">
           <Button
             type="submit"
             unstyled
-            label={lang === "Viet" ? "Gửi đi" : "SUBMIT"}
-            className={`px-16! py-3! md:text-4xl! ${lang == "Viet" ? "text-2xl!" : "text-lg!"} border-2 border-white bg-[radial-gradient(circle,#5268D2_0%,#7DB3E2_100%)] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 shadow-lg!`}
+            label={
+              lang === "Viet"
+                ? "BẮT ĐẦU NHẬN TƯ VẤN"
+                : "START YOUR CONSULTATION NOW"
+            }
+            className="w-full py-4 md:py-6 text-xs md:text-[clamp(1.5rem,0.2rem+1.4vw,2.5rem)] font-bold border-2 border-white text-white rounded-full 
+                       bg-gradient-to-r from-[#0D4CB5] via-[#1E293B] to-[#1E293B]
+                       hover:brightness-125 transition-all duration-300 uppercase tracking-widest shadow-xl active:scale-[0.98]"
           />
         </div>
       </form>

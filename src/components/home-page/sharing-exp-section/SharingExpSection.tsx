@@ -7,8 +7,11 @@ import { Carousel } from "primereact/carousel";
 import ExpImage1 from "@/assets/images/assets/SharingExpSection-ExpImage-1.png";
 import ExpImage2 from "@/assets/images/assets/SharingExpSection-ExpImage-2.png";
 import ExpImage3 from "@/assets/images/assets/SharingExpSection-ExpImage-3.png";
+import ExpImage4 from "@/assets/images/assets/SharingExpSection-ExpImage-4.png";
 import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 import { Button } from "primereact/button";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface SharingExpItemProps {
   image: string | StaticImageData;
@@ -44,9 +47,9 @@ const SharingExpSection = () => {
         },
         Eng: {
           title: "PANEL: TRENDS AND SOLUTIONS FOR MASS RECRUITMENT",
-          description: "Nguoi Lao Dong Newspaper",
-          author:
+          description:
             "Emphasizing solutions such as applying technology in recruitment and enhancing employee experience to attract and retain large-scale workforces amid high job-hopping rates, especially among Gen Z.",
+          author: "Nguoi Lao Dong Newspaper",
         },
       },
     },
@@ -64,9 +67,28 @@ const SharingExpSection = () => {
         Eng: {
           title:
             "FINANCIAL & MONETARY MARKET MAGAZINE – CONTRIBUTORS MEETUP IN HO CHI MINH CITY 2025",
-          description: "Financial & Monetary Market Magazine",
-          author:
+          description:
             "An appreciation event for experts and contributors who have delivered in-depth articles, while also setting directions for communication on monetary policy and digital transformation in the banking sector.",
+          author: "Financial & Monetary Market Magazine",
+        },
+      },
+    },
+    {
+      image: ExpImage4,
+      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_bnpl-digitalbanking-consumerfinance-activity-7459776646338863105-yi7y?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
+      text: {
+        Viet: {
+          title: "NGÂN HÀNG SỐ, TÀI CHÍNH SỐ - BNPL LÀ GÌ? (BUY NOW PAY LATER)",
+          description:
+            "BNPL không chỉ là Buy Now Pay Later mà là động lực tăng trưởng mới của tài chính số: thúc đẩy tiêu dùng tức thời, mở rộng tín dụng, nhưng thành công dài hạn phụ thuộc vào quản trị rủi ro, dữ liệu và khả năng tích hợp hệ sinh thái.",
+          author: "",
+        },
+        Eng: {
+          title:
+            "DIGITAL BANKING & DIGITAL FINANCE – WHAT IS BNPL (BUY NOW, PAY LATER)?",
+          description:
+            "BNPL is not just Buy Now, Pay Later—it is a new growth driver for digital finance, enabling instant consumption and expanding credit access. Long-term success, however, depends on risk management, data capabilities, and ecosystem integration.",
+          author: "",
         },
       },
     },
@@ -82,19 +104,21 @@ const SharingExpSection = () => {
           />
         </div>
 
-        <div className="w-full md:w-3/7 md:flex-1 flex flex-col items-start gap-3 md:gap-10 my-auto">
-          <div className="w-full font-bold leading-snug text-[clamp(15px,9.853px+1.31vw,35px)] text-center lg:text-left">
+        <div className="w-full md:w-3/7 md:flex-1 flex flex-col items-start gap-3 md:gap-8 4xl:gap-10 my-auto">
+          <div className="w-full font-bold leading-loose lg:leading-relaxed text-[0.875rem] lg:text-[clamp(1.5rem,0.375rem+1.1719vw,2.25rem)] text-center lg:text-left">
             {item.text[lang].title}
           </div>
 
-          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[clamp(12px,8.654px+0.851vw,25px)]">
-            <div className="leading-relaxed text-left">
-              <span className="font-semibold ">
-                {lang == "Viet" ? "Đơn vị đăng tin: " : "Organizer: "}
-              </span>
-              {item.text[lang].author}
-            </div>
-            <div className="leading-relaxed text-left">
+          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[0.75rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]">
+            {item.text[lang].author != "" && (
+              <div className="leading-loose text-left">
+                <span className="font-semibold ">
+                  {lang == "Viet" ? "Đơn vị đăng tin: " : "Organizer: "}
+                </span>
+                {item.text[lang].author}
+              </div>
+            )}
+            <div className="leading-loose text-left">
               <span className="font-semibold ">
                 {lang == "Viet" ? "Nội dung chia sẻ: " : "Content: "}
               </span>
@@ -105,12 +129,12 @@ const SharingExpSection = () => {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`mx-auto lg:mt-10`}
+            className={`mx-auto`}
           >
             <div
-              className={`bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-[15px] lg:text-[35px] border-2 border-white px-10 py-2 lg:px-15 lg:py-3 font-bold rounded-2xl lg:rounded-3xl`}
+              className={`bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] text-[12px] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] border-2 border-white px-10 py-2 lg:px-20 4xl:px-30 lg:py-3 font-bold rounded-full`}
             >
-              {lang == "Viet" ? "XEM BÀI VIẾT" : "READ THE ARTICLE"}
+              {lang == "Viet" ? "XEM THÊM BÀI VIẾT" : "READ THE ARTICLE"}
             </div>
           </a>
         </div>
@@ -119,15 +143,17 @@ const SharingExpSection = () => {
   };
 
   return (
-    <div className={`bg-linear-to-b from-[#0957C9] to-[#1F2833]`}>
+    <div className={`${styles.container}`}>
       <div
-        className={`pt-10 lg:pt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] lg:pb-10
-        text-transparent lg:mx-30 text-center lg:text-left text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold `}
+        className={`pt-10 lg:pt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] lg:pb-10
+        text-transparent lg:px-[15%] text-center lg:text-left text-[24px] lg:text-[clamp(2.5rem,-0.5rem+3.125vw,4.5rem)] font-extrabold `}
       >
-        {lang === "Viet" ? "TỌA ĐÀM NỔI BẬT" : "FEATURED PANEL DISCUSSIONS"}
+        {lang === "Viet"
+          ? "GÓC NHÌN NGHỀ TÀI CHÍNH"
+          : "FINANCE CAREER INSIGHTS"}
       </div>
       <div
-        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-5 lg:mt-10`}
+        className={`${styles.carouselWrapper} w-9/10! lg:w-full! mx-auto mt-5 lg:mt-10`}
       >
         <div className="">
           <Carousel
@@ -138,8 +164,18 @@ const SharingExpSection = () => {
             numScroll={1}
             circular
             autoplayInterval={8000}
-            prevIcon={<i className="pi pi-chevron-left text-3xl!" />}
-            nextIcon={<i className="pi pi-chevron-right text-3xl!" />}
+            prevIcon={
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+              />
+            }
+            nextIcon={
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+              />
+            }
             className="w-full"
           />
         </div>

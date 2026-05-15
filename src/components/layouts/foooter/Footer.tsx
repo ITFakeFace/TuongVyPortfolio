@@ -10,17 +10,17 @@ const Footer = () => {
   return (
     <div className={`${styles.container}`}>
       <div
-        className={`flex flex-col lg:flex-row px-10 lg:px-50 py-5 lg:py-20 gap-5 lg:gap-0`}
+        className={`flex flex-col lg:flex-row px-10 lg:px-[15%] py-5 lg:py-20 gap-5 lg:gap-0 items-center justify-center`}
       >
         <div className={`w-full lg:w-1/2`}>
           <div
-            className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-[clamp(25px,13.418px+2.947vw,70px)] text-transparent 
+            className={`bg-clip-text bg-linear-to-br from-[#FFFFFF] to-[#999999] text-[1.25rem] lg:text-[clamp(2.75rem,0.0313rem+2.832vw,4.5625rem)] text-transparent 
                 font-bold text-center lg:text-left 
                 mx-auto`}
           >
             {lang == "Viet" ? "CẢM ƠN" : "THANK YOU FOR"}
             <br />
-            {lang == "Viet" ? "ĐÃ ĐỒNG HÀNH" : "YOUR SUPPORT"}
+            {lang == "Viet" ? "SỰ ĐỒNG HÀNH" : "YOUR SUPPORT"}
           </div>
         </div>
         <div
@@ -36,17 +36,19 @@ const Footer = () => {
             >
               <FontAwesomeIcon
                 icon={faLinkedinIn}
-                className="text-lg lg:text-8xl! text-white hover:text-[#d9d9d9] transition-colors! "
+                className="text-lg lg:text-4xl 4xl:text-7xl! text-white hover:text-[#d9d9d9] transition-colors! "
               />
             </div>
           </a>
           <div className={`lg:w-3/5 text-white `}>
             <div
-              className={`text-sm lg:text-md lg:text-4xl italic border-b-1 border-white leading-snug`}
+              className={`text-sm lg:text-md lg:text-xl 4xl:text-3xl italic border-b-1 border-white leading-snug`}
             >
-              {lang == "Viet" ? "Liên hệ:" : "Contact ME:"}
+              {lang == "Viet" ? "Liên hệ:" : "Contact me:"}
             </div>
-            <div className={`pt-3 text-sm lg:text-3xl leading-snug`}>
+            <div
+              className={`pt-3 text-xs lg:text-lg 4xl:text-2xl leading-snug`}
+            >
               <div>
                 <span className={`font-bold`}>P:</span> (+84) 908.665.656
               </div>

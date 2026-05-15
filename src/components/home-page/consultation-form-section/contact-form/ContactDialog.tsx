@@ -169,11 +169,11 @@ const ContactDialog = ({
           },
           header: {
             className:
-              "!bg-gradient-to-tr !from-[#1F2833] !to-[#0957C9] !text-[#b5bc4f] !pt-10 !px-8 !font-bold !text-2xl md:!text-3xl !text-center !block !border-none",
+              "!bg-gradient-to-tr !from-[#011B40] from-69% !to-[#0957C9] !text-[#0346A6] !pt-10 !px-8 !font-bold !text-2xl md:!text-3xl !text-center !block !border-none",
           },
           content: {
             className:
-              "!bg-gradient-to-br !from-[#1F2833] !to-[#0957C9] !px-8 !pb-10 !border-none",
+              "!bg-gradient-to-br !from-[#011B40] from-69% !to-[#0346A6] !px-8 !pb-10 !border-none",
           },
           mask: { className: "!backdrop-blur-md !bg-black/40 !z-[10000]" },
         }}
@@ -205,7 +205,7 @@ const ContactDialog = ({
                     pt={{
                       root: {
                         className: classNames(
-                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none !transition-all",
+                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none !transition-all text-xs! lg:text-sm!",
                           {
                             "!border-red-500 !bg-red-500/10": fieldState.error,
                           },
@@ -247,7 +247,7 @@ const ContactDialog = ({
                     pt={{
                       root: {
                         className: classNames(
-                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none",
+                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none text-xs! lg:text-sm!",
                           {
                             "!border-red-500 !bg-red-500/10": fieldState.error,
                           },
@@ -287,7 +287,7 @@ const ContactDialog = ({
                     pt={{
                       root: {
                         className: classNames(
-                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none",
+                          "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none text-xs! lg:text-sm!",
                           {
                             "!border-red-500 !bg-red-500/10": fieldState.error,
                           },
@@ -321,7 +321,7 @@ const ContactDialog = ({
                   pt={{
                     root: {
                       className:
-                        "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none focus:!border-[#b5bc4f]",
+                        "!p-4 !rounded-full !bg-white/10 !text-white !border-2 !border-transparent !outline-none focus:!border-[#b5bc4f] text-xs! lg:text-sm!",
                     },
                   }}
                 />
@@ -340,12 +340,12 @@ const ContactDialog = ({
               render={({ field }) => (
                 <InputTextarea
                   {...field}
-                  rows={3}
+                  rows={2}
                   autoResize
                   pt={{
                     root: {
                       className:
-                        "!p-4 !rounded-2xl !bg-white/10 !text-white !border-2 !border-transparent !outline-none focus:!border-[#b5bc4f]",
+                        "!p-4 !rounded-2xl !bg-white/10 !text-white !border-2 !border-transparent !outline-none focus:!border-[#b5bc4f] text-xs! lg:text-sm!",
                     },
                   }}
                 />

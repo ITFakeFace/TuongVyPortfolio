@@ -11,12 +11,17 @@ import CertificateImage5 from "@/assets/images/assets/CertificateSection-Certifi
 import CertificateImage6 from "@/assets/images/assets/CertificateSection-CertificateImage-6.png";
 import CertificateImage7 from "@/assets/images/assets/CertificateSection-CertificateImage-7.png";
 import CertificateImage8 from "@/assets/images/assets/CertificateSection-CertificateImage-8.png";
+import CertificateImage9 from "@/assets/images/assets/CertificateSection-CertificateImage-9.png";
 import PartnerCertificateImage1 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-1.png";
 import PartnerCertificateImage2 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-2.png";
 import PartnerCertificateImage3 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-3.png";
+import PartnerCertificateImage4 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-4.png";
+import PartnerCertificateImage5 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-5.png";
 import FilmStrip from "@/components/generals/FilmStrip";
 import { Button } from "primereact/button";
 import { Carousel } from "primereact/carousel";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface CertificateCarouselProps {
   image: string | StaticImageData;
@@ -42,6 +47,7 @@ const CertificateSection = () => {
     CertificateImage3,
     CertificateImage4,
     CertificateImage6,
+    CertificateImage9,
   ];
   const certificateCarouselItems: CertificateCarouselProps[] = [
     {
@@ -99,7 +105,7 @@ const CertificateSection = () => {
 
   const renderCcertificateCarouselItems = (item: CertificateCarouselProps) => {
     return (
-      <div className="w-9/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
+      <div className="w-8/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
         <div className="w-full md:w-4/7 flex-none flex items-center justify-center">
           <Image
             src={item.image}
@@ -108,20 +114,20 @@ const CertificateSection = () => {
           />
         </div>
 
-        <div className="w-full md:w-3/7 md:flex-1 flex flex-col items-start gap-3 md:gap-10 my-auto">
-          <div className="w-full font-bold leading-snug text-[16px] lg:text-[clamp(25px,18.565px+1.637vw,50px)] text-center lg:text-left">
+        <div className="w-full md:w-3/7 md:flex-1 flex flex-col items-start gap-3 md:gap-5 my-auto">
+          <div className="w-full font-bold leading-snug text-[16px] lg:text-[clamp(1.75rem,0.25rem+1.5625vw,2.75rem)] text-center lg:text-left">
             {item.text[lang].title}
           </div>
 
-          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[14px] lg:text-[clamp(15px,11.136px+0.982vw,30px)]">
-            <div className=" leading-relaxed">
+          <div className="flex flex-col gap-2 md:gap-3 text-justify md:mr-2 text-[14px] font-light lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]">
+            <div className=" leading-loose ">
               <span className="font-semibold text-left">
                 {lang == "Viet" ? "Đơn vị cấp bằng: " : "Issued by: "}
               </span>
               {item.text[lang].author}
             </div>
 
-            <div className="leading-relaxed text-left">
+            <div className="leading-loose text-left">
               <span className="font-semibold ">
                 {lang == "Viet" ? "Nội dung: " : "Content: "}
               </span>
@@ -136,21 +142,33 @@ const CertificateSection = () => {
   const partnerCerts = [
     <div className={`flex flex-row justify-around`}>
       <Image
+        src={PartnerCertificateImage4}
+        alt="Partner Certificate 1"
+        className="h-[200px] lg:h-[clamp(25rem,-3.125rem+29.2969vw,43.75rem)] w-auto object-contain"
+      />
+      <Image
+        src={PartnerCertificateImage5}
+        alt="Partner Certificate 2"
+        className="h-[200px] lg:h-[clamp(25rem,-3.125rem+29.2969vw,43.75rem)] w-auto object-contain"
+      />
+    </div>,
+    <div className={`flex flex-row justify-around`}>
+      <Image
         src={PartnerCertificateImage3}
         alt="Partner Certificate 1"
-        className="h-[clamp(200px,122.724px+19.659vw,500px)] w-auto object-contain"
+        className="h-[200px] lg:h-[clamp(25rem,-3.125rem+29.2969vw,43.75rem)] w-auto object-contain"
       />
       <Image
         src={PartnerCertificateImage2}
         alt="Partner Certificate 2"
-        className="h-[clamp(200px,122.724px+19.659vw,500px)] w-auto object-contain"
+        className="h-[200px] lg:h-[clamp(25rem,-3.125rem+29.2969vw,43.75rem)] w-auto object-contain"
       />
     </div>,
     <div className={`w-full flex justify-around`}>
       <Image
         src={PartnerCertificateImage1}
         alt="Partner Certificate 3"
-        className=" h-[clamp(200px,122.724px+19.659vw,500px)] w-auto object-contain"
+        className=" h-[200px] lg:h-[clamp(25rem,-3.125rem+29.2969vw,43.75rem)] w-auto object-contain"
       />
     </div>,
   ];
@@ -161,16 +179,16 @@ const CertificateSection = () => {
 
   return (
     <div
-      className={`${styles.container} -my-100 w-full min-h-screen relative z-30 pt-15 lg:pt-30 rounded-[70px] lg:rounded-[201px] shadow-[20px_-10px_10px_0px_rgba(0,0,0,0.3)]`}
+      className={`${styles.container} -my-100 w-full min-h-screen relative z-30 pb-20 lg:pb-0 pt-15 lg:pt-30 rounded-[70px] lg:rounded-[201px] shadow-[20px_-10px_10px_0px_rgba(0,0,0,0.3)]`}
     >
       <div
-        className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
-        text-transparent text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold text-center ${styles.title}`}
+        className={`4xl:pt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
+        text-transparent text-[1.5rem] lg:text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)] font-extrabold text-center ${styles.title}`}
       >
         {lang === "Viet" ? "THÀNH TỰU SỰ NGHIỆP" : " CAREER ACHIEVEMENTS"}
       </div>
       <div
-        className={`text-white text-center px-4 w-8/10 lg:w-11/20 mx-auto text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
+        className={`text-white font-playfair text-center px-4 w-8/10 lg:w-full mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium`}
       >
         {lang === "Viet"
           ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành"
@@ -181,20 +199,20 @@ const CertificateSection = () => {
           items={certificates}
           gap={`gap-5 lg:gap-10`}
           className={`overflow-visible overflow-x-clip!`}
-          itemClassName={`w-[400px] lg:w-[700px] h-auto rounded-2xl lg:rounded-4xl object-cover my-auto hover:scale-130 hover:z-30 transition-transform duration-300`}
+          itemClassName={`w-[400px] lg:w-[700px] 4xl:w-[1000px] h-auto rounded-2xl lg:rounded-4xl object-cover my-auto hover:scale-130 hover:z-30 transition-transform duration-300`}
         />
       </div>
       <div
-        className={`mt-10 lg:mt-20 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
-          text-transparent lg:mx-40 flex flex-col items-center justify-center lg:items-start`}
+        className={`pt-50 lg:pt-20 4xl:pt-60 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
+          text-transparent lg:px-[15%] flex flex-col items-center justify-center lg:items-start`}
       >
         <div
-          className={`text-center lg:text-left text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
+          className={`text-center lg:text-left text-[1.5rem] lg:text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)] font-extrabold`}
         >
           {lang === "Viet" ? "GIẤY CHỨNG NHẬN" : "CERTIFICATION"}
         </div>
         <div
-          className={`w-8/10 lg:w-full text-white text-center lg:text-left px-4 text-[clamp(10px,6.136px+0.982vw,25px)] font-medium mx-0 lg:mx-auto`}
+          className={`font-playfair w-8/10 lg:w-full text-white text-center lg:text-left px-4 text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium mx-0 lg:mx-auto`}
         >
           {lang === "Viet"
             ? "Minh chứng cụ thể từ các đơn vị đào tạo cho những kỹ năng “làm nghề” quan trọng"
@@ -202,7 +220,7 @@ const CertificateSection = () => {
         </div>
       </div>
       <div
-        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-5 lg:mt-15`}
+        className={`${styles.carouselWrapper} w-9/10 lg:w-full mx-auto mt-5 lg:mt-20`}
       >
         <div className="">
           <Carousel
@@ -213,24 +231,34 @@ const CertificateSection = () => {
             numScroll={1}
             circular
             autoplayInterval={8000}
-            prevIcon={<i className="pi pi-chevron-left text-3xl!" />}
-            nextIcon={<i className="pi pi-chevron-right text-3xl!" />}
+            prevIcon={
+              <FontAwesomeIcon
+                icon={faArrowLeft}
+                className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+              />
+            }
+            nextIcon={
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+              />
+            }
             className="w-full"
           />
         </div>
       </div>
       <div
-        className={`mt-10 lg:mt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
+        className={`mt-50 lg:mt-60 4xl:mt-80 bg-clip-text bg-linear-to-r from-[#FFFFFF] from-19% to-[#999999] 
           text-transparent lg:mx-40 flex flex-col items-center justify-center`}
       >
         <div
           //   className={`text-center text-[clamp(25px,8.28px+4.254vw,90px)] font-extrabold`}
-          className={`text-center text-[24px] lg:text-[clamp(20px,1.987px+4.584vw,90px)] font-extrabold`}
+          className={`text-center text-[1.5rem] lg:text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)] font-extrabold`}
         >
           {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CERTIFIED PARTNERSHIPS"}
         </div>
         <div
-          className={`text-white text-center px-4 w-9/10 lg:w-20/20 mx-auto text-[10px] lg:text-[clamp(10px,6.136px+0.982vw,25px)] font-medium`}
+          className={`font-playfair text-white text-center px-4 w-9/10 lg:w-20/20 mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium`}
         >
           {lang === "Viet"
             ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành."
@@ -238,7 +266,7 @@ const CertificateSection = () => {
         </div>
       </div>
       <div
-        className={`${styles.carouselWrapper} w-9/10! mx-auto mt-10 lg:mt-10 pb-20 lg:pb-30`}
+        className={`${styles.carouselWrapper2} w-9/10! mx-auto mt-10 lg:mt-20 pb-20 lg:pb-30`}
       >
         <div className="">
           <Carousel

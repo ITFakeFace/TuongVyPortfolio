@@ -8,10 +8,14 @@ import styles from "./LatestEventsSection.module.scss";
 import { Button } from "primereact/button";
 import { Carousel } from "primereact/carousel";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useMobile } from "@/hooks/useMobile";
 
 const LatestEventsSection = () => {
   const { lang } = useLanguage();
   const [autoplay, setAutoplay] = useState<number>(0);
+  const isMobile = useMobile();
 
   useEffect(() => {
     const checkMobile = () => {
@@ -30,17 +34,17 @@ const LatestEventsSection = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
   const events = [
-    {
-      image: EventImage1,
-      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_aiesec-aiesecinvietnam-h4tf-ugcPost-7450400637424668672-o5Zv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
-      title: {
-        Viet: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
-        Eng: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
-      },
-      guest: { Viet: "Diễn giả", Eng: "Speaker" },
-      time: "3/5/2026",
-      destination: "Online",
-    },
+    // {
+    //   image: EventImage1,
+    //   url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_aiesec-aiesecinvietnam-h4tf-ugcPost-7450400637424668672-o5Zv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
+    //   title: {
+    //     Viet: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
+    //     Eng: 'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?"',
+    //   },
+    //   guest: { Viet: "Diễn giả", Eng: "Speaker" },
+    //   time: "3/5/2026",
+    //   destination: "Online",
+    // },
     {
       image: EventImage2,
       url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_for-professionals-in-banking-and-finance-share-7450433602925801472-Ft21?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
@@ -65,7 +69,7 @@ const LatestEventsSection = () => {
         <div
           className={`
           /* Mobile: size nhỏ hơn, padding ít hơn */
-          text-[15px] lg:text-[clamp(25px,-15px+2.604vw,35px)]
+          text-[15px] lg:text-[clamp(1.125rem,-0.1875rem+1.3672vw,2rem)]
           lg:min-h-[clamp(105px,73px+2.083vw,113px)]
           px-6 lg:px-12 
           
@@ -87,9 +91,8 @@ const LatestEventsSection = () => {
           justify-between items-center 
           px-6 lg:px-12 py-3 lg:py-2 
           w-full 
-          
           /* Mobile: text nhỏ hơn, Desktop: 25px */
-          text-[12px] lg:text-[clamp(20px,-12px+2.083vw,28px)]
+          text-[12px] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]
           gap-2 lg:gap-0
           ${styles.infoBox}
         `}
@@ -108,7 +111,7 @@ const LatestEventsSection = () => {
 
   const eventItemTemplate = (event: any) => {
     return (
-      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-10">
+      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-10 lg:w-4/5 mx-auto">
         {/* Phần Ảnh */}
         <div className="flex-1 flex flex-col justify-center min-h-[250px]">
           <Image
@@ -133,7 +136,7 @@ const LatestEventsSection = () => {
           <a href={event.url} target="_blank" rel="noopener noreferrer">
             <Button
               unstyled
-              className="px-10 lg:px-15 py-3 bg-linear-to-r from-[#12F4FE] to-white text-black font-bold text-[16px] lg:text-[28px] border-white border-2 rounded-2xl lg:rounded-4xl hover:cursor-pointer transition-transform hover:scale-105 animate-heartbeat"
+              className="px-10 lg:px-15 py-2 lg:py-3 bg-linear-to-r from-[#07367B]/50 from-69% to-[#1F2833]/50 text-white font-bold text-[14px] lg:text-[28px] border-white border-1 lg:border-2 rounded-full hover:cursor-pointer transition-transform hover:scale-105 animate-heartbeat"
             >
               {lang === "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
             </Button>
@@ -144,14 +147,17 @@ const LatestEventsSection = () => {
   };
 
   return (
-    <div id="latest-events" className={`${styles.container} py-10 lg:py-20`}>
+    <div
+      id="latest-events"
+      className={`bg-transparent py-10 lg:py-40 lg:pb-60 `}
+    >
       {/* <Image
         src={lang == "Viet" ? LatestEventsText : LatestEventsText}
         alt="Latest Events"
         className="mx-auto mb-8 w-4/5"
       /> */}
       <div className={`mb-5 lg:mb-15`}>
-        <div className="relative w-full h-[9px]">
+        {/* <div className="relative w-full h-[9px]">
           <svg
             className="absolute block inset-0 size-full"
             width="100%"
@@ -177,29 +183,21 @@ const LatestEventsSection = () => {
                 fy="50%"
                 gradientUnits="userSpaceOnUse"
               >
-                {/* Điểm trung tâm sáng nhất */}
                 <stop offset="0%" stopColor="#F9FCFF" />
 
-                {/* Thu nhỏ dần/Mờ dần. Offset 50% sẽ làm vùng sáng tập trung ở giữa */}
                 <stop offset="50%" stopColor="#4E70FF" stopOpacity="0.5" />
 
-                {/* Kết thúc mờ hẳn tại biên */}
                 <stop offset="100%" stopColor="#4E70FF" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
         <div>
-          <div className="flex flex-row justify-center text-[30px] lg:text-[65px] gap-2 lg:gap-4 font-bold">
-            <span className={`text-white`}>
-              {lang == "Viet" ? "SỰ KIỆN" : "LATEST"}
-            </span>
-            <span className={`text-[#12F4FE]`}>
-              {lang == "Viet" ? "MỚI NHẤT" : "EVENTS"}
-            </span>
+          <div className="flex flex-row justify-center text-[30px] lg:text-[65px] gap-2 lg:gap-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]">
+            {lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "LATEST EVENTS"}
           </div>
         </div>
-        <div className="relative w-full h-[9px]">
+        {/* <div className="relative w-full h-[9px]">
           <svg
             className="absolute block inset-0 size-full"
             width="100%"
@@ -225,24 +223,21 @@ const LatestEventsSection = () => {
                 fy="50%"
                 gradientUnits="userSpaceOnUse"
               >
-                {/* Điểm trung tâm sáng nhất */}
                 <stop offset="0%" stopColor="#F9FCFF" />
 
-                {/* Thu nhỏ dần/Mờ dần. Offset 50% sẽ làm vùng sáng tập trung ở giữa */}
                 <stop offset="50%" stopColor="#4E70FF" stopOpacity="0.5" />
 
-                {/* Kết thúc mờ hẳn tại biên */}
                 <stop offset="100%" stopColor="#4E70FF" stopOpacity="0" />
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
       </div>
-      <div className="lg:mt-10">
+      <div className={`lg:mt-10 lg:px-[15%] ${styles.carouselWrapper}`}>
         <Carousel
           key={autoplay > 0 ? "auto-on" : "auto-off"}
           value={events}
-          numVisible={2} // Hiện 2 item trên Desktop
+          numVisible={1} // Hiện 2 item trên Desktop
           numScroll={1}
           responsiveOptions={[
             {
@@ -260,8 +255,20 @@ const LatestEventsSection = () => {
           circular // Lặp vô tận
           autoplayInterval={autoplay} // Tự động chạy
           showIndicators={false} // Hiện các dấu chấm bên dưới
-          showNavigators={false} // Hiện mũi tên trái/phải
-          className={`w-9/10 mx-auto`}
+          showNavigators={isMobile} // Hiện mũi tên trái/phải
+          prevIcon={
+            <FontAwesomeIcon
+              icon={faArrowLeft}
+              className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+            />
+          }
+          nextIcon={
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className={`text-sm lg:text-[clamp(1.5rem,-0.75rem+2.3438vw,3rem)]`}
+            />
+          }
+          className={`w-9/10 lg:w-full mx-auto`}
         />
       </div>
     </div>
