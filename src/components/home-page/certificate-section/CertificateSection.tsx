@@ -12,6 +12,7 @@ import CertificateImage6 from "@/assets/images/assets/CertificateSection-Certifi
 import CertificateImage7 from "@/assets/images/assets/CertificateSection-CertificateImage-7.png";
 import CertificateImage8 from "@/assets/images/assets/CertificateSection-CertificateImage-8.png";
 import CertificateImage9 from "@/assets/images/assets/CertificateSection-CertificateImage-9.png";
+import CertificateImage10 from "@/assets/images/assets/CertificateSection-CertificateImage-10.jpg";
 import PartnerCertificateImage1 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-1.png";
 import PartnerCertificateImage2 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-2.png";
 import PartnerCertificateImage3 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-3.png";
@@ -98,6 +99,23 @@ const CertificateSection = () => {
           author: "New Mind Academy",
           description:
             "Equipping breakthrough leadership thinking, inspirational communication, team building, and change management—enabling leaders to optimize performance and strengthen their leadership presence.",
+        },
+      },
+    },
+    {
+      image: CertificateImage10,
+      text: {
+        Viet: {
+          title: "CRESTCOM BULLET PROOF MANAGER IV",
+          author: "CRESTCOM International ",
+          description:
+            "Chương trình nâng cấp năng lực lãnh đạo chuyên sâu dành cho C - Levels",
+        },
+        Eng: {
+          title: "CRESTCOM BULLET PROOF MANAGER IV",
+          author: "CRESTCOM International ",
+          description:
+            "Advanced leadership development program for C-level executives.",
         },
       },
     },

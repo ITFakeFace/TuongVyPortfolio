@@ -604,7 +604,7 @@ const HotTopicsSection = () => {
         <Image
           src={TrainingDecor}
           alt="Training Decor"
-          className={`absolute h-[39%] lg:h-[38%] left-0 bottom-0 z-10`}
+          className={`absolute h-[38%] lg:h-[38%] left-0 bottom-0 z-10`}
         />
         <div
           className={`w-6/8 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
@@ -632,7 +632,7 @@ const HotTopicsSection = () => {
 
             {/* List description */}
             <div
-              className={`w-9/10 lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-8 lg:mt-10 4xl:mt-20`}
+              className={`w-9/10 lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-10 lg:mt-10 4xl:mt-20`}
             >
               <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
                 <li>
