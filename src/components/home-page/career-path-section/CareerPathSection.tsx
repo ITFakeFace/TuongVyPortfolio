@@ -819,7 +819,7 @@ const CareerPathSection = () => {
               className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-semibold`}
             >
               {lang == "Viet"
-                ? "Professionals cho biết họ làm việc hiệu quả hơn khi có mentor"
+                ? "CEO nói mentor giúp họ tránh những sai lầm đắt giá"
                 : "CEOs say mentors help them avoid costly mistakes"}
             </div>
           </div>
@@ -836,7 +836,7 @@ const CareerPathSection = () => {
                 className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-semibold`}
               >
                 {lang == "Viet"
-                  ? "Professionals cho biết họ làm việc hiệu quả hơn khi có mentor"
+                  ? "Doanh nghiệp vừa và nhỏ nói mentor tác động trực tiếp đến tăng trưởng"
                   : "Small and medium-sized businesses say mentors have a direct impact on growth"}
               </div>
             </div>
