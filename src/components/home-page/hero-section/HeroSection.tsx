@@ -374,14 +374,14 @@ const HeroSection = () => {
         <div className="flex flex-col gap-3 w-full px-4 pb-10 lg:pb-0 justify-center items-center">
           <Button
             unstyled
-            className="bg-linear-to-r from-[#07367B] to-[#1F2833] border border-white rounded-2xl py-3 px-10 text-white text-md font-bold uppercase tracking-wider w-fit mx-auto animate-heartbeat"
+            className="bg-linear-to-r from-[#07367B] to-[#1F2833] border border-white rounded-full py-3 px-10 text-white text-md font-bold uppercase tracking-wider w-fit mx-auto animate-heartbeat"
             label={lang == "Viet" ? "TƯ VẤN TRỰC TIẾP" : "CONTACT ME NOW"}
             onClick={openContactForm}
           />
           <a href="#latest-events">
             <Button
               unstyled
-              className="border border-white rounded-2xl py-3 px-8 text-white text-sm font-bold uppercase tracking-wider w-fit mx-auto"
+              className="border border-white rounded-full py-3 px-8 text-white text-sm font-bold uppercase tracking-wider w-fit mx-auto"
               label={lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "THE LATEST EVENTS"}
             />
           </a>

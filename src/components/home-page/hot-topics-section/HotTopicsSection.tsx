@@ -198,7 +198,7 @@ const HotTopicsSection = () => {
 
   const renderPartnerItem = (item: TrainingPartnerItemProps) => {
     return (
-      <div className="flex flex-col w-8/10 gap-4 text-white items-center mx-auto min-h-full">
+      <div className="font-sans flex flex-col w-8/10 gap-4 text-white items-center mx-auto min-h-full">
         {/* Phần ảnh */}
         <Image
           src={item.image}
@@ -243,7 +243,7 @@ const HotTopicsSection = () => {
             <Button
               unstyled
               label={lang == "Viet" ? "LIÊN HỆ ĐÀO TẠO" : "TRAINING INQUIRIES"}
-              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[14px] lg:text-[clamp(1rem,-0.5rem+1.5625vw,2rem)] font-bold rounded-full border-2 border-white w-fit px-10 lg:px-15 4xl:px-20 py-2 lg:py-3 4xl:py-5 cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#07367B] to-[#1F2833] text-white text-[12px] lg:text-[clamp(1rem,-0.5rem+1.5625vw,2rem)] font-bold rounded-full border-2 border-white w-fit px-10 lg:px-15 4xl:px-20 py-2 lg:py-3 4xl:py-5 cursor-pointer hover:scale-110 transition-all duration-300"
               onClick={openContactForm}
             />
           </div>
@@ -379,7 +379,7 @@ const HotTopicsSection = () => {
   const renderYoungPartnerItem = (item: YoungPartnerItemProps) => {
     return (
       <div
-        className={`flex flex-col w-[90%] gap-4 text-[#white] items-center mx-auto min-h-full 
+        className={`font-sans flex flex-col w-[90%] gap-4 text-[#white] items-center mx-auto min-h-full 
             px-5 py-5 lg:px-10 lg:py-10 rounded-2xl lg:rounded-4xl
         `}
       >
@@ -460,8 +460,8 @@ const HotTopicsSection = () => {
               className={`
             bg-linear-to-r from-[#07367B] from-69% to-[#1F2833] 
             border-2 lg:border-1 border-white rounded-2xl lg:rounded-full
-            text-[16px] lg:text-[clamp(1.25rem,-1rem+2.3438vw,2.75rem)] font-bold text-white
-            px-4 lg:px-20 py-2 lg:py-4
+            text-[14px] lg:text-[clamp(1.25rem,-1rem+2.3438vw,2.75rem)] font-bold text-white
+            px-10 lg:px-20 py-2 lg:py-4
             transition-all duration-300 hover:brightness-110
             relative z-20 hover:cursor-pointer
           `}
@@ -598,6 +598,7 @@ const HotTopicsSection = () => {
         </div>
       </div>
       <div
+        id="training-programs"
         className={`relative px-5 lg:px-[15%] flex flex-row lg:justify-center items-end pt-50 lg:pt-40 4xl:pt-80`}
       >
         <Image
@@ -606,7 +607,7 @@ const HotTopicsSection = () => {
           className={`absolute h-[39%] lg:h-[38%] left-0 bottom-0 z-10`}
         />
         <div
-          className={`w-5/7 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
+          className={`w-6/8 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
         >
           {/* Thêm lg:pb-10 để phần chữ không dính sát đáy như ảnh */}
           <div
@@ -620,7 +621,7 @@ const HotTopicsSection = () => {
             </div>
 
             <div
-              className={`text-[1rem] lg:text-[clamp(3rem,-0.375rem+3.5156vw,5.25rem)] leading-tight font-bold lg:font-bold mt-1 lg:mt-0`}
+              className={`text-[20px] lg:text-[clamp(3rem,-0.375rem+3.5156vw,5.25rem)] leading-tight font-bold lg:font-bold mt-1 lg:mt-0`}
             >
               {lang == "Viet" ? "PHƯƠNG PHÁP" : "TAILORED"}
               <br />
@@ -631,7 +632,7 @@ const HotTopicsSection = () => {
 
             {/* List description */}
             <div
-              className={`lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-8 lg:mt-10 4xl:mt-20`}
+              className={`w-9/10 lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-8 lg:mt-10 4xl:mt-20`}
             >
               <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
                 <li>
@@ -675,7 +676,7 @@ const HotTopicsSection = () => {
 
       <div
         id="young-partners"
-        className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between pt-30 lg:pt-60 4xl:pt-80 lg:pb-0 text-white w-9/10 lg:w-full lg:pl-[15%] mx-auto`}
+        className={`flex flex-col lg:flex-row text-center lg:text-left justify-center lg:justify-between pt-50 lg:pt-60 4xl:pt-80 lg:pb-0 text-white w-9/10 lg:w-full lg:pl-[15%] mx-auto`}
       >
         <div className={`w-full lg:w-3/9 lg:pt-20`}>
           <div
@@ -734,7 +735,7 @@ const HotTopicsSection = () => {
           </div>
         </div>
       </div>
-
+      <div className={`pt-30 lg:pt-0`}></div>
       <LatestEventsSection />
     </div>
   );

@@ -10,7 +10,7 @@ import ContactForm from "./contact-form/ContactForm";
 const ConsultationFormSection = () => {
   const { lang } = useLanguage();
   return (
-    <div className={`${styles.container} pt-180 lg:pt-120 pb-40 lg:pb-40 `}>
+    <div className={`${styles.container} pt-150 lg:pt-120 pb-40 lg:pb-40 `}>
       <div id="strategic-partnerships" className={`lg:pb-15 pb-5 lg:px-[15%]`}>
         <div>
           <div

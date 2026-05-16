@@ -15,9 +15,22 @@ $secondary: #1f2833;
   width: 100%;
 
   :global(.p-carousel-container) {
+    overflow: visible;
     @media (min-width: 768px) {
       padding: 0 15%;
     }
+  }
+
+  :global(.p-carousel-items-content) {
+    overflow-y: visible !important;
+  }
+
+  :global(.p-carousel-content) {
+    overflow-y: visible !important;
+  }
+
+  :global(.p-carousel-item) {
+    overflow-y: visible !important;
   }
 
   // 1. Quan trọng: Cô lập phần nội dung (Ảnh) để nút căn theo vùng này

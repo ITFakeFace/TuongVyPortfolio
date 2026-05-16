@@ -984,7 +984,6 @@ const CareerPathSection = () => {
           />
         </div>
       </div>
-      <div id="training-programs"></div>
       <div className={`hidden lg:block`}>
         <CareerMentoringDesktop />
         <PotentialExplorationDesktop />

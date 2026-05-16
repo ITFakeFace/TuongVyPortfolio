@@ -105,7 +105,7 @@ const CertificateSection = () => {
 
   const renderCcertificateCarouselItems = (item: CertificateCarouselProps) => {
     return (
-      <div className="w-8/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
+      <div className="font-sans w-8/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
         <div className="w-full md:w-4/7 flex-none flex items-center justify-center">
           <Image
             src={item.image}

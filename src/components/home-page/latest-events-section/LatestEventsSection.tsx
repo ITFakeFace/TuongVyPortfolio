@@ -111,7 +111,7 @@ const LatestEventsSection = () => {
 
   const eventItemTemplate = (event: any) => {
     return (
-      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-10 lg:w-4/5 mx-auto">
+      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-10 lg:w-4/5 mx-auto pb-10">
         {/* Phần Ảnh */}
         <div className="flex-1 flex flex-col justify-center min-h-[250px]">
           <Image
@@ -193,7 +193,7 @@ const LatestEventsSection = () => {
           </svg>
         </div> */}
         <div>
-          <div className="flex flex-row justify-center text-[30px] lg:text-[65px] gap-2 lg:gap-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]">
+          <div className="flex flex-row justify-center text-[1.5rem] lg:text-[65px] gap-2 lg:gap-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]">
             {lang == "Viet" ? "SỰ KIỆN MỚI NHẤT" : "LATEST EVENTS"}
           </div>
         </div>

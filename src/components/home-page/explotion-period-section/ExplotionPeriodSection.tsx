@@ -482,7 +482,7 @@ const ExplotionPeriodSection = () => {
                 px-10 lg:px-35 py-2 lg:py-4 mt-5 lg:mt-15
                 rounded-full border-2 border-[#C8971F]
                 bg-[linear-gradient(90deg,#1F2833,#042B63)]
-                text-[20px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
+                text-[14px] lg:text-[clamp(25px,21.14px+0.982vw,40px)]
                 animate-heartbeat
                 hover:cursor-pointer hover:opacity-80 opacity-100 transition-all duration-300
               `}
