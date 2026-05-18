@@ -53,7 +53,7 @@ const Footer = () => {
                 <span className={`font-bold`}>P:</span> (+84) 908.665.656
               </div>
               <div>
-                <span className={`font-bold`}>E:</span> tuongvy80@gmail.com
+                <span className={`font-bold`}>E:</span> vy.trantnt08@gmail.com
               </div>
             </div>
           </div>

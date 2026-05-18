@@ -8,6 +8,7 @@ import ExpImage1 from "@/assets/images/assets/SharingExpSection-ExpImage-1.png";
 import ExpImage2 from "@/assets/images/assets/SharingExpSection-ExpImage-2.png";
 import ExpImage3 from "@/assets/images/assets/SharingExpSection-ExpImage-3.png";
 import ExpImage4 from "@/assets/images/assets/SharingExpSection-ExpImage-4.png";
+import ExpImage5 from "@/assets/images/assets/SharingExpSection-ExpImage-5.png";
 import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 import { Button } from "primereact/button";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -88,6 +89,25 @@ const SharingExpSection = () => {
             "DIGITAL BANKING & DIGITAL FINANCE – WHAT IS BNPL (BUY NOW, PAY LATER)?",
           description:
             "BNPL is not just Buy Now, Pay Later—it is a new growth driver for digital finance, enabling instant consumption and expanding credit access. Long-term success, however, depends on risk management, data capabilities, and ecosystem integration.",
+          author: "",
+        },
+      },
+    },
+    {
+      image: ExpImage5,
+      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_careerabrmentoring-careerabrcoaching-aiforwork-activity-7461348799202906113-MeIZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
+      text: {
+        Viet: {
+          title:
+            "THẾ HỆ TRẺ KHÔNG THIẾU KIẾN THỨC, HỌ CẦN MÔI TRƯỜNG ĐỂ TƯ DUY VÀ PHẢN BIỆN",
+          description:
+            "Người trẻ hôm nay giàu kiến thức số, nhưng giá trị lớn nhất nằm ở khả năng phản biện, tư duy thực chiến; AI và học tương tác đang thúc đẩy điều đó.",
+          author: "",
+        },
+        Eng: {
+          title: "YOUNG PEOPLE NEED MORE THAN KNOWLEDGE",
+          description:
+            "Today’s young generation is rich in digital knowledge, but their greatest value lies in critical thinking and practical problem-solving; AI and interactive learning are accelerating this transformation.",
           author: "",
         },
       },

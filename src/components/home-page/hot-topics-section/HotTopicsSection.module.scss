@@ -184,7 +184,7 @@ $secondary-2: #1f2833;
     transform: translateX(-80%) !important;
   }
   :global(.p-carousel-next) {
-    display: none;
+    display: none !important; // Ẩn nút next trên desktop
   }
 
   // Mobile: Nút nhỏ hơn và đè sát mép ảnh

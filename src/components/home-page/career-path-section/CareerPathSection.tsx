@@ -129,10 +129,9 @@ const CareerPathSection = () => {
               className={`w-full 4xl:w-fit bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 lg:py-10 lg:p-0 4xl:px-20 4xl:mx-auto text-white flex flex-col gap-5 lg:gap-10 mt-5 lg:mt-10 justify-center items-center animate-light-heartbeat
                 relative`}
             >
-              <div className="w-19/20 lg:w-20/20 font-bold flex items-start justify-center gap-1 lg:gap-5 text-[10px] lg:text-[clamp(1.25rem,0.875rem+0.3906vw,1.5rem)]">
+              {/* <div className="w-19/20 lg:w-20/20 font-bold flex items-start justify-center gap-1 lg:gap-5 text-[10px] lg:text-[clamp(1.25rem,0.875rem+0.3906vw,1.5rem)]">
                 <span className="">
                   {" "}
-                  {/* Thêm mt nếu muốn căn chỉnh thủ công một chút */}
                   {lang == "Viet" ? "Chỉ từ " : "Only from "}
                 </span>
 
@@ -141,7 +140,7 @@ const CareerPathSection = () => {
                 </span>
 
                 <span className="">{lang == "Viet" ? " VNĐ" : " VND"}</span>
-              </div>
+              </div> */}
               <div
                 className={`w-8/10 4xl:w-fit text-left text-[10px] lg:text-[clamp(1.25rem,0.875rem+0.3906vw,1.5rem)] mx-auto leading-relaxed`}
               >
@@ -179,6 +178,12 @@ const CareerPathSection = () => {
                         : "1-on-1 sessions with a senior industry advisor"}
                     </li>
                   </ul>
+                </div>
+                <div className={`font-normal`}>
+                  <b>{lang == "Viet" ? "Chi phí: " : "Cost: "}</b>
+                  {lang == "Viet"
+                    ? "Trao đổi thêm khi tư vấn"
+                    : "To be discussed during consultation."}
                 </div>
               </div>
             </div>
@@ -224,17 +229,16 @@ const CareerPathSection = () => {
               <div
                 className={` bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 text-white flex flex-col gap-5 mt-5 lg:mt-10 animate-light-heartbeat`}
               >
-                <div className="w-19/20 font-bold flex items-start justify-center gap-1 lg:gap-5 text-[8px]">
+                {/* <div className="w-19/20 font-bold flex items-start justify-center gap-1 lg:gap-5 text-[8px]">
                   <span className="">
                     {" "}
-                    {/* Thêm mt nếu muốn căn chỉnh thủ công một chút */}
                     {lang == "Viet" ? "Chỉ từ " : "Only from "}
                   </span>
 
                   <span className="text-[16px] leading-none">25.000.000</span>
 
                   <span className="">{lang == "Viet" ? " VNĐ" : " VND"}</span>
-                </div>
+                </div> */}
                 <div
                   className={`w-8/10 text-left text-[8px] lg:text-[24px] mx-auto leading-relaxed`}
                 >
@@ -272,6 +276,12 @@ const CareerPathSection = () => {
                           : "1-on-1 sessions with a senior industry advisor"}
                       </li>
                     </ul>
+                  </div>
+                  <div className={`font-normal`}>
+                    <b>{lang == "Viet" ? "Chi phí: " : "Cost: "}</b>
+                    {lang == "Viet"
+                      ? "Trao đổi thêm khi tư vấn"
+                      : "To be discussed during consultation."}
                   </div>
                 </div>
               </div>

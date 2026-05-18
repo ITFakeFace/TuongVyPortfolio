@@ -13,7 +13,7 @@ import PartnerImage4 from "@/assets/images/assets/HotTopicsSection-PartnerImage-
 import PartnerImage5 from "@/assets/images/assets/HotTopicsSection-PartnerImage-5.png";
 import PartnerImage6 from "@/assets/images/assets/HotTopicsSection-PartnerImage-6.png";
 import YoungPartnerImage1 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-1.png";
-import YoungPartnerImage2 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-2.png";
+import YoungPartnerImage2 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-7.png";
 import YoungPartnerImage3 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-3.png";
 import YoungPartnerImage4 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-4.png";
 import YoungPartnerImage5 from "@/assets/images/assets/HotTopicsSection-YoungPartnerImage-5.png";

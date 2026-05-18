@@ -16,13 +16,14 @@ $secondary: #1f2833;
 
   :global(.p-carousel-container) {
     overflow: visible;
-    @media (min-width: 768px) {
-      padding: 0 15%;
-    }
+    // @media (min-width: 768px) {
+    //   padding: 0 15%;
+    // }
   }
 
   :global(.p-carousel-items-content) {
     overflow-y: visible !important;
+    // border: solid 1px white; // Khắc phục lỗi nút bị đẩy ra ngoài trên một số trình duyệt
   }
 
   :global(.p-carousel-content) {

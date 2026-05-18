@@ -2,6 +2,7 @@
 import LatestEventsText from "@/assets/images/texts/LatestEventsSection-LatestEventsText-1.png";
 import EventImage1 from "@/assets/images/assets/LatestEventsSection-EventImage-1.png";
 import EventImage2 from "@/assets/images/assets/LatestEventsSection-EventImage-2.png";
+import EventImage3 from "@/assets/images/assets/LatestEventsSection-EventImage-3.png";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import styles from "./LatestEventsSection.module.scss";
@@ -47,14 +48,25 @@ const LatestEventsSection = () => {
     // },
     {
       image: EventImage2,
-      url: "https://www.linkedin.com/posts/tran-thanh-nu-tuong-vy-a9252732_for-professionals-in-banking-and-finance-share-7450433602925801472-Ft21?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
+      url: "https://vietnam.worldfis.com/",
       title: {
         Viet: "WORLD FINANCIAL INNOVATION SERIES",
         Eng: "WORLD FINANCIAL INNOVATION SERIES",
       },
-      guest: { Viet: "Khách mời", Eng: "Guests" },
+      guest: { Viet: "Khách mời", Eng: "Guest" },
       time: "19 - 20/5/2026",
       destination: { Viet: "Meliá Hà Nội", Eng: "Meliá Ha Noi" },
+    },
+    {
+      image: EventImage3,
+      url: "https://biztech.biz.vn/",
+      title: {
+        Viet: "BIZTECH 2026",
+        Eng: "BIZTECH 2026",
+      },
+      guest: { Viet: "Khách mời", Eng: "Guest" },
+      time: "12 - 13/05/2026",
+      destination: { Viet: "Khách sạn REX, TPHCM", Eng: "REX Hotel, TPHCM" },
     },
   ];
   const renderInfoBox = (
@@ -89,11 +101,11 @@ const LatestEventsSection = () => {
           className={`
           flex flex-row 
           justify-between items-center 
-          px-6 lg:px-12 py-3 lg:py-2 
+          px-6 #lg:px-12 lg:px-8 py-3 lg:py-2 
           w-full 
           /* Mobile: text nhỏ hơn, Desktop: 25px */
           text-[12px] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]
-          gap-2 lg:gap-0
+          gap-2 lg:gap-1
           ${styles.infoBox}
         `}
         >
@@ -101,7 +113,7 @@ const LatestEventsSection = () => {
             {guest}
           </span>
           <span className="font-medium lg:font-normal text-center">{time}</span>
-          <span className="font-medium lg:font-normal text-center">
+          <span className="font-medium lg:font-normal text-center text-balance">
             {destination}
           </span>
         </div>
@@ -111,7 +123,7 @@ const LatestEventsSection = () => {
 
   const eventItemTemplate = (event: any) => {
     return (
-      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-10 lg:w-4/5 mx-auto pb-10">
+      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-0 lg:w-8/10 mx-auto pb-10">
         {/* Phần Ảnh */}
         <div className="flex-1 flex flex-col justify-center min-h-[250px]">
           <Image
@@ -233,11 +245,11 @@ const LatestEventsSection = () => {
           </svg>
         </div> */}
       </div>
-      <div className={`lg:mt-10 lg:px-[15%] ${styles.carouselWrapper}`}>
+      <div className={`lg:mt-10 lg:px-[10%] ${styles.carouselWrapper}`}>
         <Carousel
           key={autoplay > 0 ? "auto-on" : "auto-off"}
           value={events}
-          numVisible={1} // Hiện 2 item trên Desktop
+          numVisible={2} // Hiện 2 item trên Desktop
           numScroll={1}
           responsiveOptions={[
             {
