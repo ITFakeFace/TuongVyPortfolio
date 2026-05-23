@@ -13,7 +13,7 @@ import EndImage1 from "@/assets/images/assets/CareerPathSection-Image-1.png";
 import EndImage2 from "@/assets/images/assets/CareerPathSection-Image-2.png";
 import EndImage3 from "@/assets/images/assets/CareerPathSection-Image-3.png";
 import EndImage4 from "@/assets/images/assets/CareerPathSection-Image-4.png";
-import PotentialBoxDecorImage from "@/assets/images/assets/CareerPathSection-PotentialBoxDecorImage-1.png";
+import PotentialBoxDecorImage from "@/assets/images/assets/CareerPathSection-PotentialBoxDecorImage-2.png";
 import FilmStrip from "@/components/generals/FilmStrip";
 import { div } from "framer-motion/client";
 import { useContactForm } from "@/context/ContactContext";
@@ -122,8 +122,8 @@ const CareerPathSection = () => {
             <Image
               src={TuongVyImage2}
               alt="Career Path Section Image"
-              className={`absolute w-auto h-[40vh] lg:w-[42vw] 4xl:w-[35vw] lg:h-auto mt-10 lg:mt-0 
-                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[-20%] 4xl:translate-y-[0%] z-20`}
+              className={`absolute w-auto h-[40vh] lg:w-[42vw] 3xl:w-[38vw] 4xl:w-[35vw] lg:h-auto mt-10 lg:mt-0 
+                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[-20%] 3xl:translate-y-[-10%] 4xl:translate-y-[0%] z-20`}
             />
             <div
               className={`w-full 4xl:w-fit bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 lg:py-10 lg:p-0 4xl:px-20 4xl:mx-auto text-white flex flex-col gap-5 lg:gap-10 mt-5 lg:mt-10 justify-center items-center animate-light-heartbeat
@@ -810,7 +810,7 @@ const CareerPathSection = () => {
               43%
             </div>
             <div
-              className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-semibold`}
+              className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-medium`}
             >
               {lang == "Viet"
                 ? "Professionals cho biết họ làm việc hiệu quả hơn khi có mentor"
@@ -826,7 +826,7 @@ const CareerPathSection = () => {
               84%
             </div>
             <div
-              className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-semibold`}
+              className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-medium`}
             >
               {lang == "Viet"
                 ? "CEO nói mentor giúp họ tránh những sai lầm đắt giá"
@@ -843,7 +843,7 @@ const CareerPathSection = () => {
                 92%
               </div>
               <div
-                className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-semibold`}
+                className={`flex-1 text-[8px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] lg:font-medium`}
               >
                 {lang == "Viet"
                   ? "Doanh nghiệp vừa và nhỏ nói mentor tác động trực tiếp đến tăng trưởng"

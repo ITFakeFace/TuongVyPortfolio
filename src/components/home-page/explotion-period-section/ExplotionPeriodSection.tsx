@@ -208,7 +208,7 @@ const ExplotionPeriodSection = () => {
         className={`${styles.container} bg-linear-to-b from-[#1F2833] to-[#07367B] relative`}
       >
         <div
-          className={`w-full relative flex flex-col items-center gap-12 lg:gap-10 py-50 lg:py-40`}
+          className={`w-full relative flex flex-col items-center gap-12 lg:gap-10 pt-50 pb-30 lg:pt-30 lg:pb-0 lg:py-40`}
         >
           <div
             className={`z-10 bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900] text-[clamp(16px,3.389px+3.209vw,65px)] font-extrabold text-center`}
@@ -228,15 +228,15 @@ const ExplotionPeriodSection = () => {
               className={`font-light font-playfair italic w-14/20 lg:w-10/20 text-balance text-[12px] lg:text-[clamp(2rem,1.25rem+0.7813vw,2.5rem)] mx-auto`}
             >
               {lang == "Viet"
-                ? "Trong giai đoạn chống dịch, ngành tài chính Việt Nam lao đao khi phải đối mặt với loạt vấn đề. Dòng tiền tắc nghẽn, nhu cầu tín dụng giảm, nợ xấu gia tăng, buộc các tổ chức phải tái cấu trúc và siết chặt quản trị rủi ro để tồn tại."
-                : "During the pandemic, the banking and financial sector faced unprecedented challenges—businesses struggled, many even suspended operations. As individuals lost or saw reductions in income, credit demand increased, yet bad debt doubled, driving up credit risk, reducing revenue, and impacting the entire industry."}
+                ? "Trong giai đoạn chống dịch, ngành Tài chính – Ngân hàng chịu áp lực lớn: doanh nghiệp đình trệ, thu nhập người lao động giảm, nhu cầu tín dụng tăng nhưng nợ xấu tăng mạnh, kéo theo rủi ro tín dụng và doanh thu toàn ngành suy giảm."
+                : "During the pandemic, the financial and banking sector faced significant pressure: businesses stalled, household incomes declined, credit demand increased, while bad debt surged—driving up credit risk and reducing industry-wide revenue."}
             </div>
             <div
               className={`font-playfair font-bold w-16/20 lg:w-13/20 text-[14px] lg:text-[clamp(14px,8.59px+1.375vw,35px)] mx-auto`}
             >
               {lang == "Viet"
-                ? "Có thể nói: “Covid - 19 bùng nổ cũng chính là lúc các tổ chức tài chính gặp khó khăn. Nhưng với tôi, đó là lúc bắt đầu chinh phục và gặt hái thành công”"
-                : "It can be said: “The outbreak of COVID-19 was when many emerging financial institutions faced even greater challenges, as their operating models and asset structures were not yet resilient enough. But for me, it marked the beginning of conquering challenges and achieving success.”"}
+                ? "“Khi Covid-19 khiến nhiều tổ chức Tài chính – Ngân hàng non trẻ lao đao vì nền tảng chưa đủ vững. Với tôi, đó lại là điểm khởi đầu — nơi áp lực trở thành động lực và thử thách mở ra hành trình chinh phục thành công”"
+                : "“When COVID-19 left many emerging financial and banking institutions struggling due to weak foundations, for me it became a starting point—where pressure turned into motivation, and challenges opened the path to success.”"}
             </div>
           </div>
           <div className={` relative z-20 flex justify-center`}>
@@ -277,7 +277,7 @@ const ExplotionPeriodSection = () => {
           <Image
             src={lang == "Viet" ? StreakImage : StreakImageEng}
             alt="Streak Image"
-            className={`w-full h-auto mt-20`}
+            className={`w-full h-auto mt-20 lg:mt-60`}
           />
           <Image
             src={lang == "Viet" ? StreakImage2 : StreakImageEng2}

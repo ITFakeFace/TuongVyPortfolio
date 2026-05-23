@@ -136,10 +136,10 @@ const HeroSection = () => {
             <div
               className={`font-playfair text-[clamp(2.5rem,1rem+1.5vw,3rem)] text-white font-medium italic mt-4 leading-loose`}
             >
-              {lang == "Viet" ? "VICTORY TRẦN" : "VICTORY TRAN"}
+              {lang == "Viet" ? "Victory Trần" : "Victory Tran"}
             </div>
             <div
-              className={`bg-linear-to-bl text-[clamp(3.75rem,-0.75rem+4.6875vw,6.75rem)] from-[#ffffff] to-[#acafaf] bg-clip-text text-transparent font-bold leading-tight`}
+              className={`bg-white #bg-linear-to-bl text-[clamp(3.75rem,-0.75rem+4.6875vw,6.75rem)] from-[#ffffff] to-[#acafaf] bg-clip-text text-transparent font-bold leading-tight`}
             >
               {lang == "Viet" ? "TRẦN THANH NỮ" : "TRAN THANH NU"}
               <br />
@@ -357,7 +357,7 @@ const HeroSection = () => {
 
         {/* Khối Tên */}
         <div className="text-center w-full space-y-2 -mt-5 mb-5">
-          <div className="bg-linear-to-br from-[#ffffff] to-[#a8abab] bg-clip-text text-transparent font-bold leading-[1.1]">
+          <div className="bg-white #bg-linear-to-br from-[#ffffff] to-[#a8abab] bg-clip-text text-transparent font-bold leading-[1.1]">
             <div className="text-[clamp(2.5rem,10vw,3.5rem)]">
               {lang == "Viet" ? "TRẦN THANH NỮ" : "TRAN THANH NU"}
             </div>
@@ -366,7 +366,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="text-[clamp(1.2rem,5vw,1.5rem)] text-white font-medium italic">
-            {lang == "Viet" ? "VICTORY TRẦN" : "VICTORY TRAN"}
+            {lang == "Viet" ? "Victory Trần" : "Victory Tran"}
           </div>
         </div>
 
