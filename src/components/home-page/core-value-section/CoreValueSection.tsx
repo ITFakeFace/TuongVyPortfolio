@@ -678,7 +678,7 @@ const CoreValueSection = () => {
         <CoreValueItem index="07" className={`col-span-2 h-full!`}>
           <div className="flex flex-row items-stretch h-full lg:gap-5 justify-between w-full relative overflow-hidden">
             {/* Khối chữ: Ép chiều rộng tối đa để không bị ảnh lấn át */}
-            <div className="flex flex-col justify-between flex-1 h-full z-10 max-w-[60%] lg:max-w-[50%]">
+            <div className="flex flex-col justify-between flex-1 h-full z-10 max-w-[55%] lg:max-w-[50%]">
               <div
                 className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
               >
