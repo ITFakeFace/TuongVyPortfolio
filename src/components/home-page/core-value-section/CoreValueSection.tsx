@@ -373,7 +373,7 @@ const CoreValueSection = () => {
                 src={Decor07}
                 alt="Decorative Image"
                 // Thay object-contain bằng object-cover hoặc điều chỉnh lại cách scale
-                className="w-[120px] md:w-[150px] lg:w-full h-full object-cover lg:object-contain object-bottom"
+                className="w-[120px] md:w-[150px] lg:w-full h-full object-cover lg:object-contain object-bottom ml-auto"
               />
             </div>
 

@@ -222,10 +222,10 @@ const ExplotionPeriodSection = () => {
               : "AN INDUSTRY CRISIS"}
           </div>
           <div
-            className={`text-white text-center z-10 flex flex-col gap-10 lg:gap-10`}
+            className={`text-white text-center z-10 flex flex-col gap-10 lg:gap-10 lg:mt-15`}
           >
             <div
-              className={`font-light font-playfair italic w-14/20 lg:w-10/20 text-balance text-[12px] lg:text-[clamp(2rem,1.25rem+0.7813vw,2.5rem)] mx-auto`}
+              className={`font-light font-playfair italic w-14/20 lg:w-15/20 text-balance text-[12px] lg:text-[clamp(2rem,1.25rem+0.7813vw,2.5rem)] mx-auto`}
             >
               {lang == "Viet"
                 ? "Trong giai đoạn chống dịch, ngành Tài chính – Ngân hàng chịu áp lực lớn: doanh nghiệp đình trệ, thu nhập người lao động giảm, nhu cầu tín dụng tăng nhưng nợ xấu tăng mạnh, kéo theo rủi ro tín dụng và doanh thu toàn ngành suy giảm."
