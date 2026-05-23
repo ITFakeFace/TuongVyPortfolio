@@ -7,7 +7,7 @@ import CareerPathEng1 from "@/assets/images/assets/CareerPathSection-CareerPathI
 import CareerPathMobile1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImage-1.png";
 import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageEng-1.png";
 import { Carousel } from "primereact/carousel";
-import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-1.png";
+import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-3.png";
 import { Button } from "primereact/button";
 import EndImage1 from "@/assets/images/assets/CareerPathSection-Image-1.png";
 import EndImage2 from "@/assets/images/assets/CareerPathSection-Image-2.png";
