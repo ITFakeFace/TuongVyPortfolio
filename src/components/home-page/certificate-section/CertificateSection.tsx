@@ -43,10 +43,10 @@ interface CertificateCarouselProps {
 const CertificateSection = () => {
   const { lang } = useLanguage();
   const certificates = [
+    CertificateImage4,
+    CertificateImage3,
     CertificateImage1,
     CertificateImage2,
-    CertificateImage3,
-    CertificateImage4,
     CertificateImage6,
     CertificateImage9,
   ];
