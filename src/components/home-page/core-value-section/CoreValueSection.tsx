@@ -78,9 +78,9 @@ const CoreValueSection = () => {
           >
             {lang === "Viet"
               ? "Phát triển doanh nghiệp từ "
-              : "Phát triển doanh nghiệp từ "}
-            <b>{lang === "Viet" ? "số 0" : "số 0"}</b>
-            {lang === "Viet" ? " đến " : " đến "}
+              : "Scaling businesses from "}
+            <b>{lang === "Viet" ? "số 0" : "Zero"}</b>
+            {lang === "Viet" ? " đến " : " to "}
             {lang === "Viet" ? "C - Levels" : "C - Levels"}
           </div>
         </div>
