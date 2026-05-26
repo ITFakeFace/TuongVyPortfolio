@@ -69,7 +69,7 @@ const CoreValueSection = () => {
           <div
             className={`font-extrabold text-[2rem] lg:text-[clamp(2.75rem,0.125rem+2.7344vw,4.5rem)] text-center lg:text-left`}
           >
-            {lang === "Viet" ? "07 NĂNG LỰC" : "07 CORE "}
+            {lang === "Viet" ? "05 NĂNG LỰC" : "05 CORE "}
             <br className={`${lang == "Viet" ? "block" : "hidden"} lg:block`} />
             {lang === "Viet" ? "CỐT LÕI" : "VALUES"}
           </div>
@@ -417,7 +417,7 @@ const CoreValueSection = () => {
           <div
             className={`font-extrabold text-[2rem] lg:text-[clamp(2.75rem,0.125rem+2.7344vw,4.5rem)] text-center lg:text-left`}
           >
-            {lang === "Viet" ? "07 NĂNG LỰC" : "07 CORE "}
+            {lang === "Viet" ? "05 NĂNG LỰC" : "05 CORE "}
             <br className={`${lang == "Viet" ? "block" : "hidden"} lg:block`} />
             {lang === "Viet" ? "CỐT LÕI" : "VALUES"}
           </div>

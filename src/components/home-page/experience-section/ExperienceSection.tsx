@@ -21,6 +21,7 @@ import ExpImage11 from "@/assets/images/assets/ExperienceSection-ExpImage-11.png
 import ExpImage12 from "@/assets/images/assets/ExperienceSection-ExpImage-12.png";
 import ExpImage13 from "@/assets/images/assets/ExperienceSection-ExpImage-13.png";
 import ExpImage14 from "@/assets/images/assets/ExperienceSection-ExpImage-14.png";
+import ExpImage15 from "@/assets/images/assets/ExperienceSection-ExpImage-15.jpg";
 import GrowthProfit from "@/assets/images/assets/ExperienceSection-GrowthProfit-1.png";
 import GrowthProfitEng from "@/assets/images/assets/ExperienceSection-GrowthProfitEng-1.png";
 import ExpImageTemp from "@/assets/images/assets/ExperienceSection-ExpTempImage-1.png";
@@ -281,7 +282,7 @@ const ExperienceSection = () => {
         </div>
       </div>
       <div className={`flex flex-col px-5 lg:px-[13%] gap-10 lg:gap-20 `}>
-        <ExperienceItem image={ExpImageTemp} title={"2026"} direction="left">
+        <ExperienceItem image={ExpImage15} title={"2026"} direction="left">
           <div className={``}>
             <div
               className={`font-bold text-[14px] lg:text-[1.5rem] text-center leading-normal`}
