@@ -422,14 +422,18 @@ const CoreValueSection = () => {
             {lang === "Viet" ? "CỐT LÕI" : "VALUES"}
           </div>
           <div
-            className={`font-playfair italic text-[0.875rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left`}
+            className={`font-playfair italic text-[0.875rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left w-4/5 mx-auto`}
           >
             {lang === "Viet"
-              ? "Phát triển doanh nghiệp từ "
-              : "Phát triển doanh nghiệp từ "}
-            <b>{lang === "Viet" ? "số 0" : "số 0"}</b>
-            {lang === "Viet" ? " đến " : " đến "}
-            {lang === "Viet" ? "C - Levels" : "C - Levels"}
+              ? "Xây dựng và tăng tốc doanh nghiệp từ "
+              : "Build and scale businesses from "}
+            <b className={`text-white`}>
+              {lang === "Viet" ? "giai đoạn khởi tạo" : "inception"}
+            </b>
+            {lang === "Viet" ? " đến " : " to "}
+            <b className={`text-white`}>
+              {lang === "Viet" ? "quy mô lớn" : "large-scale growth"}
+            </b>
           </div>
         </div>
         <CoreValueItem index="01">
@@ -648,7 +652,7 @@ const CoreValueSection = () => {
           </div>
         </CoreValueItem>
 
-        <CoreValueItem index="05">
+        <CoreValueItem index="05" className="col-span-2 w-1/2 mx-auto">
           <div className={`flex flex-col gap-0`}>
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
