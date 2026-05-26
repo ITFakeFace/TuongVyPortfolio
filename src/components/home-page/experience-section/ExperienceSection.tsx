@@ -57,10 +57,10 @@ import AhamoveLogo from "@/assets/images/assets/ExperienceSection-AhamoveLogo-1.
 import TrustingSocialLogo from "@/assets/images/assets/ExperienceSection-TrustingSocialLogo-1.png";
 import FilmStrip from "@/components/generals/FilmStrip";
 import TuongVyImage from "@/assets/images/assets/ExperienceSection-TuongVyImage-1.png";
-import CloudImage from "@/assets/images/assets/ExperienceSection-CloudImage-1.png";
-import CloudImageEng from "@/assets/images/assets/ExperienceSection-CloudImageEng-1.png";
-import CloudImageMobile from "@/assets/images/assets/ExperienceSection-CloudImageMobile-1.png";
-import CloudImageMobileEng from "@/assets/images/assets/ExperienceSection-CloudImageMobileEng-1.png";
+import CloudImage from "@/assets/images/assets/ExperienceSection-CloudImage-2.png";
+import CloudImageEng from "@/assets/images/assets/ExperienceSection-CloudImageEng-2.png";
+import CloudImageMobile from "@/assets/images/assets/ExperienceSection-CloudImageMobile-2.png";
+import CloudImageMobileEng from "@/assets/images/assets/ExperienceSection-CloudImageMobileEng-2.png";
 import MsVy from "@/assets/images/assets/ExperienceSection-MsVy-4.png";
 import DecorLine from "@/assets/images/assets/ExperienceSection-DecorLine-1.png";
 import { Button } from "primereact/button";
@@ -78,6 +78,7 @@ import FilmImage10 from "@/assets/images/assets/IntroductionSection-FilmImage-10
 import FilmImage11 from "@/assets/images/assets/IntroductionSection-FilmImage-11.png";
 import FilmImage12 from "@/assets/images/assets/IntroductionSection-FilmImage-12.png";
 import { cl } from "@/utils/cn";
+import { motion } from "framer-motion";
 
 interface ExperienceItemProps {
   image: StaticImageData;
@@ -102,7 +103,19 @@ interface ShiftReRenderItemProps {
     line3: string;
   };
 }
-
+// Định nghĩa cấu hình hiệu ứng (Fade in và trượt nhẹ từ dưới lên)
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8, // Thời gian chạy animation của mỗi item
+      delay: index * 1, // Mỗi item cách nhau đúng 5 giây theo thứ tự index
+      ease: "easeOut" as const,
+    },
+  }),
+};
 const ExperienceSection = () => {
   const { lang } = useLanguage();
   const { openContactForm } = useContactForm();
@@ -249,7 +262,7 @@ const ExperienceSection = () => {
   return (
     <div id="experience" className={`${styles.container} -mt-1 relative`}>
       <div
-        className={`py-10 lg:py-15 text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text lg:py-39`}
+        className={`py-10 lg:py-15 text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text`}
       >
         <div
           className={`font-bold text-2xl lg:text-[clamp(3.75rem,1.875rem+1.9531vw,5rem)] text-center `}
@@ -639,12 +652,12 @@ const ExperienceSection = () => {
       <div className={`relative pt-60 lg:pt-60 4xl:pt-80 z-40`}>
         <div className={`text-center z-20`}>
           <div
-            className={`text-white italic font-playfair lg:text-[clamp(2rem,-0.25rem+2.3438vw,3.5rem)]`}
+            className={`text-white italic font-playfair lg:text-[clamp(1.75rem,-0.5rem+2.3438vw,3.25rem)]`}
           >
             {lang == "Viet" ? "Tôi nhận ra rằng" : "I have relized"}
           </div>
           <div
-            className={`bg-clip-text text-transparent bg-linear-to-r from-[#FFFFFF] from-39% to-[#999999] font-bold text-[1rem] lg:text-[clamp(2rem,0.5rem+1.5625vw,3rem)]`}
+            className={`lg:mt-5 bg-clip-text text-transparent bg-linear-to-r from-[#FFFFFF] from-39% to-[#999999] font-bold text-[1rem] lg:text-[clamp(2rem,0.5rem+1.5625vw,3rem)]`}
           >
             {lang == "Viet"
               ? "ĐÂY LÀ LÚC DIGITAL BANKING"
@@ -692,118 +705,160 @@ const ExperienceSection = () => {
         <div
           className={`grid grid-cols-[repeat(2,max-content)] lg:grid-cols-[repeat(3,max-content)] justify-center gap-x-10 gap-y-5 lg:gap-50 mt-10 lg:mt-15 w-full`}
         >
-          <ShiftReRenderItem
-            className={`w-[40vw] lg:w-[16vw]`}
-            data={{
-              id: "01",
-              Viet: {
-                line1: "Application không còn là lợi thế cạnh tranh",
-                line2:
-                  "Khi +95% tổ chức tín dụng đã có chiến lược chuyển đổi số - có mobile app đẹp và internet baking mượt mà",
-                source: "(Theo Ngân hàng Nhà nước Việt Nam)",
-                line3:
-                  "Mobile app, onboarding online hay eKYC giờ đã trở thành điều kiện tối thiểu.",
-              },
-              Eng: {
-                line1: "Applications are no longer a competitive advantage",
-                line2:
-                  "As +95% of financial institutions already have digital transformation strategies — with polished mobile apps and seamless internet banking",
-                source: "(According to State Bank of Vietnam)",
-                line3:
-                  "Mobile apps, digital onboarding, and eKYC have now become the minimum standard.",
-              },
-            }}
-          />
-          <ShiftReRenderItem
-            className={`w-[40vw] lg:w-[16vw]`}
-            data={{
-              id: "02",
-              Viet: {
-                line1: "Tăng user không còn đồng nghĩa với tăng profit",
-                line2:
-                  "Digital Banking dần trở thành thói quen thanh toán với 5.5 tỷ giao dịch không tiền mặt trong Q1/2025",
-                source: "(Theo NAPAS)",
-                line3:
-                  "Retention, activation và monetization trở thành yếu tố quyết định chất lượng tăng trưởng.",
-              },
-              Eng: {
-                line1: "Growing users no longer means growing profit",
-                line2:
-                  "Digital Banking is becoming a daily payment habit, with 5.5 billion cashless transactions in Q1/2025",
-                source: "(According to NAPAS)",
-                line3:
-                  "Retention, activation, and monetization have become the key drivers of growth quality",
-              },
-            }}
-          />
-          <ShiftReRenderItem
-            className={`w-[40vw] lg:w-[16vw] col-span-2 lg:col-span-1`}
-            data={{
-              id: "03",
-              Viet: {
-                line1: "Lợi thế không còn nằm ở việc cho vay nhiều hơn",
-                line2:
-                  "Được chú ý mức hồi phục hơn 20% năm 2024, CASA đang trở thành chiến lược mới",
-                source: "(Theo Vietnam News)",
-                line3:
-                  "Cuộc chơi chuyển từ tăng tín dụng sang tối ưu nguồn vốn như CASA, Cost of Fund, khả năng giữ dòng tiền trong hệ sinh thái.",
-              },
-              Eng: {
-                line1: "The competitive edge is no longer about lending more",
-                line2:
-                  "With CASA recovering by over 20% in 2024, it is becoming the new strategic focus",
-                source: "(According to Vietnam News)",
-                line3:
-                  "The market is shifting from credit growth to optimizing funding sources — through CASA, cost of funds, and the ability to retain cash within the ecosystem.",
-              },
-            }}
-          />
+          <motion.div
+            custom={0} // Index 0 -> Delay 0s
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+            variants={itemVariants}
+          >
+            <ShiftReRenderItem
+              className={`w-[40vw] lg:w-[16vw]`}
+              data={{
+                id: "01",
+                Viet: {
+                  line1: "Application không còn là lợi thế cạnh tranh",
+                  line2:
+                    "Khi +95% tổ chức tín dụng đã có chiến lược chuyển đổi số - có mobile app đẹp và internet baking mượt mà",
+                  source: "(Theo Ngân hàng Nhà nước Việt Nam)",
+                  line3:
+                    "Mobile app, onboarding online hay eKYC giờ đã trở thành điều kiện tối thiểu.",
+                },
+                Eng: {
+                  line1: "Applications are no longer a competitive advantage",
+                  line2:
+                    "As +95% of financial institutions already have digital transformation strategies — with polished mobile apps and seamless internet banking",
+                  source: "(According to State Bank of Vietnam)",
+                  line3:
+                    "Mobile apps, digital onboarding, and eKYC have now become the minimum standard.",
+                },
+              }}
+            />
+          </motion.div>
+          <motion.div
+            custom={1} // Index 1 -> Delay 5s
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={itemVariants}
+          >
+            <ShiftReRenderItem
+              className={`w-[40vw] lg:w-[16vw]`}
+              data={{
+                id: "02",
+                Viet: {
+                  line1: "Tăng user không còn đồng nghĩa với tăng profit",
+                  line2:
+                    "Digital Banking dần trở thành thói quen thanh toán với 5.5 tỷ giao dịch không tiền mặt trong Q1/2025",
+                  source: "(Theo NAPAS)",
+                  line3:
+                    "Retention, activation và monetization trở thành yếu tố quyết định chất lượng tăng trưởng.",
+                },
+                Eng: {
+                  line1: "Growing users no longer means growing profit",
+                  line2:
+                    "Digital Banking is becoming a daily payment habit, with 5.5 billion cashless transactions in Q1/2025",
+                  source: "(According to NAPAS)",
+                  line3:
+                    "Retention, activation, and monetization have become the key drivers of growth quality",
+                },
+              }}
+            />
+          </motion.div>
+          <motion.div
+            custom={2} // Index 2 -> Delay 10s
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={itemVariants}
+            className="col-span-2 lg:col-span-1"
+          >
+            <ShiftReRenderItem
+              className={`w-[40vw] lg:w-[16vw] col-span-2 lg:col-span-1`}
+              data={{
+                id: "03",
+                Viet: {
+                  line1: "Lợi thế không còn nằm ở việc cho vay nhiều hơn",
+                  line2:
+                    "Được chú ý mức hồi phục hơn 20% năm 2024, CASA đang trở thành chiến lược mới",
+                  source: "(Theo Vietnam News)",
+                  line3:
+                    "Cuộc chơi chuyển từ tăng tín dụng sang tối ưu nguồn vốn như CASA, Cost of Fund, khả năng giữ dòng tiền trong hệ sinh thái.",
+                },
+                Eng: {
+                  line1: "The competitive edge is no longer about lending more",
+                  line2:
+                    "With CASA recovering by over 20% in 2024, it is becoming the new strategic focus",
+                  source: "(According to Vietnam News)",
+                  line3:
+                    "The market is shifting from credit growth to optimizing funding sources — through CASA, cost of funds, and the ability to retain cash within the ecosystem.",
+                },
+              }}
+            />
+          </motion.div>
         </div>
         <div
           className={`grid grid-cols-[repeat(2,max-content)] justify-center gap-10 lg:gap-50 mt-5 lg:mt-10 w-full`}
         >
-          <ShiftReRenderItem
-            className={`w-[40vw] lg:w-[16vw]`}
-            data={{
-              id: "04",
-              Viet: {
-                line1: "AI đang chuyển cuộc chơi từ quy mô sang độ chính xác",
-                line2:
-                  "AI không còn là lựa chọn thử nghiệm mà đang trở thành điều kiện cạnh tranh bắt buộc trong tương lai",
-                source: "(Theo Thời báo Ngân hàng 2025)",
-                line3:
-                  "Sự thành thạo AI biến Precision mới là lợi thế cạnh tranh thật sự.",
-              },
-              Eng: {
-                line1: "AI is shifting the market from scale to precision",
-                line2:
-                  "AI is no longer an experimental option—it is becoming a mandatory competitive capability for the future",
-                source: "(According to Thời báo Ngân hàng, 2025)",
-                line3:
-                  "AI mastery is making precision the new competitive advantage.",
-              },
-            }}
-          />
-          <ShiftReRenderItem
-            className={`w-[40vw] lg:w-[16vw]`}
-            data={{
-              id: "05",
-              Viet: {
-                line1: "Fee income đang trở thành lớp lợi nhuận phòng thủ",
-                line2:
-                  "Thay thế thu nhập lãi thuần khi đứng trước rủi ro, thu nhập dịch vụ toàn ngành đạt gần 91.000 tỷ VND năm 2025, tăng 7.5% YoY",
-                source: "(Theo Vietnam.vn)",
-                line3: "Fee income đang trở thành trụ cột lợi nhuận thứ hai.",
-              },
-              Eng: {
-                line1: "Fee income is becoming a defensive profit layer",
-                line2:
-                  "As a hedge against lending risks, industry-wide service income reached nearly VND 91 trillion in 2025, up 7.5% YoY",
-                source: "(According to Vietnam.vn)",
-                line3: "Fee income is becoming the second core profit pillar.",
-              },
-            }}
-          />
+          <motion.div
+            custom={3} // Index 3 -> Delay 15s
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={itemVariants}
+          >
+            <ShiftReRenderItem
+              className={`w-[40vw] lg:w-[16vw]`}
+              data={{
+                id: "04",
+                Viet: {
+                  line1: "AI đang chuyển cuộc chơi từ quy mô sang độ chính xác",
+                  line2:
+                    "AI không còn là lựa chọn thử nghiệm mà đang trở thành điều kiện cạnh tranh bắt buộc trong tương lai",
+                  source: "(Theo Thời báo Ngân hàng 2025)",
+                  line3:
+                    "Sự thành thạo AI biến Precision mới là lợi thế cạnh tranh thật sự.",
+                },
+                Eng: {
+                  line1: "AI is shifting the market from scale to precision",
+                  line2:
+                    "AI is no longer an experimental option—it is becoming a mandatory competitive capability for the future",
+                  source: "(According to Thời báo Ngân hàng, 2025)",
+                  line3:
+                    "AI mastery is making precision the new competitive advantage.",
+                },
+              }}
+            />
+          </motion.div>
+          <motion.div
+            custom={4} // Index 4 -> Delay 20s
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={itemVariants}
+          >
+            <ShiftReRenderItem
+              className={`w-[40vw] lg:w-[16vw]`}
+              data={{
+                id: "05",
+                Viet: {
+                  line1: "Fee income đang trở thành lớp lợi nhuận phòng thủ",
+                  line2:
+                    "Thay thế thu nhập lãi thuần khi đứng trước rủi ro, thu nhập dịch vụ toàn ngành đạt gần 91.000 tỷ VND năm 2025, tăng 7.5% YoY",
+                  source: "(Theo Vietnam.vn)",
+                  line3: "Fee income đang trở thành trụ cột lợi nhuận thứ hai.",
+                },
+                Eng: {
+                  line1: "Fee income is becoming a defensive profit layer",
+                  line2:
+                    "As a hedge against lending risks, industry-wide service income reached nearly VND 91 trillion in 2025, up 7.5% YoY",
+                  source: "(According to Vietnam.vn)",
+                  line3:
+                    "Fee income is becoming the second core profit pillar.",
+                },
+              }}
+            />
+          </motion.div>
         </div>
       </div>
       <div className={`relative py-30 lg:p-40 lg:pt-80 4xl:pt-120`}>
@@ -821,8 +876,8 @@ const ExperienceSection = () => {
             className={`font-playfair italic text-[0.75rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left mt-4 lg:mt-0`}
           >
             {lang === "Viet"
-              ? "Lợi nhuận Ngân hàng số không đến từ sản phẩm — mà được xây từ một “kiến trúc” tài chính đúng."
-              : "Digital banking profitability does not come from products— it is built on the right financial architecture."}
+              ? "Tôi tin rằng: “Tăng trưởng thật sự không nằm ở tốc độ mở rộng — mà chính là từng “tầng kiến trúc” kiên cố biến tăng trưởng trở thành lợi nhuận bền vững”"
+              : "I believe: “True growth is not about the speed of expansion—it lies in building strong layers of architecture that turn growth into sustainable profit”"}
           </div>
         </div>
         <Image
@@ -831,12 +886,12 @@ const ExperienceSection = () => {
           className={`object-cover w-full lg:w-4/6 lg:ml-auto  h-auto lg:mt-0 rounded-2xl lg:rounded-4xl z-20 relative`}
         />
       </div>
-      <div className={`lg:px-[15%] lg:pt-40 4xl:pt-80 relative`}>
+      <div className={`lg:px-[15%] lg:pt-20 4xl:pt-40 relative`}>
         <div
           className={`flex flex-col lg:flex-row items-center justify-between gap-15 lg:gap-20 z-20`}
         >
           <div
-            className={`flex flex-col flex-1 gap-10 lg:gap-5 text-white items-center lg:items-center justify-center text-center lg:text-center`}
+            className={`flex flex-col flex-1 gap-10 lg:gap-30 text-white items-center lg:items-center justify-center text-center lg:text-center`}
           >
             <div
               className={`font-playfair font-light italic text-[18px] lg:text-[clamp(1.75rem,-0.5rem+2.3438vw,3.25rem)] w-7/10 lg:w-4/5`}
@@ -864,11 +919,11 @@ const ExperienceSection = () => {
           />
         </div>
       </div>
-      <div className={`relative lg:pb-40 4xl:pb-60`}>
+      <div className={`relative`}>
         <Image
           src={DecorLine}
           alt="Decorative Line"
-          className="w-full h-auto -translate-y-1/2 z-20 relative top-0 left-0"
+          className="w-full h-auto -translate-y-1/2 z-20 absolute top-0 left-0"
         />
       </div>
     </div>

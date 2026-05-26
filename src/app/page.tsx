@@ -25,7 +25,6 @@ export default function Home() {
     <div>
       <ContactProvider lang={lang}>
         <HeroSection />
-        <IntroductionSection />
         <SelftSolutionSection />
         <CoreValueSection />
         <ExperienceSection />

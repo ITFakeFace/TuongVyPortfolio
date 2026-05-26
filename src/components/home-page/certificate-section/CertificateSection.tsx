@@ -44,11 +44,11 @@ const CertificateSection = () => {
   const { lang } = useLanguage();
   const certificates = [
     CertificateImage4,
-    CertificateImage3,
-    CertificateImage1,
     CertificateImage2,
-    CertificateImage6,
+    CertificateImage3,
     CertificateImage9,
+    CertificateImage1,
+    CertificateImage6,
   ];
   const certificateCarouselItems: CertificateCarouselProps[] = [
     {
