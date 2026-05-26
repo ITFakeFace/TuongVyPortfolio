@@ -654,7 +654,7 @@ const ExperienceSection = () => {
           <div
             className={`text-white italic font-playfair lg:text-[clamp(1.75rem,-0.5rem+2.3438vw,3.25rem)]`}
           >
-            {lang == "Viet" ? "Tôi nhận ra rằng" : "I have relized"}
+            {lang == "Viet" ? "Tôi nhận ra rằng" : "I have realized"}
           </div>
           <div
             className={`lg:mt-5 bg-clip-text text-transparent bg-linear-to-r from-[#FFFFFF] from-39% to-[#999999] font-bold text-[1rem] lg:text-[clamp(2rem,0.5rem+1.5625vw,3rem)]`}
