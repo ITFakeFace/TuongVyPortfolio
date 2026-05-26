@@ -260,7 +260,10 @@ const ExperienceSection = () => {
   };
 
   return (
-    <div id="experience" className={`${styles.container} -mt-1 relative`}>
+    <div
+      id="experience"
+      className={`${styles.container} -mt-1 lg:pt-20 relative`}
+    >
       <div
         className={`py-10 lg:py-15 text-transparent bg-linear-to-bl from-[#FFFFFF] via-white via-40% to-[#5A5B5B] bg-clip-text`}
       >

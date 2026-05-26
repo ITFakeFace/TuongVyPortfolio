@@ -61,10 +61,10 @@ const CoreValueSection = () => {
   const DesktopCoreValue = () => {
     return (
       <div
-        className={`grid grid-cols-2 lg:grid-cols-3 lg:px-[13%] gap-4 lg:gap-x-8 lg:gap-y-15 items-center pb-50 px-[7%]`}
+        className={`grid grid-cols-2 lg:grid-cols-3 lg:px-[13%] gap-4 lg:gap-x-8 lg:gap-y-15 items-center pb-60 4xl:pt-30 px-[7%]`}
       >
         <div
-          className={`bg-clip-text col-span-2 lg:col-span-1 text-transparent bg-linear-to-bl from-[#FFFFFF] from-[49%] to-[#5A5B5B] py-10 lg:py-0`}
+          className={`bg-clip-text col-span-2 lg:col-span-1 text-transparent bg-linear-to-bl from-[#FFFFFF] from-[49%] to-[#5A5B5B] py-0`}
         >
           <div
             className={`font-extrabold text-[2rem] lg:text-[clamp(2.75rem,0.125rem+2.7344vw,4.5rem)] text-center lg:text-left`}
@@ -74,14 +74,24 @@ const CoreValueSection = () => {
             {lang === "Viet" ? "CỐT LÕI" : "VALUES"}
           </div>
           <div
-            className={`font-playfair italic text-[0.875rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left`}
+            className={`font-playfair italic text-[0.875rem] lg:text-[clamp(1.125rem,0rem+1.1719vw,1.875rem)] text-center lg:text-left`}
           >
             {lang === "Viet"
+              ? "Xây dựng và tăng tốc doanh nghiệp từ "
+              : "Build and scale businesses from "}
+            <b className={`text-white`}>
+              {lang === "Viet" ? "giai đoạn khởi tạo" : "inception"}
+            </b>
+            {lang === "Viet" ? " đến " : " to "}
+            <b className={`text-white`}>
+              {lang === "Viet" ? "quy mô lớn" : "large-scale growth"}
+            </b>
+            {/* {lang === "Viet"
               ? "Phát triển doanh nghiệp từ "
               : "Scaling businesses from "}
-            <b>{lang === "Viet" ? "số 0" : "Zero"}</b>
+            <b className={`text-white`}>{lang === "Viet" ? "số 0" : "Zero"}</b>
             {lang === "Viet" ? " đến " : " to "}
-            {lang === "Viet" ? "C - Levels" : "C - Levels"}
+            <b className={`text-white`}>{lang === "Viet" ? "C - Levels" : "C - Levels"}</b> */}
           </div>
         </div>
         <CoreValueItem index="01">
@@ -127,7 +137,7 @@ const CoreValueSection = () => {
             </ul>
           </div>
         </CoreValueItem>
-        <CoreValueItem index="02">
+        {/* <CoreValueItem index="02">
           <div className={`flex flex-row gap-2 lg:gap-5`}>
             <div
               className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
@@ -169,6 +179,49 @@ const CoreValueSection = () => {
               </li>
             </ul>
           </div>
+        </CoreValueItem> */}
+        <CoreValueItem index="02">
+          <div className={`flex flex-row gap-2 lg:gap-5`}>
+            <div
+              className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
+            >
+              {lang == "Viet"
+                ? "Xây dựng & mở rộng nền tảng kinh doanh"
+                : "Business Platform Building & Expansion"}
+            </div>
+            <div
+              className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
+            aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
+            flex items-center justify-center
+            text-white font-bold text-lg lg:text-2xl 4xl:text-3xl
+            mb-4 border border-white/10 mx-auto
+            `}
+              style={{
+                boxShadow: `
+              0 10px 20px rgba(0,0,0,0.25),
+              inset 0 1px 1px rgba(255,255,255,0.1)
+              `,
+              }}
+            >
+              02
+            </div>
+          </div>
+          <div
+            className={`mt-5 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
+          >
+            <ul className={`list-disc pl-5`}>
+              <li>
+                {lang == "Viet"
+                  ? "Xây dựng mô hình kinh doanh từ 0 đến doanh thu multi-million USD/năm."
+                  : "Built a business model from scratch to multi-million USD/year in revenue."}
+              </li>
+              <li>
+                {lang == "Viet"
+                  ? "Mở rộng thị trường và tăng tốc tăng trưởng 2–3x."
+                  : "Expanded markets and accelerated growth by 2–3x."}
+              </li>
+            </ul>
+          </div>
         </CoreValueItem>
         <CoreValueItem index="03">
           <div className={`flex flex-row gap-2 lg:gap-5`}>
@@ -176,8 +229,8 @@ const CoreValueSection = () => {
               className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Xây dựng và mở rộng nền tảng kinh doanh"
-                : "Business platform build & scale"}
+                ? "Phát triển quan hệ đối tác & đàm phán chiến lược"
+                : "Partnership Development & Strategic Negotiation"}
             </div>
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
@@ -202,13 +255,8 @@ const CoreValueSection = () => {
             <ul className={`list-disc pl-5`}>
               <li>
                 {lang == "Viet"
-                  ? "Xây dựng mô hình kinh doanh từ 0 tạo doanh thu million-dollar/năm"
-                  : "Built a business model from zero to multi-million USD annual revenue."}
-              </li>
-              <li>
-                {lang == "Viet"
-                  ? "Tăng tốc mở rộng thị trường 2 – 3x."
-                  : "Accelerated market expansion by 2–3x."}
+                  ? "Tạo 30 – 50% doanh thu nhờ xây dựng mạng lưới đối tác chiến lược và dẫn dắt các thương vụ lớn."
+                  : "Generated 30–50% of revenue by building strategic partner networks and leading major deals."}
               </li>
             </ul>
           </div>
@@ -219,8 +267,8 @@ const CoreValueSection = () => {
               className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Phát triển quan hệ đối tác & đàm phán chiến lược"
-                : "Partnership development & strategic negotiation"}
+                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                : "Digital Transformation & Fintech Ecosystem Development"}
             </div>
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
@@ -240,25 +288,31 @@ const CoreValueSection = () => {
             </div>
           </div>
           <div
-            className={`mt-5 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
+            className={`mt-5 lg:mt-0 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
           >
             <ul className={`list-disc pl-5`}>
               <li>
                 {lang == "Viet"
-                  ? "Tạo 30 – 50% doanh thu nhờ xây dựng mạng lưới đối tác chiến lược và dẫn dắt các thương vụ lớn."
-                  : "Generated 30–50% of revenue by building strategic partner networks and leading major deals."}
+                  ? "Xây dựng hệ sinh thái lending và payment với nhiều đối tác chiến lược."
+                  : "Built a lending and payment ecosystem with multiple strategic partners."}
+              </li>
+              <li>
+                {lang == "Viet"
+                  ? "Ứng dụng AI và tự động hóa nhằm tối ưu hiệu quả vận hành."
+                  : "Applied AI and automation to optimize operational efficiency."}
               </li>
             </ul>
           </div>
         </CoreValueItem>
+
         <CoreValueItem index="05">
           <div className={`flex flex-row gap-2 lg:gap-5`}>
             <div
-              className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
+              className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Quản trị tài chính & tối ưu hiệu quả"
-                : "Financial & unit economics control"}
+                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                : "Strategic Analysis & Growth Leadership"}
             </div>
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
@@ -278,69 +332,24 @@ const CoreValueSection = () => {
             </div>
           </div>
           <div
-            className={`mt-5 lg:mt-0 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
-          >
-            <ul className={`list-disc pl-5`}>
-              <li>
-                {lang == "Viet"
-                  ? "Tăng yield 2 - 5% nhờ quản lý hiệu quả danh mục hàng nghìn tỷ VNĐ"
-                  : "Increased portfolio yield by 2–5% through effective management of trillion-VND portfolios."}
-              </li>
-              <li>
-                {lang == "Viet"
-                  ? "Tối ưu CAC, phê duyệt, chi phí và định giá rủi ro."
-                  : "Optimized CAC, approval rates, costs, and risk-based pricing."}
-              </li>
-            </ul>
-          </div>
-        </CoreValueItem>
-
-        <CoreValueItem index="06">
-          <div className={`flex flex-row gap-2 lg:gap-5`}>
-            <div
-              className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
-            >
-              {lang == "Viet"
-                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
-                : "Digital transformation & fintech ecosystem development"}
-            </div>
-            <div
-              className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
-            aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
-            flex items-center justify-center
-            text-white font-bold text-lg lg:text-2xl 4xl:text-3xl
-            mb-4 border border-white/10 mx-auto
-            `}
-              style={{
-                boxShadow: `
-              0 10px 20px rgba(0,0,0,0.25),
-              inset 0 1px 1px rgba(255,255,255,0.1)
-              `,
-              }}
-            >
-              06
-            </div>
-          </div>
-          <div
             className={`mt-5 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
           >
             <ul className={`list-disc pl-5`}>
               <li>
                 {lang == "Viet"
-                  ? "Tăng 20% hiệu suất nhờ tối ưu chi phí vận hành nhờ AI và tự động hóa. "
-                  : "Increased productivity by 20% through AI-driven automation and operating cost optimization."}
+                  ? "Dẫn dắt chiến lược go-to-market và mở rộng distribution ecosystem."
+                  : "Led go-to-market strategies and expanded the distribution ecosystem."}
               </li>
               <li>
                 {lang == "Viet"
-                  ? "Xây dựng hệ sinh thái vay số với 10+ đối tác chiến lược."
-                  : "Built a digital lending ecosystem with 10+ strategic partners."}
+                  ? "Tối ưu product-market fit và profitability trong consumer finance."
+                  : "Optimized product-market fit and profitability in consumer finance."}
               </li>
             </ul>
           </div>
         </CoreValueItem>
-        <CoreValueItem index="07" className={`col-span-2 h-full!`}>
+        {/* <CoreValueItem index="07" className={`col-span-2 h-full!`}>
           <div className="flex flex-row items-stretch h-full lg:gap-0 justify-between w-full relative overflow-hidden">
-            {/* Khối chữ: Ép chiều rộng tối đa để không bị ảnh lấn át */}
             <div className="flex flex-col justify-start flex-1 h-full z-10 max-w-[60%] lg:max-w-[60%] lg:gap-10">
               <div
                 className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
@@ -367,7 +376,6 @@ const CoreValueSection = () => {
               </div>
             </div>
 
-            {/* Khối ảnh: Quan trọng nhất - Khống chế width trên màn hình nhỏ */}
             <div className="absolute right-0 top-0 bottom-0 flex items-end justify-center pointer-events-none lg:relative lg:w-[30%] lg:h-full overflow-hidden">
               <Image
                 src={Decor07}
@@ -377,7 +385,6 @@ const CoreValueSection = () => {
               />
             </div>
 
-            {/* Số 07 */}
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
                 aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
@@ -395,7 +402,7 @@ const CoreValueSection = () => {
               07
             </div>
           </div>
-        </CoreValueItem>
+        </CoreValueItem> */}
       </div>
     );
   };
@@ -448,7 +455,7 @@ const CoreValueSection = () => {
             >
               {lang == "Viet"
                 ? "Lãnh đạo xây dựng tổ chức & phát triển đội ngũ hiệu suất cao"
-                : "Leadership in organizational building & high-performance team development"}
+                : "Organizational Leadership & High-Performance Team Development"}
             </div>
           </div>
           <div
@@ -457,18 +464,18 @@ const CoreValueSection = () => {
             <ul className={`list-disc pl-3`}>
               <li>
                 {lang == "Viet"
-                  ? "Quản lý 5.000+ nhân sự theo mô hình đa tầng."
-                  : "Managed a 5,000+ workforce through a multi-layered model."}
+                  ? "Quản lý 5,000+ nhân sự theo mô hình đa tầng."
+                  : "Managed 5,000+ personnel under a multi-tiered model."}
               </li>
               <li>
                 {lang == "Viet"
-                  ? "Tăng 20–30% năng suất nhờ tối ưu quản lý hiệu suất."
-                  : "Increased productivity by 20–30% through optimized performance management."}
+                  ? "Tăng 20–30% năng suất nhờ tối ưu vận hành và hiệu quả đội ngũ."
+                  : "Increased productivity by 20–30% through operational optimization and team efficiency."}
               </li>
             </ul>
           </div>
         </CoreValueItem>
-        <CoreValueItem index="02">
+        {/* <CoreValueItem index="02">
           <div className={`flex flex-col gap-0`}>
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
@@ -510,6 +517,49 @@ const CoreValueSection = () => {
               </li>
             </ul>
           </div>
+        </CoreValueItem> */}
+        <CoreValueItem index="02">
+          <div className={`flex flex-col gap-0`}>
+            <div
+              className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
+            aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
+            flex items-center justify-center
+            text-white font-bold text-lg lg:text-2xl 4xl:text-3xl
+            mb-4 border border-white/10 mx-auto
+            `}
+              style={{
+                boxShadow: `
+              0 10px 20px rgba(0,0,0,0.25),
+              inset 0 1px 1px rgba(255,255,255,0.1)
+              `,
+              }}
+            >
+              02
+            </div>
+            <div
+              className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
+            >
+              {lang == "Viet"
+                ? "Xây dựng & mở rộng nền tảng kinh doanh"
+                : "Business Platform Building & Expansion"}
+            </div>
+          </div>
+          <div
+            className={`mt-5 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
+          >
+            <ul className={`list-disc pl-3`}>
+              <li>
+                {lang == "Viet"
+                  ? "Xây dựng mô hình kinh doanh từ 0 đến doanh thu multi-million USD/năm."
+                  : "Built a business model from scratch to multi-million USD/year in revenue."}
+              </li>
+              <li>
+                {lang == "Viet"
+                  ? "Mở rộng thị trường và tăng tốc tăng trưởng 2–3x."
+                  : "Expanded markets and accelerated growth by 2–3x."}
+              </li>
+            </ul>
+          </div>
         </CoreValueItem>
         <CoreValueItem index="03">
           <div className={`flex flex-col gap-0`}>
@@ -533,8 +583,8 @@ const CoreValueSection = () => {
               className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Xây dựng và mở rộng nền tảng kinh doanh"
-                : "Business platform build & scale"}
+                ? "Phát triển quan hệ đối tác & đàm phán chiến lược"
+                : "Partnership Development & Strategic Negotiation"}
             </div>
           </div>
           <div
@@ -543,13 +593,13 @@ const CoreValueSection = () => {
             <ul className={`list-disc pl-3`}>
               <li>
                 {lang == "Viet"
-                  ? "Xây dựng mô hình kinh doanh từ 0 tạo doanh thu million-dollar/năm"
-                  : "Built a business model from zero to multi-million USD annual revenue."}
+                  ? "Xây dựng mạng lưới đối tác chiến lược trong banking, fintech và retail ecosystem."
+                  : "Built a strategic partner network within banking, fintech, and the retail ecosystem."}
               </li>
               <li>
                 {lang == "Viet"
-                  ? "Tăng tốc mở rộng thị trường 2 – 3x."
-                  : "Accelerated market expansion by 2–3x."}
+                  ? "Đóng góp 30–50% doanh thu thông qua partnership growth model."
+                  : "Contributed 30–50% of revenue through a partnership growth model."}
               </li>
             </ul>
           </div>
@@ -576,8 +626,8 @@ const CoreValueSection = () => {
               className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Phát triển quan hệ đối tác & đàm phán chiến lược"
-                : "Partnership development & strategic negotiation"}
+                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                : "Digital Transformation & Fintech Ecosystem Development"}
             </div>
           </div>
           <div
@@ -586,17 +636,18 @@ const CoreValueSection = () => {
             <ul className={`list-disc pl-3`}>
               <li>
                 {lang == "Viet"
-                  ? "Tăng yield 2 - 5% nhờ quản lý hiệu quả danh mục hàng nghìn tỷ VNĐ"
-                  : "Increased portfolio yield by 2–5% through effective management of trillion-VND portfolios."}
+                  ? "Xây dựng hệ sinh thái lending và payment với nhiều đối tác chiến lược."
+                  : "Built a lending and payment ecosystem with multiple strategic partners."}
               </li>
               <li>
                 {lang == "Viet"
-                  ? "Tối ưu CAC, phê duyệt, chi phí và định giá rủi ro."
-                  : "Optimized CAC, approval rates, costs, and risk-based pricing."}
+                  ? "Ứng dụng AI và tự động hóa nhằm tối ưu hiệu quả vận hành."
+                  : "Applied AI and automation to optimize operational efficiency."}
               </li>
             </ul>
           </div>
         </CoreValueItem>
+
         <CoreValueItem index="05">
           <div className={`flex flex-col gap-0`}>
             <div
@@ -616,11 +667,11 @@ const CoreValueSection = () => {
               05
             </div>
             <div
-              className={`text-left font-playfair font-semibold text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
+              className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Quản trị tài chính & tối ưu hiệu quả"
-                : "Financial & unit economics control"}
+                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                : "Strategic Analysis & Growth Leadership"}
             </div>
           </div>
           <div
@@ -629,55 +680,19 @@ const CoreValueSection = () => {
             <ul className={`list-disc pl-3`}>
               <li>
                 {lang == "Viet"
-                  ? "Tăng 20% hiệu suất nhờ tối ưu chi phí vận hành nhờ AI và tự động hóa. "
-                  : "Increased productivity by 20% through AI-driven automation and operating cost optimization."}
+                  ? "Dẫn dắt chiến lược go-to-market và mở rộng distribution ecosystem."
+                  : "Led go-to-market strategies and expanded the distribution ecosystem."}
               </li>
               <li>
                 {lang == "Viet"
-                  ? "Xây dựng hệ sinh thái vay số với 10+ đối tác chiến lược."
-                  : "Built a digital lending ecosystem with 10+ strategic partners."}
+                  ? "Tối ưu product-market fit và profitability trong consumer finance."
+                  : "Optimized product-market fit and profitability in consumer finance."}
               </li>
             </ul>
           </div>
         </CoreValueItem>
-
-        <CoreValueItem index="06">
-          <div className={`flex flex-col gap-0`}>
-            <div
-              className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
-            aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
-            flex items-center justify-center
-            text-white font-bold text-lg lg:text-2xl 4xl:text-3xl
-            mb-4 border border-white/10 mx-auto
-            `}
-              style={{
-                boxShadow: `
-              0 10px 20px rgba(0,0,0,0.25),
-              inset 0 1px 1px rgba(255,255,255,0.1)
-              `,
-              }}
-            >
-              06
-            </div>
-            <div
-              className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
-            >
-              {lang == "Viet"
-                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
-                : "Digital transformation & fintech ecosystem development"}
-            </div>
-          </div>
-          <div
-            className={`mt-5 leading-loose text-[0.625rem] lg:text-[clamp(0.75rem,0rem+0.7813vw,1.25rem)]`}
-          >
-            {lang == "Viet"
-              ? "10+ đối tác chiến lược cùng hệ sinh thái lending digital được xây dựng, ứng dụng AI & automation giúp tăng hiệu suất 20% và tối ưu chi phí vận hành."
-              : "Built a digital lending ecosystem with 10+ strategic partners, leveraging AI & automation to improve productivity by 20% and optimize operating costs."}
-          </div>
-        </CoreValueItem>
-        <CoreValueItem index="07" className={`col-span-2 h-full!`}>
+        {/* <CoreValueItem index="07" className={`col-span-2 h-full!`}>
           <div className="flex flex-row items-stretch h-full lg:gap-5 justify-between w-full relative overflow-hidden">
-            {/* Khối chữ: Ép chiều rộng tối đa để không bị ảnh lấn át */}
             <div className="flex flex-col justify-between flex-1 h-full z-10 max-w-[55%] lg:max-w-[50%]">
               <div
                 className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
@@ -704,7 +719,6 @@ const CoreValueSection = () => {
               </div>
             </div>
 
-            {/* Khối ảnh: Quan trọng nhất - Khống chế width trên màn hình nhỏ */}
             <div className="absolute right-0 lg:right-[0%] inset-y-0 flex items-end justify-center pointer-events-none lg:relative lg:right-0 lg:flex-1">
               <Image
                 src={Decor07}
@@ -714,7 +728,6 @@ const CoreValueSection = () => {
               />
             </div>
 
-            {/* Số 07 */}
             <div
               className={` bg-gradient-to-b from-[#1F2833] to-[#5D7899]
                 aspect-square h-12 lg:h-18 w-12 lg:w-18 4xl:h-28 4xl:w-28 rounded-full
@@ -732,7 +745,7 @@ const CoreValueSection = () => {
               07
             </div>
           </div>
-        </CoreValueItem>
+        </CoreValueItem> */}
       </div>
     );
   };
