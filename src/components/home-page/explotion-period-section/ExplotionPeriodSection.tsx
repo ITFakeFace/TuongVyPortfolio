@@ -149,8 +149,8 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
                         bg-linear-to-r from-[#2F3945]/50 to-[#042B63]/50
                         border-2 lg:border-3 border-white rounded-full
                         /* Font size & Padding thu nhỏ */
-                        text-[12px] lg:text-[24px] font-bold 
-                        px-10 lg:px-20 py-2 lg:py-4 mt-3 lg:mt-5
+                        text-[12px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold 
+                        px-10 lg:px-15 4xl:px-20 py-2 lg:py-4 mt-3 lg:mt-5
                         transition-all duration-300 hover:brightness-110
                         hover:cursor-pointer
                         hover:scale-110
