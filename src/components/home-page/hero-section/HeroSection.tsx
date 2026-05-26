@@ -5,8 +5,8 @@ import { motion } from "framer-motion"; // Import motion
 import { cl } from "@/utils/cn";
 import CountUp from "react-countup";
 import styles from "./HeroSection.module.scss";
-import TuongVyImage from "@/assets/images/assets/HeroSection-TuongVyImage-4.png";
-import TuongVyMobileImage from "@/assets/images/assets/HeroSection-TuongVyMobileImage-4.png";
+import TuongVyImage from "@/assets/images/assets/HeroSection-TuongVyImage-5.png";
+import TuongVyMobileImage from "@/assets/images/assets/HeroSection-TuongVyMobileImage-5.png";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -352,7 +352,7 @@ const HeroSection = () => {
         <Image
           src={TuongVyMobileImage}
           alt="Tuong Vy Image"
-          className={`w-10/10 h-auto mx-auto mt-17`}
+          className={`w-10/10 h-auto mx-auto mt-10`}
         />
 
         {/* Khối Tên */}

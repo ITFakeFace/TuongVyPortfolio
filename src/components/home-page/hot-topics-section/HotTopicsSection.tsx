@@ -4,8 +4,8 @@ import styles from "./HotTopicsSection.module.scss";
 import { cl } from "@/utils/cn";
 import HotTopicImage from "@/assets/images/assets/HotTopicsSection-HotTopicImage-1.png";
 import TuongVyImage from "@/assets/images/assets/HotTopicsSection-TuongVyImage-1.png";
-import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-4.png";
-import TuongVyImage2 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-2.png";
+import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-5.png";
+import TuongVyImage2 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-6.png";
 import PartnerImage1 from "@/assets/images/assets/HotTopicsSection-PartnerImage-1.png";
 import PartnerImage2 from "@/assets/images/assets/HotTopicsSection-PartnerImage-2.png";
 import PartnerImage3 from "@/assets/images/assets/HotTopicsSection-PartnerImage-3.png";
@@ -663,12 +663,12 @@ const HotTopicsSection = () => {
 
         {/* Khối chứa ảnh */}
         <div
-          className={`w-9/20 lg:w-auto lg:h-full flex items-end justify-end z-50 absolute lg:static -right-5 bottom-0`}
+          className={`w-10/20 lg:w-auto lg:h-full flex items-end justify-end z-50 absolute lg:static -right-5 bottom-0`}
         >
           <Image
             src={TuongVyImage3}
             alt="Tuong Vy"
-            className="w-full lg:w-9/10  h-auto object-contain block align-bottom mx-auto lg:mx-0"
+            className="w-full lg:w-10/10  h-auto object-contain block align-bottom mx-auto lg:mx-0"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
           />
         </div>
