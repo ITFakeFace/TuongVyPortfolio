@@ -4,7 +4,7 @@ import styles from "./HotTopicsSection.module.scss";
 import { cl } from "@/utils/cn";
 import HotTopicImage from "@/assets/images/assets/HotTopicsSection-HotTopicImage-1.png";
 import TuongVyImage from "@/assets/images/assets/HotTopicsSection-TuongVyImage-1.png";
-import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-5.png";
+import TuongVyImage3 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-7.png";
 import TuongVyImage2 from "@/assets/images/assets/HotTopicsSection-TuongVyImage-6.png";
 import PartnerImage1 from "@/assets/images/assets/HotTopicsSection-PartnerImage-1.png";
 import PartnerImage2 from "@/assets/images/assets/HotTopicsSection-PartnerImage-2.png";
@@ -599,15 +599,15 @@ const HotTopicsSection = () => {
       </div>
       <div
         id="training-programs"
-        className={`relative px-5 lg:px-[15%] flex flex-row lg:justify-center items-end pt-50 lg:pt-40 4xl:pt-80`}
+        className={`relative px-5 lg:px-[15%] flex flex-row lg:justify-center items-end pt-50 lg:pt-80 4xl:pt-80`}
       >
         <Image
           src={TrainingDecor}
           alt="Training Decor"
-          className={`absolute h-[38%] lg:h-[38%] left-0 bottom-0 z-10`}
+          className={`absolute h-[38%] lg:h-[46%] 3xl:h-[46%] 4xl:h-[35%] left-0 bottom-0 z-10`}
         />
         <div
-          className={`w-6/8 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
+          className={`w-6/8 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-100 px-8 lg:px-0`}
         >
           {/* Thêm lg:pb-10 để phần chữ không dính sát đáy như ảnh */}
           <div
@@ -668,7 +668,7 @@ const HotTopicsSection = () => {
           <Image
             src={TuongVyImage3}
             alt="Tuong Vy"
-            className="w-full lg:w-10/10  h-auto object-contain block align-bottom mx-auto lg:mx-0"
+            className="w-full lg:w-10/10 h-auto object-contain block align-bottom mx-auto lg:mx-0 scale-130 lg:scale-110 3xl:scale-120 translate-y-[-15%] translate-x-[-15%] lg:translate-x-[-5%] lg:translate-y-[-5%] 3xl:translate-x-[-10%] 3xl:translate-y-[-10%]"
             /* align-bottom và block giúp triệt tiêu khoảng hở inline phía dưới */
           />
         </div>
