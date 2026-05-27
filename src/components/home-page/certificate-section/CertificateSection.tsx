@@ -13,6 +13,7 @@ import CertificateImage7 from "@/assets/images/assets/CertificateSection-Certifi
 import CertificateImage8 from "@/assets/images/assets/CertificateSection-CertificateImage-8.png";
 import CertificateImage9 from "@/assets/images/assets/CertificateSection-CertificateImage-9.png";
 import CertificateImage10 from "@/assets/images/assets/CertificateSection-CertificateImage-10.jpg";
+import CertificateImage11 from "@/assets/images/assets/CertificateSection-CertificateImage-11.png";
 import PartnerCertificateImage1 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-1.png";
 import PartnerCertificateImage2 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-2.png";
 import PartnerCertificateImage3 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-3.png";
@@ -51,6 +52,23 @@ const CertificateSection = () => {
     CertificateImage6,
   ];
   const certificateCarouselItems: CertificateCarouselProps[] = [
+    {
+      image: CertificateImage11,
+      text: {
+        Viet: {
+          title: "TRAINERPRO - PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
+          author: "SUCCESS Training & Coaching",
+          description:
+            "Khóa học nâng cao tư duy, kỹ năng điều phối và phương pháp giảng dạy tương tác cao, giúp các chuyên gia làm chủ lớp học và tối ưu hóa hiệu quả đào tạo.",
+        },
+        Eng: {
+          title: "TRAINERPRO - PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
+          author: "SUCCESS Training & Coaching",
+          description:
+            "An advanced program designed to strengthen facilitation, instructional design, and interactive teaching capabilities—enabling professionals to lead impactful learning experiences and maximize training effectiveness.",
+        },
+      },
+    },
     {
       image: CertificateImage5,
       text: {

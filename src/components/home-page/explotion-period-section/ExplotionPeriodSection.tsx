@@ -4,7 +4,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import styles from "./ExplotionPeriodSection.module.scss";
 import EventImage1 from "@/assets/images/assets/ExplotionPeriodSection-EventImage-1.png";
 import EventImage2 from "@/assets/images/assets/ExplotionPeriodSection-EventImage-2.png";
-import EventImage3 from "@/assets/images/assets/ExplotionPeriodSection-EventImage-3.png";
+import EventImage3 from "@/assets/images/assets/ExplotionPeriodSection-EventImage-4.png";
 import ProffessorViewText1 from "@/assets/images/texts/ExplotionPeriodSection-ProffessorViewText-1.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
@@ -22,7 +22,7 @@ import StreakImageEng3 from "@/assets/images/assets/ExplotionPeriodSection-Strea
 import StreakMobileImage1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-1.png";
 import StreakMobileImage2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-2.png";
 import StreakMobileImage3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImage-3.png";
-import StreakMobileImageEng1 from "@/assets/images/assets/ExplotionPeriodSection-StreakImageMobileEng-1.png";
+import StreakMobileImageEng1 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-1.png";
 import StreakMobileImageEng2 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-2.png";
 import StreakMobileImageEng3 from "@/assets/images/assets/ExplotionPeriodSection-StreakMobileImageEng-3.png";
 import MethodEnd from "@/assets/images/assets/ExplotionPeriodSection-MethodEnd-2.png";
@@ -385,17 +385,17 @@ const ExplotionPeriodSection = () => {
               image: EventImage3,
               title:
                 lang == "Viet"
-                  ? "“VÀNG THAU LẪN LỘN” - CÔNG TY TÀI CHÍNH TIÊU DÙNG GẶP NHIỀU THÁCH THỨC"
-                  : "“A MIX OF GOLD AND GRAVEL” – CONSUMER FINANCE COMPANIES FACE MULTIPLE CHALLENGES",
+                  ? "CÔNG TY TÀI CHÍNH TIÊU DÙNG TRẦY TRẬT"
+                  : "CONSUMER FINANCE COMPANIES UNDER PRESSURE",
               subtitle:
                 lang == "Viet"
-                  ? "Báo Kinh tế & Đô thị"
-                  : "Economic & Urban Newspaper",
+                  ? "Báo Đầu tư Chứng khoán"
+                  : "Securities Investment Newspaper",
               description:
                 lang == "Viet"
-                  ? "Thời gian ngắn hạn chế tăng trưởng dư nợ, làm giảm thu nhập; đồng thời công nghệ phát triển khiến tài chính tiêu dùng phải cạnh tranh gay gắt với Fintech."
-                  : "Short-term constraints on credit growth reduced income, while rapid technological advancements intensified competition between consumer finance companies and fintech players.",
-              url: "https://kinhtedothi.vn/vang-thau-lan-lon-cong-ty-tai-chinh-tieu-dung-dung-truoc-nhieu-thach-thuc.html",
+                  ? 'Khi khó khăn thu hồi nợ do dịch "ập" đến, việc nới trần tín dụng và giãn thời gian trích lập dự phòng là cách tối ưu nhất để ổn định hoạt động'
+                  : "As debt collection challenges intensified during the pandemic, raising credit limits and extending provisioning timelines became the most effective measures to stabilize operations and preserve business resilience.",
+              url: "https://www.tinnhanhchungkhoan.vn/cong-ty-tai-chinh-tieu-dung-tray-trat-post284323.html",
             },
           ]}
         />

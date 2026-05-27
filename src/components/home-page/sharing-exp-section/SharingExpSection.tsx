@@ -9,6 +9,7 @@ import ExpImage2 from "@/assets/images/assets/SharingExpSection-ExpImage-2.png";
 import ExpImage3 from "@/assets/images/assets/SharingExpSection-ExpImage-3.png";
 import ExpImage4 from "@/assets/images/assets/SharingExpSection-ExpImage-4.png";
 import ExpImage5 from "@/assets/images/assets/SharingExpSection-ExpImage-5.png";
+import ExpImage6 from "@/assets/images/assets/SharingExpSection-ExpImage-6.png";
 import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 import { Button } from "primereact/button";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -42,9 +43,9 @@ const SharingExpSection = () => {
         Viet: {
           title:
             "TỌA ĐÀM: XU HƯỚNG VÀ GIẢI PHÁP CHO THỊ TRƯỜNG TUYỂN DỤNG LAO ĐỘNG SỐ LƯỢNG LỚN",
-          description: "Báo Người Lao Động",
-          author:
+          description:
             "Nhấn mạnh các giải pháp như ứng dụng công nghệ trong tuyển dụng và nâng cao trải nghiệm nhân viên nhằm  tuyển dụng và giữ chân lao động số lượng lớn trong bối cảnh tỷ lệ nhảy việc cao, đặc biệt ở nhóm Gen Z.",
+          author: "Báo Người Lao Động",
         },
         Eng: {
           title: "PANEL: TRENDS AND SOLUTIONS FOR MASS RECRUITMENT",
@@ -61,9 +62,9 @@ const SharingExpSection = () => {
         Viet: {
           title:
             "TẠP CHÍ THỊ TRƯỜNG TÀI CHÍNH TIỀN TỆ GẶP MẶT CỘNG TÁC VIÊN TẠI TP. HỒ CHÍ MÌNH NĂM 2025",
-          description: "Tạp chí Thị trường Tài Chính Tiền Tệ ",
-          author:
+          description:
             "Sự kiện tri ân đội ngũ chuyên gia, cộng tác viên đã đóng góp bài viết chuyên sâu, đồng thời định hướng nội dung tuyên truyền về chính sách tiền tệ và chuyển đổi số ngành ngân hàng.",
+          author: "Tạp chí Thị trường Tài Chính Tiền Tệ ",
         },
         Eng: {
           title:
@@ -108,6 +109,25 @@ const SharingExpSection = () => {
           title: "YOUNG PEOPLE NEED MORE THAN KNOWLEDGE",
           description:
             "Today’s young generation is rich in digital knowledge, but their greatest value lies in critical thinking and practical problem-solving; AI and interactive learning are accelerating this transformation.",
+          author: "",
+        },
+      },
+    },
+    {
+      image: ExpImage6,
+      url: "https://www.youtube.com/watch?v=sP8gAklm8bQ",
+      text: {
+        Viet: {
+          title: "[WE SAY, WE SHARE SEASON 1] TRÒ CHUYỆN VỀ PHỤ NỮ THỜI 4.0",
+          description:
+            "Nhấn mạnh bí quyết của người phụ nữ hiện đại đạt thành công và giữ sự bình yên nằm ở khả năng tự nhận thức, thói quen rèn luyện thân thể và tư duy chủ động thay đổi để thích nghi trước những định kiến giới hay áp lực cuộc sống.",
+          author: "",
+        },
+        Eng: {
+          title:
+            "[WE SAY, WE SHARE SEASON 1] CONVERSATIONS ABOUT WOMEN IN THE 4.0 ERA",
+          description:
+            "Highlighting how modern women achieve success and maintain inner balance through self-awareness, physical well-being, and a proactive mindset to adapt and thrive amid gender stereotypes and life pressures.",
           author: "",
         },
       },
