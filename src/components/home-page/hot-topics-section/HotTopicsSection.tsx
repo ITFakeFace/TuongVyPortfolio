@@ -604,7 +604,7 @@ const HotTopicsSection = () => {
         <Image
           src={TrainingDecor}
           alt="Training Decor"
-          className={`absolute h-[38%] lg:h-[46%] 3xl:h-[46%] 4xl:h-[35%] left-0 bottom-0 z-10`}
+          className={`absolute h-[38%] lg:h-[46%] 3xl:h-[46%] 4xl:h-[35%] left-0 bottom-0 z-10 w-full`}
         />
         <div
           className={`w-6/8 lg:w-5/7 4xl:w-5/7 text-left text-white lg:pb-10 flex flex-col justify-center items-start z-50 px-8 lg:px-0`}
