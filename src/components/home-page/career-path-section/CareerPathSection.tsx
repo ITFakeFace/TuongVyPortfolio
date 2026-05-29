@@ -7,13 +7,13 @@ import CareerPathEng1 from "@/assets/images/assets/CareerPathSection-CareerPathI
 import CareerPathMobile1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImage-1.png";
 import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageEng-1.png";
 import { Carousel } from "primereact/carousel";
-import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-3.png";
+import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-4.png";
 import { Button } from "primereact/button";
 import EndImage1 from "@/assets/images/assets/CareerPathSection-Image-1.png";
 import EndImage2 from "@/assets/images/assets/CareerPathSection-Image-2.png";
 import EndImage3 from "@/assets/images/assets/CareerPathSection-Image-3.png";
 import EndImage4 from "@/assets/images/assets/CareerPathSection-Image-4.png";
-import PotentialBoxDecorImage from "@/assets/images/assets/CareerPathSection-PotentialBoxDecorImage-2.png";
+import PotentialBoxDecorImage from "@/assets/images/assets/CareerPathSection-PotentialBoxDecorImage-3.png";
 import FilmStrip from "@/components/generals/FilmStrip";
 import { div } from "framer-motion/client";
 import { useContactForm } from "@/context/ContactContext";
@@ -123,7 +123,7 @@ const CareerPathSection = () => {
               src={TuongVyImage2}
               alt="Career Path Section Image"
               className={`absolute w-auto h-[40vh] lg:w-[42vw] 3xl:w-[38vw] 4xl:w-[35vw] lg:h-auto mt-10 lg:mt-0 
-                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[-20%] 3xl:translate-y-[-10%] 4xl:translate-y-[0%] z-20`}
+                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[0%] 3xl:translate-y-[-10%] 4xl:translate-y-[20%] z-20`}
             />
             <div
               className={`w-full 4xl:w-fit bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 lg:py-10 lg:p-0 4xl:px-20 4xl:mx-auto text-white flex flex-col gap-5 lg:gap-10 mt-5 lg:mt-10 justify-center items-center animate-light-heartbeat
@@ -297,7 +297,7 @@ const CareerPathSection = () => {
               src={TuongVyImage2}
               alt="Career Path Section Image"
               className={`absolute h-2/3 w-auto mt-10 lg:mt-0 
-              bottom-0 left-[50vw]`}
+              bottom-0 left-[51vw]`}
             />
           </div>
         </div>
@@ -715,7 +715,7 @@ const CareerPathSection = () => {
           <Image
             src={PotentialBoxDecorImage}
             alt="Potential Box Decor Image"
-            className={`w-full mt-10`}
+            className={`w-full mt-0`}
           />
         </div>
       </div>
