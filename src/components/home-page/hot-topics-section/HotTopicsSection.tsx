@@ -143,16 +143,16 @@ const HotTopicsSection = () => {
         Viet: {
           title: "AI UNLIMITED FUTURE: HỘI NGHỊ ĐỔI MỚI SÁNG TẠO VIỆT NAM",
           partner: "BOSSKOL",
-          role: "Huấn luyện đào tạo",
+          role: "Cố Vấn cấp cao mảng Ứng dụng AI vào Doanh Nghiệp",
           description:
-            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh và Quản lý kinh doanh vùng.",
+            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh",
         },
         Eng: {
           title: "AI UNLIMITED FUTURE: VIETNAM INNOVATION SUMMIT",
           partner: "BOSSKOL",
-          role: "Training & Coaching",
+          role: "Senior Advisor - AI Applications in Business",
           description:
-            "Solution design, business strategy and operations; hands-on training for the Business Strategy Planning Department and Regional Sales Management.",
+            "Solution design, business strategy and operations; hands-on training for the Business Strategy Planning Department",
         },
       },
     },

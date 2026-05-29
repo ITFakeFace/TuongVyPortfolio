@@ -33,7 +33,7 @@ import EndMobileImageEng from "@/assets/images/assets/ExplotionPeriodSection-End
 import BusinessGrowth from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowth-1.png";
 import BusinessGrowthEng from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowthEng-1.png";
 import HumanImage from "@/assets/images/assets/ExplotionPeriodSection-HumanImage-1.png";
-import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-1.png";
+import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-2.png";
 import { useContactForm } from "@/context/ContactContext";
 import { motion } from "framer-motion";
 

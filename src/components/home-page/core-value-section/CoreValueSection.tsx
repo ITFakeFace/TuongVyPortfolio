@@ -79,6 +79,7 @@ const CoreValueSection = () => {
             {lang === "Viet"
               ? "Xây dựng và tăng tốc doanh nghiệp từ "
               : "Build and scale businesses from "}
+            <br />
             <b className={`text-white`}>
               {lang === "Viet" ? "giai đoạn khởi tạo" : "inception"}
             </b>
@@ -427,6 +428,7 @@ const CoreValueSection = () => {
             {lang === "Viet"
               ? "Xây dựng và tăng tốc doanh nghiệp từ "
               : "Build and scale businesses from "}
+            <br />
             <b className={`text-white`}>
               {lang === "Viet" ? "giai đoạn khởi tạo" : "inception"}
             </b>
