@@ -145,7 +145,7 @@ const HotTopicsSection = () => {
           partner: "BOSSKOL",
           role: "Cố Vấn cấp cao mảng Ứng dụng AI vào Doanh Nghiệp",
           description:
-            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoach Chiến Lược Kinh Doanh",
+            "Thiết kế giải pháp, chiến lược và vận hành kinh doanh; Đào tạo thực chiến cho Phòng Kế Hoạch Chiến Lược Kinh Doanh",
         },
         Eng: {
           title: "AI UNLIMITED FUTURE: VIETNAM INNOVATION SUMMIT",
@@ -632,7 +632,7 @@ const HotTopicsSection = () => {
 
             {/* List description */}
             <div
-              className={`w-9/10 lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-10 lg:mt-10 4xl:mt-20`}
+              className={`w-9/10 lg:w-8/10 flex items-center justify-center text-left text-[10px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] text-white leading-relaxed lg:leading-normal mt-10 lg:mt-20 3xl:mt-20 4xl:mt-20`}
             >
               <ul className={`list-disc list-inside lg:list-outside lg:pl-10`}>
                 <li>
@@ -685,11 +685,11 @@ const HotTopicsSection = () => {
             `}
           >
             {lang == "Viet" ? "DẤU ẤN " : "COMMUNITY "}
-            <br className={`hidden`} />
+            <br className={`hidden lg:block`} />
             {lang == "Viet" ? "CỘNG ĐỒNG" : "IMPACT"}
           </div>
           <div
-            className={`font-playfair pt-2 lg:pt-0 lg:pl-1 4xl:pl-2 italic bg-clip-text text-transparent bg-linear-to-bl from-[#FFFFFF] to-[#5A5B5B] lg:w-full w-7/10 mx-auto lg:mx-0 text-[7px] lg:text-[clamp(1.5rem,0.75rem+0.7813vw,2rem)]`}
+            className={`font-playfair pt-2 lg:pt-0 lg:pl-1 4xl:pl-2 italic bg-clip-text text-transparent bg-white #bg-linear-to-bl from-[#FFFFFF] to-[#5A5B5B] lg:w-full w-10/10 mx-auto lg:mx-0 text-[10px] lg:text-[clamp(1.5rem,0.75rem+0.7813vw,2rem)]`}
           >
             {lang == "Viet"
               ? "Chia sẻ về hành trình lan tỏa giá trị và kiến thức giúp phát triển cộng đồng trẻ"

@@ -110,7 +110,7 @@ const CertificateSection = () => {
           title: "LEADERSHIP EXCELLENCE",
           author: "New Mind Academy",
           description:
-            "trang bị tư duy lãnh đạo đột phá, kỹ năng truyền cảm hứng, xây dựng đội ngũ và quản trị thay đổi, giúp nhà quản lý tối ưu hiệu suất và khẳng định vị thế dẫn dắt.",
+            "Trang bị tư duy lãnh đạo đột phá, kỹ năng truyền cảm hứng, xây dựng đội ngũ và quản trị thay đổi, giúp nhà quản lý tối ưu hiệu suất và khẳng định vị thế dẫn dắt.",
         },
         Eng: {
           title: "LEADERSHIP EXCELLENCE",
@@ -127,7 +127,7 @@ const CertificateSection = () => {
           title: "CRESTCOM BULLET PROOF MANAGER IV",
           author: "CRESTCOM International ",
           description:
-            "Chương trình nâng cấp năng lực lãnh đạo chuyên sâu dành cho C - Levels",
+            "Chương trình nâng cấp năng lực lãnh đạo chuyên sâu dành cho C-Levels",
         },
         Eng: {
           title: "CRESTCOM BULLET PROOF MANAGER IV",
@@ -163,8 +163,8 @@ const CertificateSection = () => {
               {item.text[lang].author}
             </div>
 
-            <div className="leading-loose text-left">
-              <span className="font-semibold ">
+            <div className="leading-loose text-left lg:text-[clamp(1.15rem,0.025rem+1.1719vw,1.9rem)]">
+              <span className="font-semibold lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]">
                 {lang == "Viet" ? "Nội dung: " : "Content: "}
               </span>
               {item.text[lang].description}
@@ -224,7 +224,7 @@ const CertificateSection = () => {
         {lang === "Viet" ? "THÀNH TỰU SỰ NGHIỆP" : " CAREER ACHIEVEMENTS"}
       </div>
       <div
-        className={`text-white font-playfair text-center px-4 w-8/10 lg:w-full mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium`}
+        className={`text-white font-playfair text-center px-4 w-8/10 lg:w-full mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-light`}
       >
         {lang === "Viet"
           ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành"
@@ -248,7 +248,7 @@ const CertificateSection = () => {
           {lang === "Viet" ? "GIẤY CHỨNG NHẬN" : "CERTIFICATION"}
         </div>
         <div
-          className={`font-playfair w-8/10 lg:w-full text-white text-center lg:text-left px-4 text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium mx-0 lg:mx-auto`}
+          className={`font-playfair w-8/10 lg:w-full text-white text-center lg:text-left px-4 lg:px-0 text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-light mx-0 lg:mx-auto`}
         >
           {lang === "Viet"
             ? "Minh chứng cụ thể từ các đơn vị đào tạo cho những kỹ năng “làm nghề” quan trọng"
@@ -294,7 +294,7 @@ const CertificateSection = () => {
           {lang === "Viet" ? "CHỨNG NHẬN ĐỒNG HÀNH" : "CERTIFIED PARTNERSHIPS"}
         </div>
         <div
-          className={`font-playfair text-white text-center px-4 w-9/10 lg:w-20/20 mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-medium`}
+          className={`font-playfair text-white text-center px-4 w-9/10 lg:w-20/20 mx-auto text-[0.625rem] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-light`}
         >
           {lang === "Viet"
             ? "Mỗi hành trình trải qua đều mang theo giá trị ý nghĩa được chứng nhận bởi các đơn vị, doanh nghiệp đồng hành."

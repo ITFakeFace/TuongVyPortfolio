@@ -877,7 +877,7 @@ const ExperienceSection = () => {
             ARCHITECTURE
           </div>
           <div
-            className={`font-playfair italic text-[0.75rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left mt-4 lg:mt-0`}
+            className={`text-white font-playfair italic text-[0.75rem] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)] text-center lg:text-left mt-4 lg:mt-0`}
           >
             {lang === "Viet"
               ? "Tôi tin rằng: “Tăng trưởng thật sự không nằm ở tốc độ mở rộng — mà chính là từng “tầng kiến trúc” kiên cố biến tăng trưởng trở thành lợi nhuận bền vững”"

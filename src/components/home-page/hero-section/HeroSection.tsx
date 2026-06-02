@@ -287,12 +287,12 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <div className="text-[8px] text-white/90 font-semibold tracking-wide uppercase px-3 leading-tight mt-1">
+            <div className="text-[7px] text-white/90 font-semibold tracking-wide uppercase px-3 leading-tight mt-1">
               {lang == "Viet" ? "Quản lý cấp cao ngành" : "Senior Executive in"}
               <br />
               {lang == "Viet"
-                ? "Tài chính & Ngân hàng số"
-                : "Finance & Digital Banking"}
+                ? "Tài chính tiêu dùng và Ngân hàng số"
+                : "Consumer Finance and Digital Banking"}
             </div>
           </motion.div>
 
@@ -326,10 +326,12 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <div className="text-[8px] text-white/90 text-balance font-semibold tracking-wide uppercase px-3 leading-tight mt-1">
-              {lang == "Viet" ? "Chuyên gia mảng" : "Expert in"}
+            <div className="text-[7px] text-white/90 text-balance font-semibold tracking-wide uppercase px-3 leading-tight mt-1">
+              {lang == "Viet" ? "Chuyên gia trong mảng" : "Expert in"}
               <br />
-              {lang == "Viet" ? "Digital Bank & AI" : "Digital Banking & AI"}
+              {lang == "Viet"
+                ? "Digital Bank và Ứng dụng AI"
+                : "Digital Banking and AI Applications"}
             </div>
           </motion.div>
         </div>
@@ -401,7 +403,7 @@ const HeroSection = () => {
             <div className={`text-center text-[8px]`}>
               {lang == "Viet"
                 ? "nhân sự được phát triển từ giai đoạn xây dựng nền móng doanh nghiệp"
-                : "nhân sự được phát triển từ giai đoạn xây dựng nền móng doanh nghiệp"}
+                : "employees developed from the foundational stage of business building"}
             </div>
           </GlassCard>
           <GlassCard
@@ -416,7 +418,7 @@ const HeroSection = () => {
             <div className={`text-center text-[8px]`}>
               {lang == "Viet"
                 ? "tỉnh thành đã mở rộng và phát triển mạng lưới phân phối toàn quốc"
-                : "tỉnh thành đã mở rộng và phát triển mạng lưới phân phối toàn quốc"}
+                : "provinces covered through nationwide network expansion"}
             </div>
           </GlassCard>
           <GlassCard
@@ -432,7 +434,7 @@ const HeroSection = () => {
             <div className={`text-center text-[8px]`}>
               {lang == "Viet"
                 ? "người dùng mới đang phát triển trong hệ sinh thái Digital Banking"
-                : "người dùng mới đang phát triển trong hệ sinh thái Digital Banking"}
+                : "new users acquired within the Digital Banking ecosystem"}
             </div>
           </GlassCard>
           <GlassCard
@@ -448,7 +450,7 @@ const HeroSection = () => {
             <div className={`text-center text-[8px]`}>
               {lang == "Viet"
                 ? "đối tác tin tưởng trong việc mở rộng hợp tác và phát triển"
-                : "đối tác tin tưởng trong việc mở rộng hợp tác và phát triển"}
+                : "trusted partners driving collaborative growth and expansion"}
             </div>
           </GlassCard>
         </div>

@@ -312,7 +312,7 @@ const CoreValueSection = () => {
               className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                ? "Phân tích chiến lược & dẫn dắt tăng trưởng"
                 : "Strategic Analysis & Growth Leadership"}
             </div>
             <div
@@ -676,7 +676,7 @@ const CoreValueSection = () => {
               className={`text-left font-playfair italic font-semibold antialiased [font-optical-sizing:auto] text-[0.875rem] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)]`}
             >
               {lang == "Viet"
-                ? "Chuyển đổi số & phát triển hệ sinh thái fintech"
+                ? "Phân tích chiến lược & dẫn dắt tăng trưởng"
                 : "Strategic Analysis & Growth Leadership"}
             </div>
           </div>

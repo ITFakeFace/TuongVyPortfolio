@@ -15,7 +15,7 @@ const ConsultationFormSection = () => {
         <div>
           <div
             className={`flex flex-row justify-center text-[1.5rem] lg:text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)] gap-2 lg:gap-4 font-bold 
-                    text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] to-[#999999]
+                    text-transparent bg-clip-text bg-white #bg-gradient-to-r from-[#FFFFFF] to-[#999999]
                 `}
           >
             {lang == "Viet" ? "ĐỐI TÁC HỢP TÁC" : "STRATEGIC PARTNERSHIPS"}
@@ -70,7 +70,7 @@ const ConsultationFormSection = () => {
       <Image
         src={LogoListImage}
         alt="Logo List"
-        className="lg:px-[15%] w-9/10 lg:w-full h-auto object-contain mx-auto pb-10 lg:pb-0"
+        className="lg:px-[15%] w-9/10 lg:w-full h-auto object-contain mx-auto pb-30 lg:pb-0"
       />
       <div
         className={`w-full lg:w-full lg:px-[15%] mx-auto lg:mr-auto lg:my-60 lg:py-20 bg-[radial-gradient(circle_at_center,_#011B40_9%,_#0346A6_100%)]`}

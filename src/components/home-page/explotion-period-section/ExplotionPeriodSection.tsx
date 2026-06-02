@@ -121,9 +121,9 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
                   </div>
 
                   {/* Content */}
-                  <div className="text-center mt-3 lg:mt-[15px] mx-2 lg:mx-10 lg:px-10">
+                  <div className="text-center mt-3 lg:mt-[15px] mx-2 lg:mx-5 lg:px-5">
                     {/* Title: Mobile ~20px, Desktop 32px */}
-                    <div className="text-[16px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold uppercase leading-normal ">
+                    <div className="text-[16px] lg:text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)] font-bold uppercase leading-normal ">
                       {event.title}
                     </div>
 
@@ -225,14 +225,14 @@ const ExplotionPeriodSection = () => {
             className={`text-white text-center z-10 flex flex-col gap-10 lg:gap-10 lg:mt-15`}
           >
             <div
-              className={`font-light font-playfair italic w-14/20 lg:w-15/20 text-balance text-[12px] lg:text-[clamp(2rem,1.25rem+0.7813vw,2.5rem)] mx-auto`}
+              className={`font-light font-playfair italic w-14/20 lg:w-13/20 text-balance text-[12px] lg:text-[clamp(1.75rem,1rem+0.7813vw,2.25rem)] mx-auto`}
             >
               {lang == "Viet"
                 ? "Trong giai đoạn chống dịch, ngành Tài chính – Ngân hàng chịu áp lực lớn: doanh nghiệp đình trệ, thu nhập người lao động giảm, nhu cầu tín dụng tăng nhưng nợ xấu tăng mạnh, kéo theo rủi ro tín dụng và doanh thu toàn ngành suy giảm."
                 : "During the pandemic, the financial and banking sector faced significant pressure: businesses stalled, household incomes declined, credit demand increased, while bad debt surged—driving up credit risk and reducing industry-wide revenue."}
             </div>
             <div
-              className={`font-playfair font-bold w-16/20 lg:w-13/20 text-[14px] lg:text-[clamp(14px,8.59px+1.375vw,35px)] mx-auto`}
+              className={`font-playfair font-bold w-16/20 lg:w-13/20 text-[14px] lg:text-[clamp(14px,8.59px+1.375vw,35px)] mx-auto text-balance`}
             >
               {lang == "Viet"
                 ? "“Khi Covid-19 khiến nhiều tổ chức Tài chính – Ngân hàng non trẻ lao đao vì nền tảng chưa đủ vững. Với tôi, đó lại là điểm khởi đầu — nơi áp lực trở thành động lực và thử thách mở ra hành trình chinh phục thành công”"
@@ -505,7 +505,7 @@ const ExplotionPeriodSection = () => {
             className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-between items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
           >
             <div
-              className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent 
+              className={`bg-clip-text bg-white #bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent 
                 text-center lg:text-left`}
             >
               <div
@@ -514,7 +514,7 @@ const ExplotionPeriodSection = () => {
                 {lang == "Viet" ? "Đồng hành toàn diện" : "End-to-end support"}
               </div>
               <div
-                className={`font-semibold text-[8px] lg:text-[clamp(1.25rem,-0.25rem+1.5625vw,2.25rem)]`}
+                className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent font-semibold text-[8px] lg:text-[clamp(1.25rem,-0.25rem+1.5625vw,2.25rem)]`}
               >
                 {lang == "Viet"
                   ? "Phát triển vững mạnh cùng đội ngũ chuyên gia tại PNP"

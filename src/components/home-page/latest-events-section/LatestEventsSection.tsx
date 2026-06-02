@@ -76,7 +76,7 @@ const LatestEventsSection = () => {
     destination: string,
   ) => {
     return (
-      <div className="w-full bg-linear-to-br from-[#999999]/30 from-0% via-[#FFFFFF]/30 via-48% to-[#999999]/30 to-100% text-white rounded-tl-[40px] rounded-br-[40px] rounded-bl-[15px] rounded-tr-[15px] lg:rounded-tl-[61px] lg:rounded-br-[61px] lg:rounded-bl-[20px] lg:rounded-tr-[20px]">
+      <div className="w-full bg-linear-to-br from-[#999999]/30 from-0% via-[#FFFFFF]/30 via-48% to-[#999999]/30 to-100% text-white rounded-tl-[40px] rounded-br-[40px] rounded-bl-[15px] rounded-tr-[15px] lg:rounded-tl-[61px] lg:rounded-br-[61px] lg:rounded-bl-[20px] lg:rounded-tr-[20px] overflow-hidden">
         {/* Title Box */}
         <div
           className={`
@@ -104,7 +104,7 @@ const LatestEventsSection = () => {
           px-6 #lg:px-12 lg:px-8 py-3 lg:py-2 
           w-full 
           /* Mobile: text nhỏ hơn, Desktop: 25px */
-          text-[12px] lg:text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]
+          text-[12px] lg:text-[clamp(0.875rem,-0.25rem+1.1719vw,1.625rem)]
           gap-2 lg:gap-1
           ${styles.infoBox}
         `}
