@@ -136,7 +136,7 @@ const HeroSection = () => {
             <div
               className={`font-playfair text-[clamp(2.5rem,1rem+1.5vw,3rem)] text-white font-medium italic mt-4 leading-loose`}
             >
-              {lang == "Viet" ? "Victory Trần" : "Victory Tran"}
+              {lang == "Viet" ? "Victory Tran" : "Victory Tran"}
             </div>
             <div
               className={`#bg-white bg-linear-to-r text-[clamp(3.75rem,-0.75rem+4.6875vw,6.75rem)] from-[#ffffff] from-79% to-[#7c7e7e] bg-clip-text text-transparent font-bold leading-tight`}
@@ -368,7 +368,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="font-playfair text-[1.5rem] text-white font-medium italic">
-            {lang == "Viet" ? "Victory Trần" : "Victory Tran"}
+            {lang == "Viet" ? "Victory Tran" : "Victory Tran"}
           </div>
         </div>
 
