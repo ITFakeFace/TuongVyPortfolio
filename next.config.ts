@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // GitHub Pages không hỗ trợ tối ưu ảnh tự động của Next.js
   },
-  basePath: "/TuongVyPortfolio",
+  // basePath: "/",
 };
 
 export default nextConfig;
