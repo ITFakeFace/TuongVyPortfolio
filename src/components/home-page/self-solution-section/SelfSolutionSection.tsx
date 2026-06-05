@@ -46,6 +46,7 @@ import NTVLogo from "@/assets/images/assets/ExperienceSection-NTVLogo-1.png";
 import KimberlyClarkLogo from "@/assets/images/assets/ExperienceSection-KimberlyClarkLogo-1.png";
 import AhamoveLogo from "@/assets/images/assets/ExperienceSection-AhamoveLogo-1.png";
 import TrustingSocialLogo from "@/assets/images/assets/ExperienceSection-TrustingSocialLogo-1.png";
+import ViettelPayLogo from "@/assets/images/assets/ExperienceSection-ViettelPayLogo-1.png";
 
 const SelftSolutionSection = () => {
   const { lang } = useLanguage();
@@ -57,6 +58,7 @@ const SelftSolutionSection = () => {
     VMGLogo,
     MFastLogo,
     ZaloPayLogo,
+    ViettelPayLogo,
     // EPayLogo,
     // VNPTLogo,
     TrueMoneyLogo,

@@ -7,7 +7,7 @@ import CareerPathEng1 from "@/assets/images/assets/CareerPathSection-CareerPathI
 import CareerPathMobile1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImage-1.png";
 import CareerPathMobileEng1 from "@/assets/images/assets/CareerPathSection-CareerPathMobileImageEng-1.png";
 import { Carousel } from "primereact/carousel";
-import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-4.png";
+import TuongVyImage2 from "@/assets/images/assets/CareerPathSection-TuongVyImage-5.png";
 import { Button } from "primereact/button";
 import EndImage1 from "@/assets/images/assets/CareerPathSection-Image-1.png";
 import EndImage2 from "@/assets/images/assets/CareerPathSection-Image-2.png";
@@ -122,8 +122,8 @@ const CareerPathSection = () => {
             <Image
               src={TuongVyImage2}
               alt="Career Path Section Image"
-              className={`absolute w-auto h-[40vh] lg:w-[42vw] 3xl:w-[38vw] 4xl:w-[35vw] lg:h-auto mt-10 lg:mt-0 
-                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[0%] 3xl:translate-y-[-10%] 4xl:translate-y-[20%] z-20`}
+              className={`absolute lg:w-[45vw] 3xl:w-[38vw] 4xl:w-[35vw] lg:h-auto mt-10 lg:mt-0 
+                bottom-0 right-0 lg:right-2% lg:translate-x-[100%] 4xl:translate-x-[110%] lg:translate-y-[20%] 3xl:translate-y-[-10%] 4xl:translate-y-[20%] z-20`}
             />
             <div
               className={`w-full 4xl:w-fit bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 lg:py-10 lg:p-0 4xl:px-20 4xl:mx-auto text-white flex flex-col gap-5 lg:gap-10 mt-5 lg:mt-10 justify-center items-center animate-light-heartbeat
@@ -224,10 +224,10 @@ const CareerPathSection = () => {
           >
             {lang == "Viet" ? "CAREER MENTORING" : "CAREER MENTORING"}
           </div>
-          <div className={`w-full flex flex-row`}>
-            <div>
+          <div className={`relative w-full flex flex-row`}>
+            <div className={`relative`}>
               <div
-                className={` bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 text-white flex flex-col gap-5 mt-5 lg:mt-10 animate-light-heartbeat`}
+                className={`relative bg-linear-to-br from-[#056CFF] to-[#034199] rounded-4xl py-5 text-white flex flex-col gap-5 mt-5 lg:mt-10 animate-light-heartbeat z-10`}
               >
                 {/* <div className="w-19/20 font-bold flex items-start justify-center gap-1 lg:gap-5 text-[8px]">
                   <span className="">
@@ -287,8 +287,8 @@ const CareerPathSection = () => {
               </div>
               <Button
                 unstyled
-                className={`bg-linear-to-r from-[#0957C9] from-65% to-[#5268D2] text-white font-bold lg:px-15 lg:py-3 px-5 py-2 rounded-full lg:rounded-4xl
-                mt-5 lg:mt-10 text-[clamp(15px,9.851px+1.31vw,35px)] hover:cursor-pointer transition-all hover:scale-105 duration-300`}
+                className={`relative bg-linear-to-r from-[#0957C9] from-65% to-[#5268D2] text-white font-bold lg:px-15 lg:py-3 px-5 py-2 rounded-full lg:rounded-4xl
+                mt-5 lg:mt-10 text-[clamp(15px,9.851px+1.31vw,35px)] hover:cursor-pointer transition-all hover:scale-105 duration-300 z-100!`}
                 label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
                 onClick={openContactForm}
               />
@@ -296,8 +296,8 @@ const CareerPathSection = () => {
             <Image
               src={TuongVyImage2}
               alt="Career Path Section Image"
-              className={`absolute h-2/3 w-auto mt-10 lg:mt-0 
-              bottom-0 left-[51vw]`}
+              className={`absolute h-[37vh] w-auto mt-10 lg:mt-0 z-30
+              -bottom-17 left-[40vw]`}
             />
           </div>
         </div>

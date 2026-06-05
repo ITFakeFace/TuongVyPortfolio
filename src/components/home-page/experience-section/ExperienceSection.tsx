@@ -45,6 +45,7 @@ import ChoTotLogo from "@/assets/images/assets/ExperienceSection-ChoTotLogo-1.pn
 import VDSLogo from "@/assets/images/assets/ExperienceSection-VDSLogo-1.png";
 import VNPayLogo from "@/assets/images/assets/ExperienceSection-VNPayLogo-1.png";
 import ZaloPayLogo from "@/assets/images/assets/ExperienceSection-ZaloPayLogo-1.png";
+import ViettelPayLogo from "@/assets/images/assets/ExperienceSection-ViettelPayLogo-1.png";
 import DiDongVietLogo from "@/assets/images/assets/ExperienceSection-DiDongVietLogo-1.png";
 import WinCommerceLogo from "@/assets/images/assets/ExperienceSection-WinCommerceLogo-1.png";
 import VMGLogo from "@/assets/images/assets/ExperienceSection-VMGLogo-1.png";

@@ -23,7 +23,7 @@ const HeroSection = () => {
     return (
       <div className={`px-[15%] pt-10 3xl:pt-20 flex flex-col gap-10`}>
         <div className={`flex flex-row relative`}>
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 className="text-lg lg:text-5xl! text-white hover:text-[#d9d9d9] transition-colors! "
               />
             </div>
-          </a>
+          </a> */}
           <div className={`w-5/9`}>
             <div className={`flex flex-row gap-8 items-end`}>
               <motion.div
@@ -335,7 +335,7 @@ const HeroSection = () => {
             </div>
           </motion.div>
         </div>
-        <a
+        {/* <a
           href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
           target="_blank"
           rel="noopener noreferrer"
@@ -349,7 +349,7 @@ const HeroSection = () => {
               className="text-lg lg:text-8xl! text-white hover:text-[#d9d9d9] transition-colors! "
             />
           </div>
-        </a>
+        </a> */}
         {/* Hình ảnh nhân vật */}
         <Image
           src={TuongVyMobileImage}

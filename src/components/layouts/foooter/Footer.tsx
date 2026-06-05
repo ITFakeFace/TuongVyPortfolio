@@ -26,7 +26,7 @@ const Footer = () => {
         <div
           className={`w-full lg:w-1/2 flex flex-row items-center justify-center gap-5 lg:gap-10`}
         >
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,15 +39,15 @@ const Footer = () => {
                 className="text-lg lg:text-4xl 4xl:text-7xl! text-white hover:text-[#d9d9d9] transition-colors! "
               />
             </div>
-          </a>
+          </a> */}
           <div className={`lg:w-3/5 text-white `}>
             <div
-              className={`text-sm lg:text-md lg:text-xl 4xl:text-3xl italic border-b-1 border-white leading-snug`}
+              className={`text-sm lg:text-md lg:text-xl 4xl:text-3xl italic border-b-1 border-white leading-relaxed lg:leading-loose`}
             >
               {lang == "Viet" ? "Liên hệ:" : "Contact me:"}
             </div>
             <div
-              className={`pt-3 text-xs lg:text-lg 4xl:text-2xl leading-snug`}
+              className={`pt-3 text-xs lg:text-lg 4xl:text-2xl leading-relaxed lg:leading-loose`}
             >
               <div>
                 <span className={`font-bold`}>P:</span> (+84) 908.665.656

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./ConsultationFormSection.module.scss";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import LogoListImage from "@/assets/images/assets/ConsultaionFormSection-LogoListImage-1.png";
+import LogoListImage from "@/assets/images/assets/ConsultaionFormSection-LogoListImage-2.png";
 import TuongVyImage from "@/assets/images/assets/ConsultaionFormSection-TuongVyImage-1.png";
 import ContactForm from "./contact-form/ContactForm";
 

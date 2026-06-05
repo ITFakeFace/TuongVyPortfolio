@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ZaloIcon from "@/assets/images/assets/ZaloButton-1.png";
+import LinkedInIcon from "@/assets/images/assets/Layout-LinkedInButton-1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ContactSidebar = () => {
@@ -12,6 +13,20 @@ const ContactSidebar = () => {
   return (
     <div className="fixed bottom-10 right-6 z-1000 flex flex-col gap-4 pointer-events-auto opacity-100">
       {/* Nút Zalo */}
+      <Link
+        href={"https://www.linkedin.com/in/tran-thanh-nu-tuong-vy-a9252732/"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition-all duration-300 hover:scale-110 active:scale-95 drop-shadow-lg"
+      >
+        <div className="w-14 h-14 sm:w-20 sm:h-20 relative">
+          <Image
+            src={LinkedInIcon}
+            alt="LinkedIn"
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </Link>
       <Link
         href={zaloLink}
         target="_blank"
