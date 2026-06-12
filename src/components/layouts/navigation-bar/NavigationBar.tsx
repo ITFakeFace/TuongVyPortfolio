@@ -14,7 +14,7 @@ const NavigationBar = () => {
 
   const options = [
     { label: "Eng", value: "Eng" },
-    { label: "Viet", value: "Viet" },
+    { label: "Vie", value: "Viet" },
   ];
 
   // Cấu trúc menu lấy từ t() để tự động dịch

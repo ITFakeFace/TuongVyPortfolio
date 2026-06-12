@@ -493,53 +493,53 @@ const HotTopicsSection = () => {
               {lang == "Viet"
                 ? renderTopicItem(
                     "01",
-                    "TRÍ TUỆ NHÂN TẠO (AI)",
+                    "AI & TĂNG TRƯỞNG THỰC CHIẾN TRONG KINH DOANH",
                     "AI không thay thế bạn, nhưng người biết sử dụng AI sẽ làm được điều đó.",
                     "ml-4 w-6/7 lg:w-6/7",
                   )
                 : renderTopicItem(
                     "01",
-                    "ARTIFICIAL INTELLIGENCE (AI)",
+                    "AI-DRIVEN BUSINESS GROWTH",
                     "AI won’t replace you—but those who use AI will.",
                     "ml-4 w-6/7 lg:w-6/7",
                   )}
               {lang == "Viet"
                 ? renderTopicItem(
                     "02",
-                    "KỸ NĂNG LÃNH ĐẠO",
+                    "HỆ THỐNG NĂNG LỰC LÃNH ĐẠO",
                     "Lãnh đạo là xây dựng hệ thống vận hành hiệu quả, không chỉ kiểm soát con người.",
                     "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
                   )
                 : renderTopicItem(
                     "02",
-                    "LEADERSHIP SKILLS",
+                    "LEADERSHIP EXCELLENCE FRAMEWORK",
                     "Leadership is about building effective systems, not just managing people.",
                     "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
                   )}
               {lang == "Viet"
                 ? renderTopicItem(
                     "03",
-                    "TÀI CHÍNH VÀ CHUYỂN ĐỔI SỐ",
+                    "TĂNG TRƯỞNG TRONG THỜI ĐẠI AI",
                     "Giai đoạn chuyển mình của mỗi doanh nghiệp trong thời đại ngân hàng số",
                     "ml-4 w-6/7 lg:ml-16 lg:w-6/7 ",
                   )
                 : renderTopicItem(
                     "03",
-                    "FINANCE & DIGITAL TRANSFORMATION",
+                    "THRIVING IN THE AI ERA",
                     "A pivotal phase for businesses in the digital banking era.",
                     "ml-4 w-6/7 lg:ml-16 lg:w-6/7",
                   )}
               {lang == "Viet"
                 ? renderTopicItem(
                     "04",
-                    "KINH TẾ THỊ TRƯỜNG",
-                    "Hiểu kinh tế thị trường là hiểu dòng tiền và hành vi khách hàng.",
+                    "ĐỒNG HÀNH PHÁT TRIỂN NĂNG LỰC TRẺ",
+                    "Nâng bước kiến thức cho sinh viên bằng kinh nghiệm thực chiến trong các mảng Digital, Marketing và Finance.",
                     "ml-4 w-6/7 lg:w-6/7",
                   )
                 : renderTopicItem(
                     "04",
-                    "MARKET ECONOMY",
-                    "Understanding the market means understanding cash flow and customer behavior.",
+                    "EMPOWERING YOUNG TALENT",
+                    "Bridging academic learning with real-world experience in Digital, Marketing, and Finance.",
                     "ml-4 w-6/7 lg:w-6/7",
                   )}
             </div>

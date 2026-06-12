@@ -6,6 +6,7 @@ import { PrimeReactProvider } from "primereact/api";
 import NavigationBar from "@/components/layouts/navigation-bar/NavigationBar";
 import Footer from "@/components/layouts/foooter/Footer";
 import ContactSidebar from "@/components/layouts/side-button-bar/ContactSidebar";
+import EventPopup from "@/components/generals/EventPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
             <NavigationBar />
             {children}
             <Footer />
+            <EventPopup />
             <ContactSidebar />
           </LanguageProvider>
         </PrimeReactProvider>

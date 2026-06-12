@@ -34,8 +34,12 @@ import BusinessGrowth from "@/assets/images/assets/ExplotionPeriodSection-Busine
 import BusinessGrowthEng from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowthEng-1.png";
 import HumanImage from "@/assets/images/assets/ExplotionPeriodSection-HumanImage-1.png";
 import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-2.png";
+import DecorSolutionPack1 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-1.png";
+import DecorSolutionPack2 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-2.png";
+import DecorSolutionPack3 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-3.png";
 import { useContactForm } from "@/context/ContactContext";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 interface Event {
   image: StaticImageData | string;
@@ -200,7 +204,837 @@ const EventSwiper = ({ events }: { events: Event[] }) => {
 const ExplotionPeriodSection = () => {
   const { lang } = useLanguage();
   const { openContactForm } = useContactForm();
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8, // Thời gian chạy animation của mỗi item
+        delay: index * 1, // Mỗi item cách nhau đúng 5 giây theo thứ tự index
+        ease: "easeOut" as const,
+      },
+    }),
+  };
+  const SolutionPackSectionDesktop = () => {
+    const componentStyles = {
+      headStyles:
+        "text-center font-bold text-[clamp(1.75rem,-0.125rem+1.9531vw,3rem)]",
+      priceText:
+        "text-center font-bold text-white text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]",
+      resultText:
+        "list-disc list-inside text-white mt-3 px-8 4xl:px-15 text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)]",
+      title:
+        "font-bold text-white text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)]",
+      quoteText:
+        "italic font-light text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+      targetText:
+        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+      contentText:
+        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+    };
+    return (
+      <div className={`lg:px-[15%] mt-40`}>
+        <div
+          className={`bg-clip-text text-transparent bg-linear-to-b from-[#F3C85F] via-[#FFDC87] via-51% to-[FBB200] font-bold text- mb-20 text-center text-[clamp(3rem,0.75rem+2.3438vw,4.5rem)]`}
+        >
+          {lang == "Viet" ? "CÁC GÓI GIẢI PHÁP" : "STRATEGIC SOLUTION PACKAGES"}
+        </div>
 
+        <motion.div
+          custom={0} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-2 rounded-4xl flex flex-row relative`}
+        >
+          <div className={`w-2/7`}>
+            <Image
+              src={DecorSolutionPack1}
+              alt="Decor Solution Pack"
+              className={`w-full h-auto scale-110 py-5 `}
+            />
+          </div>
+          <div
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+          >
+            <div
+              className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 1" : "PACKAGE 1"}</div>
+                <div>BUSINESS GROWTH </div>
+                <div>DIAGNOSTIC & STRATEGY</div>
+              </div>
+              <div className="text-center font-semibold text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)] mt-10">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Báo cáo đánh giá doanh nghiệp 360°"
+                      : "360° Business Health Assessment"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bản thiết kế chiến lược tăng trưởng"
+                      : "Customized Growth Strategy Blueprint"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Kế hoạch vận hành 12 tháng"
+                      : "12-Month Execution Plan"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Lộ trình triển khai chi tiết"
+                      : "Detailed Implementation Roadmap"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={componentStyles.priceText}>
+              {lang == "Viet"
+                ? "Giá tham khảo: 50 - 300 triệu/ dự án"
+                : "Indicative Investment: 50 - 300 million/ project"}
+            </div>
+          </div>
+          <div
+            className={`w-2/7 flex flex-col gap-5 text-white pl-5 py-5 4xl:pl-8 4xl:py-8`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Xác định rõ điểm nghẽn tăng trưởng và lộ trình chiến lược được thiết kế riêng"'
+                : '"Identify growth constraints and develop a tailored strategic roadmap for sustainable expansion."'}
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Chủ doanh nghiệp SME"
+                    : "SME Business Owners"}
+                </li>
+                <li>{lang == "Viet" ? "Founder/ CEO" : "Founder/ CEO"}</li>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp từ 10 tỷ đến 500 tỷ doanh thu"
+                    : "Companies with annual revenue of VND 1–50 million (10–500 billion VND)"}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Đánh giá toàn diện sức khỏe doanh nghiệp"
+                    : "Comprehensive Business Health Assessment"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phân tích mô hình kinh doanh và lợi nhuận"
+                    : "Business Model & Profitability Analysis"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xác định điểm nghẽn tăng trưởng"
+                    : "Identification of Growth Bottlenecks"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng chiến lược tăng trưởng và mở rộng"
+                    : "Growth & Expansion Strategy Design"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Định hướng chuyển đổi AI & Partnership"
+                    : "AI Transformation & Partnership Strategy"}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Button
+            unstyled
+            label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+            className={`absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%] text-white bg-[#1F2833] px-15 py-2 4xl:px-20 border-[#C8971F] border-2 rounded-full font-bold z-50 text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] cursor-pointer hover:scale-110 transition-all duration-300`}
+            onClick={openContactForm}
+          />
+        </motion.div>
+
+        <motion.div
+          custom={1} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-2 rounded-4xl flex flex-row-reverse relative mt-30 4xl:mt-40`}
+        >
+          <div className={`w-2/7`}>
+            <Image
+              src={DecorSolutionPack2}
+              alt="Decor Solution Pack"
+              className={`w-full h-auto scale-105 py-8 -translate-x-5 4xl:-translate-x-4`}
+            />
+          </div>
+          <div
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+          >
+            <div
+              className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 2" : "PACKAGE 2"}</div>
+                <div>GO - TO - MARKET & </div>
+                <div>SALES TRANSFORMATION</div>
+              </div>
+              <div className="text-center font-semibold text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)] mt-10">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Kế hoạch Go - to - Market thực chiến"
+                      : "Go-to-Market Execution Plan"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bộ quy trình bán hàng"
+                      : "Sales Operating Framework"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Khung KPI & chính sách thưởng"
+                      : "KPI Framework & Incentive Scheme"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Dashboard quản trị kinh doanh"
+                      : "Sales Management Dashboard"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={componentStyles.priceText}>
+              {lang == "Viet"
+                ? "Giá tham khảo: 80 - 500 triệu/ dự án"
+                : "Indicative Investment: 80 - 500 million/ project"}
+            </div>
+          </div>
+          <div
+            className={`w-2/7 flex flex-col gap-5 text-white pl-5 py-5 4xl:pl-8 4xl:py-8`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Chuyển hóa thành hệ thống tăng trưởng góp phần tạo ra doanh thu thực tế"'
+                : '"Transforming growth systems into measurable revenue outcomes”'}
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp ra mắt sản phẩm mới"
+                    : "Companies launching new products"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Công ty cần tăng trưởng doanh thu"
+                    : "Businesses seeking revenue acceleration"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp muốn xây dựng hệ thống bán hàng chuyên nghiệp"
+                    : "Organizations building a scalable sales system"}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Chiến lược Go - to - Market"
+                    : "Go-to-Market Strategy Design"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng hệ thống bán hàng"
+                    : "Sales System Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Thiết kế KPI & chính sách thúc đẩy"
+                    : "KPI & Sales Incentive Framework"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phát triển hệ sinh thái đối tác"
+                    : "Digital Sales Platform Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Ứng dụng AI cho bán hàng & marketing"
+                    : "AI Applications for Sales & Marketing"}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Button
+            unstyled
+            label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+            className={`absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%] text-white bg-[#1F2833] px-15 py-2 4xl:px-20 border-[#C8971F] border-2 rounded-full font-bold z-50 text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] cursor-pointer hover:scale-110 transition-all duration-300`}
+            onClick={openContactForm}
+          />
+        </motion.div>
+
+        <motion.div
+          custom={2} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-2 rounded-4xl flex flex-row relative mt-30 4xl:mt-40`}
+        >
+          <div className={`w-2/7`}>
+            <Image
+              src={DecorSolutionPack3}
+              alt="Decor Solution Pack"
+              className={`w-5/6 h-auto scale-125 py-8 rotate-[5deg] -translate-y-2 4xl:-translate-y-5 translate-x-8 4xl:translate-x-5`}
+            />
+          </div>
+          <div
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+          >
+            <div
+              className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 3" : "PACKAGE 3"}</div>
+                <div>FRACTIONAL CHIEF</div>
+                <div>GROWTH OFFICER</div>
+              </div>
+              <div className="text-center font-semibold text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)] mt-10">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bổ sung lãnh đạo tăng trưởng cấp cao"
+                      : "Executive Growth Leadership"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Tối ưu chi phí sở hữu đội ngũ C - Levels"
+                      : "Lower C-Level Talent Costs"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Tăng tốc thực thi chiến lược"
+                      : "Faster Strategy Execution"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={componentStyles.priceText}>
+              {lang == "Viet"
+                ? "Giá tham khảo: 40 - 120 triệu/ dự án"
+                : "Indicative Investment: 40 - 120 million/ project"}
+            </div>
+          </div>
+          <div
+            className={`w-2/7 flex flex-col gap-5 text-white pl-5 py-5 4xl:pl-8 4xl:py-8`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Sở hữu năng lực lãnh đạo tăng trưởng cấp điều hành với chi phí linh hoạt và hiệu quả”'
+                : '"Gain executive-level growth leadership with maximum flexibility and cost efficiency”'}
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp chưa cần thuê CEO hoặc CGO toàn thời gian"
+                    : "Companies not yet ready for a full-time CEO or CGO"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Công ty cần chuyên gia tăng trưởng cấp điều hành"
+                    : "Businesses seeking executive-level growth expertise"}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng chiến lược tăng trưởng"
+                    : "Growth Strategy Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tối ưu doanh thu và lợi nhuận"
+                    : "Revenue & Profit Optimization"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phát triển Sales & Partnership"
+                    : "Sales & Partnership Expansion"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Dẫn dắt chuyển đổi AI"
+                    : "AI Transformation Leadership"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Quản trị thực thi và KPI"
+                    : "Performance & KPI Management"}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Button
+            unstyled
+            label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+            className={`absolute bottom-0 left-[50%] translate-x-[-50%] translate-y-[50%] text-white bg-[#1F2833] px-15 py-2 4xl:px-20 border-[#C8971F] border-2 rounded-full font-bold z-50 text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] cursor-pointer hover:scale-110 transition-all duration-300`}
+            onClick={openContactForm}
+          />
+        </motion.div>
+      </div>
+    );
+  };
+  const SolutionPackSectionMobile = () => {
+    const componentStyles = {
+      headStyles: "text-center font-bold text-[0.625rem]",
+      priceText: "text-center font-bold text-white text-[0.625rem] mb-3",
+      resultText: "list-disc list-inside text-white mt-3 px-2 text-[0.5rem]",
+      title: "font-bold text-white text-[0.5rem] mt-3",
+      quoteText:
+        "italic font-light text-white text-[0.5rem] leading-relaxed pl-4 pt-6",
+      targetText:
+        "list-disc list-inside text-white mt-1 px-1 text-[0.5rem] leading-relaxed",
+      contentText:
+        "list-disc list-inside text-white mt-1 px-1 text-[0.5rem] leading-relaxed",
+    };
+    return (
+      <div className={`px-8 mt-40`}>
+        <div
+          className={`bg-clip-text text-transparent bg-linear-to-b from-[#F3C85F] via-[#FFDC87] via-51% to-[FBB200] font-extrabold text- mb-20 text-center text-[1.15rem]`}
+        >
+          {lang == "Viet" ? "CÁC GÓI GIẢI PHÁP" : "STRATEGIC SOLUTION PACKAGES"}
+        </div>
+        <motion.div
+          custom={0} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-1 rounded-4xl flex flex-row relative pb-2`}
+        >
+          <div
+            className={`w-1/2 flex flex-col items-center justify-between pb-2`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Xác định rõ điểm nghẽn tăng trưởng và lộ trình chiến lược được thiết kế riêng"'
+                : '"Identify growth constraints and develop a tailored strategic roadmap for sustainable expansion."'}
+            </div>
+            <Image
+              src={DecorSolutionPack1}
+              alt="Decor Solution Pack"
+              className={`w-full h-auto py-5 `}
+            />
+            <div>
+              <div className={componentStyles.priceText}>
+                {lang == "Viet" ? "Giá tham khảo:" : "Indicative Investment:"}
+                <br />
+                {lang == "Viet"
+                  ? "50 - 300 triệu/ dự án"
+                  : "50 - 300 million/ project"}
+              </div>
+              <Button
+                unstyled
+                label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+                className={`text-white bg-[#1F2833] px-5 py-2 border-[#C8971F] border-1 rounded-full font-bold z-50 text-[0.625rem] cursor-pointer hover:scale-110 transition-all duration-300 mx-auto`}
+                onClick={openContactForm}
+              />
+            </div>
+          </div>
+          <div className={`w-1/2 flex flex-col gap-3 -mt-10 4xl:-mt-15 pb-6`}>
+            <div
+              className={`w-full border-[#C8971F] border-1 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-6`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 1" : "PACKAGE 1"}</div>
+                <div>BUSINESS GROWTH </div>
+                <div>DIAGNOSTIC & STRATEGY</div>
+              </div>
+              <div className="text-center font-semibold text-[0.625rem] mt-5">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Báo cáo đánh giá doanh nghiệp 360°"
+                      : "360° Business Health Assessment"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bản thiết kế chiến lược tăng trưởng"
+                      : "Customized Growth Strategy Blueprint"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Kế hoạch vận hành 12 tháng"
+                      : "12-Month Execution Plan"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Lộ trình triển khai chi tiết"
+                      : "Detailed Implementation Roadmap"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Chủ doanh nghiệp SME"
+                    : "SME Business Owners"}
+                </li>
+                <li>{lang == "Viet" ? "Founder/ CEO" : "Founder/ CEO"}</li>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp từ 10 tỷ đến 500 tỷ doanh thu"
+                    : "Companies with annual revenue of VND 1–50 million (10–500 billion VND)"}
+                </li>
+              </ul>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Đánh giá toàn diện sức khỏe doanh nghiệp"
+                    : "Comprehensive Business Health Assessment"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phân tích mô hình kinh doanh và lợi nhuận"
+                    : "Business Model & Profitability Analysis"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xác định điểm nghẽn tăng trưởng"
+                    : "Identification of Growth Bottlenecks"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng chiến lược tăng trưởng và mở rộng"
+                    : "Growth & Expansion Strategy Design"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Định hướng chuyển đổi AI & Partnership"
+                    : "AI Transformation & Partnership Strategy"}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          custom={1} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-1 rounded-4xl flex flex-row relative pb-2 mt-20`}
+        >
+          <div className={`w-1/2 flex flex-col gap-3 -mt-10 4xl:-mt-15 pb-10`}>
+            <div
+              className={`w-full border-[#C8971F] border-1 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-6`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 2" : "PACKAGE 2"}</div>
+                <div>GO - TO - MARKET & </div>
+                <div>SALES TRANSFORMATION</div>
+              </div>
+              <div className="text-center font-semibold text-[0.625rem] mt-5">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Kế hoạch Go - to - Market thực chiến"
+                      : "Go-to-Market Execution Plan"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bộ quy trình bán hàng"
+                      : "Sales Operating Framework"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Khung KPI & chính sách thưởng"
+                      : "KPI Framework & Incentive Scheme"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Dashboard quản trị kinh doanh"
+                      : "Sales Management Dashboard"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp ra mắt sản phẩm mới"
+                    : "Companies launching new products"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Công ty cần tăng trưởng doanh thu"
+                    : "Businesses seeking revenue acceleration"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp muốn xây dựng hệ thống bán hàng chuyên nghiệp"
+                    : "Organizations building a scalable sales system"}
+                </li>
+              </ul>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Chiến lược Go - to - Market"
+                    : "Go-to-Market Strategy Design"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng hệ thống bán hàng"
+                    : "Sales System Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Thiết kế KPI & chính sách thúc đẩy"
+                    : "KPI & Sales Incentive Framework"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phát triển hệ sinh thái đối tác"
+                    : "Digital Sales Platform Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Ứng dụng AI cho bán hàng & marketing"
+                    : "AI Applications for Sales & Marketing"}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className={`w-1/2 flex flex-col items-center  justify-between pb-2`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Chuyển hóa thành hệ thống tăng trưởng góp phần tạo ra doanh thu thực tế"'
+                : '"Transforming growth systems into measurable revenue outcomes”'}
+            </div>
+            <Image
+              src={DecorSolutionPack2}
+              alt="Decor Solution Pack"
+              className={`w-full h-auto py-5 `}
+            />
+            <div>
+              <div className={componentStyles.priceText}>
+                {lang == "Viet" ? "Giá tham khảo:" : "Indicative Investment:"}
+                <br />
+                {lang == "Viet"
+                  ? "80 - 500 triệu/ dự án"
+                  : "80 - 500 million/ project"}
+              </div>
+              <Button
+                unstyled
+                label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+                className={`text-white bg-[#1F2833] px-5 py-2 border-[#C8971F] border-1 rounded-full font-bold z-50 text-[0.625rem] cursor-pointer hover:scale-110 transition-all duration-300 mx-auto`}
+                onClick={openContactForm}
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          custom={2} // Index 0 -> Delay 0s
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }} // Kích hoạt khi scroll cách màn hình 100px
+          variants={itemVariants}
+          className={`w-full border-[#C8971F] bg-linear-to-b from-[#000000]/50 to-[#011B40]/50 border-1 rounded-4xl flex flex-row relative pb-2 mt-20`}
+        >
+          <div
+            className={`w-1/2 flex flex-col items-center justify-between pb-2`}
+          >
+            <div className={componentStyles.quoteText}>
+              {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
+              <br />
+              {lang == "Viet"
+                ? '"Sở hữu năng lực lãnh đạo tăng trưởng cấp điều hành với chi phí linh hoạt và hiệu quả”'
+                : '"Gain executive-level growth leadership with maximum flexibility and cost efficiency”'}
+            </div>
+            <Image
+              src={DecorSolutionPack3}
+              alt="Decor Solution Pack"
+              className={`w-full h-auto py-5 pl-3`}
+            />
+            <div>
+              <div className={componentStyles.priceText}>
+                {lang == "Viet" ? "Giá tham khảo:" : "Indicative Investment:"}
+                <br />
+                {lang == "Viet"
+                  ? "80 - 120 triệu/ dự án"
+                  : "80 - 120 million/ project"}
+              </div>
+              <Button
+                unstyled
+                label={lang == "Viet" ? "CHỌN GIẢI PHÁP" : "UNLOCK GROWTH"}
+                className={`text-white bg-[#1F2833] px-5 py-2 border-[#C8971F] border-1 rounded-full font-bold z-50 text-[0.625rem] cursor-pointer hover:scale-110 transition-all duration-300 mx-auto`}
+                onClick={openContactForm}
+              />
+            </div>
+          </div>
+          <div className={`w-1/2 flex flex-col gap-3 -mt-10 4xl:-mt-15 pb-12`}>
+            <div
+              className={`w-full border-[#C8971F] border-1 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-6`}
+            >
+              <div className={componentStyles.headStyles}>
+                <div>{lang == "Viet" ? "GÓI 3" : "PACKAGE 3"}</div>
+                <div>FRACTIONAL CHIEF </div>
+                <div>GROWTH OFFICER</div>
+              </div>
+              <div className="text-center font-semibold text-[0.625rem] mt-5">
+                {lang == "Viet" ? "Kết quả đạt được" : "Key Deliverables"}
+              </div>
+              <div>
+                <ul className={componentStyles.resultText}>
+                  <li>
+                    {lang == "Viet"
+                      ? "Bổ sung lãnh đạo tăng trưởng cấp cao"
+                      : "Executive Growth Leadership"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Tối ưu chi phí sở hữu đội ngũ C - Levels"
+                      : "Lower C-Level Talent Costs"}
+                  </li>
+                  <li>
+                    {lang == "Viet"
+                      ? "Tăng tốc thực thi chiến lược"
+                      : "Faster Strategy Execution"}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Đối tượng" : "Target Clients"}
+              </div>
+              <ul className={componentStyles.targetText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Doanh nghiệp chưa cần thuê CEO hoặc CGO toàn thời gian"
+                    : "Companies not yet ready for a full-time CEO or CGO"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Công ty cần chuyên gia tăng trưởng cấp điều hành"
+                    : "Businesses seeking executive-level growth expertise"}
+                </li>
+              </ul>
+            </div>
+            <div className={`pl-3`}>
+              <div className={componentStyles.title}>
+                {lang == "Viet" ? "Nội dung tư vấn" : "Consulting Scope"}
+              </div>
+              <ul className={componentStyles.contentText}>
+                <li>
+                  {lang == "Viet"
+                    ? "Xây dựng chiến lược tăng trưởng"
+                    : "Growth Strategy Development"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tối ưu doanh thu và lợi nhuận"
+                    : "Revenue & Profit Optimization"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Phát triển Sales & Partnership"
+                    : "Sales & Partnership Expansion"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Dẫn dắt chuyển đổi AI"
+                    : "AI Transformation Leadership"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Quản trị thực thi và KPI"
+                    : "Performance & KPI Management"}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  };
   return (
     <>
       <div
@@ -400,6 +1234,7 @@ const ExplotionPeriodSection = () => {
           ]}
         />
         <div
+          id="strategy-consulting"
           className={`flex flex-col lg:flex-row mt-60 lg:mt-40 relative z-20 items-center ${styles.strategyConsultingSection}`}
         >
           <div
@@ -500,6 +1335,14 @@ const ExplotionPeriodSection = () => {
             </Button>
           </div>
         </div>
+
+        <div className={`hidden lg:block`}>
+          <SolutionPackSectionDesktop />
+        </div>
+        <div className={`block lg:hidden`}>
+          <SolutionPackSectionMobile />
+        </div>
+
         <div className={`w-full flex flex-col`}>
           <div
             className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-between items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}

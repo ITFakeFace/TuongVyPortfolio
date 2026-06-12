@@ -288,7 +288,7 @@ const ExperienceSection = () => {
             <div
               className={`font-bold text-[14px] lg:text-[1.5rem] text-center leading-normal`}
             >
-              {lang == "Viet" ? "Đồng sáng lập" : "Co - Founder"}
+              {lang == "Viet" ? "Cố vấn chiến lược" : "Strategic Advisor"}
             </div>
             <div className={`text-center text-[12px] lg:text-[1rem]`}>
               PNP Viet Nam Trading Solutions Co.Ltd

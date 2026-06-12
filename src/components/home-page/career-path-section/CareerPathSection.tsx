@@ -362,8 +362,8 @@ const CareerPathSection = () => {
                   className={`text-[#0957C9] font-bold text-[clamp(1.75rem,0.25rem+1.5625vw,2.75rem)]`}
                 >
                   {lang == "Viet"
-                    ? "QUY TRÌNH 04 GIAI ĐOẠN"
-                    : "04 PHASE JOURNEY"}
+                    ? "QUY TRÌNH 03 GIAI ĐOẠN"
+                    : "03 PHASE JOURNEY"}
                 </div>
                 <div
                   className={`text-[#011B40] font-medium text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)]`}
@@ -563,7 +563,7 @@ const CareerPathSection = () => {
           >
             <div className={`flex flex-col text-center`}>
               <div className={`text-[#0957C9] font-bold text-lg`}>
-                {lang == "Viet" ? "QUY TRÌNH 04 GIAI ĐOẠN" : "04 PHASE JOURNEY"}
+                {lang == "Viet" ? "QUY TRÌNH 03 GIAI ĐOẠN" : "03 PHASE JOURNEY"}
               </div>
               <div className={`text-[#011B40] font-medium text-[10px]`}>
                 {lang == "Viet"
