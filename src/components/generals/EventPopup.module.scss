@@ -1,0 +1,28 @@
+.noGapCarousel {
+  /* Ghi đè item */
+  :global(.p-carousel-content) {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+  :global(.p-carousel-item) {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+  :global(.p-carousel-items-content) {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  /* Ghi đè container chứa item */
+  :global(.p-carousel-items-container) {
+    border: none !important;
+    gap: 0 !important;
+  }
+  :global(.p-carousel-container) {
+    border: none !important;
+    gap: 0 !important;
+  }
+}

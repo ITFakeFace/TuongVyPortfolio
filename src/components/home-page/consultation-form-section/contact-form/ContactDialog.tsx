@@ -93,7 +93,7 @@ const ContactDialog = ({
       <div className="flex items-center justify-between w-full pr-4">
         {/* Tiêu đề (Căn trái hoặc giữa tùy bạn, ở đây tôi dùng flex-1 để chiếm chỗ) */}
         <span className="text-[clamp(1.2rem,3vw,1.75rem)] font-bold text-white">
-          {lang === "Viet" ? "ĐĂNG KÝ TƯ VẤN" : "BOOK A CONSULTATION"}
+          {lang === "Viet" ? "THÔNG TIN LIÊN HỆ" : "CONTACT INFORMATION"}
         </span>
 
         {/* Nút X tùy chỉnh */}
@@ -332,7 +332,7 @@ const ContactDialog = ({
           {/* Nội dung */}
           <div className="flex flex-col gap-1">
             <label className="text-white font-bold ml-1 text-lg">
-              {lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content"}
+              {lang === "Viet" ? "Nội dung" : "Content"}
             </label>
             <Controller
               name="content"

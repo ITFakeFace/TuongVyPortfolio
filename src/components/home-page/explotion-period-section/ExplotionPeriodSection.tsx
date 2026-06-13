@@ -218,20 +218,20 @@ const ExplotionPeriodSection = () => {
   };
   const SolutionPackSectionDesktop = () => {
     const componentStyles = {
-      headStyles:
-        "text-center font-bold text-[clamp(1.75rem,-0.125rem+1.9531vw,3rem)]",
+      headStyles: `text-center font-bold text-[clamp(1.75rem,-0.125rem+1.9531vw,3rem)]
+        bg-clip-text text-transparent bg-linear-to-r from-[#C8971F] to-[#FFD368]`,
       priceText:
         "text-center font-bold text-white text-[clamp(1rem,-0.125rem+1.1719vw,1.75rem)]",
       resultText:
-        "list-disc list-inside text-white mt-3 px-8 4xl:px-15 text-[clamp(1.125rem,0.1875rem+0.9766vw,1.75rem)]",
+        "list-disc list-inside text-white mt-3 px-8 4xl:px-15 text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)]",
       title:
-        "font-bold text-white text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)]",
+        "font-bold text-white text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)]",
       quoteText:
-        "italic font-light text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+        "italic font-light text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
       targetText:
-        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
       contentText:
-        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.625rem,-0.125rem+0.7813vw,1.125rem)] leading-loose",
+        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
     };
     return (
       <div className={`lg:px-[15%] mt-40`}>
@@ -257,7 +257,7 @@ const ExplotionPeriodSection = () => {
             />
           </div>
           <div
-            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-12 4xl:pb-18`}
           >
             <div
               className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
@@ -302,7 +302,7 @@ const ExplotionPeriodSection = () => {
             </div>
           </div>
           <div
-            className={`w-2/7 flex flex-col gap-5 text-white pl-5 py-5 4xl:pl-8 4xl:py-8`}
+            className={`w-2/7 flex flex-col gap-5 text-white px-5 py-5 4xl:px-8 4xl:py-8`}
           >
             <div className={componentStyles.quoteText}>
               {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
@@ -386,7 +386,7 @@ const ExplotionPeriodSection = () => {
             />
           </div>
           <div
-            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-10 4xl:pb-15`}
           >
             <div
               className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
@@ -519,7 +519,7 @@ const ExplotionPeriodSection = () => {
             />
           </div>
           <div
-            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-8 4xl:pb-10 4xl:pb-15`}
+            className={`w-3/7 flex flex-col justify-between -mt-10 4xl:-mt-15 pb-10 4xl:pb-16`}
           >
             <div
               className={`w-full border-[#C8971F] border-2 bg-linear-to-b rounded-4xl from-[#000000] to-[#011B40] text-white py-10 4xl:py-15`}
@@ -630,7 +630,8 @@ const ExplotionPeriodSection = () => {
   };
   const SolutionPackSectionMobile = () => {
     const componentStyles = {
-      headStyles: "text-center font-bold text-[0.625rem]",
+      headStyles: `text-center font-bold text-[0.625rem] 
+      bg-clip-text text-transparent bg-linear-to-r from-[#C8971F] to-[#FFD368]`,
       priceText: "text-center font-bold text-white text-[0.625rem] mb-3",
       resultText: "list-disc list-inside text-white mt-3 px-2 text-[0.5rem]",
       title: "font-bold text-white text-[0.5rem] mt-3",
@@ -1377,6 +1378,7 @@ const ExplotionPeriodSection = () => {
             </a>
           </div>
           <Image
+          id="pnp-team"
             src={BannerImage}
             alt="Banner Image"
             className={`w-full h-auto mt-5`}
