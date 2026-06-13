@@ -554,8 +554,8 @@ const ExplotionPeriodSection = () => {
             </div>
             <div className={componentStyles.priceText}>
               {lang == "Viet"
-                ? "Giá tham khảo: 80 - 120 triệu/ tháng"
-                : "Indicative Investment: 80 - 120 million/ month"}
+                ? "Giá tham khảo: 40 - 120 triệu/ tháng"
+                : "Indicative Investment: 40 - 120 million/ month"}
             </div>
           </div>
           <div
@@ -939,8 +939,8 @@ const ExplotionPeriodSection = () => {
                 {lang == "Viet" ? "Giá tham khảo:" : "Indicative Investment:"}
                 <br />
                 {lang == "Viet"
-                  ? "80 - 120 triệu/ tháng"
-                  : "80 - 120 million/ month"}
+                  ? "40 - 120 triệu/ tháng"
+                  : "40 - 120 million/ month"}
               </div>
               <Button
                 unstyled
