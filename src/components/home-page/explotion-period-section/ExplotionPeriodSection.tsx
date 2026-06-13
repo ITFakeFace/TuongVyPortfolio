@@ -229,7 +229,7 @@ const ExplotionPeriodSection = () => {
       quoteText:
         "italic font-light text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
       targetText:
-        "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
+        "list-disc list-inside text-white mt-3 px-2 pr-4 4xl:px-3 text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
       contentText:
         "list-disc list-inside text-white mt-3 px-2 4xl:px-3 text-[clamp(0.6875rem,-0.0625rem+0.7813vw,1.1875rem)] leading-loose",
     };
@@ -302,7 +302,7 @@ const ExplotionPeriodSection = () => {
             </div>
           </div>
           <div
-            className={`w-2/7 flex flex-col gap-5 text-white px-5 py-5 4xl:px-6 4xl:py-8`}
+            className={`w-2/7 flex flex-col gap-5 text-white px-3 py-5 4xl:px-5 4xl:py-8`}
           >
             <div className={componentStyles.quoteText}>
               {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
@@ -351,7 +351,7 @@ const ExplotionPeriodSection = () => {
                 </li>
                 <li>
                   {lang == "Viet"
-                    ? "Xây dựng chiến lược tăng trưởng và mở rộng"
+                    ? "Xây dựng chiến lược mở rộng tăng trưởng"
                     : "Growth & Expansion Strategy Design"}
                 </li>
                 <li>
