@@ -302,7 +302,7 @@ const ExplotionPeriodSection = () => {
             </div>
           </div>
           <div
-            className={`w-2/7 flex flex-col gap-5 text-white px-5 py-5 4xl:px-8 4xl:py-8`}
+            className={`w-2/7 flex flex-col gap-5 text-white px-5 py-5 4xl:px-6 4xl:py-8`}
           >
             <div className={componentStyles.quoteText}>
               {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
@@ -324,7 +324,7 @@ const ExplotionPeriodSection = () => {
                 <li>{lang == "Viet" ? "Founder/ CEO" : "Founder/ CEO"}</li>
                 <li>
                   {lang == "Viet"
-                    ? "Doanh nghiệp từ 10 tỷ đến 500 tỷ doanh thu"
+                    ? "Doanh nghiệp 10 tỷ đến 500 tỷ doanh thu"
                     : "Companies with annual revenue of VND 1–50 million (10–500 billion VND)"}
                 </li>
               </ul>
@@ -554,8 +554,8 @@ const ExplotionPeriodSection = () => {
             </div>
             <div className={componentStyles.priceText}>
               {lang == "Viet"
-                ? "Giá tham khảo: 40 - 120 triệu/ dự án"
-                : "Indicative Investment: 40 - 120 million/ project"}
+                ? "Giá tham khảo: 80 - 120 triệu/ tháng"
+                : "Indicative Investment: 80 - 120 million/ month"}
             </div>
           </div>
           <div
@@ -565,7 +565,7 @@ const ExplotionPeriodSection = () => {
               {lang == "Viet" ? "Giá trị cuối cùng:" : "Ultimate Value:"}
               <br />
               {lang == "Viet"
-                ? '"Sở hữu năng lực lãnh đạo tăng trưởng cấp điều hành với chi phí linh hoạt và hiệu quả”'
+                ? '"Sở hữu năng lực lãnh đạo tăng trưởng cấp điều hành với chi phí linh hoạt và hiệu quả"'
                 : '"Gain executive-level growth leadership with maximum flexibility and cost efficiency”'}
             </div>
             <div>
@@ -939,8 +939,8 @@ const ExplotionPeriodSection = () => {
                 {lang == "Viet" ? "Giá tham khảo:" : "Indicative Investment:"}
                 <br />
                 {lang == "Viet"
-                  ? "80 - 120 triệu/ dự án"
-                  : "80 - 120 million/ project"}
+                  ? "80 - 120 triệu/ tháng"
+                  : "80 - 120 million/ month"}
               </div>
               <Button
                 unstyled
@@ -1378,7 +1378,7 @@ const ExplotionPeriodSection = () => {
             </a>
           </div>
           <Image
-          id="pnp-team"
+            id="pnp-team"
             src={BannerImage}
             alt="Banner Image"
             className={`w-full h-auto mt-5`}
