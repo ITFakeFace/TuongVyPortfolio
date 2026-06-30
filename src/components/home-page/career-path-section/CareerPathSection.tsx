@@ -66,14 +66,10 @@ const CareerPathSection = () => {
     </a>
   );
   const filmItems = [
-    renderFilmItems(
-      'WORKSHOP SERIES DAY 2: "WHO\'S REALLY IN CONTROL?" (3/5/2026)',
-      "#latest-events",
-    ),
-    renderFilmItems(
-      "WORLD FINANCIAL INNOVATION SERIES (19 - 20/5/2026)",
-      "#latest-events",
-    ),
+    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
+    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
+    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
+    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
   ];
   const renderBoostCareerItems = (item: BoostCareerItemProps) => {
     return (

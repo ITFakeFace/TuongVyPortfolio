@@ -14,6 +14,7 @@ import CertificateImage8 from "@/assets/images/assets/CertificateSection-Certifi
 import CertificateImage9 from "@/assets/images/assets/CertificateSection-CertificateImage-9.png";
 import CertificateImage10 from "@/assets/images/assets/CertificateSection-CertificateImage-10.jpg";
 import CertificateImage11 from "@/assets/images/assets/CertificateSection-CertificateImage-11.png";
+import CertificateImage12 from "@/assets/images/assets/CertificateSection-CertificateImage-12.png";
 import PartnerCertificateImage1 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-1.png";
 import PartnerCertificateImage2 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-2.png";
 import PartnerCertificateImage3 from "@/assets/images/assets/CertificateSection-PartnerCertificateImage-3.png";
@@ -56,16 +57,16 @@ const CertificateSection = () => {
       image: CertificateImage11,
       text: {
         Viet: {
-          title: "TRAINERPRO - PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
-          author: "SUCCESS Training & Coaching",
+          title: "PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
+          author: "Success Training and Coaching",
           description:
-            "Khóa học nâng cao tư duy, kỹ năng điều phối và phương pháp giảng dạy tương tác cao, giúp các chuyên gia làm chủ lớp học và tối ưu hóa hiệu quả đào tạo.",
+            "Kỹ năng chuyên sâu trang bị cho giảng viên, chuyên gia nhân sự và quản lý các phương pháp thiết kế, xây dựng và thực hiện một buổi đào tạo lôi cuốn, hiệu quả cao.",
         },
         Eng: {
-          title: "TRAINERPRO - PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
-          author: "SUCCESS Training & Coaching",
+          title: "PROFESSIONAL AND INTERACTIVE TRAINING SKILLS",
+          author: "Success Training and Coaching",
           description:
-            "An advanced program designed to strengthen facilitation, instructional design, and interactive teaching capabilities—enabling professionals to lead impactful learning experiences and maximize training effectiveness.",
+            "An advanced program equipping trainers, HR professionals, and managers with proven methodologies to design, facilitate, and deliver highly engaging, high-impact training sessions.",
         },
       },
     },

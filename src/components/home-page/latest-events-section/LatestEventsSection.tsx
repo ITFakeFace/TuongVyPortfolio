@@ -3,6 +3,7 @@ import LatestEventsText from "@/assets/images/texts/LatestEventsSection-LatestEv
 import EventImage1 from "@/assets/images/assets/LatestEventsSection-EventImage-1.png";
 import EventImage2 from "@/assets/images/assets/LatestEventsSection-EventImage-2.png";
 import EventImage3 from "@/assets/images/assets/LatestEventsSection-EventImage-3.png";
+import EventImage4 from "@/assets/images/assets/LatestEventsSection-EventImage-4.png";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import styles from "./LatestEventsSection.module.scss";
@@ -47,27 +48,27 @@ const LatestEventsSection = () => {
     //   destination: "Online",
     // },
     {
-      image: EventImage2,
-      url: "https://vietnam.worldfis.com/",
+      image: EventImage4,
+      url: "",
       title: {
-        Viet: "WORLD FINANCIAL INNOVATION SERIES",
-        Eng: "WORLD FINANCIAL INNOVATION SERIES",
+        Viet: "MISSION: AI POSSIBLE",
+        Eng: "MISSION: AI POSSIBLE",
       },
-      guest: { Viet: "Khách mời", Eng: "Guest" },
-      time: "19 - 20/5/2026",
-      destination: { Viet: "Meliá Hà Nội", Eng: "Meliá Ha Noi" },
+      guest: { Viet: "Diễn giả", Eng: "Speaker" },
+      time: "14/06/2023",
+      destination: { Viet: "Online", Eng: "Online" },
     },
-    {
-      image: EventImage3,
-      url: "https://biztech.biz.vn/",
-      title: {
-        Viet: "BIZTECH 2026",
-        Eng: "BIZTECH 2026",
-      },
-      guest: { Viet: "Khách mời", Eng: "Guest" },
-      time: "12 - 13/05/2026",
-      destination: { Viet: "Khách sạn REX, TPHCM", Eng: "REX Hotel, TPHCM" },
-    },
+    // {
+    //   image: EventImage3,
+    //   url: "https://biztech.biz.vn/",
+    //   title: {
+    //     Viet: "BIZTECH 2026",
+    //     Eng: "BIZTECH 2026",
+    //   },
+    //   guest: { Viet: "Khách mời", Eng: "Guest" },
+    //   time: "12 - 13/05/2026",
+    //   destination: { Viet: "Khách sạn REX, TPHCM", Eng: "REX Hotel, TPHCM" },
+    // },
   ];
   const renderInfoBox = (
     title: string,
@@ -82,7 +83,9 @@ const LatestEventsSection = () => {
           className={`
           /* Mobile: size nhỏ hơn, padding ít hơn */
           text-[15px] lg:text-[clamp(1.125rem,-0.1875rem+1.3672vw,2rem)]
-          lg:min-h-[clamp(105px,73px+2.083vw,113px)]
+          min-h-[50px]
+          #lg:min-h-[clamp(105px,73px+2.083vw,113px)]
+          lg:min-h-[clamp(65px,33px+2.083vw,73px)]
           px-6 lg:px-12 
           
           leading-tight lg:leading-normal 
@@ -123,13 +126,13 @@ const LatestEventsSection = () => {
 
   const eventItemTemplate = (event: any) => {
     return (
-      <div className="flex flex-col h-full lg:gap-8 px-4 lg:px-0 lg:w-8/10 mx-auto pb-10">
+      <div className="flex flex-col h-full gap-8 lg:gap-8 px-4 lg:px-0 lg:w-8/10 mx-auto pb-10">
         {/* Phần Ảnh */}
-        <div className="flex-1 flex flex-col justify-center min-h-[250px]">
+        <div className="flex-1 flex flex-col justify-center lg:min-h-[250px]">
           <Image
             src={event.image}
             alt="Event"
-            className="w-full h-auto object-contain rounded-xl"
+            className="w-auto h-full object-contain rounded-xl"
           />
         </div>
 
@@ -245,16 +248,18 @@ const LatestEventsSection = () => {
           </svg>
         </div> */}
       </div>
-      <div className={`lg:mt-10 lg:px-[10%] ${styles.carouselWrapper}`}>
+      <div
+        className={`lg:mt-10 lg:px-[10%] lg:w-4/7! lg:mx-auto ${styles.carouselWrapper}`}
+      >
         <Carousel
           key={autoplay > 0 ? "auto-on" : "auto-off"}
           value={events}
-          numVisible={2} // Hiện 2 item trên Desktop
+          numVisible={1} // Hiện 2 item trên Desktop
           numScroll={1}
           responsiveOptions={[
             {
               breakpoint: "1024px",
-              numVisible: 2,
+              numVisible: 1,
               numScroll: 1,
             },
             {

@@ -10,6 +10,7 @@ import ExpImage3 from "@/assets/images/assets/SharingExpSection-ExpImage-3.png";
 import ExpImage4 from "@/assets/images/assets/SharingExpSection-ExpImage-4.png";
 import ExpImage5 from "@/assets/images/assets/SharingExpSection-ExpImage-5.png";
 import ExpImage6 from "@/assets/images/assets/SharingExpSection-ExpImage-6.png";
+import ExpImage7 from "@/assets/images/assets/SharingExpSection-ExpImage-7.png";
 import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 import { Button } from "primereact/button";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -36,6 +37,24 @@ const SharingExpSection = () => {
   const { lang } = useLanguage();
 
   const sharingExpItems: SharingExpItemProps[] = [
+    {
+      image: ExpImage7,
+      url: "https://www.linkedin.com/posts/tran-thanh-n%E1%BB%AF-t%C6%B0%E1%BB%9Dng-vy-a9252732_tranthanhnutuongvy-businessstrategy-growthstrategy-share-7476101957607272448-awPs/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAbXM04B5wAt7jD3LZeXek7C3-FJXDd2FuE",
+      text: {
+        Viet: {
+          title: "KHÉP LẠI NỬA ĐẦU NĂM - ĐỂ TĂNG TỐC NỬA CUỐI NĂM",
+          description:
+            "Hãy khép lại 6 tháng đầu năm, hãy nhìn lại điều tạo giá trị, mạnh dạn bỏ việc kém hiệu quả và kiên trì thực thi để tạo tăng trưởng bền vững.",
+          author: "",
+        },
+        Eng: {
+          title: "CLOSING THE FIRST HALF TO ACCELERATE THE SECOND HALF",
+          description:
+            "As the first half of the year comes to a close, reflect on what truly creates value, eliminate what no longer works, and stay disciplined in execution to drive sustainable growth.",
+          author: "",
+        },
+      },
+    },
     {
       image: ExpImage2,
       url: "https://nld.com.vn/toa-dam-xu-huong-va-giai-phap-cho-thi-truong-tuyen-dung-lao-dong-so-luong-lon-196240911091937972.htm",
@@ -183,7 +202,7 @@ const SharingExpSection = () => {
   };
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container}`} id="sharing-exp">
       <div
         className={`pt-10 lg:pt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] lg:pb-10
         text-transparent lg:px-[15%] text-center lg:text-left text-[24px] lg:text-[clamp(2.5rem,-0.5rem+3.125vw,4.5rem)] font-extrabold `}

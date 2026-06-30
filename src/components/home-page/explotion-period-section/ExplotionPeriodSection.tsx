@@ -1365,7 +1365,12 @@ const ExplotionPeriodSection = () => {
                   : "Growing stronger with the expert team at PNP"}
               </div>
             </div>
-            <a>
+            <a
+              href="https://www.pnpvietnam.com.vn"
+              className={`mx-auto lg:mx-0`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 unstyled
                 className={`px-4 lg:px-10 border-2 border-white rounded-full py-2 lg:py-4 mt-5 lg:mt-0 bg-[linear-gradient(90deg,#E3B266,#F5EEDB_91%)] text-[10px] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer`}
