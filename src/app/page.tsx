@@ -35,7 +35,7 @@ export default function Home() {
         <HotTopicsSection />
         <CertificateSection />
         <ConsultationFormSection />
-        <div className={`mt-10 lg:mt-30`}>
+        <div className={``}>
           <Image
             src={ImageGroup}
             alt="Image Group"
