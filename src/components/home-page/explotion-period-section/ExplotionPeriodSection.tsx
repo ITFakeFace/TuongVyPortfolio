@@ -1346,7 +1346,7 @@ const ExplotionPeriodSection = () => {
 
         <div className={`w-full flex flex-col`}>
           <div
-            className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-center items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
+            className={`flex flex-col lg:flex-row pt-30 pb-5 lg:pb-10 lg:pt-60 lg:px-[15%] justify-center items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
           >
             <div
               className={`bg-clip-text bg-white #bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent 
@@ -1361,8 +1361,8 @@ const ExplotionPeriodSection = () => {
                 className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent font-semibold text-[8px] lg:text-[clamp(1.25rem,-0.25rem+1.5625vw,2.25rem)]`}
               >
                 {lang == "Viet"
-                  ? "Phát triển vững mạnh cùng đội ngũ chuyên gia"
-                  : "Growing stronger with the expert team"}
+                  ? "Phát triển vững mạnh cùng chuyên gia"
+                  : "Growing stronger with the expert"}
               </div>
             </div>
             {/* <a
