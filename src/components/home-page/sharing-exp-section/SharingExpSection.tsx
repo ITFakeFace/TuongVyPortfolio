@@ -11,7 +11,6 @@ import ExpImage4 from "@/assets/images/assets/SharingExpSection-ExpImage-4.png";
 import ExpImage5 from "@/assets/images/assets/SharingExpSection-ExpImage-5.png";
 import ExpImage6 from "@/assets/images/assets/SharingExpSection-ExpImage-6.png";
 import ExpImage7 from "@/assets/images/assets/SharingExpSection-ExpImage-7.png";
-import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 import { Button } from "primereact/button";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -154,7 +153,7 @@ const SharingExpSection = () => {
   ];
   const renderSharingExpCarouselItems = (item: SharingExpItemProps) => {
     return (
-      <div className="font-sans  w-9/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
+      <div className="font-sans w-9/10 lg:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2 text-white">
         <div className="w-full md:w-4/7 flex-none flex items-center justify-center">
           <Image
             src={item.image}
@@ -202,9 +201,12 @@ const SharingExpSection = () => {
   };
 
   return (
-    <div className={`${styles.container}`} id="sharing-exp">
+    <div
+      className={`${styles.container} mt-30 lg:mt-30 mb-8 lg:mb-40`}
+      id="sharing-exp"
+    >
       <div
-        className={`pt-10 lg:pt-30 bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] lg:pb-10
+        className={` bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] lg:pb-10
         text-transparent lg:px-[15%] text-center lg:text-left text-[24px] lg:text-[clamp(2.5rem,-0.5rem+3.125vw,4.5rem)] font-extrabold `}
       >
         {lang === "Viet"
@@ -238,13 +240,6 @@ const SharingExpSection = () => {
             className="w-full"
           />
         </div>
-      </div>
-      <div className={`mt-10 lg:mt-30`}>
-        <Image
-          src={ImageGroup}
-          alt="Image Group"
-          className="w-full h-auto object-contain"
-        />
       </div>
     </div>
   );

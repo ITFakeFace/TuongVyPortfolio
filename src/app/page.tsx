@@ -18,6 +18,7 @@ import { ContactProvider } from "@/context/ContactContext";
 import { useLanguage } from "@/context/LanguageContext";
 import { div } from "framer-motion/client";
 import Image from "next/image";
+import ImageGroup from "@/assets/images/assets/SharingExpSection-ImageGroup-1.png";
 
 export default function Home() {
   const { lang } = useLanguage();
@@ -27,13 +28,20 @@ export default function Home() {
         <HeroSection />
         <SelftSolutionSection />
         <CoreValueSection />
+        <SharingExpSection />
         <ExperienceSection />
         <ExplotionPeriodSection />
         <CareerPathSection />
         <HotTopicsSection />
         <CertificateSection />
         <ConsultationFormSection />
-        <SharingExpSection />
+        <div className={`mt-10 lg:mt-30`}>
+          <Image
+            src={ImageGroup}
+            alt="Image Group"
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </ContactProvider>
     </div>
   );

@@ -8,7 +8,7 @@ $secondary-2: #1f2833;
 .container {
   position: relative; // Cần thiết để định vị lớp giả bên trong
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   overflow: hidden; // Đảm bảo lớp giả không tràn ra ngoài
 
   &::before {

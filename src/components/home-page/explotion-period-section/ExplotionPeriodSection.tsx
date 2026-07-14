@@ -33,7 +33,7 @@ import EndMobileImageEng from "@/assets/images/assets/ExplotionPeriodSection-End
 import BusinessGrowth from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowth-1.png";
 import BusinessGrowthEng from "@/assets/images/assets/ExplotionPeriodSection-BusinessGrowthEng-1.png";
 import HumanImage from "@/assets/images/assets/ExplotionPeriodSection-HumanImage-1.png";
-import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-2.png";
+import BannerImage from "@/assets/images/assets/ExplotionPeriodSection-Banner-3.png";
 import DecorSolutionPack1 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-1.png";
 import DecorSolutionPack2 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-2.png";
 import DecorSolutionPack3 from "@/assets/images/assets/ExplotionPeriodSection-DecorSolutionPack-3.png";
@@ -1114,11 +1114,11 @@ const ExplotionPeriodSection = () => {
             alt="Streak Image"
             className={`w-full h-auto mt-20 lg:mt-60`}
           />
-          <Image
+          {/* <Image
             src={lang == "Viet" ? StreakImage2 : StreakImageEng2}
             alt="Streak Image"
             className={`w-8/10 lg:w-full h-auto mt-20 lg:mt-80 mx-auto lg:px-[15%]`}
-          />
+          /> */}
           <div
             className={`lg:text-[clamp(45px,25px+1.302vw,50px)] font-bold text-center 
             bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]
@@ -1145,11 +1145,11 @@ const ExplotionPeriodSection = () => {
             alt="Streak Mobile Image"
             className={`w-full h-auto mt-20 lg:mt-20`}
           />
-          <Image
+          {/* <Image
             src={lang == "Viet" ? StreakMobileImage2 : StreakMobileImageEng2}
             alt="Streak Mobile Image"
             className={`w-full h-auto mt-40 lg:mt-20`}
-          />
+          /> */}
           <div
             className={`text-[18px] lg:text-[clamp(45px,-15px+3.9vw,60px)] font-bold text-center mt-40 lg:mt-5
             bg-clip-text text-transparent bg-linear-to-r from-[#F3C85F] from-26% via-[#FFECBF] via-66% to-[#C28900]`}
@@ -1346,14 +1346,14 @@ const ExplotionPeriodSection = () => {
 
         <div className={`w-full flex flex-col`}>
           <div
-            className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-between items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
+            className={`flex flex-col lg:flex-row pt-30 pb-5 lg:py-60 lg:px-[15%] justify-center items-center w-8/10 mx-auto lg:mx-0 lg:w-full `}
           >
             <div
               className={`bg-clip-text bg-white #bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent 
-                text-center lg:text-left`}
+                text-center lg:text-center`}
             >
               <div
-                className={`font-playfair text-2xl lg:text-[clamp(2.25rem,-0.375rem+2.7344vw,4rem)] font-medium`}
+                className={`font-playfair text-2xl lg:text-[clamp(2.25rem,-0.375rem+2.7344vw,4rem)] font-medium mb-2 lg:mb-5`}
               >
                 {lang == "Viet" ? "Đồng hành toàn diện" : "End-to-end support"}
               </div>
@@ -1361,11 +1361,11 @@ const ExplotionPeriodSection = () => {
                 className={`bg-clip-text bg-linear-to-r from-[#FFFFFF] to-[#999999] text-transparent font-semibold text-[8px] lg:text-[clamp(1.25rem,-0.25rem+1.5625vw,2.25rem)]`}
               >
                 {lang == "Viet"
-                  ? "Phát triển vững mạnh cùng đội ngũ chuyên gia tại PNP"
-                  : "Growing stronger with the expert team at PNP"}
+                  ? "Phát triển vững mạnh cùng đội ngũ chuyên gia"
+                  : "Growing stronger with the expert team"}
               </div>
             </div>
-            <a
+            {/* <a
               href="https://www.pnpvietnam.com.vn"
               className={`mx-auto lg:mx-0`}
               target="_blank"
@@ -1376,11 +1376,11 @@ const ExplotionPeriodSection = () => {
                 className={`px-4 lg:px-10 border-2 border-white rounded-full py-2 lg:py-4 mt-5 lg:mt-0 bg-[linear-gradient(90deg,#E3B266,#F5EEDB_91%)] text-[10px] lg:text-[clamp(1rem,0.25rem+0.7813vw,1.5rem)] font-bold hover:scale-110 transition-all duration-300 hover:cursor-pointer`}
                 label={
                   lang == "Viet"
-                    ? "HIỂU THÊM VỀ ĐỘI NGŨ PNP"
-                    : "LEARN ABOUT THE PNP TEAM"
+                    ? "PHÁT TRIỂN VỮNG MẠNH CÙNG CHUYÊN GIA"
+                    : "GROW STRONGER WITH EXPERTS"
                 }
               />
-            </a>
+            </a> */}
           </div>
           <Image
             id="pnp-team"
