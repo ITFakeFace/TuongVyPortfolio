@@ -701,7 +701,7 @@ const HotTopicsSection = () => {
               lang == "Viet" ? "ĐẶT LỊCH CHIA SẺ" : "BOOK A SPEAKING SESSION"
             }
             className={`mt-10 lg:mt-15 lg:mb-0 bg-linear-to-r from-[#0B54BE] to-[#1F2833] text-white text-[12px] lg:text-[clamp(1.25rem,0.125rem+1.1719vw,2rem)] font-bold 
-            rounded-full border-2 border-white w-fit px-10 lg:px-25 py-2 cursor-pointer hover:scale-110 transition-all duration-300
+            rounded-full border-2 border-white w-fit px-10 ${lang == "Viet" ? "lg:px-25" : "lg:px-15"} py-2 cursor-pointer hover:scale-110 transition-all duration-300
             `}
             onClick={openContactForm}
           />
