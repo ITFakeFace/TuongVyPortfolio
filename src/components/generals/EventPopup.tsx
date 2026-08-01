@@ -5,6 +5,7 @@ import Image from "next/image";
 import EventImage from "@/assets/images/assets/PopUp-Event-2.png";
 import EventImage2 from "@/assets/images/assets/PopUp-Event-3.png";
 import EventImage4 from "@/assets/images/assets/PopUp-Event-4.png";
+import EventImage5 from "@/assets/images/assets/PopUp-Event-5.png";
 import { Carousel } from "primereact/carousel";
 import styles from "./EventPopup.module.scss";
 
@@ -26,7 +27,7 @@ const EventPopup = () => {
       className="block w-full h-full"
     >
       <Image
-        src={EventImage4}
+        src={EventImage5}
         alt="Newest Event"
         /* h-full w-full kết hợp aspect-square đảm bảo ảnh vuông khít khung Dialog */
         className="w-full h-auto object-cover rounded-xl shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
@@ -66,7 +67,7 @@ const EventPopup = () => {
          - Desktop (md): Cao 80vh, rộng tự động theo aspect-square để giữ hình vuông.
       */
       className={`border-none p-0 overflow-visible! bg-transparent! shadow-none 
-        md:w-[40vw]! w-[80vw] h-auto 
+        md:w-[30vw]! w-[80vw] h-auto 
         #aspect-square
         `}
       maskClassName="backdrop-blur-sm bg-black/70 z-[10000]"

@@ -66,10 +66,30 @@ const CareerPathSection = () => {
     </a>
   );
   const filmItems = [
-    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
-    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
-    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
-    renderFilmItems("AI POSSIBLE (14/06/2023)", "#latest-events"),
+    renderFilmItems(
+      lang === "Viet"
+        ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC (01/08/2026)"
+        : "WORKSHOP: MASTER THE RIGHT CHANNELS, BUILD THE RIGHT STRATEGY (01/08/2026)",
+      "#latest-events",
+    ),
+    renderFilmItems(
+      lang === "Viet"
+        ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC (01/08/2026)"
+        : "WORKSHOP: MASTER THE RIGHT CHANNELS, BUILD THE RIGHT STRATEGY (01/08/2026)",
+      "#latest-events",
+    ),
+    renderFilmItems(
+      lang === "Viet"
+        ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC (01/08/2026)"
+        : "WORKSHOP: MASTER THE RIGHT CHANNELS, BUILD THE RIGHT STRATEGY (01/08/2026)",
+      "#latest-events",
+    ),
+    renderFilmItems(
+      lang === "Viet"
+        ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC (01/08/2026)"
+        : "WORKSHOP: MASTER THE RIGHT CHANNELS, BUILD THE RIGHT STRATEGY (01/08/2026)",
+      "#latest-events",
+    ),
   ];
   const renderBoostCareerItems = (item: BoostCareerItemProps) => {
     return (

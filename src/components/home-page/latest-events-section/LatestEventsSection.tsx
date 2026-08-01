@@ -4,6 +4,7 @@ import EventImage1 from "@/assets/images/assets/LatestEventsSection-EventImage-1
 import EventImage2 from "@/assets/images/assets/LatestEventsSection-EventImage-2.png";
 import EventImage3 from "@/assets/images/assets/LatestEventsSection-EventImage-3.png";
 import EventImage4 from "@/assets/images/assets/LatestEventsSection-EventImage-4.png";
+import EventImage5 from "@/assets/images/assets/LatestEventsSection-EventImage-5.png";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import styles from "./LatestEventsSection.module.scss";
@@ -48,16 +49,30 @@ const LatestEventsSection = () => {
     //   destination: "Online",
     // },
     {
-      image: EventImage4,
+      image: EventImage5,
       url: "",
       title: {
-        Viet: "MISSION: AI POSSIBLE",
-        Eng: "MISSION: AI POSSIBLE",
+        Viet: "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC",
+        Eng: "WORKSHOP: Master the Right Channels, Build the Right Strategy",
       },
       guest: { Viet: "Diễn giả", Eng: "Speaker" },
-      time: "14/06/2023",
+      time: {
+        Viet: "09:00 - 11:30 | Thứ 7, 01/08/2026",
+        Eng: " 09:00 AM – 11:30 AM | Saturday, August 1, 2026",
+      },
       destination: { Viet: "Online", Eng: "Online" },
     },
+    // {
+    //   image: EventImage4,
+    //   url: "",
+    //   title: {
+    //     Viet: "MISSION: AI POSSIBLE",
+    //     Eng: "MISSION: AI POSSIBLE",
+    //   },
+    //   guest: { Viet: "Diễn giả", Eng: "Speaker" },
+    //   time: "14/06/2023",
+    //   destination: { Viet: "Online", Eng: "Online" },
+    // },
     // {
     //   image: EventImage3,
     //   url: "https://biztech.biz.vn/",
@@ -141,7 +156,7 @@ const LatestEventsSection = () => {
           {renderInfoBox(
             lang === "Viet" ? event.title.Viet : event.title.Eng,
             lang === "Viet" ? event.guest.Viet : event.guest.Eng,
-            event.time,
+            event.time[lang],
             typeof event.destination === "string"
               ? event.destination
               : lang === "Viet"
